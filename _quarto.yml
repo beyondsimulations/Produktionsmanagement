@@ -1,0 +1,94 @@
+project:
+  type: website
+  post-render:
+    - helpers/convert_pypercent.py
+    - helpers/convert_qmd_to_md.py
+  render:
+    - index.qmd
+    - 404.qmd
+    - general/*.qmd
+    - lectures/*.qmd
+    - tutorials/*.qmd
+website:
+  title: "Produktionsmanagement"
+  repo-url: https://github.com/beyondsimulations/Produktionsmanagement
+  site-url: https://beyondsimulations.github.io/Produktionsmanagement
+  bread-crumbs: true
+  sidebar:
+    style: floating
+    logo: https://images.beyondsimulations.com/lectures/mj-machine.png
+    collapse-level: 1
+    search: true
+    contents:
+      - text: "Welcome"
+        href: index.qmd
+      - text: "Syllabus"
+        href: general/syllabus.qmd
+      - text: "***"
+      - text: "01 Introduction"
+        href: lectures/lecture-01.qmd
+      - text: "***"
+      - text: "FAQs"
+        href: general/faq.qmd
+
+  page-footer:
+    center: "Produktionsmanagement, Tobias Vlćek </br>CC BY-SA 4.0"
+    right:
+      - icon: github
+        href: https://github.com/beyondsimulations/Produktionsmanagement
+      - icon: linkedin
+        href: https://linkedin.com/in/tobiasvlcek
+      - icon: envelope
+        href: mailto:vlcek@beyondsimulations.com
+      - icon: lock
+        href: general/privacy.qmd
+
+format:
+  html:
+    theme:
+      - default
+      - styles.scss
+      - brand
+    toc: true
+    highlight-style: arrow
+    code-copy: true
+    code-link: true
+    toc-location: right
+    code-overflow: wrap
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    include-in-header:
+      - general/header.html
+    include-after-body:
+      text: |
+        <script src="https://cdn.jsdelivr.net/gh/beyondsimulations/web-embedded-chat@latest/floating-chat.js"></script>
+        <script>
+            new UniversalChatWidget({
+                title: "Course Assistant",
+                apiEndpoint: "https://model-proxy.vlcek-4b4.workers.dev",
+                model: "produktionsmanagement",
+                userMessageOpacity: 0.5,
+                assistantMessageOpacity: 0.5,
+                position: "bottom-right",
+                windowHeight: 800
+            });
+        </script>
+
+  hugo-md: default
+
+  typst:
+    papersize: a4
+
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf
+
+bibliography: Literature.bib
+
+execute:
+  freeze: auto
+
+brand: _brand.yml
