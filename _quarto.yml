@@ -20,13 +20,39 @@ website:
     collapse-level: 1
     search: true
     contents:
-      - text: "Welcome"
+      - text: "Willkommen"
         href: index.qmd
-      - text: "Syllabus"
-        href: general/syllabus.qmd
       - text: "***"
-      - text: "01 Introduction"
-        href: lectures/lecture-01.qmd
+      - section: "01 Standorte"
+        contents:
+          - text: "Vorlesung"
+            href: lectures/lec-01-standort.pdf
+          - text: "Tutorium"
+            href: tutorial/tutorial-01.qmd
+      - section: "02 Standorte"
+        contents:
+          - text: "Vorlesung"
+            href: lectures/lec-02-standort.pdf
+          - text: "Tutorium"
+            href: tutorial/tutorial-02.qmd
+      - section: "03 Standorte"
+        contents:
+          - text: "Vorlesung"
+            href: lectures/lec-03-standort.pdf
+          - text: "Tutorium"
+            href: tutorial/tutorial-03.qmd
+      - section: "04 Standorte"
+        contents:
+          - text: "Vorlesung"
+            href: lectures/lec-04-standort.pdf
+          - text: "Tutorium"
+            href: tutorial/tutorial-04.qmd
+      - section: "05 Standorte"
+        contents:
+          - text: "Vorlesung"
+            href: lectures/lec-05-standort.pdf
+          - text: "Tutorium"
+            href: tutorial/tutorial-05.qmd
       - text: "***"
       - text: "FAQs"
         href: general/faq.qmd
