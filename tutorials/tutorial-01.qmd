@@ -3,49 +3,264 @@ title: "Übung 01"
 subtitle: "Grundlagen & Standortplanung"
 ---
 
-## Aufgabe 1 - Standortplanung ohne Kapazität
+## Einführung
 
-Ein Unternehmen möchte drei Bedarfszentren von einer Menge noch zu bestimmender Standorte aus beliefern. Nach einer Voranalyse stehen drei potentielle Standorte mit jeweils unbegrenzter Kapazität zur Wahl. Die folgende Tabelle gibt die variablen Kosten für die vollständige Belieferung der Bedarfszentren von den jeweiligen Standorten aus sowie die Fixkosten bei Nutzung eines Standortes an.
+Die Standortplanung ist eine zentrale Aufgabe des strategischen Produktionsmanagements.
 
-| Bedarfszentren <br> Standorte | I | II | III | Fixkosten |
-| :-- | :-- | :-- | :-- | :-- |
-| A | 1 | 2 | 3 |  |
-| B | 5 | 4 | 5 | 2 |
-| C | 8 | 3 | 4 | 2 |
+**Notation:**
+- $\gamma_i \in \{0,1\}$: Binärvariable für Standortwahl (1 = Standort wird errichtet)
+- $x_{ij} \geq 0$: Transportmenge von Standort $i$ zu Abnehmer $j$
+- $f_i$: Fixkosten für Standort $i$
+- $c_{ij}$: Transportkosten pro ME von $i$ nach $j$
+- $b_i$: Kapazität von Standort $i$
+- $d_j$: Bedarf von Abnehmer $j$
 
-a) Bestimmen Sie den/die kostenminimalen Standort(e)!
-b) Wieviele Kombinationsmöglichkeiten müssen geprüft werden?
+## Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung
 
-## Aufgabe 2 - Modellierung der Standortplanung
+Ein Unternehmen plant die Belieferung von drei Abnehmern ($j \in \{1, 2, 3\}$) von potentiellen Standorten ($i \in \{A, B, C\}$) mit unbegrenzter Kapazität. Folgende Daten sind gegeben:
 
-a) Notieren Sie das zugehörige Planungsmodell zur Unterstützung der Standortentscheidungen, wenn die Kapazitäten im Problem nicht unbeschränkt sind in der allgemeinen Form!
-b) Aus welchen zwei Teilproblemen besteht das Standortplanungsproblem?
-c) Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Bedarfszentren (I, II, III).
-d) Formulieren Sie explizit die zweite Nebenbedingung des Standortproblems.
+**Transportkosten $c_{ij}$ [€/ME] und Fixkosten $f_i$ [€]:**
 
-## Aufgabe 3 - Standortplanung mit Kapazität
+| Standort $i$ | Abnehmer 1 | Abnehmer 2 | Abnehmer 3 | Fixkosten $f_i$ |
+|:-------------|:-----------|:-----------|:-----------|:----------------|
+| A            | 10         | 20         | 30         | 1.000           |
+| B            | 50         | 40         | 50         | 2.000           |
+| C            | 80         | 30         | 40         | 2.500           |
 
-| $c_{i w}$ | I | II | III | $f_{i}$ | $b_{i}$ |
-| :--: | :--: | :--: | :--: | :--: | :--: |
-| A | 1 | 2 | 3 | 1000 | 400 |
-| B | 4 | 5 | 6 | 1200 | 400 |
-| C | 7 | 8 | 9 | 900 | 400 |
+**Bedarfe:** $d_1 = 100$ ME, $d_2 = 150$ ME, $d_3 = 200$ ME
 
-a) Für die Problemstellung sind zusätzlich folgende Angaben gegeben: Kunde 1 hat einen Bedarf von $d_{1}=200$, Kunde 2 von $d_{2}=300$ und Kunde drei von $d_{3}=250$ Einheiten. Die Entscheidungsvariablen sollen so gesetzt werden, dass die ersten beiden Standorte (A, B) eingerichtet werden. Die Belieferung des ersten Kunden wird komplett von Standort A und die des dritten Kunden komplett von Standort B aus durchgeführt. Der zweite Kunde wird je zur Hälfte von den Standorten A und B beliefert. Berechnen Sie den Zielfunktionswert.
-b) Prüfen Sie die Zulässigkeit der Lösung anhand der zweiten Nebenbedingung.
-h) Ist die Lösung zulässig, wenn Kunde 2 komplett von Standort A aus beliefert werden soll?
+a) Bestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.
+
+b) Wie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?
+
+c) Interpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Bestimmung der kostenminimalen Standorte:**
+
+Schritt 1: Berechnung der Gesamtkosten für jeden einzelnen Standort (vollständige Belieferung):
+
+- Standort A: $K_A = f_A + c_{A1} \cdot d_1 + c_{A2} \cdot d_2 + c_{A3} \cdot d_3$
+  $K_A = 1.000 + 10 \cdot 100 + 20 \cdot 150 + 30 \cdot 200 = 1.000 + 1.000 + 3.000 + 6.000 = 11.000$ €
+
+- Standort B: $K_B = 2.000 + 50 \cdot 100 + 40 \cdot 150 + 50 \cdot 200$
+  $K_B = 2.000 + 5.000 + 6.000 + 10.000 = 23.000$ €
+
+- Standort C: $K_C = 2.500 + 80 \cdot 100 + 30 \cdot 150 + 40 \cdot 200$
+  $K_C = 2.500 + 8.000 + 4.500 + 8.000 = 23.000$ €
+
+**Ergebnis:** Standort A ist mit 11.000 € die kostenminimale Lösung.
+
+b) **Anzahl der Kombinationsmöglichkeiten:**
+
+Bei 3 Standorten gibt es $2^3 - 1 = 7$ nicht-leere Kombinationen:
+- Einzelstandorte: {A}, {B}, {C}
+- Zweierkombinationen: {A,B}, {A,C}, {B,C}
+- Alle drei: {A,B,C}
+
+c) **Interpretation:**
+
+Die Lösung mit nur Standort A minimiert zwar die Kosten, birgt aber Risiken:
+- **Keine Redundanz**: Bei Ausfall von A bricht die gesamte Versorgung zusammen
+- **Keine Flexibilität**: Keine Reaktionsmöglichkeit auf Nachfrageschwankungen
+- **Transportrisiken**: Alle Transporte gehen von einem Punkt aus
+- In der Praxis würde man möglicherweise einen zweiten Standort als Backup in Betracht ziehen
+:::
+
+## Aufgabe 2 - Mathematische Modellierung
+
+Gegeben sei ein Standortplanungsproblem mit $I$ potentiellen Standorten und $J$ Abnehmern.
+
+a) Formulieren Sie die vollständige mathematische Modellierung des Standortplanungsproblems mit Kapazitätsbeschränkungen (Zielfunktion und alle Nebenbedingungen).
+
+b) Erläutern Sie, aus welchen zwei Teilproblemen das Standortplanungsproblem besteht.
+
+c) Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Abnehmern (1, 2, 3) mit folgenden Daten:
+   - Fixkosten: $f_A = 1.000$, $f_B = 1.200$, $f_C = 900$
+   - Transportkosten: $c_{A1} = 1$, $c_{A2} = 2$, $c_{A3} = 3$, etc.
+
+d) Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Vollständiges Modell STANDORT:**
+
+**Zielfunktion:**
+$$\text{Minimiere } Z = \sum_{i \in \mathcal{I}} f_i \cdot \gamma_i + \sum_{i \in \mathcal{I}} \sum_{j \in \mathcal{J}} c_{ij} \cdot x_{ij}$$
+
+**Nebenbedingungen:**
+
+(1) Bedarfsdeckung: $\sum_{i \in \mathcal{I}} x_{ij} \geq d_j$ für alle $j \in \mathcal{J}$
+
+(2) Kapazitätsbeschränkung: $\sum_{j \in \mathcal{J}} x_{ij} \leq b_i \cdot \gamma_i$ für alle $i \in \mathcal{I}$
+
+(3) Binärbedingung: $\gamma_i \in \{0,1\}$ für alle $i \in \mathcal{I}$
+
+(4) Nichtnegativität: $x_{ij} \geq 0$ für alle $i \in \mathcal{I}, j \in \mathcal{J}$
+
+b) **Die zwei Teilprobleme:**
+
+1. **Standortauswahlproblem**: Welche Standorte sollen errichtet werden? (Entscheidung über $\gamma_i$)
+2. **Transportproblem**: Wie sollen die Abnehmer von den gewählten Standorten beliefert werden? (Entscheidung über $x_{ij}$)
+
+Diese Probleme sind gekoppelt, da die Transportentscheidung von der Standortwahl abhängt.
+
+c) **Explizite Zielfunktion:**
+
+$Z = 1.000 \cdot \gamma_A + 1.200 \cdot \gamma_B + 900 \cdot \gamma_C$
+$\quad + 1 \cdot x_{A1} + 2 \cdot x_{A2} + 3 \cdot x_{A3}$
+$\quad + 4 \cdot x_{B1} + 5 \cdot x_{B2} + 6 \cdot x_{B3}$
+$\quad + 7 \cdot x_{C1} + 8 \cdot x_{C2} + 9 \cdot x_{C3}$
+
+(Annahme: Die restlichen $c_{ij}$-Werte folgen dem Muster aus Aufgabe 3)
+
+d) **Kapazitätsbeschränkung für Standort B:**
+
+$x_{B1} + x_{B2} + x_{B3} \leq b_B \cdot \gamma_B$
+
+Diese Nebenbedingung stellt sicher, dass:
+- Wenn $\gamma_B = 0$ (Standort B nicht errichtet): $x_{B1} + x_{B2} + x_{B3} \leq 0$, d.h. keine Lieferung möglich
+- Wenn $\gamma_B = 1$ (Standort B errichtet): $x_{B1} + x_{B2} + x_{B3} \leq b_B$, d.h. Kapazität begrenzt Lieferungen
+:::
+
+## Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung
+
+Betrachten Sie folgendes Standortplanungsproblem:
+
+**Daten:**
+
+| Standort $i$ | $c_{i1}$ | $c_{i2}$ | $c_{i3}$ | Fixkosten $f_i$ | Kapazität $b_i$ |
+|:-------------|:---------|:---------|:---------|:----------------|:----------------|
+| A            | 1        | 2        | 3        | 1.000           | 400             |
+| B            | 4        | 5        | 6        | 1.200           | 400             |
+| C            | 7        | 8        | 9        | 900             | 400             |
+
+**Bedarfe:** $d_1 = 200$, $d_2 = 300$, $d_3 = 250$
+
+a) Gegeben sei folgende Lösung: $\gamma_A = 1$, $\gamma_B = 1$, $\gamma_C = 0$
+   - Abnehmer 1 wird vollständig von A beliefert: $x_{A1} = 200$
+   - Abnehmer 2 wird je zur Hälfte von A und B beliefert: $x_{A2} = 150$, $x_{B2} = 150$
+   - Abnehmer 3 wird vollständig von B beliefert: $x_{B3} = 250$
+
+   Berechnen Sie den Zielfunktionswert dieser Lösung.
+
+b) Prüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingungen.
+
+c) Ist folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert ($x_{A2} = 300$)? Begründen Sie.
+
+d) Schlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Berechnung des Zielfunktionswerts:**
+
+Fixkosten: $f_A \cdot \gamma_A + f_B \cdot \gamma_B + f_C \cdot \gamma_C = 1.000 \cdot 1 + 1.200 \cdot 1 + 900 \cdot 0 = 2.200$
+
+Transportkosten:
+- Von A: $c_{A1} \cdot x_{A1} + c_{A2} \cdot x_{A2} = 1 \cdot 200 + 2 \cdot 150 = 500$
+- Von B: $c_{B2} \cdot x_{B2} + c_{B3} \cdot x_{B3} = 5 \cdot 150 + 6 \cdot 250 = 2.250$
+
+**Gesamtkosten:** $Z = 2.200 + 500 + 2.250 = 4.950$
+
+b) **Prüfung der Zulässigkeit:**
+
+**Bedarfsdeckung (NB 1):**
+- Abnehmer 1: $x_{A1} + x_{B1} + x_{C1} = 200 + 0 + 0 = 200 = d_1$ ✓
+- Abnehmer 2: $x_{A2} + x_{B2} + x_{C2} = 150 + 150 + 0 = 300 = d_2$ ✓
+- Abnehmer 3: $x_{A3} + x_{B3} + x_{C3} = 0 + 250 + 0 = 250 = d_3$ ✓
+
+**Kapazitätsbeschränkung (NB 2):**
+- Standort A: $x_{A1} + x_{A2} + x_{A3} = 200 + 150 + 0 = 350 \leq 400 = b_A \cdot 1$ ✓
+- Standort B: $x_{B1} + x_{B2} + x_{B3} = 0 + 150 + 250 = 400 \leq 400 = b_B \cdot 1$ ✓
+- Standort C: $x_{C1} + x_{C2} + x_{C3} = 0 + 0 + 0 = 0 \leq 0 = b_C \cdot 0$ ✓
+
+**Ergebnis:** Die Lösung ist zulässig.
+
+c) **Alternative mit vollständiger Belieferung von Abnehmer 2 durch A:**
+
+Bei $x_{A2} = 300$ wäre die Auslastung von A:
+$x_{A1} + x_{A2} + x_{A3} = 200 + 300 + 0 = 500 > 400 = b_A$
+
+**Nein**, diese Lösung ist nicht zulässig, da die Kapazität von Standort A überschritten wird.
+:::
 
 ## Aufgabe 4 - Heuristiken zur Standortplanung
 
-Ein Unternehmen möchte drei Abnehmer von einer Menge noch zu bestimmender Standorte aus beliefern. Nach einer Voranalyse stehen drei potentielle Standorte mit jeweils einer begrenzten Kapazität zur Auswahl. Für die Belieferung der Abnehmer von den potentiellen Standorten aus sind die folgenden Transportkostensätze (pro Mengeneinheit), die Bedarfsmengen sowie die Fixkosten bei Errichtung eines Standortes gegeben:
+Ein mittelständisches Unternehmen plant die Versorgung von drei regionalen Abnehmern. Folgende Daten liegen vor:
 
-| Abnehmer <br> Standorte | I | II | III | Fixkosten | Kapazität |
-| :--: | :--: | :--: | :--: | :--: | :--: |
-| A | 4 | 4 | 9 | 60 | 25 |
-| B | 8 | 7 | 2 | 60 | 20 |
-| C | 6 | 3 | 5 | 70 | 25 |
-| Bedarfsmengen | 20 | 10 | 10 |  |  |
+**Transportkosten $c_{ij}$ [€/ME], Fixkosten und Kapazitäten:**
 
-a) Bestimmen Sie den/die kostenminimalen Standort(e) unter Verwendung der Add-Heuristik.
-b) Sind die Lösungen auf Basis einer Heuristik optimal? Begründen Sie Ihre Antwort.
-c) Auf welcher Managementebene sind Entscheidungen bezüglich der Produktionsstandortwahl angesiedelt?
+| Standort $i$ | Abnehmer 1 | Abnehmer 2 | Abnehmer 3 | Fixkosten $f_i$ | Kapazität $b_i$ |
+|:-------------|:-----------|:-----------|:-----------|:----------------|:----------------|
+| A            | 4          | 4          | 9          | 60              | 25              |
+| B            | 8          | 7          | 2          | 60              | 20              |
+| C            | 6          | 3          | 5          | 70              | 25              |
+
+**Bedarfe:** $d_1 = 20$, $d_2 = 10$, $d_3 = 10$
+
+a) Wenden Sie die Add-Heuristik an, um eine Lösung zu bestimmen. Dokumentieren Sie jeden Schritt.
+
+b) Sind heuristische Lösungen optimal? Begründen Sie Ihre Antwort.
+
+c) Auf welcher Managementebene sind Standortentscheidungen angesiedelt und warum?
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Add-Heuristik:**
+
+**Schritt 1:** Bestimme den besten Einzelstandort (vollständige Belieferung)
+
+- Standort A: Kapazität 25 < Gesamtbedarf 40 → nicht möglich
+- Standort B: Kapazität 20 < Gesamtbedarf 40 → nicht möglich
+- Standort C: Kapazität 25 < Gesamtbedarf 40 → nicht möglich
+
+Da kein Einzelstandort ausreicht, starten wir mit dem Standort mit den geringsten durchschnittlichen Transportkosten:
+
+- A: $(4 \cdot 20 + 4 \cdot 10 + 9 \cdot 10)/40 = 210/40 = 5,25$ €/ME
+- B: $(8 \cdot 20 + 7 \cdot 10 + 2 \cdot 10)/40 = 250/40 = 6,25$ €/ME
+- C: $(6 \cdot 20 + 3 \cdot 10 + 5 \cdot 10)/40 = 200/40 = 5,00$ €/ME
+
+**Start mit Standort C** (geringste durchschnittliche Transportkosten)
+
+Zuordnung zu C (Kapazität 25):
+- Abnehmer 2 von C (günstigste Option): $x_{C2} = 10$
+- Abnehmer 3 von C: $x_{C3} = 10$
+- Abnehmer 1 teilweise von C: $x_{C1} = 5$
+
+Restbedarf: Abnehmer 1 benötigt noch 15 ME
+
+**Schritt 2:** Ergänze zweiten Standort
+
+Für Restbedarf von 15 ME bei Abnehmer 1:
+- Standort A: Fixkosten 60 + Transportkosten $4 \cdot 15 = 60$ → Gesamt: 120
+- Standort B: Fixkosten 60 + Transportkosten $8 \cdot 15 = 120$ → Gesamt: 180
+
+**Wähle Standort A** zusätzlich: $x_{A1} = 15$
+
+**Ergebnis Add-Heuristik:**
+- Standorte: C und A
+- Zuordnung: $x_{C1} = 5$, $x_{C2} = 10$, $x_{C3} = 10$, $x_{A1} = 15$
+- Kosten: $70 + 60 + 6 \cdot 5 + 3 \cdot 10 + 5 \cdot 10 + 4 \cdot 15 = 130 + 30 + 30 + 50 + 60 = 300$
+
+b) **Optimalität:**
+
+Heuristische Lösungen sind **nicht notwendigerweise optimal**, da:
+- Sie nur lokale Verbesserungen betrachten
+- Nicht alle Kombinationen systematisch geprüft werden
+
+Die tatsächlich optimale Lösung müsste durch vollständige Enumeration oder Optimierungsverfahren ermittelt werden.
+
+c) **Managementebene:**
+
+Standortentscheidungen sind auf der **strategischen Managementebene** angesiedelt, da sie:
+- Langfristige Auswirkungen haben (mehrere Jahre bis Jahrzehnte)
+- Hohe Investitionen erfordern
+- Schwer reversibel sind
+- Die Wettbewerbsposition fundamental beeinflussen
+- Mit der Unternehmensstrategie abgestimmt werden müssen
+:::

@@ -18,7 +18,7 @@ a) Beschreiben Sie mathematisch ein Modell zur Beschäftigungsglättung.
 b) Wie lassen sich in einem Modell zu diesem Planungsproblem Mindestproduktionsmengen berücksichtigen?
 c) Wie viele Nebenbedingungen hat das Modell für das obige Beispiel konkret?
 d) Formulieren Sie die Zielfunktion sowie die Lagerbilanzgleichung für das obige Beispiel aus.
-e) Liefert die Planung mithilfe des AGGRPLAN-Modells einen zulässigen Produktionsplan?
+e) Liefert die Planung einen zulässigen Produktionsplan?
 
 ## Aufgabe 2 - Losgrößenplanung
 

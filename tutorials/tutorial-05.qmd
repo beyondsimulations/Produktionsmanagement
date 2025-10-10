@@ -67,7 +67,7 @@ e) **Kritischer Weg (GP=0):**
 
 :::
 
-## Aufgabe 1: Planung mit Rüstzustandsübernahme (PLSP)
+## Aufgabe 2: Planung mit Rüstzustandsübernahme (CLSP)
 
 Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschiedene Getriebetypen: Typ A und Typ B. Die Maschine kann pro Woche nur für einen Typ eingerichtet sein, aber der Rüstzustand kann in die Folgewoche übernommen werden, wenn derselbe Typ weiterproduziert wird. Ein Rüstvorgang ist nur dann nötig, wenn von einem Typ zum anderen gewechselt wird oder nach einer Woche ohne Produktion neu gestartet wird.
 

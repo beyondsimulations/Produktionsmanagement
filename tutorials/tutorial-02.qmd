@@ -3,32 +3,307 @@ title: "Übung 02"
 subtitle: "Fließbandproduktion & Leistungsanalysen"
 ---
 
-## Aufgabe 1 - Warteschlangentheorie
+## Einführung
 
-Gegeben sei ein Warteschlangensystem mit 4 Stationen. Die Bearbeitungsraten der einzelnen Stationen seien: $\mu_{1}=3 ; \mu_{2}=3 ; \mu_{3}=4 ; \mu_{4}=3$
+Diese Übung behandelt zwei zentrale Themen der Kapazitätsplanung in der Produktion: Warteschlangensysteme und Fließbandabstimmung.
 
-a) Bestimmen Sie jeweils für die Ankunftsraten $\lambda_{1}=2$ und $\lambda_{1}=3$ vor der ersten Maschine die Produktionsrate des Systems.
-b) Bestimmen Sie für oben genannte Systeme ebenfalls die Auslastung der einzelnen Stationen, die Gesamtauslastung des Systems, den mittleren Bestand an den einzelnen Stationen und im gesamten System sowie die mittlere Durchlaufzeit eines Werkstücks an jeder Station und im gesamten System.
-c) Wie hoch ist die Wahrscheinlichkeit, dass sich genau 5 Werkstücke in oder vor der ersten Maschine befinden? Wie hoch ist die Wahrscheinlichkeit, dass sich 5 oder weniger Werkstücke in oder vor der ersten Maschine befinden?
-d) Die Ankunftsrate vor einer Station i betrage $\lambda_{i}=5$ bei einer Bearbeitungsrate von $\mu_{i}=7$. Bestimmen Sie den mittleren Bestand der Station i.
+**Wichtige Formeln:**
 
-:::{.callout-tip}
-Berechnen Sie für d. zuerst die Bearbeitungszeit sowie die Auslastung der Station.
+- **Little's Gesetz**: $L = \lambda \cdot W$ (Bestand = Ankunftsrate × Durchlaufzeit)
+- **Auslastung**: $\rho = \frac{\lambda}{\mu}$ (bei einem Server)
+- **Mittlerer Bestand (M/M/1)**: $L = \frac{\rho}{1-\rho}$
+- **Mittlere Durchlaufzeit (M/M/1)**: $W = \frac{1}{\mu(1-\rho)}$
+
+## Aufgabe 1 - Warteschlangenanalyse in der Automobilproduktion
+
+Ein Automobilzulieferer betreibt eine Fertigungslinie mit 4 Bearbeitungsstationen für Getriebekomponenten. Die Stationen haben folgende Bearbeitungsraten (in Stück pro Stunde):
+
+- Station 1 (Drehen): $\mu_1 = 3$
+- Station 2 (Fräsen): $\mu_2 = 3$
+- Station 3 (Schleifen): $\mu_3 = 4$
+- Station 4 (Qualitätskontrolle): $\mu_4 = 3$
+
+Zwischen den Stationen sind unbeschränkte Puffer vorhanden. Die Zwischenankunfts- und Bearbeitungszeiten sind exponentialverteilt.
+
+a) Bestimmen Sie für die Ankunftsraten $\lambda_1 = 2$ und $\lambda_1 = 3$ Stück/h vor der ersten Station:
+   - Die Produktionsrate des Systems
+   - Die Ankunftsraten an den einzelnen Stationen
+
+b) Berechnen Sie für beide Szenarien aus a):
+   - Die Auslastung jeder Station und die durchschnittliche Systemauslastung
+   - Den mittleren Bestand an jeder Station und im Gesamtsystem
+   - Die mittlere Durchlaufzeit pro Station und die Gesamtdurchlaufzeit
+
+c) Für $\lambda_1 = 2$: Wie hoch ist die Wahrscheinlichkeit, dass sich an Station 1:
+   - Genau 5 Werkstücke befinden?
+   - Höchstens 5 Werkstücke befinden?
+   - Die Station leer ist?
+
+d) Eine zusätzliche Vorbearbeitungsstation hat $\lambda = 5$ und $\mu = 7$. Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Produktionsrate und Ankunftsraten:**
+
+Für $\lambda_1 = 2$:
+
+- Produktionsrate: $X = \min\{\lambda_1, \mu_1, \mu_2, \mu_3, \mu_4\} = \min\{2, 3, 3, 4, 3\} = 2$ Stück/h
+- Ankunftsraten: $\lambda_1 = 2$, $\lambda_2 = \min\{2, 3\} = 2$, $\lambda_3 = \min\{2, 3\} = 2$, $\lambda_4 = \min\{2, 4\} = 2$
+
+Für $\lambda_1 = 3$:
+
+- Produktionsrate: $X = \min\{3, 3, 3, 4, 3\} = 3$ Stück/h
+- Ankunftsraten: $\lambda_1 = 3$, $\lambda_2 = \min\{3, 3\} = 3$, $\lambda_3 = \min\{3, 3\} = 3$, $\lambda_4 = \min\{3, 4\} = 3$
+
+b) **Kenngrößen für beide Szenarien:**
+
+**Szenario 1: $\lambda_1 = 2$**
+
+Auslastungen:
+
+- $\rho_1 = \frac{2}{3} = 0,667$
+- $\rho_2 = \frac{2}{3} = 0,667$
+- $\rho_3 = \frac{2}{4} = 0,500$
+- $\rho_4 = \frac{2}{3} = 0,667$
+- Durchschnitt: $\bar{\rho} = 0,625$
+
+Mittlerer Bestand:
+
+- $L_1 = \frac{0,667}{1-0,667} = 2,00$ Stück
+- $L_2 = \frac{0,667}{1-0,667} = 2,00$ Stück
+- $L_3 = \frac{0,500}{1-0,500} = 1,00$ Stück
+- $L_4 = \frac{0,667}{1-0,667} = 2,00$ Stück
+- Gesamt: $L = 7,00$ Stück
+
+Mittlere Durchlaufzeit (Little's Gesetz: $W = L/\lambda$):
+
+- $W_1 = \frac{2,00}{2} = 1,00$ h
+- $W_2 = \frac{2,00}{2} = 1,00$ h
+- $W_3 = \frac{1,00}{2} = 0,50$ h
+- $W_4 = \frac{2,00}{2} = 1,00$ h
+- Gesamt: $W = 3,50$ h
+
+**Szenario 2: $\lambda_1 = 3$**
+
+Auslastungen:
+
+- $\rho_1 = \rho_2 = \rho_4 = \frac{3}{3} = 1,000$ → Grenzfall!
+- $\rho_3 = \frac{3}{4} = 0,750$
+
+Das System arbeitet am Limit. Die Stationen 1, 2 und 4 haben 100% Auslastung, was theoretisch noch stabil ist, aber praktisch extrem problematisch:
+
+- Keine Puffer für Schwankungen vorhanden
+- Warteschlangen werden sehr lang (theoretisch unendlich)
+- Jede kleine Störung führt zu Problemen
+- In der Praxis nicht realisierbar → Ankunftsrate reduzieren oder Kapazitäten erhöhen!
+
+c) **Wahrscheinlichkeiten für Station 1 bei $\lambda_1 = 2$:**
+
+Mit $\rho_1 = 0,667$ gilt: $P[N=n] = (1-\rho) \cdot \rho^n = 0,333 \cdot 0,667^n$
+
+- $P[N=5] = 0,333 \cdot 0,667^5 = 0,333 \cdot 0,132 = 0,044$ (4,4%)
+- $P[N \leq 5] = \sum_{n=0}^{5} P[N=n] = 0,333 \cdot \frac{1-0,667^6}{1-0,667} = 0,912$ (91,2%)
+- $P[N=0] = 0,333$ (33,3%)
+
+d) **Analyse der Vorbearbeitungsstation:**
+
+Bei $\lambda = 5$ und $\mu = 7$:
+- Bearbeitungszeit: $b = \frac{1}{\mu} = \frac{1}{7} = 0,143$ h
+- Auslastung: $\rho = \frac{5}{7} = 0,714$
+- Mittlerer Bestand: $L = \frac{0,714}{1-0,714} = 2,50$ Stück
+- Mittlere Durchlaufzeit: $W = \frac{L}{\lambda} = \frac{2,50}{5} = 0,50$ h
 :::
 
-## Aufgabe 2 - Fließbandabstimmung
+## Aufgabe 2 - Fließbandabstimmung bei der Smartphone-Montage
 
-Es sollen pro Schicht (8 Stunden) insgesamt 40 Mengeneinheiten eines hochwertigen Erzeugnisses hergestellt werden. Man produziert in Massenproduktion. Die Arbeitssysteme sollen gemäß der Reihenfolge der Arbeitsgänge angeordnet werden. Der folgende Vorranggraph zeigt die technologisch bedingten Reihenfolgerestriktionen in Bezug auf die Arbeitselemente. Die zusätzlichen Angaben rechts oberhalb der Knoten zeigen die zugehörigen Elementzeiten in Minuten.
+Ein Elektronikhersteller plant eine neue Montagelinie für Smartphones. Pro 8-Stunden-Schicht sollen 48 Geräte montiert werden. Die Montage besteht aus 10 Arbeitselementen mit folgenden Beziehungen:
 
-a) Wie groß darf die Taktzeit höchstens sein?
-b) Welche theoretisch minimale Anzahl an Arbeitsstationen ist notwendig? Wie viele Stationen werden maximal benötigt?
-c) Beschreiben Sie die Effekte des Starving und Blocking.
+**Arbeitselemente und Elementzeiten:**
 
-## Aufgabe 3 - Leistungsanalyse
+| Element | A | B | C | D | E | F | G | H | I | J |
+|:--------|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|
+| Zeit [min] | 5 | 3 | 6 | 4 | 8 | 3 | 4 | 5 | 6 | 5 |
 
-Die erste Station eines Fließproduktionssystems liefert Werkstücke mit einer Rate von $\lambda=0.07$ Stück pro Zeiteinheit (ZE) an nachfolgende Bearbeitungsstationen. Die mittlere Bearbeitungszeit beträgt für alle Stationen jeweils $b=\frac{\lambda}{\mu}=11 \mathrm{ZE}$ pro Werkstück. Die Bearbeitungszeiten an den einzelnen Stationen sind stochastisch; man nimmt an, dass sie exponentialverteilt sind. Zwischen den einzelnen Stationen sind ausreichend große Pufferbereiche eingerichtet worden.
+**Vorranggraph:**
+```
+    A(5) ──→ D(4) ──→ G(4) ──→ J(5)
+         ↘                    ↗
+          E(8) ──→ H(5) ────↗
+          ↗
+    B(3) ↗
 
-a) Bestimmen Sie die Auslastung $\rho=\frac{\lambda}{\mu}$, den mittleren Bestand $L=\frac{\rho}{1-\rho}$ sowie die mittlere Durchlaufzeit an einer Station in diesem Fließproduktionssystem!
-b) Die Wahrscheinlichkeit, dass sich im stationären Zustand genau $n$ Kunden in einem Warteschlangensystem befinden, beträgt $\mathrm{P}[N=n]=\rho^{n} \cdot(1-\rho)$. Mit welcher Wahrscheinlichkeit ist eine Bearbeitungsstation unbeschäftigt bzw. leer? Wie hoch ist die Wahrscheinlichkeit, dass sich $n=3$ oder weniger Werkstücke an einer Maschine befinden? Mit welcher Wahrscheinlichkeit befinden sich $n=4$ oder mehr Werkstücke an einer Station?
-c) Wie groß ist die Produktionsrate des Systems?
-d) Könnten Sie mit dem identischen Vorgehen auch die Werte berechnen, falls der Puffer beschränkt wäre? Begründen Sie Ihre Antwort.
+    C(6) ──→ F(3) ──→ I(6) ──→ J(5)
+```
+
+a) Bestimmen Sie die Taktzeit für die geforderte Produktionsrate.
+
+b) Berechnen Sie die theoretisch minimale Anzahl an Stationen. Wie viele Stationen werden maximal benötigt?
+
+c) Führen Sie eine Fließbandabstimmung mit der Heuristik "Längste Elementzeit zuerst" durch.
+
+d) Berechnen Sie den Bandwirkungsgrad Ihrer Lösung.
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Taktzeit:**
+
+- Verfügbare Zeit: $T = 8 \text{ h} \times 60 \text{ min/h} = 480$ min
+- Produktionsrate: 48 Stück/Schicht
+- Taktzeit: $C = \frac{480}{48} = 10$ min/Stück
+
+b) **Stationenanzahl:**
+
+- Theoretisches Minimum: $M_{\min} = \lceil\frac{49}{10}\rceil = 5$ Stationen
+- Maximum: $M_{\max} = 10$ Stationen (ein Element pro Station)
+
+c) **Fließbandabstimmung (Längste Elementzeit zuerst):**
+
+**Prioritätsliste**: E(8), C(6), I(6), A(5), H(5), J(5), D(4), G(4), B(3), F(3)
+**Wichtig:** Es werden nur Elemente zugeordnet, deren Vorgänger bereits zugeordnet sind!
+
+| Station | Verfügbare Elemente | Gewähltes Element | Elementzeit | Stationszeit | Restzeit |
+|:--------|:-------------------|:-----------------|:------------|:-------------|:---------|
+| I | A, B, C | C | 6 | 6 | 4 |
+| | A, B | B | 3 | 9 | 1 |
+| | A | - | - | 9 | 1 |
+| II | A, F | A | 5 | 5 | 5 |
+| | F, D, E | E (längste) | 8 | - | - |
+| | | E passt nicht → F | 3 | 8 | 2 |
+| | D | - | - | 8 | 2 |
+| III | D, E, I | E | 8 | 8 | 2 |
+| | D, I | - | - | 8 | 2 |
+| IV | D, I, H | I | 6 | 6 | 4 |
+| | D, H | D | 4 | 10 | 0 |
+| V | H, G | H | 5 | 5 | 5 |
+| | G | G | 4 | 9 | 1 |
+| | J | - | - | 9 | 1 |
+| VI | J | J | 5 | 5 | 5 |
+
+Ergebnis: 6 Stationen benötigt
+
+**Hinweis zur Optimalität:**
+Das theoretische Minimum von 5 Stationen (⌈49/10⌉) ist aufgrund der Vorrangbeziehungen und Elementzeiten nicht erreichbar. Die gefundene Lösung mit 6 Stationen ist für diese Heuristik gut, muss aber nicht global optimal sein. Andere Heuristiken könnten möglicherweise 5 Stationen erreichen.
+
+d) **Bandwirkungsgrad:**
+$$U = \frac{\text{Summe Elementzeiten}}{\text{Anzahl Stationen} \times \text{Taktzeit}} = \frac{49}{6 \times 10} = \frac{49}{60} = 0,817 = 81,7\%$$
+
+:::
+
+## Aufgabe 3 - Leistungsanalyse eines Fließproduktionssystems
+
+Eine Elektronikfertigung für Leiterplatten besteht aus 5 aufeinanderfolgenden Bearbeitungsstationen. Die erste Station erhält Werkstücke mit einer Rate von $\lambda = 0,08$ Leiterplatten pro Minute. Alle Stationen haben eine mittlere Bearbeitungszeit von $b = 11$ Minuten pro Leiterplatte. Die Bearbeitungszeiten sind exponentialverteilt, und zwischen den Stationen befinden sich unbeschränkte Puffer.
+
+a) Berechnen Sie für jede Station:
+   - Die Bearbeitungsrate $\mu$
+   - Die Auslastung $\rho$
+   - Den mittleren Bestand $L$
+   - Die mittlere Durchlaufzeit $W$
+
+b) Bestimmen Sie für das Gesamtsystem:
+   - Die Produktionsrate
+   - Den Gesamtbestand
+   - Die Gesamtdurchlaufzeit
+
+c) Für Station 3: Mit welcher Wahrscheinlichkeit
+   - Ist die Station leer?
+   - Befinden sich genau 3 Leiterplatten an der Station?
+   - Befinden sich 3 oder weniger Leiterplatten an der Station?
+   - Befinden sich mehr als 10 Leiterplatten an der Station?
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Stationskenngrößen:**
+
+Für alle Stationen $m = 1, ..., 5$:
+
+- Bearbeitungsrate: $\mu_m = \frac{1}{b_m} = \frac{1}{11} = 0,091$ Leiterplatten/min
+- Ankunftsrate: $\lambda_m = \min\{\lambda_{m-1}, \mu_{m-1}\} = 0,08$ (da $0,08 < 0,091$ für alle Stationen)
+- Auslastung: $\rho_m = \frac{\lambda_m}{\mu_m} = \frac{0,08}{0,091} = 0,88$
+- Mittlerer Bestand: $L_m = \frac{\rho_m}{1-\rho_m} = \frac{0,88}{0,12} = 7,33$ Leiterplatten
+- Mittlere Durchlaufzeit: $W_m = \frac{L_m}{\lambda_m} = \frac{7,33}{0,08} = 91,67$ min
+
+b) **Gesamtsystem:**
+
+- Produktionsrate: $X = \min\{\lambda, \mu_1, ..., \mu_5\} = 0,08$ Leiterplatten/min
+- Gesamtbestand: $L = \sum_{m=1}^{5} L_m = 5 \times 7,33 = 36,67$ Leiterplatten
+- Gesamtdurchlaufzeit: $W = \sum_{m=1}^{5} W_m = 5 \times 91,67 = 458,33$ min
+
+c) **Wahrscheinlichkeiten für Station 3:**
+
+Mit $\rho_3 = 0,88$ und $P[N=n] = (1-\rho) \cdot \rho^n$:
+
+- Station leer: $P[N=0] = 1 - 0,88 = 0,12$ (12%)
+- Genau 3 Leiterplatten: $P[N=3] = 0,12 \cdot 0,88^3 = 0,12 \cdot 0,681 = 0,082$ (8,2%)
+- 3 oder weniger: $P[N \leq 3] = 0,12 \cdot \frac{1-0,88^4}{1-0,88} = 0,12 \cdot \frac{0,401}{0,12} = 0,401$ (40,1%)
+- Mehr als 10: $P[N > 10] = \rho^{11} = 0,88^{11} = 0,314$ (31,4%)
+
+:::
+
+## Aufgabe 4 - Starving und Blocking
+
+Ein Produktionssystem besteht aus drei Stationen mit beschränkten Puffern:
+
+```
+[Lager] → Station 1 → [Puffer 1: 3 Plätze] → Station 2 → [Puffer 2: 2 Plätze] → Station 3 → [Fertigwarenlager]
+```
+
+Die Bearbeitungszeiten sind deterministisch: $b_1 = 4$ min, $b_2 = 5$ min, $b_3 = 3$ min.
+
+a) Erklären Sie die Begriffe "Starving" und "Blocking" im Kontext dieses Systems.
+
+b) Identifizieren Sie mögliche Starving- und Blocking-Situationen in diesem System.
+
+c) Welche Station ist der Engpass? Wie wirkt sich das auf die anderen Stationen aus?
+
+d) Schlagen Sie zwei Maßnahmen zur Verbesserung der Systemleistung vor.
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Begriffserklärungen:**
+
+**Starving** (Aushungern): Eine Station kann nicht arbeiten, weil der vorgelagerte Puffer leer ist und kein zu bearbeitendes Werkstück verfügbar ist.
+
+**Blocking** (Blockierung): Eine Station kann nicht arbeiten, obwohl sie ein Werkstück fertiggestellt hat, weil der nachgelagerte Puffer voll ist und das fertige Werkstück nicht weitergegeben werden kann.
+
+b) **Mögliche Situationen:**
+
+**Starving:**
+
+- Station 2 hungert aus, wenn Puffer 1 leer ist und Station 1 noch arbeitet
+- Station 3 hungert aus, wenn Puffer 2 leer ist und Station 2 noch arbeitet
+
+**Blocking:**
+
+- Station 1 wird blockiert, wenn Puffer 1 voll ist (3 Werkstücke) und Station 2 noch arbeitet
+- Station 2 wird blockiert, wenn Puffer 2 voll ist (2 Werkstücke) und Station 3 noch arbeitet
+
+c) **Engpassanalyse:**
+
+Station 2 ist der Engpass mit der längsten Bearbeitungszeit (5 min).
+
+**Auswirkungen:**
+
+- Station 1 (schneller als Station 2): Wird häufig blockiert, da Puffer 1 sich füllt
+- Station 3 (schneller als Station 2): Hungert häufig aus, da Station 2 nicht schnell genug liefert
+- Systemtakt wird durch Station 2 auf 5 min pro Werkstück begrenzt
+
+d) **Verbesserungsmaßnahmen:**
+
+1. **Pufferoptimierung:**
+   - Puffer 1 verkleinern (da Station 1 ohnehin oft blockiert wird)
+   - Puffer 2 vergrößern (um Schwankungen besser auszugleichen)
+   - Dadurch: Reduzierte Kapitalbindung bei gleicher Leistung
+
+2. **Kapazitätsanpassung:**
+   - Parallelstation zu Station 2 hinzufügen
+   - Oder: Prozessverbesserung bei Station 2 zur Reduzierung von $b_2$
+   - Ziel: Engpass eliminieren und Systemleistung erhöhen
+
+3. **Alternative: Pull-System einführen:**
+   - Kanban-System könnte Blocking reduzieren
+   - Produktion nur bei Bedarf der nachgelagerten Station
+:::
