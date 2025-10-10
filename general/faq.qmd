@@ -16,3 +16,8 @@ Ja, die Übungen können als PDF herunterladen werden. Die Datei finden Sie auf 
 ### Woran orientiert sich die Klausur?
 
 Die Klausur orientiert sich primär an den Probeklausuren von Herrn Manitz und wird die Themen der Vorlesung abdecken, die wir gemeinsam behandelt haben. Wenn ihr die von uns behandelten Themen der alten Klausuren rechnen könnt und die Übungen verstanden habt, seid ihr sehr gut vorbereitet.
+
+### Wie ist die Klausur aufgebaut?
+
+**Die Klausur wird aus etwa 4-5 Teilen bestehen, die alle bearbeitet werden müssen.**
+Um einen Überblick von dem Klausurformat zu bekommen, mit dem ich in der Regel arbeite, schauen Sie sich gerne die Klausur zu [Produktionswirtschaft II](general/pw2-2025.pdf) und [Materiallogistik](general/mlb-2025.pdf) aus dem Frühjahr 2025 an.
