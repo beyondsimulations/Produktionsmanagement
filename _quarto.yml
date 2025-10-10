@@ -28,25 +28,25 @@ website:
             href: lectures/lec-01-standort.pdf
           - text: "Tutorium"
             href: tutorials/tutorial-01.qmd
-      - section: "02 Standorte"
+      - section: "02 Leistung"
         contents:
           - text: "Vorlesung"
             href: lectures/lec-02-standort.pdf
           - text: "Tutorium"
             href: tutorials/tutorial-02.qmd
-      - section: "03 Standorte"
+      - section: "03 Qualität"
         contents:
           - text: "Vorlesung"
             href: lectures/lec-03-standort.pdf
           - text: "Tutorium"
             href: tutorials/tutorial-03.qmd
-      - section: "04 Standorte"
+      - section: "04 Produktion"
         contents:
           - text: "Vorlesung"
             href: lectures/lec-04-standort.pdf
           - text: "Tutorium"
             href: tutorials/tutorial-04.qmd
-      - section: "05 Standorte"
+      - section: "05 Ressourcen"
         contents:
           - text: "Vorlesung"
             href: lectures/lec-05-standort.pdf

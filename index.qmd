@@ -29,7 +29,7 @@ Der Kerninhalt des Kurses ist in sechs Abschnitte gegliedert:
 3. **Zentrenproduktion & Qualitätsmanagement**
 4. **Produktionsprogrammplanung**
 5. **Ressourceneinsatzplanung & Losgrößen**
-6. **iederholung und offene Fragen**
+6. **Wiederholung und offene Fragen**
 
 ## Tutorials
 
