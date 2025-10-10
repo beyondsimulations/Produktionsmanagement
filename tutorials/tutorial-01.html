@@ -284,8 +284,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#einführung" id="toc-einführung" class="nav-link active" data-scroll-target="#einführung">Einführung</a></li>
-  <li><a href="#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung" id="toc-aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung" class="nav-link" data-scroll-target="#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung">Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung</a></li>
+  <li><a href="#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung" id="toc-aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung" class="nav-link active" data-scroll-target="#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung">Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung</a></li>
   <li><a href="#aufgabe-2---mathematische-modellierung" id="toc-aufgabe-2---mathematische-modellierung" class="nav-link" data-scroll-target="#aufgabe-2---mathematische-modellierung">Aufgabe 2 - Mathematische Modellierung</a></li>
   <li><a href="#aufgabe-3---standortplanung-mit-kapazitätsbeschränkung" id="toc-aufgabe-3---standortplanung-mit-kapazitätsbeschränkung" class="nav-link" data-scroll-target="#aufgabe-3---standortplanung-mit-kapazitätsbeschränkung">Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung</a></li>
   <li><a href="#aufgabe-4---heuristiken-zur-standortplanung" id="toc-aufgabe-4---heuristiken-zur-standortplanung" class="nav-link" data-scroll-target="#aufgabe-4---heuristiken-zur-standortplanung">Aufgabe 4 - Heuristiken zur Standortplanung</a></li>
@@ -315,11 +314,6 @@ window.Quarto = {
 </header>
 
 
-<section id="einführung" class="level2">
-<h2 class="anchored" data-anchor-id="einführung">Einführung</h2>
-<p>Die Standortplanung ist eine zentrale Aufgabe des strategischen Produktionsmanagements.</p>
-<p><strong>Notation:</strong> - <span class="math inline">\(\gamma_i \in \{0,1\}\)</span>: Binärvariable für Standortwahl (1 = Standort wird errichtet) - <span class="math inline">\(x_{ij} \geq 0\)</span>: Transportmenge von Standort <span class="math inline">\(i\)</span> zu Abnehmer <span class="math inline">\(j\)</span> - <span class="math inline">\(f_i\)</span>: Fixkosten für Standort <span class="math inline">\(i\)</span> - <span class="math inline">\(c_{ij}\)</span>: Transportkosten pro ME von <span class="math inline">\(i\)</span> nach <span class="math inline">\(j\)</span> - <span class="math inline">\(b_i\)</span>: Kapazität von Standort <span class="math inline">\(i\)</span> - <span class="math inline">\(d_j\)</span>: Bedarf von Abnehmer <span class="math inline">\(j\)</span></p>
-</section>
 <section id="aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung">Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung</h2>
 <p>Ein Unternehmen plant die Belieferung von drei Abnehmern (<span class="math inline">\(j \in \{1, 2, 3\}\)</span>) von potentiellen Standorten (<span class="math inline">\(i \in \{A, B, C\}\)</span>) mit unbegrenzter Kapazität. Folgende Daten sind gegeben:</p>
@@ -367,23 +361,23 @@ window.Quarto = {
 </table>
 <p><strong>Bedarfe:</strong> <span class="math inline">\(d_1 = 100\)</span> ME, <span class="math inline">\(d_2 = 150\)</span> ME, <span class="math inline">\(d_3 = 200\)</span> ME</p>
 <ol type="a">
-<li><p>Bestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.</p></li>
-<li><p>Wie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?</p></li>
-<li><p>Interpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?</p></li>
+<li>Bestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.</li>
+<li>Wie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?</li>
+<li>Interpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?</li>
 </ol>
 </section>
 <section id="aufgabe-2---mathematische-modellierung" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-2---mathematische-modellierung">Aufgabe 2 - Mathematische Modellierung</h2>
 <p>Gegeben sei ein Standortplanungsproblem mit <span class="math inline">\(I\)</span> potentiellen Standorten und <span class="math inline">\(J\)</span> Abnehmern.</p>
 <ol type="a">
-<li><p>Formulieren Sie die vollständige mathematische Modellierung des Standortplanungsproblems mit Kapazitätsbeschränkungen (Zielfunktion und alle Nebenbedingungen).</p></li>
-<li><p>Erläutern Sie, aus welchen zwei Teilproblemen das Standortplanungsproblem besteht.</p></li>
-<li><p>Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Abnehmern (1, 2, 3) mit folgenden Daten:</p>
+<li>Formulieren Sie die vollständige mathematische Modellierung des Standortplanungsproblems mit Kapazitätsbeschränkungen (Zielfunktion und alle Nebenbedingungen).</li>
+<li>Erläutern Sie, aus welchen zwei Teilproblemen das Standortplanungsproblem besteht.</li>
+<li>Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Abnehmern (1, 2, 3) mit folgenden Daten:
 <ul>
 <li>Fixkosten: <span class="math inline">\(f_A = 1.000\)</span>, <span class="math inline">\(f_B = 1.200\)</span>, <span class="math inline">\(f_C = 900\)</span></li>
 <li>Transportkosten: <span class="math inline">\(c_{A1} = 1\)</span>, <span class="math inline">\(c_{A2} = 2\)</span>, <span class="math inline">\(c_{A3} = 3\)</span>, etc.</li>
 </ul></li>
-<li><p>Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.</p></li>
+<li>Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.</li>
 </ol>
 </section>
 <section id="aufgabe-3---standortplanung-mit-kapazitätsbeschränkung" class="level2">
@@ -438,16 +432,15 @@ window.Quarto = {
 </table>
 <p><strong>Bedarfe:</strong> <span class="math inline">\(d_1 = 200\)</span>, <span class="math inline">\(d_2 = 300\)</span>, <span class="math inline">\(d_3 = 250\)</span></p>
 <ol type="a">
-<li><p>Gegeben sei folgende Lösung: <span class="math inline">\(\gamma_A = 1\)</span>, <span class="math inline">\(\gamma_B = 1\)</span>, <span class="math inline">\(\gamma_C = 0\)</span></p>
+<li>Gegeben sei folgende Lösung: <span class="math inline">\(\gamma_A = 1\)</span>, <span class="math inline">\(\gamma_B = 1\)</span>, <span class="math inline">\(\gamma_C = 0\)</span>
 <ul>
 <li>Abnehmer 1 wird vollständig von A beliefert: <span class="math inline">\(x_{A1} = 200\)</span></li>
 <li>Abnehmer 2 wird je zur Hälfte von A und B beliefert: <span class="math inline">\(x_{A2} = 150\)</span>, <span class="math inline">\(x_{B2} = 150\)</span></li>
-<li>Abnehmer 3 wird vollständig von B beliefert: <span class="math inline">\(x_{B3} = 250\)</span></li>
-</ul>
-<p>Berechnen Sie den Zielfunktionswert dieser Lösung.</p></li>
-<li><p>Prüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingungen.</p></li>
-<li><p>Ist folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert (<span class="math inline">\(x_{A2} = 300\)</span>)? Begründen Sie.</p></li>
-<li><p>Schlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.</p></li>
+<li>Abnehmer 3 wird vollständig von B beliefert: <span class="math inline">\(x_{B3} = 250\)</span> Berechnen Sie den Zielfunktionswert dieser Lösung.</li>
+</ul></li>
+<li>Prüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingungen.</li>
+<li>Ist folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert (<span class="math inline">\(x_{A2} = 300\)</span>)? Begründen Sie.</li>
+<li>Schlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.</li>
 </ol>
 </section>
 <section id="aufgabe-4---heuristiken-zur-standortplanung" class="level2">
@@ -502,9 +495,9 @@ window.Quarto = {
 </table>
 <p><strong>Bedarfe:</strong> <span class="math inline">\(d_1 = 20\)</span>, <span class="math inline">\(d_2 = 10\)</span>, <span class="math inline">\(d_3 = 10\)</span></p>
 <ol type="a">
-<li><p>Wenden Sie die Add-Heuristik an, um eine Lösung zu bestimmen. Dokumentieren Sie jeden Schritt.</p></li>
-<li><p>Sind heuristische Lösungen optimal? Begründen Sie Ihre Antwort.</p></li>
-<li><p>Auf welcher Managementebene sind Standortentscheidungen angesiedelt und warum?</p></li>
+<li>Wenden Sie die Add-Heuristik an, um eine Lösung zu bestimmen. Dokumentieren Sie jeden Schritt.</li>
+<li>Sind heuristische Lösungen optimal? Begründen Sie Ihre Antwort.</li>
+<li>Auf welcher Managementebene sind Standortentscheidungen angesiedelt und warum?</li>
 </ol>
 
 

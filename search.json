@@ -92,18 +92,7 @@
     "href": "tutorials/tutorial-01.html",
     "title": "Übung 01",
     "section": "",
-    "text": "Die Standortplanung ist eine zentrale Aufgabe des strategischen Produktionsmanagements.\nNotation: - \\(\\gamma_i \\in \\{0,1\\}\\): Binärvariable für Standortwahl (1 = Standort wird errichtet) - \\(x_{ij} \\geq 0\\): Transportmenge von Standort \\(i\\) zu Abnehmer \\(j\\) - \\(f_i\\): Fixkosten für Standort \\(i\\) - \\(c_{ij}\\): Transportkosten pro ME von \\(i\\) nach \\(j\\) - \\(b_i\\): Kapazität von Standort \\(i\\) - \\(d_j\\): Bedarf von Abnehmer \\(j\\)",
-    "crumbs": [
-      "01 Standorte",
-      "Tutorium"
-    ]
-  },
-  {
-    "objectID": "tutorials/tutorial-01.html#einführung",
-    "href": "tutorials/tutorial-01.html#einführung",
-    "title": "Übung 01",
-    "section": "",
-    "text": "Die Standortplanung ist eine zentrale Aufgabe des strategischen Produktionsmanagements.\nNotation: - \\(\\gamma_i \\in \\{0,1\\}\\): Binärvariable für Standortwahl (1 = Standort wird errichtet) - \\(x_{ij} \\geq 0\\): Transportmenge von Standort \\(i\\) zu Abnehmer \\(j\\) - \\(f_i\\): Fixkosten für Standort \\(i\\) - \\(c_{ij}\\): Transportkosten pro ME von \\(i\\) nach \\(j\\) - \\(b_i\\): Kapazität von Standort \\(i\\) - \\(d_j\\): Bedarf von Abnehmer \\(j\\)",
+    "text": "Ein Unternehmen plant die Belieferung von drei Abnehmern (\\(j \\in \\{1, 2, 3\\}\\)) von potentiellen Standorten (\\(i \\in \\{A, B, C\\}\\)) mit unbegrenzter Kapazität. Folgende Daten sind gegeben:\nTransportkosten \\(c_{ij}\\) [€/ME] und Fixkosten \\(f_i\\) [€]:\n\n\n\n\n\n\n\n\n\n\nStandort \\(i\\)\nAbnehmer 1\nAbnehmer 2\nAbnehmer 3\nFixkosten \\(f_i\\)\n\n\n\n\nA\n10\n20\n30\n1.000\n\n\nB\n50\n40\n50\n2.000\n\n\nC\n80\n30\n40\n2.500\n\n\n\nBedarfe: \\(d_1 = 100\\) ME, \\(d_2 = 150\\) ME, \\(d_3 = 200\\) ME\n\nBestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.\nWie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?\nInterpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?",
     "crumbs": [
       "01 Standorte",
       "Tutorium"
@@ -113,8 +102,8 @@
     "objectID": "tutorials/tutorial-01.html#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung",
     "href": "tutorials/tutorial-01.html#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung",
     "title": "Übung 01",
-    "section": "Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung",
-    "text": "Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung\nEin Unternehmen plant die Belieferung von drei Abnehmern (\\(j \\in \\{1, 2, 3\\}\\)) von potentiellen Standorten (\\(i \\in \\{A, B, C\\}\\)) mit unbegrenzter Kapazität. Folgende Daten sind gegeben:\nTransportkosten \\(c_{ij}\\) [€/ME] und Fixkosten \\(f_i\\) [€]:\n\n\n\n\n\n\n\n\n\n\nStandort \\(i\\)\nAbnehmer 1\nAbnehmer 2\nAbnehmer 3\nFixkosten \\(f_i\\)\n\n\n\n\nA\n10\n20\n30\n1.000\n\n\nB\n50\n40\n50\n2.000\n\n\nC\n80\n30\n40\n2.500\n\n\n\nBedarfe: \\(d_1 = 100\\) ME, \\(d_2 = 150\\) ME, \\(d_3 = 200\\) ME\n\nBestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.\nWie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?\nInterpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?",
+    "section": "",
+    "text": "Ein Unternehmen plant die Belieferung von drei Abnehmern (\\(j \\in \\{1, 2, 3\\}\\)) von potentiellen Standorten (\\(i \\in \\{A, B, C\\}\\)) mit unbegrenzter Kapazität. Folgende Daten sind gegeben:\nTransportkosten \\(c_{ij}\\) [€/ME] und Fixkosten \\(f_i\\) [€]:\n\n\n\n\n\n\n\n\n\n\nStandort \\(i\\)\nAbnehmer 1\nAbnehmer 2\nAbnehmer 3\nFixkosten \\(f_i\\)\n\n\n\n\nA\n10\n20\n30\n1.000\n\n\nB\n50\n40\n50\n2.000\n\n\nC\n80\n30\n40\n2.500\n\n\n\nBedarfe: \\(d_1 = 100\\) ME, \\(d_2 = 150\\) ME, \\(d_3 = 200\\) ME\n\nBestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.\nWie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?\nInterpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?",
     "crumbs": [
       "01 Standorte",
       "Tutorium"
@@ -136,7 +125,7 @@
     "href": "tutorials/tutorial-01.html#aufgabe-3---standortplanung-mit-kapazitätsbeschränkung",
     "title": "Übung 01",
     "section": "Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung",
-    "text": "Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung\nBetrachten Sie folgendes Standortplanungsproblem:\nDaten:\n\n\n\n\n\n\n\n\n\n\n\nStandort \\(i\\)\n\\(c_{i1}\\)\n\\(c_{i2}\\)\n\\(c_{i3}\\)\nFixkosten \\(f_i\\)\nKapazität \\(b_i\\)\n\n\n\n\nA\n1\n2\n3\n1.000\n400\n\n\nB\n4\n5\n6\n1.200\n400\n\n\nC\n7\n8\n9\n900\n400\n\n\n\nBedarfe: \\(d_1 = 200\\), \\(d_2 = 300\\), \\(d_3 = 250\\)\n\nGegeben sei folgende Lösung: \\(\\gamma_A = 1\\), \\(\\gamma_B = 1\\), \\(\\gamma_C = 0\\)\n\nAbnehmer 1 wird vollständig von A beliefert: \\(x_{A1} = 200\\)\nAbnehmer 2 wird je zur Hälfte von A und B beliefert: \\(x_{A2} = 150\\), \\(x_{B2} = 150\\)\nAbnehmer 3 wird vollständig von B beliefert: \\(x_{B3} = 250\\)\n\nBerechnen Sie den Zielfunktionswert dieser Lösung.\nPrüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingungen.\nIst folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert (\\(x_{A2} = 300\\))? Begründen Sie.\nSchlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.",
+    "text": "Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung\nBetrachten Sie folgendes Standortplanungsproblem:\nDaten:\n\n\n\n\n\n\n\n\n\n\n\nStandort \\(i\\)\n\\(c_{i1}\\)\n\\(c_{i2}\\)\n\\(c_{i3}\\)\nFixkosten \\(f_i\\)\nKapazität \\(b_i\\)\n\n\n\n\nA\n1\n2\n3\n1.000\n400\n\n\nB\n4\n5\n6\n1.200\n400\n\n\nC\n7\n8\n9\n900\n400\n\n\n\nBedarfe: \\(d_1 = 200\\), \\(d_2 = 300\\), \\(d_3 = 250\\)\n\nGegeben sei folgende Lösung: \\(\\gamma_A = 1\\), \\(\\gamma_B = 1\\), \\(\\gamma_C = 0\\)\n\nAbnehmer 1 wird vollständig von A beliefert: \\(x_{A1} = 200\\)\nAbnehmer 2 wird je zur Hälfte von A und B beliefert: \\(x_{A2} = 150\\), \\(x_{B2} = 150\\)\nAbnehmer 3 wird vollständig von B beliefert: \\(x_{B3} = 250\\) Berechnen Sie den Zielfunktionswert dieser Lösung.\n\nPrüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingungen.\nIst folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert (\\(x_{A2} = 300\\))? Begründen Sie.\nSchlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.",
     "crumbs": [
       "01 Standorte",
       "Tutorium"
@@ -318,18 +307,7 @@
     "href": "tutorials/tutorial-02.html",
     "title": "Übung 02",
     "section": "",
-    "text": "Diese Übung behandelt zwei zentrale Themen der Kapazitätsplanung in der Produktion: Warteschlangensysteme und Fließbandabstimmung.\nWichtige Formeln:\n\nLittle’s Gesetz: \\(L = \\lambda \\cdot W\\) (Bestand = Ankunftsrate × Durchlaufzeit)\nAuslastung: \\(\\rho = \\frac{\\lambda}{\\mu}\\) (bei einem Server)\nMittlerer Bestand (M/M/1): \\(L = \\frac{\\rho}{1-\\rho}\\)\nMittlere Durchlaufzeit (M/M/1): \\(W = \\frac{1}{\\mu(1-\\rho)}\\)",
-    "crumbs": [
-      "02 Leistung",
-      "Tutorium"
-    ]
-  },
-  {
-    "objectID": "tutorials/tutorial-02.html#einführung",
-    "href": "tutorials/tutorial-02.html#einführung",
-    "title": "Übung 02",
-    "section": "",
-    "text": "Diese Übung behandelt zwei zentrale Themen der Kapazitätsplanung in der Produktion: Warteschlangensysteme und Fließbandabstimmung.\nWichtige Formeln:\n\nLittle’s Gesetz: \\(L = \\lambda \\cdot W\\) (Bestand = Ankunftsrate × Durchlaufzeit)\nAuslastung: \\(\\rho = \\frac{\\lambda}{\\mu}\\) (bei einem Server)\nMittlerer Bestand (M/M/1): \\(L = \\frac{\\rho}{1-\\rho}\\)\nMittlere Durchlaufzeit (M/M/1): \\(W = \\frac{1}{\\mu(1-\\rho)}\\)",
+    "text": "Ein Automobilzulieferer betreibt eine Fertigungslinie mit 4 Bearbeitungsstationen für Getriebekomponenten. Die Stationen haben folgende Bearbeitungsraten (in Stück pro Stunde):\n\nStation 1 (Drehen): \\(\\mu_1 = 3\\)\nStation 2 (Fräsen): \\(\\mu_2 = 3\\)\nStation 3 (Schleifen): \\(\\mu_3 = 4\\)\nStation 4 (Qualitätskontrolle): \\(\\mu_4 = 3\\)\n\nZwischen den Stationen sind unbeschränkte Puffer vorhanden. Die Zwischenankunfts- und Bearbeitungszeiten sind exponentialverteilt.\n\nBestimmen Sie für die Ankunftsraten \\(\\lambda_1 = 2\\) und \\(\\lambda_1 = 3\\) Stück/h vor der ersten Station:\n\nDie Produktionsrate des Systems\nDie Ankunftsraten an den einzelnen Stationen\n\nBerechnen Sie für beide Szenarien aus a):\n\nDie Auslastung jeder Station und die durchschnittliche Systemauslastung\nDen mittleren Bestand an jeder Station und im Gesamtsystem\nDie mittlere Durchlaufzeit pro Station und die Gesamtdurchlaufzeit\n\nFür \\(\\lambda_1 = 2\\): Wie hoch ist die Wahrscheinlichkeit, dass sich an Station 1:\n\nGenau 5 Werkstücke befinden?\nHöchstens 5 Werkstücke befinden?\nDie Station leer ist?\n\nEine zusätzliche Vorbearbeitungsstation hat \\(\\lambda = 5\\) und \\(\\mu = 7\\). Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.",
     "crumbs": [
       "02 Leistung",
       "Tutorium"
@@ -339,8 +317,8 @@
     "objectID": "tutorials/tutorial-02.html#aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion",
     "href": "tutorials/tutorial-02.html#aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion",
     "title": "Übung 02",
-    "section": "Aufgabe 1 - Warteschlangenanalyse in der Automobilproduktion",
-    "text": "Aufgabe 1 - Warteschlangenanalyse in der Automobilproduktion\nEin Automobilzulieferer betreibt eine Fertigungslinie mit 4 Bearbeitungsstationen für Getriebekomponenten. Die Stationen haben folgende Bearbeitungsraten (in Stück pro Stunde):\n\nStation 1 (Drehen): \\(\\mu_1 = 3\\)\nStation 2 (Fräsen): \\(\\mu_2 = 3\\)\nStation 3 (Schleifen): \\(\\mu_3 = 4\\)\nStation 4 (Qualitätskontrolle): \\(\\mu_4 = 3\\)\n\nZwischen den Stationen sind unbeschränkte Puffer vorhanden. Die Zwischenankunfts- und Bearbeitungszeiten sind exponentialverteilt.\n\nBestimmen Sie für die Ankunftsraten \\(\\lambda_1 = 2\\) und \\(\\lambda_1 = 3\\) Stück/h vor der ersten Station:\n\nDie Produktionsrate des Systems\nDie Ankunftsraten an den einzelnen Stationen\n\nBerechnen Sie für beide Szenarien aus a):\n\nDie Auslastung jeder Station und die durchschnittliche Systemauslastung\nDen mittleren Bestand an jeder Station und im Gesamtsystem\nDie mittlere Durchlaufzeit pro Station und die Gesamtdurchlaufzeit\n\nFür \\(\\lambda_1 = 2\\): Wie hoch ist die Wahrscheinlichkeit, dass sich an Station 1:\n\nGenau 5 Werkstücke befinden?\nHöchstens 5 Werkstücke befinden?\nDie Station leer ist?\n\nEine zusätzliche Vorbearbeitungsstation hat \\(\\lambda = 5\\) und \\(\\mu = 7\\). Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.",
+    "section": "",
+    "text": "Ein Automobilzulieferer betreibt eine Fertigungslinie mit 4 Bearbeitungsstationen für Getriebekomponenten. Die Stationen haben folgende Bearbeitungsraten (in Stück pro Stunde):\n\nStation 1 (Drehen): \\(\\mu_1 = 3\\)\nStation 2 (Fräsen): \\(\\mu_2 = 3\\)\nStation 3 (Schleifen): \\(\\mu_3 = 4\\)\nStation 4 (Qualitätskontrolle): \\(\\mu_4 = 3\\)\n\nZwischen den Stationen sind unbeschränkte Puffer vorhanden. Die Zwischenankunfts- und Bearbeitungszeiten sind exponentialverteilt.\n\nBestimmen Sie für die Ankunftsraten \\(\\lambda_1 = 2\\) und \\(\\lambda_1 = 3\\) Stück/h vor der ersten Station:\n\nDie Produktionsrate des Systems\nDie Ankunftsraten an den einzelnen Stationen\n\nBerechnen Sie für beide Szenarien aus a):\n\nDie Auslastung jeder Station und die durchschnittliche Systemauslastung\nDen mittleren Bestand an jeder Station und im Gesamtsystem\nDie mittlere Durchlaufzeit pro Station und die Gesamtdurchlaufzeit\n\nFür \\(\\lambda_1 = 2\\): Wie hoch ist die Wahrscheinlichkeit, dass sich an Station 1:\n\nGenau 5 Werkstücke befinden?\nHöchstens 5 Werkstücke befinden?\nDie Station leer ist?\n\nEine zusätzliche Vorbearbeitungsstation hat \\(\\lambda = 5\\) und \\(\\mu = 7\\). Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.",
     "crumbs": [
       "02 Leistung",
       "Tutorium"
@@ -384,18 +362,7 @@
     "href": "tutorials/tutorial-04.html",
     "title": "Übung 04",
     "section": "",
-    "text": "Diese Übung behandelt die operative Produktionsplanung mit zwei zentralen Planungsaufgaben: die aggregierte Produktionsprogrammplanung zur Beschäftigungsglättung und die Losgrößenplanung zur optimalen Auftragsgrößenbestimmung.\nWichtige Modelle und Formeln:\nAGGRPLAN (Aggregierte Planung):\n\nZielfunktion: \\(\\text{Min } Z = \\sum_{k,t} h_k \\cdot y_{kt} + \\sum_t u_t \\cdot U_t\\)\nLagerbilanz: \\(y_{k,t-1} + x_{kt} - y_{kt} = d_{kt}\\)\nKapazitätsbeschränkungen: \\(\\sum_k a_k^C \\cdot x_{kt} \\leq b_t^{C_{max}}\\), \\(\\sum_k a_k^N \\cdot x_{kt} - U_t \\leq b_t^{N_{max}}\\)\n\nSIULSP (Losgrößenplanung):\n\nZielfunktion: \\(\\text{Min } Z = \\sum_t (s \\cdot \\gamma_t + h \\cdot y_t)\\)\nBedarfsdeckung: \\(y_{t-1} + q_t - y_t = d_t\\)\nSetup-Kopplung: \\(q_t \\leq M \\cdot \\gamma_t\\)",
-    "crumbs": [
-      "04 Produktion",
-      "Tutorium"
-    ]
-  },
-  {
-    "objectID": "tutorials/tutorial-04.html#einführung",
-    "href": "tutorials/tutorial-04.html#einführung",
-    "title": "Übung 04",
-    "section": "",
-    "text": "Diese Übung behandelt die operative Produktionsplanung mit zwei zentralen Planungsaufgaben: die aggregierte Produktionsprogrammplanung zur Beschäftigungsglättung und die Losgrößenplanung zur optimalen Auftragsgrößenbestimmung.\nWichtige Modelle und Formeln:\nAGGRPLAN (Aggregierte Planung):\n\nZielfunktion: \\(\\text{Min } Z = \\sum_{k,t} h_k \\cdot y_{kt} + \\sum_t u_t \\cdot U_t\\)\nLagerbilanz: \\(y_{k,t-1} + x_{kt} - y_{kt} = d_{kt}\\)\nKapazitätsbeschränkungen: \\(\\sum_k a_k^C \\cdot x_{kt} \\leq b_t^{C_{max}}\\), \\(\\sum_k a_k^N \\cdot x_{kt} - U_t \\leq b_t^{N_{max}}\\)\n\nSIULSP (Losgrößenplanung):\n\nZielfunktion: \\(\\text{Min } Z = \\sum_t (s \\cdot \\gamma_t + h \\cdot y_t)\\)\nBedarfsdeckung: \\(y_{t-1} + q_t - y_t = d_t\\)\nSetup-Kopplung: \\(q_t \\leq M \\cdot \\gamma_t\\)",
+    "text": "Ein Unternehmen produziert zwei Produkte (P1, P2) für die folgenden Nachfragemengen in den nächsten vier Perioden ermittelt wurden:\n\n\n\n\\(d_{k,t}\\)\n\\(t=1\\)\n\\(t=2\\)\n\\(t=3\\)\n\\(t=4\\)\n\n\n\n\nP1\n20\n50\n30\n20\n\n\nP2\n50\n20\n60\n30\n\n\n\nWeitere Daten:\n\nKapazitätsbedarf P1: 1 Maschinenstunde, 1,5 Personenstunden pro Einheit\nKapazitätsbedarf P2: 2 Maschinenstunden, 0,5 Personenstunden pro Einheit\nVerfügbare Kapazität pro Periode: 150 Maschinenstunden, 70 Personenstunden\nMaximale Überstunden: 50 pro Periode\nLagerkostensatz: 1 GE/(Einheit·Periode) für beide Produkte\nÜberstundenkostensatz: 2 GE/Stunde (alle Perioden)\nAnfangslagerbestände: \\(y_{1,0} = y_{2,0} = 0\\)\n\n\nFormulieren Sie das vollständige mathematische Modell zur Beschäftigungsglättung.\nBerechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständiger Bedarfsdeckung ohne Lagerhaltung.\nBestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.\nWie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?",
     "crumbs": [
       "04 Produktion",
       "Tutorium"
@@ -405,8 +372,8 @@
     "objectID": "tutorials/tutorial-04.html#aufgabe-1---aggregierte-produktionsplanung",
     "href": "tutorials/tutorial-04.html#aufgabe-1---aggregierte-produktionsplanung",
     "title": "Übung 04",
-    "section": "Aufgabe 1 - Aggregierte Produktionsplanung",
-    "text": "Aufgabe 1 - Aggregierte Produktionsplanung\nEin Unternehmen produziert zwei Produkte (P1, P2) für die folgenden Nachfragemengen in den nächsten vier Perioden ermittelt wurden:\n\n\n\n\\(d_{k,t}\\)\n\\(t=1\\)\n\\(t=2\\)\n\\(t=3\\)\n\\(t=4\\)\n\n\n\n\nP1\n20\n50\n30\n20\n\n\nP2\n50\n20\n60\n30\n\n\n\nWeitere Daten:\n\nKapazitätsbedarf P1: 1 Maschinenstunde, 1,5 Personenstunden pro Einheit\nKapazitätsbedarf P2: 2 Maschinenstunden, 0,5 Personenstunden pro Einheit\nVerfügbare Kapazität pro Periode: 150 Maschinenstunden, 70 Personenstunden\nMaximale Überstunden: 50 pro Periode\nLagerkostensatz: 1 GE/(Einheit·Periode) für beide Produkte\nÜberstundenkostensatz: 2 GE/Stunde (alle Perioden)\nAnfangslagerbestände: \\(y_{1,0} = y_{2,0} = 0\\)\n\n\nFormulieren Sie das vollständige mathematische Modell zur Beschäftigungsglättung.\nBerechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständiger Bedarfsdeckung ohne Lagerhaltung.\nBestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.\nWie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?",
+    "section": "",
+    "text": "Ein Unternehmen produziert zwei Produkte (P1, P2) für die folgenden Nachfragemengen in den nächsten vier Perioden ermittelt wurden:\n\n\n\n\\(d_{k,t}\\)\n\\(t=1\\)\n\\(t=2\\)\n\\(t=3\\)\n\\(t=4\\)\n\n\n\n\nP1\n20\n50\n30\n20\n\n\nP2\n50\n20\n60\n30\n\n\n\nWeitere Daten:\n\nKapazitätsbedarf P1: 1 Maschinenstunde, 1,5 Personenstunden pro Einheit\nKapazitätsbedarf P2: 2 Maschinenstunden, 0,5 Personenstunden pro Einheit\nVerfügbare Kapazität pro Periode: 150 Maschinenstunden, 70 Personenstunden\nMaximale Überstunden: 50 pro Periode\nLagerkostensatz: 1 GE/(Einheit·Periode) für beide Produkte\nÜberstundenkostensatz: 2 GE/Stunde (alle Perioden)\nAnfangslagerbestände: \\(y_{1,0} = y_{2,0} = 0\\)\n\n\nFormulieren Sie das vollständige mathematische Modell zur Beschäftigungsglättung.\nBerechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständiger Bedarfsdeckung ohne Lagerhaltung.\nBestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.\nWie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?",
     "crumbs": [
       "04 Produktion",
       "Tutorium"

@@ -284,8 +284,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#einführung" id="toc-einführung" class="nav-link active" data-scroll-target="#einführung">Einführung</a></li>
-  <li><a href="#aufgabe-1---aggregierte-produktionsplanung" id="toc-aufgabe-1---aggregierte-produktionsplanung" class="nav-link" data-scroll-target="#aufgabe-1---aggregierte-produktionsplanung">Aufgabe 1 - Aggregierte Produktionsplanung</a></li>
+  <li><a href="#aufgabe-1---aggregierte-produktionsplanung" id="toc-aufgabe-1---aggregierte-produktionsplanung" class="nav-link active" data-scroll-target="#aufgabe-1---aggregierte-produktionsplanung">Aufgabe 1 - Aggregierte Produktionsplanung</a></li>
   <li><a href="#aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren" id="toc-aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren" class="nav-link" data-scroll-target="#aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren">Aufgabe 2 - Losgrößenplanung mit verschiedenen Verfahren</a></li>
   <li><a href="#aufgabe-3---kapazitätsbeschränkte-losgrößenplanung" id="toc-aufgabe-3---kapazitätsbeschränkte-losgrößenplanung" class="nav-link" data-scroll-target="#aufgabe-3---kapazitätsbeschränkte-losgrößenplanung">Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung</a></li>
   </ul>
@@ -314,23 +313,6 @@ window.Quarto = {
 </header>
 
 
-<section id="einführung" class="level2">
-<h2 class="anchored" data-anchor-id="einführung">Einführung</h2>
-<p>Diese Übung behandelt die operative Produktionsplanung mit zwei zentralen Planungsaufgaben: die aggregierte Produktionsprogrammplanung zur Beschäftigungsglättung und die Losgrößenplanung zur optimalen Auftragsgrößenbestimmung.</p>
-<p><strong>Wichtige Modelle und Formeln:</strong></p>
-<p><strong>AGGRPLAN (Aggregierte Planung):</strong></p>
-<ul>
-<li>Zielfunktion: <span class="math inline">\(\text{Min } Z = \sum_{k,t} h_k \cdot y_{kt} + \sum_t u_t \cdot U_t\)</span></li>
-<li>Lagerbilanz: <span class="math inline">\(y_{k,t-1} + x_{kt} - y_{kt} = d_{kt}\)</span></li>
-<li>Kapazitätsbeschränkungen: <span class="math inline">\(\sum_k a_k^C \cdot x_{kt} \leq b_t^{C_{max}}\)</span>, <span class="math inline">\(\sum_k a_k^N \cdot x_{kt} - U_t \leq b_t^{N_{max}}\)</span></li>
-</ul>
-<p><strong>SIULSP (Losgrößenplanung):</strong></p>
-<ul>
-<li>Zielfunktion: <span class="math inline">\(\text{Min } Z = \sum_t (s \cdot \gamma_t + h \cdot y_t)\)</span></li>
-<li>Bedarfsdeckung: <span class="math inline">\(y_{t-1} + q_t - y_t = d_t\)</span></li>
-<li>Setup-Kopplung: <span class="math inline">\(q_t \leq M \cdot \gamma_t\)</span></li>
-</ul>
-</section>
 <section id="aufgabe-1---aggregierte-produktionsplanung" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-1---aggregierte-produktionsplanung">Aufgabe 1 - Aggregierte Produktionsplanung</h2>
 <p>Ein Unternehmen produziert zwei Produkte (P1, P2) für die folgenden Nachfragemengen in den nächsten vier Perioden ermittelt wurden:</p>
@@ -372,10 +354,10 @@ window.Quarto = {
 <li>Anfangslagerbestände: <span class="math inline">\(y_{1,0} = y_{2,0} = 0\)</span></li>
 </ul>
 <ol type="a">
-<li><p>Formulieren Sie das vollständige mathematische Modell zur Beschäftigungsglättung.</p></li>
-<li><p>Berechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständiger Bedarfsdeckung ohne Lagerhaltung.</p></li>
-<li><p>Bestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.</p></li>
-<li><p>Wie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?</p></li>
+<li>Formulieren Sie das vollständige mathematische Modell zur Beschäftigungsglättung.</li>
+<li>Berechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständiger Bedarfsdeckung ohne Lagerhaltung.</li>
+<li>Bestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.</li>
+<li>Wie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?</li>
 </ol>
 </section>
 <section id="aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren" class="level2">
@@ -401,9 +383,9 @@ window.Quarto = {
 <li>Produktionszeit: 0,5 Stunden pro Einheit</li>
 </ul>
 <ol type="a">
-<li><p>Formulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschränkte Problem.</p></li>
-<li><p>Analysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.</p></li>
-<li><p>Welche Auswirkungen haben Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren?</p></li>
+<li>Formulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschränkte Problem.</li>
+<li>Analysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.</li>
+<li>Welche Auswirkungen haben Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren?</li>
 </ol>
 
 
