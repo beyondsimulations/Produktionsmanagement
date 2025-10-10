@@ -14,22 +14,25 @@ Die folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihr
 | Erzeugnis C |  |  |  | X |  | X |
 | Erzeugnis D |  | X |  |  | X | X |
 
-a) Bilden Sie geeignete Erzeugnisfamilien für die Produktionsinseln! Welche Probleme ergeben sich bei den Maschinen 1 und 6? Welche alternativen Organisationsformen bieten sich in diesem Fall an?
+a) Bilden Sie geeignete Erzeugnisfamilien für die Produktionsinseln! Ergeben sich irgendwelche Probleme?
+b) Was ist der Unterschied zwischen der Werkstatt und der Zentrenproduktion?
 
-## Aufgabe 2 - Leistungsanalyse
+## Aufgabe 2 - Flexible Fertigungssysteme
 
-Leistungsanalyse von Flexiblen-Fertigungssystemen
+Gegeben sei ein geschlossenes Warteschlangennetzwerk mit 3 Bearbeitungsstationen (je eine gleichartige Maschine) und einem verbindenden Transportsystem.
+Die mittleren Bearbeitungszeiten der Maschinen betragen $b_{1}=50, b_{2}=70$ und $b_{3}=30$, die mittlere Transportzeit beträgt $b_{4}=12$.
+Die Routingwahrscheinlichkeiten für die einzelnen Maschinen seien $p_{1}=0,4, p_{2}=0,25$ und $p_{3}=0,35$.
+Das Transportsystem wird nach jeder Bearbeitung benötigt. Es sind genügend Palletten im System, um eine Engpassauslastung von $100 \%$ zu gewährleisten. Ein Werkstück wird durchschnittlich 8 mal bearbeitet.
 
-Gegeben sei ein geschlossenes Warteschlangennetzwerk mit 3 Bearbeitungsstationen (je eine gleichartige Maschine) und einem verbindenden Transportsystem. Die mittleren Bearbeitungszeiten der Maschinen betragen $b_{1}=50, b_{2}=70$ und $b_{3}=30$, die mittlere Transportzeit beträgt $b_{4}=12$. Die Routingwahrscheinlichkeiten für die einzelnen Maschinen seien $p_{1}=0,4, p_{2}=0,25$ und $p_{3}=0,35$. Das Transportsystem wird nach jeder Bearbeitung benötigt. Es sind genügend Palletten im System, um eine Engpassauslastung von $100 \%$ zu gewährleisten. Ein Werkstück wird durchschnittlich 8 mal bearbeitet.
-
-a) Bestimmen Sie die mittlere Arbeitsbelastung der Maschinen und des Transportsystems .
+a) Bestimmen Sie die mittlere Arbeitsbelastung der Maschinen und des Transportsystems.
 b) Bestimmen Sie den Engpass.
-c) Bestimmen Sie die Auslastung der Maschinen und des Transportsystems, die Produktionsraten der Stationen sowie die Produktionsrate des Systems .
+c) Bestimmen Sie die Auslastung der Maschinen und des Transportsystems, die Produktionsraten der Stationen sowie die Produktionsrate des Systems.
 d) Ist das Ergebnis weiterhin realistisch, wenn die Anzahl an Palletten begrenzt ist?
 
-Aufgabe 3 - Statistische Qualitätskontrolle
+## Aufgabe 3 - Statistische Qualitätskontrolle
 
-Eine alteingesessene Duisburger Spirituosenfabrik produziert den Schnaps "Studentenglück" mit einem Soll-Alkoholgehalt von $40 \%$, welcher im Durchschnitt auch erreicht wird. Da die Duisburger Studenten neuerdings besonders großen Wert darauf legen, dass die Angabe des Alkoholgehalts stimmt sollen die bisher jährlich durchgeführten Stichproben (Umfang $n=5$ Proben pro Stichprobe) intensiviert werden. Die Stichproben der letzten 4 Jahre ergaben folgende Werte:
+Eine alteingesessene Duisburger Spirituosenfabrik produziert den Schnaps "Studentenglück" mit einem Soll-Alkoholgehalt von $40 \%$, welcher im Durchschnitt auch erreicht wird. Da die Duisburger Studenten neuerdings besonders großen Wert darauf legen, dass die Angabe des Alkoholgehalts stimmt sollen die bisher jährlich durchgeführten Stichproben (Umfang $n=5$ Proben pro Stichprobe) intensiviert werden.
+Die Stichproben der letzten 4 Jahre ergaben folgende Werte:
 
 | Stichprobe | Probe 1 | Probe 2 | Probe 3 | Probe 4 | Probe 5 |
 | :--: | :--: | :--: | :--: | :--: | :--: |

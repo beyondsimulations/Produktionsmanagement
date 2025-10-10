@@ -3,13 +3,114 @@ title: "Übung 05"
 subtitle: "Ressourceneinsatzplanung & Losgrößen"
 ---
 
-## Aufgabe 1 - Losgrößen und Ressourceneinsatzplanung
+## Aufgabe 1 - Montageplanung
 
-In einer Werkstatt wird von 8 Uhr bis 16.30 Uhr gearbeitet (einschließlich einer halben Stunde Pause). Es sollen für einen Kunden zwei Produkte gefertigt werden. Dafür sind die folgenden zwei Aufträge einzuplanen:
+Die Fahrzeugfertigung Zwickau GmbH ist ein traditionsreicher Standort im Automobilbau und hat sich auf die Produktion von Komponenten und die Endmontage von Elektrofahrzeugen spezialisiert. Für die Einführung einer neuen Montagelinie zur Fertigung von Batteriemodulen für das Modell "Saxon-E" müssen die einzelnen Arbeitsschritte genau geplant werden. Das Projektmanagement-Team hat die folgende Liste von Arbeitsgängen (AG), deren Dauer in Stunden (Std.) und die direkten Vorgänger identifiziert:
 
-![img-1.jpeg](img-1.jpeg)
+| Arbeitsgang | Beschreibung                           | Dauer (Std.) | Direkte Vorgänger |
+|-------------|----------------------------------------|--------------|-------------------|
+| A           | Materialbereitstellung Rahmen          | 3            | -                 |
+| B           | Vormontage Zellhalterungen             | 5            | A                 |
+| C           | Einbau Zellhalterungen in Rahmen       | 4            | B                 |
+| D           | Materialbereitstellung Elektronik      | 2            | -                 |
+| E           | Vormontage Steuerungseinheit           | 6            | D                 |
+| F           | Integration Steuerungseinheit          | 3            | C, E              |
+| G           | Qualitätsprüfung & Endverschluss       | 2            | F                 |
 
-Um bestellfixe Kosten zu sparen, sollen beide Produkte in einer Lieferung ausgeliefert werden. Der Verpackungsvorgang dafür dauert nochmal eine Stunde.
+Der Projektstart (Beginn von A und D) ist zum Zeitpunkt 0. Der spätestzulässige Fertigstellungstermin für den gesamten Prozess (Ende von G) ist Stunde 25.
 
-a) Beurteilen Sie kritisch den Einsatz der Durchlaufterminierung im Rahmen der Ressourceneinsatzplanung bei beschränkten Ressourcen!
-b) Wie sieht ein kapazitätsorientierter Ansatz zur Ressourceneinsatzplanung aus! Wie kann man dieses Planungsproblem modellieren?
+**Ihre Aufgaben:**
+
+a) Erstellen Sie ein Netzplan-Diagramm für dieses Projekt.
+b) Führen Sie eine Vorwärtsrechnung durch, um die frühestmöglichen Anfangszeitpunkte (FAZ) und Endzeitpunkte (FEZ) für jeden Arbeitsgang zu bestimmen.
+c) Führen Sie eine Rückwärtsrechnung durch, um die spätestzulässigen Anfangszeitpunkte (SAZ) und Endzeitpunkte (SEZ) für jeden Arbeitsgang zu bestimmen. Gehen Sie davon aus, dass der SEZ des letzten Arbeitsgangs (G) dem spätestzulässigen Projektendtermin entspricht, falls er diesen nicht überschreitet. Andernfalls ist der spätestzulässige Endtermin des Projekts maßgebend für SEZ(G).
+d) Berechnen Sie die Gesamtpufferzeit (GP) für jeden Arbeitsgang.
+e) Identifizieren Sie den kritischen Weg im Projekt.
+f) Was könnte passieren, wenn einige Arbeitsschritte Kapazitätsbeschränkungen unterliegen?
+
+::: {.content-visible when-profile="solution"}
+
+**Lösungshinweise:**
+
+b)  **Vorwärtsrechnung:**
+    *   A: FAZ=0, FEZ=3
+    *   D: FAZ=0, FEZ=2
+    *   B: FAZ=max(FEZ(A))=3, FEZ=3+5=8
+    *   E: FAZ=max(FEZ(D))=2, FEZ=2+6=8
+    *   C: FAZ=max(FEZ(B))=8, FEZ=8+4=12
+    *   F: FAZ=max(FEZ(C)=12, FEZ(E)=8)=12, FEZ=12+3=15
+    *   G: FAZ=max(FEZ(F))=15, FEZ=15+2=17
+    Die minimale Projektdauer beträgt 17 Stunden.
+
+c) **Rückwärtsrechnung (Annahme SEZ(G) = FEZ(G) = 17, um kritischen Pfad zu finden):**
+    *   G: SEZ=17, SAZ=17-2=15
+    *   F: SEZ=min(SAZ(G))=15, SAZ=15-3=12
+    *   C: SEZ=min(SAZ(F))=12, SAZ=12-4=8
+    *   E: SEZ=min(SAZ(F))=12, SAZ=12-6=6
+    *   B: SEZ=min(SAZ(C))=8, SAZ=8-5=3
+    *   A: SEZ=min(SAZ(B))=3, SAZ=3-3=0
+    *   D: SEZ=min(SAZ(E))=6, SAZ=6-2=4
+
+d) **Gesamtpuffer (GP = SAZ - FAZ):**
+    *   A: GP = 0 - 0 = 0
+    *   B: GP = 3 - 3 = 0
+    *   C: GP = 8 - 8 = 0
+    *   D: GP = 4 - 0 = 4
+    *   E: GP = 6 - 2 = 4
+    *   F: GP = 12 - 12 = 0
+    *   G: GP = 15 - 15 = 0
+
+e) **Kritischer Weg (GP=0):**
+    A → B → C → F → G. Die Dauer dieses Pfades ist 3+5+4+3+2 = 17 Stunden.
+
+**Hinweis:** Wenn der gegebene spätestzulässige Projektendtermin (hier 25 Stunden) für die Rückwärtsrechnung verwendet worden wäre (d.h. SEZ(G) = 25), dann wären alle Pufferzeiten positiv gewesen (z.B. GP(G) = SAZ(G) - FAZ(G) = (25-2) - 15 = 23 - 15 = 8). In diesem Fall gäbe es keinen Arbeitsgang mit Pufferzeit Null. Der "kritische Weg" wird typischerweise als der Pfad mit Pufferzeit Null definiert, was impliziert, dass das Projekt so früh wie möglich abgeschlossen wird.
+
+:::
+
+## Aufgabe 1: Planung mit Rüstzustandsübernahme (PLSP)
+
+Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschiedene Getriebetypen: Typ A und Typ B. Die Maschine kann pro Woche nur für einen Typ eingerichtet sein, aber der Rüstzustand kann in die Folgewoche übernommen werden, wenn derselbe Typ weiterproduziert wird. Ein Rüstvorgang ist nur dann nötig, wenn von einem Typ zum anderen gewechselt wird oder nach einer Woche ohne Produktion neu gestartet wird.
+
+**Gegebene Daten:**
+
+*   **Planungshorizont:** 4 Wochen
+*   **Wöchentliche Kapazität:** 60 Stunden
+
+**Produktdaten:**
+
+| Parameter | Getriebe Typ A | Getriebe Typ B |
+| :--- | :--- | :--- |
+| Rüstkosten (s) | 200 GE | 150 GE |
+| Lagerkosten (h) | 5 GE/Stück | 7 GE/Stück |
+| Bearbeitungszeit (tb) | 1,0 h/Stück | 1,2 h/Stück |
+| Rüstzeit (tr) | 10 h | 8 h |
+
+**Nachfrage:**
+
+| Woche (t) | 1 | 2 | 3 | 4 |
+| :--- | :-: | :-: | :-: | :-: |
+| Bedarf Typ A | 20 | 55 | 0 | 0 |
+| Bedarf Typ B | 0 | 0 | 35 | 20 |
+
+
+**Vorgegebener Produktionsplan:**
+
+Um das Konzept zu verstehen, analysieren Sie den folgenden, manuell erstellten Produktionsplan:
+
+-   **Woche 1:** Produziere 50 $\times$ Typ A.
+-   **Woche 2:** Produziere 25 $\times$ Typ A.
+-   **Woche 3:** Produziere 55 $\times$ Typ B.
+-   **Woche 4:** Keine Produktion.
+
+a) Berechnen Sie die gesamten Rüst- und Lagerkosten für den vorgegebenen Plan. Identifizieren Sie, in welcher Woche Rüstkosten eingespart werden.
+b) Überprüfen Sie für jede Woche, ob die Produktions- und Rüstzeiten die verfügbare Kapazität von 60 Stunden einhalten.
+c)  Erläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde.
+
+::: {.content-visible when-profile="solution"}
+
+```{=typst}
+#pagebreak()
+```
+
+
+:::

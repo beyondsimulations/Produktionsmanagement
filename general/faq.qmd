@@ -20,4 +20,8 @@ Die Klausur orientiert sich primär an den Probeklausuren von Herrn Manitz und w
 ### Wie ist die Klausur aufgebaut?
 
 **Die Klausur wird aus etwa 4-5 Teilen bestehen, die alle bearbeitet werden müssen.**
-Um einen Überblick von dem Klausurformat zu bekommen, mit dem ich in der Regel arbeite, schauen Sie sich gerne die Klausur zu [Produktionswirtschaft II](general/pw2-2025.pdf) und [Materiallogistik](general/mlb-2025.pdf) aus dem Frühjahr 2025 an.
+Um einen Überblick von dem Klausurformat zu bekommen, mit dem ich in der Regel arbeite, schauen Sie sich gerne die Klausur zu [Produktionswirtschaft II](pw2-2025.pdf) und [Materiallogistik](mlb-2025.pdf) aus dem Frühjahr 2025 an.
+
+### Wie lange dauert die Klausur?
+
+Die Klausur hat eine Länge von 60 Minuten.

@@ -3,11 +3,11 @@ title: "Übung 01"
 subtitle: "Grundlagen & Standortplanung"
 ---
 
-## Aufgabe 1 - Allgemeine Standortplanung
+## Aufgabe 1 - Standortplanung ohne Kapazität
 
 Ein Unternehmen möchte drei Bedarfszentren von einer Menge noch zu bestimmender Standorte aus beliefern. Nach einer Voranalyse stehen drei potentielle Standorte mit jeweils unbegrenzter Kapazität zur Wahl. Die folgende Tabelle gibt die variablen Kosten für die vollständige Belieferung der Bedarfszentren von den jeweiligen Standorten aus sowie die Fixkosten bei Nutzung eines Standortes an.
 
-| Bedarfszentren <br> Standorte |  |  |  | Fixkosten |
+| Bedarfszentren <br> Standorte | I | II | III | Fixkosten |
 | :-- | :-- | :-- | :-- | :-- |
 | A | 1 | 2 | 3 |  |
 | B | 5 | 4 | 5 | 2 |
@@ -15,20 +15,37 @@ Ein Unternehmen möchte drei Bedarfszentren von einer Menge noch zu bestimmender
 
 a) Bestimmen Sie den/die kostenminimalen Standort(e)!
 b) Wieviele Kombinationsmöglichkeiten müssen geprüft werden?
-c) Wie ändert sich die Komplexität des Problems bei steigender Anzahl an Standorten?
-d) Beschreiben Sie ein Planungsmodell zur Unterstützung der Standortentscheidungen, wenn die Kapazitäten nicht unbeschränkt sind!
-e) Aus welchen zwei Teilproblemen besteht das Standortplanungsproblem?
-f) Formulieren Sie die Zielfunktion für eine konkrete Instanz mit $\mathrm{I}=3$ Standorten (A, B, C) und $\mathrm{J}=3$ Bedarfszentren. Formulieren Sie ebenfalls die zweite Nebenbedingung.
 
+## Aufgabe 2 - Modellierung der Standortplanung
 
-g) Für die Problemstellung sind zusätzlich folgende Angaben gegeben:
+a) Notieren Sie das zugehörige Planungsmodell zur Unterstützung der Standortentscheidungen, wenn die Kapazitäten im Problem nicht unbeschränkt sind in der allgemeinen Form!
+b) Aus welchen zwei Teilproblemen besteht das Standortplanungsproblem?
+c) Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Bedarfszentren (I, II, III).
+d) Formulieren Sie explizit die zweite Nebenbedingung des Standortproblems.
 
-| $c_{i w}$ | 1 | 2 | 3 | $f_{i}$ | $b_{i}$ |
+## Aufgabe 3 - Standortplanung mit Kapazität
+
+| $c_{i w}$ | I | II | III | $f_{i}$ | $b_{i}$ |
 | :--: | :--: | :--: | :--: | :--: | :--: |
 | A | 1 | 2 | 3 | 1000 | 400 |
 | B | 4 | 5 | 6 | 1200 | 400 |
 | C | 7 | 8 | 9 | 900 | 400 |
 
-Kunde 1 hat einen Bedarf von $d_{1}=200$, Kunde 2 von $d_{2}=300$ und Kunde drei von $d_{3}=250$ Einheiten. Die Entscheidungsvariablen sollen so gesetzt werden, dass die ersten beiden Standorte (A, B) eingerichtet werden. Die Belieferung des ersten Kunden wird komplett von Standort A und die des dritten Kunden komplett von Standort B aus durchgeführt. Der zweite Kunde wird je zur Hälfte von den Standorten A und B beliefert.
-Berechnen Sie den Zielfunktionswert! Prüfen Sie zusätzlich die Zulässigkeit der Lösung anhand der zweiten Nebenbedingung!
-h) Ist die Lösung immer noch zulässig, wenn Kunde 2 komplett von Standort A aus beliefert werden soll?
+a) Für die Problemstellung sind zusätzlich folgende Angaben gegeben: Kunde 1 hat einen Bedarf von $d_{1}=200$, Kunde 2 von $d_{2}=300$ und Kunde drei von $d_{3}=250$ Einheiten. Die Entscheidungsvariablen sollen so gesetzt werden, dass die ersten beiden Standorte (A, B) eingerichtet werden. Die Belieferung des ersten Kunden wird komplett von Standort A und die des dritten Kunden komplett von Standort B aus durchgeführt. Der zweite Kunde wird je zur Hälfte von den Standorten A und B beliefert. Berechnen Sie den Zielfunktionswert.
+b) Prüfen Sie die Zulässigkeit der Lösung anhand der zweiten Nebenbedingung.
+h) Ist die Lösung zulässig, wenn Kunde 2 komplett von Standort A aus beliefert werden soll?
+
+## Aufgabe 4 - Heuristiken zur Standortplanung
+
+Ein Unternehmen möchte drei Abnehmer von einer Menge noch zu bestimmender Standorte aus beliefern. Nach einer Voranalyse stehen drei potentielle Standorte mit jeweils einer begrenzten Kapazität zur Auswahl. Für die Belieferung der Abnehmer von den potentiellen Standorten aus sind die folgenden Transportkostensätze (pro Mengeneinheit), die Bedarfsmengen sowie die Fixkosten bei Errichtung eines Standortes gegeben:
+
+| Abnehmer <br> Standorte | I | II | III | Fixkosten | Kapazität |
+| :--: | :--: | :--: | :--: | :--: | :--: |
+| A | 4 | 4 | 9 | 60 | 25 |
+| B | 8 | 7 | 2 | 60 | 20 |
+| C | 6 | 3 | 5 | 70 | 25 |
+| Bedarfsmengen | 20 | 10 | 10 |  |  |
+
+a) Bestimmen Sie den/die kostenminimalen Standort(e) unter Verwendung der Add-Heuristik.
+b) Sind die Lösungen auf Basis einer Heuristik optimal? Begründen Sie Ihre Antwort.
+c) Auf welcher Managementebene sind Entscheidungen bezüglich der Produktionsstandortwahl angesiedelt?

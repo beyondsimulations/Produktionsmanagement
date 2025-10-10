@@ -7,18 +7,28 @@ subtitle: "Fließbandproduktion & Leistungsanalysen"
 
 Gegeben sei ein Warteschlangensystem mit 4 Stationen. Die Bearbeitungsraten der einzelnen Stationen seien: $\mu_{1}=3 ; \mu_{2}=3 ; \mu_{3}=4 ; \mu_{4}=3$
 
-(a Bestimmen Sie jeweils für die Ankunftsraten $\lambda_{1}=2$ und $\lambda_{1}=3$ vor der ersten Maschine die Produktionsrate des Systems.
-(b Bestimmen Sie für oben genannte Systeme ebenfalls die Auslastung der einzelnen Stationen, die Gesamtauslastung des Systems, den mittleren Bestand an den einzelnen Stationen und im gesamten System sowie die mittlere Durchlaufzeit eines Werkstücks an jeder Station und im gesamten System.
-(c Wie hoch ist die Wahrscheinlichkeit, dass sich genau 5 Werkstücke in oder vor der ersten Maschine befinden? Wie hoch ist die Wahrscheinlichkeit, dass sich 5 oder weniger Werkstücke in oder vor der ersten Maschine befinden?
-(d Die Ankunftsrate vor einer Station i betrage $\lambda_{i}=5$ bei einer Bearbeitungsrate von $\mu_{i}=7$. Bestimmen Sie den mittleren Bestand der Station i (Tipp: berechnen Sie zuerst die Bearbeitungszeit sowie die Auslastung der Station).# 4. Konfigurationsplanung bei Fließproduktion
+a) Bestimmen Sie jeweils für die Ankunftsraten $\lambda_{1}=2$ und $\lambda_{1}=3$ vor der ersten Maschine die Produktionsrate des Systems.
+b) Bestimmen Sie für oben genannte Systeme ebenfalls die Auslastung der einzelnen Stationen, die Gesamtauslastung des Systems, den mittleren Bestand an den einzelnen Stationen und im gesamten System sowie die mittlere Durchlaufzeit eines Werkstücks an jeder Station und im gesamten System.
+c) Wie hoch ist die Wahrscheinlichkeit, dass sich genau 5 Werkstücke in oder vor der ersten Maschine befinden? Wie hoch ist die Wahrscheinlichkeit, dass sich 5 oder weniger Werkstücke in oder vor der ersten Maschine befinden?
+d) Die Ankunftsrate vor einer Station i betrage $\lambda_{i}=5$ bei einer Bearbeitungsrate von $\mu_{i}=7$. Bestimmen Sie den mittleren Bestand der Station i.
 
-## Aufgabe 2 - Fließbandproduktion
+:::{.callout-tip}
+Berechnen Sie für d. zuerst die Bearbeitungszeit sowie die Auslastung der Station.
+:::
+
+## Aufgabe 2 - Fließbandabstimmung
 
 Es sollen pro Schicht (8 Stunden) insgesamt 40 Mengeneinheiten eines hochwertigen Erzeugnisses hergestellt werden. Man produziert in Massenproduktion. Die Arbeitssysteme sollen gemäß der Reihenfolge der Arbeitsgänge angeordnet werden. Der folgende Vorranggraph zeigt die technologisch bedingten Reihenfolgerestriktionen in Bezug auf die Arbeitselemente. Die zusätzlichen Angaben rechts oberhalb der Knoten zeigen die zugehörigen Elementzeiten in Minuten.
-![img-0.jpeg](img-0.jpeg)
-(a) Wie groß darf die Taktzeit höchstens sein?
-(b) Welche theoretisch minimale Anzahl an Arbeitsstationen ist notwendig? Wie viele Stationen werden maximal benötigt?
-(c) Beschreiben Sie ein Modell zum klassischen Fließbandabstimmungsproblem. Formulieren Sie Zielfunktion und Nebenbedingungen mathematisch und erklären Sie deren Funktion .
-(d) Beschreiben Sie die Effekte des Starving und Blocking (wie kommen sie zustande, wie kann ihnen vorgebeugt werden).
-(e) Was passiert unter Annahme stochastischer Bearbeitungszeiten mit der Produktionsrate, wenn die Puffer nicht unbeschränkt groß sind?
-(f) Warum ist es ökonomisch sinnvoll und in der Realität notwendig, dass Pufferkapazitäten begrenzt werden?
+
+a) Wie groß darf die Taktzeit höchstens sein?
+b) Welche theoretisch minimale Anzahl an Arbeitsstationen ist notwendig? Wie viele Stationen werden maximal benötigt?
+c) Beschreiben Sie die Effekte des Starving und Blocking.
+
+## Aufgabe 3 - Leistungsanalyse
+
+Die erste Station eines Fließproduktionssystems liefert Werkstücke mit einer Rate von $\lambda=0.07$ Stück pro Zeiteinheit (ZE) an nachfolgende Bearbeitungsstationen. Die mittlere Bearbeitungszeit beträgt für alle Stationen jeweils $b=\frac{\lambda}{\mu}=11 \mathrm{ZE}$ pro Werkstück. Die Bearbeitungszeiten an den einzelnen Stationen sind stochastisch; man nimmt an, dass sie exponentialverteilt sind. Zwischen den einzelnen Stationen sind ausreichend große Pufferbereiche eingerichtet worden.
+
+a) Bestimmen Sie die Auslastung $\rho=\frac{\lambda}{\mu}$, den mittleren Bestand $L=\frac{\rho}{1-\rho}$ sowie die mittlere Durchlaufzeit an einer Station in diesem Fließproduktionssystem!
+b) Die Wahrscheinlichkeit, dass sich im stationären Zustand genau $n$ Kunden in einem Warteschlangensystem befinden, beträgt $\mathrm{P}[N=n]=\rho^{n} \cdot(1-\rho)$. Mit welcher Wahrscheinlichkeit ist eine Bearbeitungsstation unbeschäftigt bzw. leer? Wie hoch ist die Wahrscheinlichkeit, dass sich $n=3$ oder weniger Werkstücke an einer Maschine befinden? Mit welcher Wahrscheinlichkeit befinden sich $n=4$ oder mehr Werkstücke an einer Station?
+c) Wie groß ist die Produktionsrate des Systems?
+d) Könnten Sie mit dem identischen Vorgehen auch die Werte berechnen, falls der Puffer beschränkt wäre? Begründen Sie Ihre Antwort.
