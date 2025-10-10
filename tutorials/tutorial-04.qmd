@@ -3,4 +3,31 @@ title: "Übung 04"
 subtitle: "Produktionsprogrammplanung"
 ---
 
-## Aufgabe 1
+## Aufgabe 1 - Aggregierte Planung
+
+Ein Unternehmen produziert zwei Produkte für die die folgenden Nachfragemengen für die nächsten vier Perioden ermittelt wurden:
+
+| $d_{k, t}$ | $t=1$ | $t=2$ | $t=3$ | $t=4$ |
+| :--: | :--: | :--: | :--: | :--: |
+| P1 | 20 | 50 | 30 | 20 |
+| P2 | 50 | 20 | 60 | 30 |
+
+Für die Fertigung einer Einheit von P1 benötigt man eine Maschinenstunde und 1,5 Personenstunden (P2: 2 und 0,5). Pro Periode stehen 150 Stunden Maschinenzeit und 70 Stunden Arbeitszeit zur Verfügung. Es dürfen jede Periode 50 Überstunden gemacht werden. Der Lagerkostensatz beträgt für beide Produkte eine GE pro Periode. Jede Überstunde kostet periodenunabhängig 2 GE.
+
+a) Beschreiben Sie ein Modell zur Beschäftigungsglättung.
+b) Wie lassen sich in einem Modell zu diesem Planungsproblem Mindestproduktionsmengen (Losgrößen) berücksichtigen?
+c) Wie viele Nebenbedingungen hat das Modell für das obige Beispiel konkret?
+d) Formulieren Sie die Zielfunktion sowie die Lagerbilanzgleichung für das obige Beispiel aus.
+e) Ist ein nachfragesynchroner Produktionsplan zulässig? Wie verändert sich die optimale Lösung, wenn für die Inanspruchnahme von Zusatzkapazität hohe Überstundenzuschläge und/oder auf Grund der notwendigen Transporte bei der Nutzung externer Reservekapazitäten hohe Zusatzkosten anfallen?
+f) Liefert die Planung mithilfe des AGGRPLAN-Modells einen zulässigen Produktionsplan?
+
+## Aufgabe 2 - Losgrößenplanung
+
+Für ein Endprodukt liegen die folgenden periodenbezogenen Bedarfsprognosen vor: $30,90,20,0,50$. Es wird mit einem Lagerkostensatz von 2 Euro und einem Rüstkostensatz von 250 Euro gerechnet.
+
+a) Beschreiben Sie ein Modell zur Einprodukt-Losgrößenplanung .
+b) Welchen Wert muss "Big-M" für das obige Beispiel mindestens annehmen?
+c) Wie kann/muss das Modell angepasst werden, wenn beschränkte Kapazitäten berücksichtigt werden sollen? Gehen Sie davon aus, dass die verfügbare Kapazität sowohl durch die Produktion wie auch durch die Rüstvorgänge belastet wird!
+d) Wie viele Binärvariablen und Nebenbedingungen hat das konkrete Problem?
+e) Welche heuristischen Verfahren zur Lösung des SLULSP kennen Sie?
+f) Bestimmen Sie jeweils eine Lösung mithilfe des Groff-, Silver-Meal-, und Wagner-Whitin-Verfahrens. Welche Aussage können Sie zur Qualität der einzelnen Lösungen machen?

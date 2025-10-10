@@ -3,4 +3,13 @@ title: "Übung 05"
 subtitle: "Ressourceneinsatzplanung & Losgrößen"
 ---
 
-## Aufgabe 1
+## Aufgabe 1 - Losgrößen und Ressourceneinsatzplanung
+
+In einer Werkstatt wird von 8 Uhr bis 16.30 Uhr gearbeitet (einschließlich einer halben Stunde Pause). Es sollen für einen Kunden zwei Produkte gefertigt werden. Dafür sind die folgenden zwei Aufträge einzuplanen:
+
+![img-1.jpeg](img-1.jpeg)
+
+Um bestellfixe Kosten zu sparen, sollen beide Produkte in einer Lieferung ausgeliefert werden. Der Verpackungsvorgang dafür dauert nochmal eine Stunde.
+
+a) Beurteilen Sie kritisch den Einsatz der Durchlaufterminierung im Rahmen der Ressourceneinsatzplanung bei beschränkten Ressourcen!
+b) Wie sieht ein kapazitätsorientierter Ansatz zur Ressourceneinsatzplanung aus! Wie kann man dieses Planungsproblem modellieren?

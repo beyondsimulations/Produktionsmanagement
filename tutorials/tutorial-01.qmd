@@ -3,4 +3,32 @@ title: "Übung 01"
 subtitle: "Grundlagen & Standortplanung"
 ---
 
-## Aufgabe 1
+## Aufgabe 1 - Allgemeine Standortplanung
+
+Ein Unternehmen möchte drei Bedarfszentren von einer Menge noch zu bestimmender Standorte aus beliefern. Nach einer Voranalyse stehen drei potentielle Standorte mit jeweils unbegrenzter Kapazität zur Wahl. Die folgende Tabelle gibt die variablen Kosten für die vollständige Belieferung der Bedarfszentren von den jeweiligen Standorten aus sowie die Fixkosten bei Nutzung eines Standortes an.
+
+| Bedarfszentren <br> Standorte |  |  |  | Fixkosten |
+| :-- | :-- | :-- | :-- | :-- |
+| A | 1 | 2 | 3 |  |
+| B | 5 | 4 | 5 | 2 |
+| C | 8 | 3 | 4 | 2 |
+
+a) Bestimmen Sie den/die kostenminimalen Standort(e)!
+b) Wieviele Kombinationsmöglichkeiten müssen geprüft werden?
+c) Wie ändert sich die Komplexität des Problems bei steigender Anzahl an Standorten?
+d) Beschreiben Sie ein Planungsmodell zur Unterstützung der Standortentscheidungen, wenn die Kapazitäten nicht unbeschränkt sind!
+e) Aus welchen zwei Teilproblemen besteht das Standortplanungsproblem?
+f) Formulieren Sie die Zielfunktion für eine konkrete Instanz mit $\mathrm{I}=3$ Standorten (A, B, C) und $\mathrm{J}=3$ Bedarfszentren. Formulieren Sie ebenfalls die zweite Nebenbedingung.
+
+
+g) Für die Problemstellung sind zusätzlich folgende Angaben gegeben:
+
+| $c_{i w}$ | 1 | 2 | 3 | $f_{i}$ | $b_{i}$ |
+| :--: | :--: | :--: | :--: | :--: | :--: |
+| A | 1 | 2 | 3 | 1000 | 400 |
+| B | 4 | 5 | 6 | 1200 | 400 |
+| C | 7 | 8 | 9 | 900 | 400 |
+
+Kunde 1 hat einen Bedarf von $d_{1}=200$, Kunde 2 von $d_{2}=300$ und Kunde drei von $d_{3}=250$ Einheiten. Die Entscheidungsvariablen sollen so gesetzt werden, dass die ersten beiden Standorte (A, B) eingerichtet werden. Die Belieferung des ersten Kunden wird komplett von Standort A und die des dritten Kunden komplett von Standort B aus durchgeführt. Der zweite Kunde wird je zur Hälfte von den Standorten A und B beliefert.
+Berechnen Sie den Zielfunktionswert! Prüfen Sie zusätzlich die Zulässigkeit der Lösung anhand der zweiten Nebenbedingung!
+h) Ist die Lösung immer noch zulässig, wenn Kunde 2 komplett von Standort A aus beliefert werden soll?
