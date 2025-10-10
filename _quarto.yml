@@ -16,7 +16,7 @@ website:
   sidebar:
     style: floating
     logo: https://images.beyondsimulations.com/lectures/mj-machine.png
-    collapse-level: 1
+    collapse-level: 2
     search: true
     contents:
       - text: "Willkommen"
@@ -58,7 +58,7 @@ website:
 
   page-footer:
     center: "Produktionsmanagement, Tobias Vlćek </br>CC BY-SA 4.0"
-    right:
+    left:
       - icon: github
         href: https://github.com/beyondsimulations/Produktionsmanagement
       - icon: linkedin
