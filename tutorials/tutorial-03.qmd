@@ -3,7 +3,18 @@ title: "Übung 03"
 subtitle: "Zentrenproduktion & Qualitätsmanagement"
 ---
 
-## Aufgabe 1 - Zentrenproduktion
+## Einführung
+
+Diese Übung behandelt zwei zentrale Konzepte der Produktionsorganisation: die Zentrenproduktion als flexible Alternative zur Werkstattfertigung und das Qualitätsmanagement mit statistischen Methoden.
+
+**Wichtige Konzepte:**
+
+- **Zentrenproduktion**: Gruppierung von Maschinen nach Erzeugnisfamilien
+- **Erzeugnisfamilien**: Produkte mit ähnlichen Fertigungsverfahren
+- **FFS (Flexibles Fertigungssystem)**: Automatisierte Zentrenproduktion
+- **Engpassanalyse**: $\text{Engpass } e = \arg \max_m \left\{ \frac{p_m \cdot b_m}{S_m} \right\}$
+
+## Aufgabe 1 - Zentrenproduktion und Erzeugnisfamilien
 
 Die folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihrer Erstellung notwendigen Maschinen:
 
@@ -14,39 +25,230 @@ Die folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihr
 | Erzeugnis C |  |  |  | X |  | X |
 | Erzeugnis D |  | X |  |  | X | X |
 
-a) Bilden Sie geeignete Erzeugnisfamilien für die Produktionsinseln! Ergeben sich irgendwelche Probleme?
-b) Was ist der Unterschied zwischen der Werkstatt und der Zentrenproduktion?
+a) Identifizieren Sie geeignete Erzeugnisfamilien für Produktionsinseln durch systematische Umordnung der Matrix. Welche Maschinengruppen und Erzeugnisgruppen ergeben sich?
 
-## Aufgabe 2 - Flexible Fertigungssysteme
+b) Bewerten Sie die Qualität Ihrer Erzeugnisfamilienbildung. Ergeben sich Probleme und wie könnten diese gelöst werden?
 
-Gegeben sei ein geschlossenes Warteschlangennetzwerk mit 3 Bearbeitungsstationen (je eine gleichartige Maschine) und einem verbindenden Transportsystem.
-Die mittleren Bearbeitungszeiten der Maschinen betragen $b_{1}=50, b_{2}=70$ und $b_{3}=30$, die mittlere Transportzeit beträgt $b_{4}=12$.
-Die Routingwahrscheinlichkeiten für die einzelnen Maschinen seien $p_{1}=0,4, p_{2}=0,25$ und $p_{3}=0,35$.
-Das Transportsystem wird nach jeder Bearbeitung benötigt. Es sind genügend Palletten im System, um eine Engpassauslastung von $100 \%$ zu gewährleisten. Ein Werkstück wird durchschnittlich 8 mal bearbeitet.
+c) Vergleichen Sie die Zentrenproduktion mit der Werkstattfertigung hinsichtlich folgender Kriterien:
+   - Transportwege und -zeiten
+   - Durchlaufzeiten und Lagerbestände
+   - Flexibilität bei Produktmix-Änderungen
+   - Investitionsbedarf
 
-a) Bestimmen Sie die mittlere Arbeitsbelastung der Maschinen und des Transportsystems.
-b) Bestimmen Sie den Engpass.
-c) Bestimmen Sie die Auslastung der Maschinen und des Transportsystems, die Produktionsraten der Stationen sowie die Produktionsrate des Systems.
-d) Ist das Ergebnis weiterhin realistisch, wenn die Anzahl an Palletten begrenzt ist?
+d) Ein Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. Welche vier Planungsschritte sind dabei zu berücksichtigen?
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Systematische Erzeugnisfamilienbildung:**
+
+Schritt 1: Analyse der Maschinen-Erzeugnis-Matrix
+```
+Original-Matrix:
+        M1  M2  M3  M4  M5  M6
+    A   -   X   -   -   X   -
+    B   X   -   X   X   -   X
+    C   -   -   -   X   -   X
+    D   -   X   -   -   X   X
+```
+
+Schritt 2: Umordnung nach Ähnlichkeiten
+```
+Optimierte Matrix:
+        M2  M5  M6  M1  M3  M4
+    A   X   X   -   -   -   -
+    D   X   X   X   -   -   -
+    B   -   -   X   X   X   X
+    C   -   -   X   -   -   X
+```
+
+**Ergebnis:**
+
+- **Familie 1**: Erzeugnisse A, D mit Maschinen M2, M5 (+ teilweise M6)
+- **Familie 2**: Erzeugnisse B, C mit Maschinen M1, M3, M4, M6
+
+b) **Bewertung der Erzeugnisfamilienbildung:**
+
+**Probleme:**
+
+- Maschine M6 wird von beiden Familien benötigt → "Springer-Maschine"
+- Nicht perfekt trennscharf → Kompromisse erforderlich
+
+**Lösungsansätze:**
+
+1. M6 duplizieren (eine Maschine pro Familie)
+2. M6 als gemeinsam genutzte Ressource zwischen den Zentren
+3. Restfertigung für Familie 2 in separater Werkstatt
+
+c) **Vergleich Zentren- vs. Werkstattfertigung:**
+
+| Kriterium | Zentrenproduktion | Werkstattfertigung |
+|:----------|:------------------|:-------------------|
+| Transportwege | Kurz, innerhalb der Zelle | Lang, zwischen verschiedenen Abteilungen |
+| Durchlaufzeiten | Niedrig durch kurze Wege | Hoch durch Transport und Warteschlangen |
+| Lagerbestände | Gering durch niedrige Losgrößen | Hoch durch große Lose |
+| Flexibilität | Hoch für Produktfamilie | Hoch für verschiedene Produkte |
+| Investitionsbedarf | Mittel (evtl. Maschinenduplikation) | Niedrig (Maschinenauslastung optimal) |
+
+d) **Vier Planungsschritte:**
+
+  1. **Identifizierung von Erzeugnisfamilien** (wie in Aufgabe durchgeführt)
+  2. **Auswahl der Arbeitssysteme** (Layout, Maschinenausstattung)
+  3. **Auswahl des Planungs- und Steuerungssystems** (dezentral vs. zentral)
+  4. **Auswahl, Schulung und Motivation der Mitarbeiter** (Gruppenarbeit, Qualifikation)
+:::
+
+## Aufgabe 2 - Flexible Fertigungssysteme (FFS)
+
+Gegeben sei ein geschlossenes Warteschlangennetzwerk (FFS) mit 3 Bearbeitungsstationen (je eine Maschine) und einem verbindenden Transportsystem. Die Daten sind:
+
+**Bearbeitungszeiten:**
+
+- Maschine 1: $b_1 = 50$ min
+- Maschine 2: $b_2 = 70$ min
+- Maschine 3: $b_3 = 30$ min
+- Transport: $b_4 = 12$ min
+
+**Routing-Wahrscheinlichkeiten:**
+
+- $p_1 = 0,4$ (Station 1)
+- $p_2 = 0,25$ (Station 2)
+- $p_3 = 0,35$ (Station 3)
+- $p_4 = 1,0$ (Transport - nach jeder Bearbeitung)
+
+a) Berechnen Sie die mittlere Arbeitsbelastung (Workload) $w_m = \frac{p_m \cdot b_m}{S_m}$ für alle Stationen.
+
+b) Bestimmen Sie den Engpass des Systems.
+
+c) Berechnen Sie unter der Annahme einer 100%-Engpassauslastung:
+   - Die Produktionsraten $X_m$ aller Stationen
+   - Die Auslastungen $U_m$ aller Stationen
+
+d) Diskutieren Sie: Ist das Ergebnis realistisch, wenn die Anzahl der Paletten im System begrenzt ist? Welche praktischen Probleme könnten auftreten?
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Mittlere Arbeitsbelastung (Workload):**
+
+$w_m = \frac{p_m \cdot b_m}{S_m}$ mit $S_m = 1$ für alle Stationen:
+
+- $w_1 = \frac{0,4 \times 50}{1} = 20,0$ min
+- $w_2 = \frac{0,25 \times 70}{1} = 17,5$ min
+- $w_3 = \frac{0,35 \times 30}{1} = 10,5$ min
+- $w_4 = \frac{1,0 \times 12}{1} = 12,0$ min
+
+b) **Engpass-Bestimmung:**
+
+**Engpass** = Station mit höchster Arbeitsbelastung = **Station 1** mit $w_1 = 20,0$ min
+
+c) **Produktionsraten und Auslastungen bei 100% Engpassauslastung:**
+
+**Produktionsrate des Engpasses:**
+$X_e = X_1 = \frac{S_1}{b_1} = \frac{1}{50} = 0,02$ Werkstücke/min
+
+**Produktionsraten der anderen Stationen:**
+$X_m = \frac{p_m}{p_e} \cdot X_e = \frac{p_m}{p_1} \cdot X_1$
+
+- $X_1 = 0,020$ Werkstücke/min
+- $X_2 = \frac{0,25}{0,4} \times 0,020 = 0,0125$ Werkstücke/min
+- $X_3 = \frac{0,35}{0,4} \times 0,020 = 0,0175$ Werkstücke/min
+- $X_4 = \frac{1,0}{0,4} \times 0,020 = 0,050$ Werkstücke/min
+
+**Auslastungen:**
+$U_m = \frac{b_m \cdot X_m}{S_m}$
+
+- $U_1 = \frac{50 \times 0,020}{1} = 1,000 = 100,0\%$ (Engpass)
+- $U_2 = \frac{70 \times 0,0125}{1} = 0,875 = 87,5\%$
+- $U_3 = \frac{30 \times 0,0175}{1} = 0,525 = 52,5\%$
+- $U_4 = \frac{12 \times 0,050}{1} = 0,600 = 60,0\%$
+
+d) **Realitätsbewertung bei begrenzten Paletten:**
+
+**Nein, das Ergebnis ist bei begrenzten Paletten nicht realistisch:**
+
+**Probleme:**
+
+1. **Warteschlangeneffekte**: Bei zu wenigen Paletten können Stationen "aushungern"
+2. **Blockierungen**: Volle Puffer können Stationen blockieren
+3. **Schwankungen**: Reale Bearbeitungszeiten sind nicht konstant
+4. **100% Auslastung**: Praktisch nicht dauerhaft erreichbar
+
+**Realistische Auslastung**: 85-90% des Engpasses wären praktikabel, was die Systemleistung entsprechend reduziert.
+:::
 
 ## Aufgabe 3 - Statistische Qualitätskontrolle
 
-Eine alteingesessene Duisburger Spirituosenfabrik produziert den Schnaps "Studentenglück" mit einem Soll-Alkoholgehalt von $40 \%$, welcher im Durchschnitt auch erreicht wird. Da die Duisburger Studenten neuerdings besonders großen Wert darauf legen, dass die Angabe des Alkoholgehalts stimmt sollen die bisher jährlich durchgeführten Stichproben (Umfang $n=5$ Proben pro Stichprobe) intensiviert werden.
-Die Stichproben der letzten 4 Jahre ergaben folgende Werte:
+Die Duisburger Spirituosenfabrik "Nordrhein Destille" produziert den Schnaps "Studentenglück" mit einem Soll-Alkoholgehalt von 40%. Die Stichproben der letzten 5 Jahre (Umfang $n=5$ Proben pro Stichprobe) ergaben folgende Werte:
 
-| Stichprobe | Probe 1 | Probe 2 | Probe 3 | Probe 4 | Probe 5 |
+| Jahr | Probe 1 | Probe 2 | Probe 3 | Probe 4 | Probe 5 |
 | :--: | :--: | :--: | :--: | :--: | :--: |
-| 2007 | 39,9 | 40,5 | 39,2 | 40,3 | 40,6 |
-| 2008 | 41,1 | 40,1 | 39,8 | 40,1 | 40,1 |
-| 2009 | 39,3 | 40,4 | 39,7 | 40,5 | 39,9 |
-| 2010 | 40,1 | 40 | 39,4 | 39,5 | 39,5 |
+| 2019 | 39,9 | 40,5 | 39,2 | 40,3 | 40,6 |
+| 2020 | 41,1 | 40,1 | 39,8 | 40,1 | 40,1 |
+| 2021 | 39,3 | 40,4 | 39,7 | 40,5 | 39,9 |
+| 2022 | 40,1 | 40,0 | 39,4 | 39,5 | 39,5 |
+| 2023 | 39,8 | 40,2 | 40,4 | 39,9 | 40,1 |
 
-a) Berechnen Sie die Mittelwerte und Spannweiten der einzelnen Stichproben. Wie groß sind die mittlere Spannweite und der Mittelwert aller Stichproben?
-b) Wie müssten die Kontrollgrenzen definiert werden? Gehen Sie davon aus, dass der Faktor A für eine Stichprobengröße von $n=5$ einen Wert von 0,577 annimmt.
-c) Die nächste Stichprobe liefert folgende Werte:
+a) Berechnen Sie für jede Stichprobe den Stichprobenmittelwert $x_t$ und die Stichprobenspannweite $R_t$.
 
-| Stichprobe | Probe 1 | Probe 2 | Probe 3 | Probe 4 | Probe 5 |
-| :--: | :--: | :--: | :--: | :--: | :--: |
-| 2011 | 38,2 | 40,5 | 39,3 | 39,9 | 41,4 |
+b) Bestimmen Sie den Mittelwert aller Stichprobenmittelwerte $\bar{x}$ und die mittlere Spannweite $\bar{R}$.
 
-Liegt der Stichprobenmittelwert innerhalb des Toleranzbereichs? Verdeutlichen Sie dies anhand einer geeigneten Grafik.
+c) Berechnen Sie die Kontrollgrenzen für eine $\bar{x}$-Kontrollkarte mit dem Faktor $A(n=5) = 0,577$.
+
+d) Die nächste Stichprobe (2024) liefert folgende Werte: [38,2; 40,5; 39,3; 39,9; 41,4]. Ist der Prozess noch unter statistischer Kontrolle?
+
+e) Interpretieren Sie das Ergebnis: Was bedeutet es für die Qualität des Produkts und welche Maßnahmen wären zu empfehlen?
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Stichprobenmittelwerte und Spannweiten:**
+
+| Jahr | Stichprobenmittelwert $x_t$ | Spannweite $R_t$ |
+| :--: | :--: | :--: |
+| 2019 | $\frac{39,9 + 40,5 + 39,2 + 40,3 + 40,6}{5} = 40,1$ | $40,6 - 39,2 = 1,4$ |
+| 2020 | $\frac{41,1 + 40,1 + 39,8 + 40,1 + 40,1}{5} = 40,24$ | $41,1 - 39,8 = 1,3$ |
+| 2021 | $\frac{39,3 + 40,4 + 39,7 + 40,5 + 39,9}{5} = 39,96$ | $40,5 - 39,3 = 1,2$ |
+| 2022 | $\frac{40,1 + 40,0 + 39,4 + 39,5 + 39,5}{5} = 39,7$ | $40,1 - 39,4 = 0,7$ |
+| 2023 | $\frac{39,8 + 40,2 + 40,4 + 39,9 + 40,1}{5} = 40,08$ | $40,4 - 39,8 = 0,6$ |
+
+b) **Prozessparameter:**
+
+- Mittelwert der Stichprobenmittelwerte:
+  $\bar{x} = \frac{40,1 + 40,24 + 39,96 + 39,7 + 40,08}{5} = 40,016$ (≈ 40,0%)
+
+- Mittlere Spannweite:
+  $\bar{R} = \frac{1,4 + 1,3 + 1,2 + 0,7 + 0,6}{5} = 1,04$
+
+c) **Kontrollgrenzen:**
+
+Mit $A(5) = 0,577$:
+
+- **UCL** = $\bar{x} + A \cdot \bar{R} = 40,0 + 0,577 \times 1,04 = 40,0 + 0,60 = 40,60$%
+- **LCL** = $\bar{x} - A \cdot \bar{R} = 40,0 - 0,577 \times 1,04 = 40,0 - 0,60 = 39,40$%
+
+d) **Beurteilung der Stichprobe 2024:**
+
+Stichprobe 2024: [38,2; 40,5; 39,3; 39,9; 41,4]
+
+- $x_{2024} = \frac{38,2 + 40,5 + 39,3 + 39,9 + 41,4}{5} = 39,86$%
+- Kontrollgrenzen: LCL = 39,40% ≤ **39,86%** ≤ 40,60% = UCL
+
+**Ergebnis:** Der Stichprobenmittelwert liegt **innerhalb der Kontrollgrenzen** → Prozess ist unter statistischer Kontrolle.
+
+e) **Interpretation und Maßnahmen:**
+
+**Positive Aspekte:**
+
+- Prozess arbeitet statistisch stabil
+- Mittelwert liegt nahe dem Sollwert (40%)
+- Schwankungen sind im erwarteten Rahmen
+
+**Verbesserungsmöglichkeiten:**
+
+1. **Prozessfähigkeit erhöhen**: Spannweite von 1,04% ist relativ hoch
+2. **Ursachenanalyse**: Warum schwankt der Alkoholgehalt?
+3. **Prozessoptimierung**: Bessere Temperatur-/Druckkontrolle bei der Destillation
+4. **Häufigere Kontrollen**: Monatliche statt jährliche Stichproben
+
+:::

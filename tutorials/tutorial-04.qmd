@@ -1,31 +1,351 @@
 ---
 title: "Übung 04"
-subtitle: "Produktionsprogrammplanung"
+subtitle: "Operative Produktionsplanung"
 ---
 
-## Aufgabe 1 - Aggregierte Planung
+## Einführung
 
-Ein Unternehmen produziert zwei Produkte für die die folgenden Nachfragemengen für die nächsten vier Perioden ermittelt wurden:
+Diese Übung behandelt die operative Produktionsplanung mit zwei zentralen Planungsaufgaben: die aggregierte Produktionsprogrammplanung zur Beschäftigungsglättung und die Losgrößenplanung zur optimalen Auftragsgrößenbestimmung.
 
-| $d_{k, t}$ | $t=1$ | $t=2$ | $t=3$ | $t=4$ |
+**Wichtige Modelle und Formeln:**
+
+**AGGRPLAN (Aggregierte Planung):**
+
+- Zielfunktion: $\text{Min } Z = \sum_{k,t} h_k \cdot y_{kt} + \sum_t u_t \cdot U_t$
+- Lagerbilanz: $y_{k,t-1} + x_{kt} - y_{kt} = d_{kt}$
+- Kapazitätsbeschränkungen: $\sum_k a_k^C \cdot x_{kt} \leq b_t^{C_{max}}$, $\sum_k a_k^N \cdot x_{kt} - U_t \leq b_t^{N_{max}}$
+
+**SIULSP (Losgrößenplanung):**
+
+- Zielfunktion: $\text{Min } Z = \sum_t (s \cdot \gamma_t + h \cdot y_t)$
+- Bedarfsdeckung: $y_{t-1} + q_t - y_t = d_t$
+- Setup-Kopplung: $q_t \leq M \cdot \gamma_t$
+
+## Aufgabe 1 - Aggregierte Produktionsplanung
+
+Ein Unternehmen produziert zwei Produkte (P1, P2) für die folgenden Nachfragemengen in den nächsten vier Perioden ermittelt wurden:
+
+| $d_{k,t}$ | $t=1$ | $t=2$ | $t=3$ | $t=4$ |
 | :--: | :--: | :--: | :--: | :--: |
 | P1 | 20 | 50 | 30 | 20 |
 | P2 | 50 | 20 | 60 | 30 |
 
-Für die Fertigung einer Einheit von P1 benötigt man eine Maschinenstunde und 1,5 Personenstunden (P2: 2 und 0,5). Pro Periode stehen 150 Stunden Maschinenzeit und 70 Stunden Arbeitszeit zur Verfügung. Es dürfen jede Periode 50 Überstunden gemacht werden. Der Lagerkostensatz beträgt für beide Produkte eine GE pro Periode. Jede Überstunde kostet periodenunabhängig 2 GE.
+**Weitere Daten:**
 
-a) Beschreiben Sie mathematisch ein Modell zur Beschäftigungsglättung.
-b) Wie lassen sich in einem Modell zu diesem Planungsproblem Mindestproduktionsmengen berücksichtigen?
-c) Wie viele Nebenbedingungen hat das Modell für das obige Beispiel konkret?
-d) Formulieren Sie die Zielfunktion sowie die Lagerbilanzgleichung für das obige Beispiel aus.
-e) Liefert die Planung einen zulässigen Produktionsplan?
+- Kapazitätsbedarf P1: 1 Maschinenstunde, 1,5 Personenstunden pro Einheit
+- Kapazitätsbedarf P2: 2 Maschinenstunden, 0,5 Personenstunden pro Einheit
+- Verfügbare Kapazität pro Periode: 150 Maschinenstunden, 70 Personenstunden
+- Maximale Überstunden: 50 pro Periode
+- Lagerkostensatz: 1 GE/(Einheit·Periode) für beide Produkte
+- Überstundenkostensatz: 2 GE/Stunde (alle Perioden)
+- Anfangslagerbestände: $y_{1,0} = y_{2,0} = 0$
 
-## Aufgabe 2 - Losgrößenplanung
+a) Formulieren Sie das vollständige mathematische Modell zur Beschäftigungsglättung.
 
-Für ein Endprodukt liegen die folgenden periodenbezogenen Bedarfsprognosen vor: $30,90,20,0,50$. Es wird mit einem Lagerkostensatz von 2 Euro und einem Rüstkostensatz von 250 Euro gerechnet.
+b) Berechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständiger Bedarfsdeckung ohne Lagerhaltung.
 
-a) Beschreiben Sie ein Modell zur Einprodukt-Losgrößenplanung.
-b) Welchen Wert muss "Big-M" für das obige Beispiel mindestens annehmen?
-c) Wie kann/muss das Modell angepasst werden, wenn beschränkte Kapazitäten berücksichtigt werden sollen? Gehen Sie davon aus, dass die verfügbare Kapazität sowohl durch die Produktion wie auch durch die Rüstvorgänge belastet wird!
-d) Bestimmen Sie jeweils eine Lösung mithilfe des Groff-, Silver-Meal-, und Wagner-Whitin-Verfahrens (Kürzeste Wege).
-e) Welche Aussage können Sie zur Qualität der einzelnen Lösungen machen?
+c) Bestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.
+
+d) Wie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Vollständiges mathematisches Modell:**
+
+**Indexmengen:**
+
+- $\mathcal{K} = \{1, 2\}$ (Produkttypen P1, P2)
+- $t \in \{1, 2, 3, 4\}$ (Perioden)
+
+**Entscheidungsvariablen:**
+
+- $x_{kt}$ = Produktionsmenge für Produkt $k$ in Periode $t$
+- $y_{kt}$ = Lagerbestand für Produkt $k$ am Ende von Periode $t$
+- $U_t$ = Überstunden in Periode $t$
+
+**Zielfunktion:**
+
+$$\text{Minimiere } Z = \sum_{k=1}^{2} \sum_{t=1}^{4} 1 \cdot y_{kt} + \sum_{t=1}^{4} 2 \cdot U_t$$
+
+**Nebenbedingungen:**
+
+(1) Anfangslagerbestände: $y_{10} = y_{20} = 0$
+
+(2) Lagerbilanzgleichungen:
+
+- $y_{1,t-1} + x_{1t} - y_{1t} = d_{1t}$ für $t = 1,2,3,4$
+- $y_{2,t-1} + x_{2t} - y_{2t} = d_{2t}$ für $t = 1,2,3,4$
+
+(3) Maschinenstunden-Restriktion:
+
+$1 \cdot x_{1t} + 2 \cdot x_{2t} \leq 150$ für $t = 1,2,3,4$
+
+(4) Personenstunden-Restriktion:
+
+$1,5 \cdot x_{1t} + 0,5 \cdot x_{2t} - U_t \leq 70$ für $t = 1,2,3,4$
+
+(5) Überstunden-Beschränkung:
+
+$U_t \leq 50$ für $t = 1,2,3,4$
+
+(6) Nichtnegativitätsbedingungen:
+
+$x_{kt} \geq 0, y_{kt} \geq 0, U_t \geq 0$ für alle $k,t$
+
+b) **Kapazitätsbedarf bei vollständiger Bedarfsdeckung:**
+
+| Periode $t$ | $d_{1t}$ | $d_{2t}$ | Maschinen-bedarf | Personal-bedarf |
+|:------------|:---------|:---------|:-----------------|:----------------|
+| 1 | 20 | 50 | $1 \cdot 20 + 2 \cdot 50 = 120$ | $1,5 \cdot 20 + 0,5 \cdot 50 = 55$ |
+| 2 | 50 | 20 | $1 \cdot 50 + 2 \cdot 20 = 90$ | $1,5 \cdot 50 + 0,5 \cdot 20 = 85$ |
+| 3 | 30 | 60 | $1 \cdot 30 + 2 \cdot 60 = 150$ | $1,5 \cdot 30 + 0,5 \cdot 60 = 75$ |
+| 4 | 20 | 30 | $1 \cdot 20 + 2 \cdot 30 = 80$ | $1,5 \cdot 20 + 0,5 \cdot 30 = 45$ |
+
+c) **Überstunden-Analyse:**
+
+Verfügbare Personenstunden: 70 pro Periode
+Überstunden erforderlich in:
+
+- Periode 2: $85 - 70 = 15$ Überstunden
+- Periode 3: $75 - 70 = 5$ Überstunden
+
+Beide liegen unter der Maximalgrenze von 50 Überstunden.
+
+d) **Berücksichtigung von Mindestproduktionsmengen:**
+
+Zusätzliche Nebenbedingungen:
+$$x_{kt} \geq \underline{x}_{kt} \cdot \delta_{kt}$$
+$$\delta_{kt} \in \{0,1\}$$
+
+Wobei $\delta_{kt} = 1$ bedeutet, dass Produkt $k$ in Periode $t$ produziert wird, und $\underline{x}_{kt}$ die Mindestproduktionsmenge ist.
+:::
+
+## Aufgabe 2 - Losgrößenplanung mit verschiedenen Verfahren
+
+Für ein Endprodukt liegen folgende periodenbezogene Bedarfsprognosen vor: $d_1 = 30, d_2 = 90, d_3 = 20, d_4 = 0, d_5 = 50$.
+
+**Gegeben:** Lagerkostensatz $h = 2$ €/(Einheit·Periode), Rüstkostensatz $s = 250$ €/Rüstvorgang
+
+a) Formulieren Sie das vollständige SIULSP-Modell für dieses Problem.
+
+b) Welchen Wert muss "Big-M" mindestens annehmen? Begründen Sie Ihre Antwort.
+
+c) Bestimmen Sie eine Lösung mit dem **Silver-Meal-Verfahren**.
+
+d) Bestimmen Sie eine Lösung mit dem **Groff-Verfahren**.
+
+e) Bestimmen Sie die **optimale Lösung** mit dem **Wagner-Whitin-Verfahren** (Kürzeste-Wege-Interpretation).
+
+f) Vergleichen Sie die Lösungsqualität der drei Verfahren und bewerten Sie deren praktische Anwendbarkeit.
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **SIULSP-Modell für das gegebene Problem:**
+
+**Entscheidungsvariablen:**
+
+- $q_t$ = Produktionsmenge in Periode $t$ ($t = 1,2,3,4,5$)
+- $y_t$ = Lagerbestand am Ende von Periode $t$
+- $\gamma_t \in \{0,1\}$ = Rüstvariable (1 = Produktion, 0 = keine Produktion)
+
+**Zielfunktion:**
+
+$$\text{Minimiere } Z = \sum_{t=1}^{5} (250 \cdot \gamma_t + 2 \cdot y_t)$$
+
+**Nebenbedingungen:**
+
+- Anfangslagerbestand: $y_0 = 0$
+- Bedarfsdeckung: $y_{t-1} + q_t - y_t = d_t$ für $t = 1,2,3,4,5$
+- Setup-Kopplung: $q_t \leq M \cdot \gamma_t$ für $t = 1,2,3,4,5$
+- Nichtnegativität: $q_t \geq 0, y_t \geq 0$ für alle $t$
+- Binärbedingung: $\gamma_t \in \{0,1\}$ für alle $t$
+
+b) **Bestimmung von Big-M:**
+
+Die maximale Losgröße ist die Summe aller verbleibenden Bedarfe:
+$$M \geq \max\{d_1 + d_2 + d_3 + d_4 + d_5, d_2 + d_3 + d_4 + d_5, ..., d_5\}$$
+$$M \geq \max\{190, 160, 70, 50, 50\} = 190$$
+
+**Antwort:** $M \geq 190$
+
+c) **Silver-Meal-Verfahren:**
+
+Das Verfahren minimiert die durchschnittlichen Kosten pro Periode für jedes Los.
+
+Kostenkriterium: $c_{\tau,t} = \frac{s + h \cdot \sum_{j=\tau}^{t} (j-\tau) \cdot d_j}{t-\tau+1}$
+
+**Iteration 1 (Start $\tau = 1$):**
+
+- $c_{1,1} = \frac{250 + 2 \cdot 0 \cdot 30}{1} = 250$
+- $c_{1,2} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90)}{2} = \frac{430}{2} = 215$ (besser)
+- $c_{1,3} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20)}{3} = \frac{490}{3} = 163,33$ (besser)
+- $c_{1,4} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0)}{4} = \frac{490}{4} = 122,5$ (besser)
+- $c_{1,5} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0 + 4 \cdot 50)}{5} = \frac{890}{5} = 178$ (schlechter)
+
+**Los 1:** Perioden 1-4, $q_1 = 140$
+
+**Iteration 2 (Start $\tau = 5$):**
+- $c_{5,5} = \frac{250 + 2 \cdot 0 \cdot 50}{1} = 250$
+
+**Los 2:** Periode 5, $q_5 = 50$
+
+**Silver-Meal-Lösung:**
+- $q_1 = 140, q_2 = 0, q_3 = 0, q_4 = 0, q_5 = 50$
+- Lagerbestände: $y_1 = 110, y_2 = 20, y_3 = 0, y_4 = 0, y_5 = 0$
+- **Gesamtkosten:** $2 \cdot 250 + 2 \cdot (110 + 20) = 760$ €
+
+d) **Groff-Verfahren:**
+
+Das Verfahren verwendet das Kriterium: $d_{j} \cdot j \cdot (j+1) \leq 2s/h = 250$
+
+**Iteration 1 ($\tau = 1$):**
+
+- $j = 0$: $30 \cdot 0 \cdot 1 = 0 \leq 250$ ✓
+- $j = 1$: $90 \cdot 1 \cdot 2 = 180 \leq 250$ ✓
+- $j = 2$: $20 \cdot 2 \cdot 3 = 120 \leq 250$ ✓
+- $j = 3$: $0 \cdot 3 \cdot 4 = 0 \leq 250$ ✓
+- $j = 4$: $50 \cdot 4 \cdot 5 = 1000 > 250$ ✗
+
+**Los 1:** Perioden 1-4, $q_1 = 140$
+
+**Iteration 2 ($\tau = 5$):**
+
+- $j = 0$: $50 \cdot 0 \cdot 1 = 0 \leq 250$ ✓
+
+**Los 2:** Periode 5, $q_5 = 50$
+
+**Groff-Lösung:** Identisch mit Silver-Meal
+
+- **Gesamtkosten:** $760$ €
+
+e) **Wagner-Whitin-Verfahren (Optimale Lösung):**
+
+Das Wagner-Whitin-Verfahren verwendet dynamische Programmierung mit der Rekursionsformel:
+$$F_t = \min_{1 \leq \tau \leq t} \left\{ F_{\tau-1} + s + h \cdot \sum_{j=\tau}^{t} (j-\tau) \cdot d_j \right\}$$
+
+**Schrittweise Berechnung:**
+
+**Periode 1:** $F_1$
+- $\tau = 1$: $F_0 + 250 + 2 \cdot (0 \cdot 30) = 0 + 250 + 0 = 250$
+- **$F_1 = 250$** (Produktion in Periode 1)
+
+**Periode 2:** $F_2$  
+- $\tau = 1$: $F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90) = 0 + 250 + 180 = 430$
+- $\tau = 2$: $F_1 + 250 + 2 \cdot (0 \cdot 90) = 250 + 250 + 0 = 500$
+- **$F_2 = 430$** (Produktion in Periode 1 für Perioden 1-2)
+
+**Periode 3:** $F_3$
+- $\tau = 1$: $F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20) = 0 + 250 + 260 = 510$
+- $\tau = 2$: $F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20) = 250 + 250 + 40 = 540$  
+- $\tau = 3$: $F_2 + 250 + 2 \cdot (0 \cdot 20) = 430 + 250 + 0 = 680$
+- **$F_3 = 510$** (Produktion in Periode 1 für Perioden 1-3)
+
+**Periode 4:** $F_4$
+- $\tau = 1$: $F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0) = 0 + 250 + 260 = 510$
+- $\tau = 2$: $F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20 + 2 \cdot 0) = 250 + 250 + 40 = 540$
+- $\tau = 3$: $F_2 + 250 + 2 \cdot (0 \cdot 20 + 1 \cdot 0) = 430 + 250 + 0 = 680$  
+- $\tau = 4$: $F_3 + 250 + 2 \cdot (0 \cdot 0) = 510 + 250 + 0 = 760$
+- **$F_4 = 510$** (Produktion in Periode 1 für Perioden 1-4)
+
+**Periode 5:** $F_5$
+- $\tau = 1$: $F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0 + 4 \cdot 50) = 0 + 250 + 460 = 710$
+- $\tau = 2$: $F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20 + 2 \cdot 0 + 3 \cdot 50) = 250 + 250 + 340 = 840$
+- $\tau = 3$: $F_2 + 250 + 2 \cdot (0 \cdot 20 + 1 \cdot 0 + 2 \cdot 50) = 430 + 250 + 200 = 880$
+- $\tau = 4$: $F_3 + 250 + 2 \cdot (0 \cdot 0 + 1 \cdot 50) = 510 + 250 + 100 = 860$
+- $\tau = 5$: $F_4 + 250 + 2 \cdot (0 \cdot 50) = 510 + 250 + 0 = 760$
+- **$F_5 = 760$** (Produktion in Periode 5 zusätzlich zu optimaler Lösung bis Periode 4)
+
+**Optimale Lösung durch Backtracking:**
+- $F_5 = 760$ wird erreicht durch $\tau = 5$ in der letzten Stufe
+- $F_4 = 510$ wird erreicht durch $\tau = 1$ 
+- **Lösung:** Produktion in Periode 1 für Perioden 1-4, Produktion in Periode 5 für Periode 5
+- $q_1 = 30 + 90 + 20 + 0 = 140$, $q_5 = 50$
+- **Gesamtkosten:** $760$ €
+
+f) **Vergleich der Lösungsqualität:**
+
+| Verfahren | Produktionsplan | Gesamtkosten | Rechenaufwand |
+|:----------|:---------------|:-------------|:--------------|
+| Silver-Meal | $q_1=140, q_5=50$ | 760 € | Mittel |
+| Groff | $q_1=140, q_5=50$ | 760 € | Gering |
+| Wagner-Whitin | $q_1=140, q_5=50$ | 760 € | Hoch |
+
+**Praktische Bewertung:**
+
+- **Groff-Verfahren**: Einfachste Anwendung mit klarem Stopkriterium
+- **Silver-Meal**: Ausgewogenes Verhältnis von Rechenaufwand und Lösungsqualität
+- **Wagner-Whitin**: Garantiert optimale Lösung, aber aufwendige Berechnung
+
+**Besonderheit:** In diesem Beispiel führen alle drei Verfahren zur identischen optimalen Lösung mit gleichen Kosten. Dies ist ein Zufall und tritt in der Praxis nicht regelmäßig auf.
+
+:::
+
+## Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung
+
+Erweitern Sie das SIULSP-Modell aus Aufgabe 2 um folgende Kapazitätsbeschränkungen:
+
+- Verfügbare Produktionskapazität: 80 Einheiten pro Periode
+- Rüstzeit: 10 Stunden pro Rüstvorgang
+- Verfügbare Rüstkapazität: 15 Stunden pro Periode
+- Produktionszeit: 0,5 Stunden pro Einheit
+
+a) Formulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschränkte Problem.
+
+b) Analysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.
+
+c) Welche Auswirkungen haben Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren?
+
+::: {.content-visible when-profile="solution"}
+**Lösung:**
+
+a) **Zusätzliche Nebenbedingungen:**
+
+**Produktionskapazitätsbeschränkung:**
+$$q_t \leq 80 \quad \text{für alle } t = 1,2,3,4,5$$
+
+**Rüstkapazitätsbeschränkung:**
+$$10 \cdot \gamma_t + 0,5 \cdot q_t \leq 15 \quad \text{für alle } t = 1,2,3,4,5$$
+
+Dies kann umformuliert werden zu:
+$$q_t \leq (15 - 10 \cdot \gamma_t) \cdot 2 = 30 - 20 \cdot \gamma_t \quad \text{wenn } \gamma_t = 1$$
+$$q_t \leq 10 \quad \text{wenn } \gamma_t = 1$$
+
+Da $\gamma_t = 0 \Rightarrow q_t = 0$ (durch Setup-Kopplung), ergibt sich:
+$$q_t \leq 10 \cdot \gamma_t \quad \text{für alle } t$$
+
+b) **Zulässigkeitsprüfung der Lösung aus 2 e):**
+
+Optimale Lösung: $q_1 = 140, q_5 = 50$
+
+**Periode 1:**
+
+- Produktionskapazität: $140 > 80$ → **Verletzt!**
+- Rüstkapazität: $10 \cdot 1 + 0,5 \cdot 140 = 80 > 15$ → **Verletzt!**
+
+**Periode 5:**
+
+- Produktionskapazität: $50 \leq 80$ ✓
+- Rüstkapazität: $10 \cdot 1 + 0,5 \cdot 50 = 35 > 15$ → **Verletzt!**
+
+**Antwort:** Die Lösung ist **nicht zulässig**.
+
+c) **Auswirkungen auf heuristische Verfahren:**
+
+**Silver-Meal und Groff-Verfahren:**
+
+- Müssen **modifiziert** werden, um Kapazitätsbeschränkungen zu berücksichtigen
+- Los-Bildung muss gestoppt werden, wenn Kapazitätsgrenzen erreicht sind
+- **Lösungsqualität** kann deutlich schlechter werden
+
+**Wagner-Whitin-Verfahren:**
+
+- Kantenkosten müssen neu berechnet werden unter Beachtung der Restriktionen
+- Möglicherweise **keine zulässigen Pfade** vorhanden
+- Deutlich **komplexere Berechnung**
+
+**Praktische Konsequenz:**
+
+Kapazitätsbeschränkte Losgrößenprobleme erfordern meist **spezialisierte Algorithmen** oder die Verwendung von **Mixed-Integer-Programming-Solvern**.
+:::
