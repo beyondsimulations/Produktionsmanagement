@@ -227,9 +227,7 @@ Mit $\rho_3 = 0,88$ und $P[N=n] = (1-\rho) \cdot \rho^n$:
 
 Ein Produktionssystem besteht aus drei Stationen mit beschränkten Puffern:
 
-```
-[Lager] → Station 1 → [Puffer 1: 3 Plätze] → Station 2 → [Puffer 2: 2 Plätze] → Station 3 → [Fertigwarenlager]
-```
+`[Lager] → Station 1 → [Puffer 1: 3 Plätze] → Station 2 → [Puffer 2: 2 Plätze] → Station 3 → [Fertigwarenlager]`
 
 Die Bearbeitungszeiten sind deterministisch: $b_1 = 4$ min, $b_2 = 5$ min, $b_3 = 3$ min.
 
