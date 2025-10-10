@@ -1,6 +1,6 @@
 ---
-title: "Übung 01"
-subtitle: "Standortplanung"
+title: "Übung 02"
+subtitle: "Fließbandproduktion & Leistungsanalysen"
 ---
 
 ## Aufgabe 1

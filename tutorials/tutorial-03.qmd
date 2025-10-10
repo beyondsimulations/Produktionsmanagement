@@ -1,6 +1,6 @@
 ---
-title: "Übung 01"
-subtitle: "Standortplanung"
+title: "Übung 03"
+subtitle: "Zentrenproduktion & Qualitätsmanagement"
 ---
 
 ## Aufgabe 1

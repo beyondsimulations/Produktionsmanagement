@@ -1,6 +1,6 @@
 ---
 title: "Übung 01"
-subtitle: "Standortplanung"
+subtitle: "Grundlagen & Standortplanung"
 ---
 
 ## Aufgabe 1

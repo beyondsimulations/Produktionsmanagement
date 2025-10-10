@@ -1,6 +1,6 @@
 ---
-title: "Übung 01"
-subtitle: "Standortplanung"
+title: "Übung 05"
+subtitle: "Ressourceneinsatzplanung & Losgrößen"
 ---
 
 ## Aufgabe 1
