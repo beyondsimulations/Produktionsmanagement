@@ -1,0 +1,437 @@
+[
+  {
+    "objectID": "tutorials/tutorial-05.html",
+    "href": "tutorials/tutorial-05.html",
+    "title": "Übung 05",
+    "section": "",
+    "text": "Die Fahrzeugfertigung Zwickau GmbH ist ein traditionsreicher Standort im Automobilbau und hat sich auf die Produktion von Komponenten und die Endmontage von Elektrofahrzeugen spezialisiert. Für die Einführung einer neuen Montagelinie zur Fertigung von Batteriemodulen für das Modell “Saxon-E” müssen die einzelnen Arbeitsschritte genau geplant werden. Das Projektmanagement-Team hat die folgende Liste von Arbeitsgängen (AG), deren Dauer in Stunden (Std.) und die direkten Vorgänger identifiziert:\n\n\n\n\n\n\n\n\n\nArbeitsgang\nBeschreibung\nDauer (Std.)\nDirekte Vorgänger\n\n\n\n\nA\nMaterialbereitstellung Rahmen\n3\n-\n\n\nB\nVormontage Zellhalterungen\n5\nA\n\n\nC\nEinbau Zellhalterungen in Rahmen\n4\nB\n\n\nD\nMaterialbereitstellung Elektronik\n2\n-\n\n\nE\nVormontage Steuerungseinheit\n6\nD\n\n\nF\nIntegration Steuerungseinheit\n3\nC, E\n\n\nG\nQualitätsprüfung & Endverschluss\n2\nF\n\n\n\nDer Projektstart (Beginn von A und D) ist zum Zeitpunkt 0. Der spätestzulässige Fertigstellungstermin für den gesamten Prozess (Ende von G) ist Stunde 25.\nIhre Aufgaben:\n\nErstellen Sie ein Netzplan-Diagramm für dieses Projekt.\nFühren Sie eine Vorwärtsrechnung durch, um die frühestmöglichen Anfangszeitpunkte (FAZ) und Endzeitpunkte (FEZ) für jeden Arbeitsgang zu bestimmen.\nFühren Sie eine Rückwärtsrechnung durch, um die spätestzulässigen Anfangszeitpunkte (SAZ) und Endzeitpunkte (SEZ) für jeden Arbeitsgang zu bestimmen. Gehen Sie davon aus, dass der SEZ des letzten Arbeitsgangs (G) dem spätestzulässigen Projektendtermin entspricht, falls er diesen nicht überschreitet. Andernfalls ist der spätestzulässige Endtermin des Projekts maßgebend für SEZ(G).\nBerechnen Sie die Gesamtpufferzeit (GP) für jeden Arbeitsgang.\nIdentifizieren Sie den kritischen Weg im Projekt.\nWas könnte passieren, wenn einige Arbeitsschritte Kapazitätsbeschränkungen unterliegen?",
+    "crumbs": [
+      "05 Ressourcen",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-05.html#aufgabe-1---montageplanung",
+    "href": "tutorials/tutorial-05.html#aufgabe-1---montageplanung",
+    "title": "Übung 05",
+    "section": "",
+    "text": "Die Fahrzeugfertigung Zwickau GmbH ist ein traditionsreicher Standort im Automobilbau und hat sich auf die Produktion von Komponenten und die Endmontage von Elektrofahrzeugen spezialisiert. Für die Einführung einer neuen Montagelinie zur Fertigung von Batteriemodulen für das Modell “Saxon-E” müssen die einzelnen Arbeitsschritte genau geplant werden. Das Projektmanagement-Team hat die folgende Liste von Arbeitsgängen (AG), deren Dauer in Stunden (Std.) und die direkten Vorgänger identifiziert:\n\n\n\n\n\n\n\n\n\nArbeitsgang\nBeschreibung\nDauer (Std.)\nDirekte Vorgänger\n\n\n\n\nA\nMaterialbereitstellung Rahmen\n3\n-\n\n\nB\nVormontage Zellhalterungen\n5\nA\n\n\nC\nEinbau Zellhalterungen in Rahmen\n4\nB\n\n\nD\nMaterialbereitstellung Elektronik\n2\n-\n\n\nE\nVormontage Steuerungseinheit\n6\nD\n\n\nF\nIntegration Steuerungseinheit\n3\nC, E\n\n\nG\nQualitätsprüfung & Endverschluss\n2\nF\n\n\n\nDer Projektstart (Beginn von A und D) ist zum Zeitpunkt 0. Der spätestzulässige Fertigstellungstermin für den gesamten Prozess (Ende von G) ist Stunde 25.\nIhre Aufgaben:\n\nErstellen Sie ein Netzplan-Diagramm für dieses Projekt.\nFühren Sie eine Vorwärtsrechnung durch, um die frühestmöglichen Anfangszeitpunkte (FAZ) und Endzeitpunkte (FEZ) für jeden Arbeitsgang zu bestimmen.\nFühren Sie eine Rückwärtsrechnung durch, um die spätestzulässigen Anfangszeitpunkte (SAZ) und Endzeitpunkte (SEZ) für jeden Arbeitsgang zu bestimmen. Gehen Sie davon aus, dass der SEZ des letzten Arbeitsgangs (G) dem spätestzulässigen Projektendtermin entspricht, falls er diesen nicht überschreitet. Andernfalls ist der spätestzulässige Endtermin des Projekts maßgebend für SEZ(G).\nBerechnen Sie die Gesamtpufferzeit (GP) für jeden Arbeitsgang.\nIdentifizieren Sie den kritischen Weg im Projekt.\nWas könnte passieren, wenn einige Arbeitsschritte Kapazitätsbeschränkungen unterliegen?",
+    "crumbs": [
+      "05 Ressourcen",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-05.html#aufgabe-2-planung-mit-rüstzustandsübernahme-clsp",
+    "href": "tutorials/tutorial-05.html#aufgabe-2-planung-mit-rüstzustandsübernahme-clsp",
+    "title": "Übung 05",
+    "section": "Aufgabe 2: Planung mit Rüstzustandsübernahme (CLSP)",
+    "text": "Aufgabe 2: Planung mit Rüstzustandsübernahme (CLSP)\nEin Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschiedene Getriebetypen: Typ A und Typ B. Die Maschine kann pro Woche nur für einen Typ eingerichtet sein, aber der Rüstzustand kann in die Folgewoche übernommen werden, wenn derselbe Typ weiterproduziert wird. Ein Rüstvorgang ist nur dann nötig, wenn von einem Typ zum anderen gewechselt wird oder nach einer Woche ohne Produktion neu gestartet wird.\nGegebene Daten:\n\nPlanungshorizont: 4 Wochen\nWöchentliche Kapazität: 60 Stunden\n\nProduktdaten:\n\n\n\nParameter\nGetriebe Typ A\nGetriebe Typ B\n\n\n\n\nRüstkosten (s)\n200 GE\n150 GE\n\n\nLagerkosten (h)\n5 GE/Stück\n7 GE/Stück\n\n\nBearbeitungszeit (tb)\n1,0 h/Stück\n1,2 h/Stück\n\n\nRüstzeit (tr)\n10 h\n8 h\n\n\n\nNachfrage:\n\n\n\nWoche (t)\n1\n2\n3\n4\n\n\n\n\nBedarf Typ A\n20\n55\n0\n0\n\n\nBedarf Typ B\n0\n0\n35\n20\n\n\n\nVorgegebener Produktionsplan:\nUm das Konzept zu verstehen, analysieren Sie den folgenden, manuell erstellten Produktionsplan:\n\nWoche 1: Produziere 50 \\(\\times\\) Typ A.\nWoche 2: Produziere 25 \\(\\times\\) Typ A.\nWoche 3: Produziere 55 \\(\\times\\) Typ B.\nWoche 4: Keine Produktion.\n\n\nBerechnen Sie die gesamten Rüst- und Lagerkosten für den vorgegebenen Plan. Identifizieren Sie, in welcher Woche Rüstkosten eingespart werden.\nÜberprüfen Sie für jede Woche, ob die Produktions- und Rüstzeiten die verfügbare Kapazität von 60 Stunden einhalten.\nErläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde.",
+    "crumbs": [
+      "05 Ressourcen",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-03.html",
+    "href": "tutorials/tutorial-03.html",
+    "title": "Übung 03",
+    "section": "",
+    "text": "Diese Übung behandelt zwei zentrale Konzepte der Produktionsorganisation: die Zentrenproduktion als flexible Alternative zur Werkstattfertigung und das Qualitätsmanagement mit statistischen Methoden.\nWichtige Konzepte:\n\nZentrenproduktion: Gruppierung von Maschinen nach Erzeugnisfamilien\nErzeugnisfamilien: Produkte mit ähnlichen Fertigungsverfahren\nFFS (Flexibles Fertigungssystem): Automatisierte Zentrenproduktion\nEngpassanalyse: \\(\\text{Engpass } e = \\arg \\max_m \\left\\{ \\frac{p_m \\cdot b_m}{S_m} \\right\\}\\)",
+    "crumbs": [
+      "03 Qualität",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-03.html#einführung",
+    "href": "tutorials/tutorial-03.html#einführung",
+    "title": "Übung 03",
+    "section": "",
+    "text": "Diese Übung behandelt zwei zentrale Konzepte der Produktionsorganisation: die Zentrenproduktion als flexible Alternative zur Werkstattfertigung und das Qualitätsmanagement mit statistischen Methoden.\nWichtige Konzepte:\n\nZentrenproduktion: Gruppierung von Maschinen nach Erzeugnisfamilien\nErzeugnisfamilien: Produkte mit ähnlichen Fertigungsverfahren\nFFS (Flexibles Fertigungssystem): Automatisierte Zentrenproduktion\nEngpassanalyse: \\(\\text{Engpass } e = \\arg \\max_m \\left\\{ \\frac{p_m \\cdot b_m}{S_m} \\right\\}\\)",
+    "crumbs": [
+      "03 Qualität",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-03.html#aufgabe-1---zentrenproduktion-und-erzeugnisfamilien",
+    "href": "tutorials/tutorial-03.html#aufgabe-1---zentrenproduktion-und-erzeugnisfamilien",
+    "title": "Übung 03",
+    "section": "Aufgabe 1 - Zentrenproduktion und Erzeugnisfamilien",
+    "text": "Aufgabe 1 - Zentrenproduktion und Erzeugnisfamilien\nDie folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihrer Erstellung notwendigen Maschinen:\n\n\n\nMaschine\n1\n2\n3\n4\n5\n6\n\n\n\n\nErzeugnis A\n\nX\n\n\nX\n\n\n\nErzeugnis B\nX\n\nX\nX\n\nX\n\n\nErzeugnis C\n\n\n\nX\n\nX\n\n\nErzeugnis D\n\nX\n\n\nX\nX\n\n\n\n\nIdentifizieren Sie geeignete Erzeugnisfamilien für Produktionsinseln durch systematische Umordnung der Matrix. Welche Maschinengruppen und Erzeugnisgruppen ergeben sich?\nBewerten Sie die Qualität Ihrer Erzeugnisfamilienbildung. Ergeben sich Probleme und wie könnten diese gelöst werden?\nVergleichen Sie die Zentrenproduktion mit der Werkstattfertigung hinsichtlich folgender Kriterien:\n\nTransportwege und -zeiten\nDurchlaufzeiten und Lagerbestände\nFlexibilität bei Produktmix-Änderungen\nInvestitionsbedarf\n\nEin Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. Welche vier Planungsschritte sind dabei zu berücksichtigen?",
+    "crumbs": [
+      "03 Qualität",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-03.html#aufgabe-2---flexible-fertigungssysteme-ffs",
+    "href": "tutorials/tutorial-03.html#aufgabe-2---flexible-fertigungssysteme-ffs",
+    "title": "Übung 03",
+    "section": "Aufgabe 2 - Flexible Fertigungssysteme (FFS)",
+    "text": "Aufgabe 2 - Flexible Fertigungssysteme (FFS)\nGegeben sei ein geschlossenes Warteschlangennetzwerk (FFS) mit 3 Bearbeitungsstationen (je eine Maschine) und einem verbindenden Transportsystem. Die Daten sind:\nBearbeitungszeiten:\n\nMaschine 1: \\(b_1 = 50\\) min\nMaschine 2: \\(b_2 = 70\\) min\nMaschine 3: \\(b_3 = 30\\) min\nTransport: \\(b_4 = 12\\) min\n\nRouting-Wahrscheinlichkeiten:\n\n\\(p_1 = 0,4\\) (Station 1)\n\\(p_2 = 0,25\\) (Station 2)\n\\(p_3 = 0,35\\) (Station 3)\n\\(p_4 = 1,0\\) (Transport - nach jeder Bearbeitung)\n\n\nBerechnen Sie die mittlere Arbeitsbelastung (Workload) \\(w_m = \\frac{p_m \\cdot b_m}{S_m}\\) für alle Stationen.\nBestimmen Sie den Engpass des Systems.\nBerechnen Sie unter der Annahme einer 100%-Engpassauslastung:\n\nDie Produktionsraten \\(X_m\\) aller Stationen\nDie Auslastungen \\(U_m\\) aller Stationen\n\nDiskutieren Sie: Ist das Ergebnis realistisch, wenn die Anzahl der Paletten im System begrenzt ist? Welche praktischen Probleme könnten auftreten?",
+    "crumbs": [
+      "03 Qualität",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-03.html#aufgabe-3---statistische-qualitätskontrolle",
+    "href": "tutorials/tutorial-03.html#aufgabe-3---statistische-qualitätskontrolle",
+    "title": "Übung 03",
+    "section": "Aufgabe 3 - Statistische Qualitätskontrolle",
+    "text": "Aufgabe 3 - Statistische Qualitätskontrolle\nDie Duisburger Spirituosenfabrik “Nordrhein Destille” produziert den Schnaps “Studentenglück” mit einem Soll-Alkoholgehalt von 40%. Die Stichproben der letzten 5 Jahre (Umfang \\(n=5\\) Proben pro Stichprobe) ergaben folgende Werte:\n\n\n\nJahr\nProbe 1\nProbe 2\nProbe 3\nProbe 4\nProbe 5\n\n\n\n\n2019\n39,9\n40,5\n39,2\n40,3\n40,6\n\n\n2020\n41,1\n40,1\n39,8\n40,1\n40,1\n\n\n2021\n39,3\n40,4\n39,7\n40,5\n39,9\n\n\n2022\n40,1\n40,0\n39,4\n39,5\n39,5\n\n\n2023\n39,8\n40,2\n40,4\n39,9\n40,1\n\n\n\n\nBerechnen Sie für jede Stichprobe den Stichprobenmittelwert \\(x_t\\) und die Stichprobenspannweite \\(R_t\\).\nBestimmen Sie den Mittelwert aller Stichprobenmittelwerte \\(\\bar{x}\\) und die mittlere Spannweite \\(\\bar{R}\\).\nBerechnen Sie die Kontrollgrenzen für eine \\(\\bar{x}\\)-Kontrollkarte mit dem Faktor \\(A(n=5) = 0,577\\).\nDie nächste Stichprobe (2024) liefert folgende Werte: [38,2; 40,5; 39,3; 39,9; 41,4]. Ist der Prozess noch unter statistischer Kontrolle?\nInterpretieren Sie das Ergebnis: Was bedeutet es für die Qualität des Produkts und welche Maßnahmen wären zu empfehlen?",
+    "crumbs": [
+      "03 Qualität",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-01.html",
+    "href": "tutorials/tutorial-01.html",
+    "title": "Übung 01",
+    "section": "",
+    "text": "Die Standortplanung ist eine zentrale Aufgabe des strategischen Produktionsmanagements.\nNotation: - \\(\\gamma_i \\in \\{0,1\\}\\): Binärvariable für Standortwahl (1 = Standort wird errichtet) - \\(x_{ij} \\geq 0\\): Transportmenge von Standort \\(i\\) zu Abnehmer \\(j\\) - \\(f_i\\): Fixkosten für Standort \\(i\\) - \\(c_{ij}\\): Transportkosten pro ME von \\(i\\) nach \\(j\\) - \\(b_i\\): Kapazität von Standort \\(i\\) - \\(d_j\\): Bedarf von Abnehmer \\(j\\)",
+    "crumbs": [
+      "01 Standorte",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-01.html#einführung",
+    "href": "tutorials/tutorial-01.html#einführung",
+    "title": "Übung 01",
+    "section": "",
+    "text": "Die Standortplanung ist eine zentrale Aufgabe des strategischen Produktionsmanagements.\nNotation: - \\(\\gamma_i \\in \\{0,1\\}\\): Binärvariable für Standortwahl (1 = Standort wird errichtet) - \\(x_{ij} \\geq 0\\): Transportmenge von Standort \\(i\\) zu Abnehmer \\(j\\) - \\(f_i\\): Fixkosten für Standort \\(i\\) - \\(c_{ij}\\): Transportkosten pro ME von \\(i\\) nach \\(j\\) - \\(b_i\\): Kapazität von Standort \\(i\\) - \\(d_j\\): Bedarf von Abnehmer \\(j\\)",
+    "crumbs": [
+      "01 Standorte",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-01.html#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung",
+    "href": "tutorials/tutorial-01.html#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung",
+    "title": "Übung 01",
+    "section": "Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung",
+    "text": "Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung\nEin Unternehmen plant die Belieferung von drei Abnehmern (\\(j \\in \\{1, 2, 3\\}\\)) von potentiellen Standorten (\\(i \\in \\{A, B, C\\}\\)) mit unbegrenzter Kapazität. Folgende Daten sind gegeben:\nTransportkosten \\(c_{ij}\\) [€/ME] und Fixkosten \\(f_i\\) [€]:\n\n\n\n\n\n\n\n\n\n\nStandort \\(i\\)\nAbnehmer 1\nAbnehmer 2\nAbnehmer 3\nFixkosten \\(f_i\\)\n\n\n\n\nA\n10\n20\n30\n1.000\n\n\nB\n50\n40\n50\n2.000\n\n\nC\n80\n30\n40\n2.500\n\n\n\nBedarfe: \\(d_1 = 100\\) ME, \\(d_2 = 150\\) ME, \\(d_3 = 200\\) ME\n\nBestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.\nWie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?\nInterpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?",
+    "crumbs": [
+      "01 Standorte",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-01.html#aufgabe-2---mathematische-modellierung",
+    "href": "tutorials/tutorial-01.html#aufgabe-2---mathematische-modellierung",
+    "title": "Übung 01",
+    "section": "Aufgabe 2 - Mathematische Modellierung",
+    "text": "Aufgabe 2 - Mathematische Modellierung\nGegeben sei ein Standortplanungsproblem mit \\(I\\) potentiellen Standorten und \\(J\\) Abnehmern.\n\nFormulieren Sie die vollständige mathematische Modellierung des Standortplanungsproblems mit Kapazitätsbeschränkungen (Zielfunktion und alle Nebenbedingungen).\nErläutern Sie, aus welchen zwei Teilproblemen das Standortplanungsproblem besteht.\nFormulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Abnehmern (1, 2, 3) mit folgenden Daten:\n\nFixkosten: \\(f_A = 1.000\\), \\(f_B = 1.200\\), \\(f_C = 900\\)\nTransportkosten: \\(c_{A1} = 1\\), \\(c_{A2} = 2\\), \\(c_{A3} = 3\\), etc.\n\nWelche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.",
+    "crumbs": [
+      "01 Standorte",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-01.html#aufgabe-3---standortplanung-mit-kapazitätsbeschränkung",
+    "href": "tutorials/tutorial-01.html#aufgabe-3---standortplanung-mit-kapazitätsbeschränkung",
+    "title": "Übung 01",
+    "section": "Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung",
+    "text": "Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung\nBetrachten Sie folgendes Standortplanungsproblem:\nDaten:\n\n\n\n\n\n\n\n\n\n\n\nStandort \\(i\\)\n\\(c_{i1}\\)\n\\(c_{i2}\\)\n\\(c_{i3}\\)\nFixkosten \\(f_i\\)\nKapazität \\(b_i\\)\n\n\n\n\nA\n1\n2\n3\n1.000\n400\n\n\nB\n4\n5\n6\n1.200\n400\n\n\nC\n7\n8\n9\n900\n400\n\n\n\nBedarfe: \\(d_1 = 200\\), \\(d_2 = 300\\), \\(d_3 = 250\\)\n\nGegeben sei folgende Lösung: \\(\\gamma_A = 1\\), \\(\\gamma_B = 1\\), \\(\\gamma_C = 0\\)\n\nAbnehmer 1 wird vollständig von A beliefert: \\(x_{A1} = 200\\)\nAbnehmer 2 wird je zur Hälfte von A und B beliefert: \\(x_{A2} = 150\\), \\(x_{B2} = 150\\)\nAbnehmer 3 wird vollständig von B beliefert: \\(x_{B3} = 250\\)\n\nBerechnen Sie den Zielfunktionswert dieser Lösung.\nPrüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingungen.\nIst folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert (\\(x_{A2} = 300\\))? Begründen Sie.\nSchlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.",
+    "crumbs": [
+      "01 Standorte",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-01.html#aufgabe-4---heuristiken-zur-standortplanung",
+    "href": "tutorials/tutorial-01.html#aufgabe-4---heuristiken-zur-standortplanung",
+    "title": "Übung 01",
+    "section": "Aufgabe 4 - Heuristiken zur Standortplanung",
+    "text": "Aufgabe 4 - Heuristiken zur Standortplanung\nEin mittelständisches Unternehmen plant die Versorgung von drei regionalen Abnehmern. Folgende Daten liegen vor:\nTransportkosten \\(c_{ij}\\) [€/ME], Fixkosten und Kapazitäten:\n\n\n\n\n\n\n\n\n\n\n\nStandort \\(i\\)\nAbnehmer 1\nAbnehmer 2\nAbnehmer 3\nFixkosten \\(f_i\\)\nKapazität \\(b_i\\)\n\n\n\n\nA\n4\n4\n9\n60\n25\n\n\nB\n8\n7\n2\n60\n20\n\n\nC\n6\n3\n5\n70\n25\n\n\n\nBedarfe: \\(d_1 = 20\\), \\(d_2 = 10\\), \\(d_3 = 10\\)\n\nWenden Sie die Add-Heuristik an, um eine Lösung zu bestimmen. Dokumentieren Sie jeden Schritt.\nSind heuristische Lösungen optimal? Begründen Sie Ihre Antwort.\nAuf welcher Managementebene sind Standortentscheidungen angesiedelt und warum?",
+    "crumbs": [
+      "01 Standorte",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "general/faq.html",
+    "href": "general/faq.html",
+    "title": "Häufig gestellte Fragen",
+    "section": "",
+    "text": "Falls Sie eine Frage haben, die hier nicht beantwortet wird, teilen Sie mir dies bitte mit, indem Sie mir eine E-Mail an tobias.vlcek@uni-due.de. Sollten Sie einen Fehler im Kursmaterial gefunden haben oder Vorschläge zur Verbesserung des Kurses haben, teilen Sie mir dies bitte ebenfalls sehr gerne mit!",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "general/faq.html#unbeantwortete-fragen",
+    "href": "general/faq.html#unbeantwortete-fragen",
+    "title": "Häufig gestellte Fragen",
+    "section": "",
+    "text": "Falls Sie eine Frage haben, die hier nicht beantwortet wird, teilen Sie mir dies bitte mit, indem Sie mir eine E-Mail an tobias.vlcek@uni-due.de. Sollten Sie einen Fehler im Kursmaterial gefunden haben oder Vorschläge zur Verbesserung des Kurses haben, teilen Sie mir dies bitte ebenfalls sehr gerne mit!",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "general/faq.html#faqs",
+    "href": "general/faq.html#faqs",
+    "title": "Häufig gestellte Fragen",
+    "section": "FAQs",
+    "text": "FAQs\n\nKann ich die Übungen auch als PDF herunterladen?\nJa, die Übungen können als PDF herunterladen werden. Die Datei finden Sie auf der jeweiligen Seite der Übung, wenn Sie auf “PDF” klicken.\n\n\nWoran orientiert sich die Klausur?\nDie Klausur orientiert sich primär an den Probeklausuren von Herrn Manitz und wird die Themen der Vorlesung abdecken, die wir gemeinsam behandelt haben. Wenn ihr die von uns behandelten Themen der alten Klausuren rechnen könnt und die Übungen verstanden habt, seid ihr sehr gut vorbereitet.\n\n\nWie ist die Klausur aufgebaut?\nDie Klausur wird aus etwa 4-5 Teilen bestehen, die alle bearbeitet werden müssen. Um einen Überblick von dem Klausurformat zu bekommen, mit dem ich in der Regel arbeite, schauen Sie sich gerne die Klausur zu Produktionswirtschaft II und Materiallogistik aus dem Frühjahr 2025 an.\n\n\nWie lange dauert die Klausur?\nDie Klausur hat eine Länge von 60 Minuten.",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Produktionsmanagement",
+    "section": "",
+    "text": "Dieser Kurs behandelt das Modul Produktionsmanagement auf Basis der ursprünglichen Vorlesung von Prof. Dr. Manitz. Ich habe den Kurs kurzfristig übernommen und die Materialien deswegen lediglich leicht angepasst. Es sind keine neuen Inhalte enthalten, sondern lediglich angepasste Übungen.",
+    "crumbs": [
+      "Willkommen"
+    ]
+  },
+  {
+    "objectID": "index.html#einleitung",
+    "href": "index.html#einleitung",
+    "title": "Produktionsmanagement",
+    "section": "",
+    "text": "Dieser Kurs behandelt das Modul Produktionsmanagement auf Basis der ursprünglichen Vorlesung von Prof. Dr. Manitz. Ich habe den Kurs kurzfristig übernommen und die Materialien deswegen lediglich leicht angepasst. Es sind keine neuen Inhalte enthalten, sondern lediglich angepasste Übungen.",
+    "crumbs": [
+      "Willkommen"
+    ]
+  },
+  {
+    "objectID": "index.html#lernziele",
+    "href": "index.html#lernziele",
+    "title": "Produktionsmanagement",
+    "section": "Lernziele",
+    "text": "Lernziele\nMein Ziel ist es, Ihnen einige wichtige Grundlagen in der Produktion näherzubringen. Diese Konzepte werden sowohl in der Wissenschaft als auch in der Industrie eingesetzt und sind gute Werkzeuge für die Praxis.\nNach Abschluss dieses Kurses werden Sie in der Lage sein:\n\nStandortplanung mit und ohne Kapazitätsbeschränkungen durchzuführen\nLeistungsanalyse und grundlegende Warteschlangenmodelle zu erstellen\nGrundlagen im Qualitätsmanagement anzuwenden\nKernkonzepte der Ressourcen und Produktionsprogrammplanung zu verstehen\n\nEs sind keine fortgeschrittenen Kenntnisse oder Erfahrungen erforderlich, um den Inhalten zu folgen, obwohl Grundkenntnisse in statistischen Methoden, Operations Research und Mathematik hilfreich sind. Ferner entsprechen nicht alle Inhalte der Vorlesung dem jeweils letzten Stand der Forschung, da die Folien von Prof. Dr. Manitz stammen und teils etwas älter sind.",
+    "crumbs": [
+      "Willkommen"
+    ]
+  },
+  {
+    "objectID": "index.html#kursabschnitte",
+    "href": "index.html#kursabschnitte",
+    "title": "Produktionsmanagement",
+    "section": "Kursabschnitte",
+    "text": "Kursabschnitte\nDer Kerninhalt des Kurses ist in sechs Abschnitte gegliedert:\n\nGrundlagen & Standortplanung\nFließbandproduktion & Leistungsanalysen\nZentrenproduktion & Qualitätsmanagement\nProduktionsprogrammplanung\nRessourceneinsatzplanung & Losgrößen\nWiederholung und offene Fragen",
+    "crumbs": [
+      "Willkommen"
+    ]
+  },
+  {
+    "objectID": "index.html#tutorials",
+    "href": "index.html#tutorials",
+    "title": "Produktionsmanagement",
+    "section": "Tutorials",
+    "text": "Tutorials\nDie Tutorials sind von mir auf Basis der Vorlesung von Prof. Dr. Manitz erstellt worden. Sie helfen Ihnen, die Konzepte aus der Vorlesung anzuwenden und zu verstehen. Die Klausur am Ende orientiert sich an den Probeklausuren von Herrn Manitz und wird die Themen der Vorlesung abdecken, die wir gemeinsam behandelt haben.",
+    "crumbs": [
+      "Willkommen"
+    ]
+  },
+  {
+    "objectID": "index.html#fragen-und-unterstützung",
+    "href": "index.html#fragen-und-unterstützung",
+    "title": "Produktionsmanagement",
+    "section": "Fragen und Unterstützung",
+    "text": "Fragen und Unterstützung\nFür Ihre Fragen stehe ich jederzeit gerne zur Verfügung. Kontaktieren Sie mich einfach per E-Mail unter tobias.vlcek@uni-due.de.\nZusätzlich steht Ihnen auf dieser Seite ein Chatbot zur Verfügung, der auf den Inhalten der Vorlesung basiert und Ihnen bei inhaltlichen Fragen unterstützend zur Seite stehen kann. Er ist nicht perfekt und eher eine Beta-Version, aber ich hoffe, dass er Ihnen dennoch hilft.",
+    "crumbs": [
+      "Willkommen"
+    ]
+  },
+  {
+    "objectID": "general/privacy.html",
+    "href": "general/privacy.html",
+    "title": "Privacy Policy",
+    "section": "",
+    "text": "Welcome! This Privacy Policy explains how we collect, use, shares, and protects information in relation to our AI Chatbot service (the “Chatbot”) provided on this website. All other services do not use data that is covered by this policy!\nWe are committed to protecting your privacy. This policy outlines our practices concerning the data processed when you interact with our Chatbot. By using the Chatbot, you agree to the collection and use of information in accordance with this policy."
+  },
+  {
+    "objectID": "general/privacy.html#introduction",
+    "href": "general/privacy.html#introduction",
+    "title": "Privacy Policy",
+    "section": "",
+    "text": "Welcome! This Privacy Policy explains how we collect, use, shares, and protects information in relation to our AI Chatbot service (the “Chatbot”) provided on this website. All other services do not use data that is covered by this policy!\nWe are committed to protecting your privacy. This policy outlines our practices concerning the data processed when you interact with our Chatbot. By using the Chatbot, you agree to the collection and use of information in accordance with this policy."
+  },
+  {
+    "objectID": "general/privacy.html#data-controller",
+    "href": "general/privacy.html#data-controller",
+    "title": "Privacy Policy",
+    "section": "2. Data Controller",
+    "text": "2. Data Controller\nThe data controller responsible for your personal data is:\nBeyond Simulations GmbH\nAm Eich 9d\n22113 Oststeinbek\nGermany\nEmail: info@beyond-simulations.com"
+  },
+  {
+    "objectID": "general/privacy.html#information-we-collect",
+    "href": "general/privacy.html#information-we-collect",
+    "title": "Privacy Policy",
+    "section": "3. Information We Collect",
+    "text": "3. Information We Collect\nWhen you interact with our Chatbot, we collect and process the following types of information:\n\nChat Interactions: This includes the questions, prompts, and text you submit to the Chatbot (“Prompts”) and the responses generated by the Chatbot (“Responses”). We do not store any personal data and all prompts are anonymized.\nTechnical Data: We may automatically collect technical information associated with your interaction, such as timestamps, session identifiers for service functionality. This data is processed on our self-hosted server at Hetzner in Germany.\nUsage Data: We may collect aggregated and anonymized data about how the Chatbot is used to monitor performance and improve the service."
+  },
+  {
+    "objectID": "general/privacy.html#how-we-use-your-information",
+    "href": "general/privacy.html#how-we-use-your-information",
+    "title": "Privacy Policy",
+    "section": "4. How We Use Your Information",
+    "text": "4. How We Use Your Information\nWe use the collected information for the following purposes:\n\nTo Provide and Operate the Chatbot: To receive your Prompts, process them using AI models, and deliver Responses back to you.\nTo Route Requests: To manage communication between our Chatbot interface and the underlying AI models via intermediary services.\nFor Safety and Content Moderation: To analyze Prompts and/or potential Responses for harmful, inappropriate, or policy-violating content using designated services by Mistral AI acting as guardrails, aiming to ensure safer interactions.\nFor Service Improvement: To analyze usage patterns to understand user needs, troubleshoot issues, and enhance the Chatbot’s performance and capabilities.\nFor Security and Monitoring: To maintain the security of our service, prevent fraud, and monitor for potential misuse.\nTo Comply with Legal Obligations: To meet any applicable legal or regulatory requirements."
+  },
+  {
+    "objectID": "general/privacy.html#legal-basis-for-processing",
+    "href": "general/privacy.html#legal-basis-for-processing",
+    "title": "Privacy Policy",
+    "section": "5. Legal Basis for Processing",
+    "text": "5. Legal Basis for Processing\nWe process your personal data based on the following legal grounds:\n\nLegitimate Interests: Processing is necessary for our legitimate interests in operating and improving the Chatbot service and maintaining its security, provided these interests are not overridden by your data protection rights.\nConsent: In some cases, we might ask for your explicit consent for specific processing activities (e.g., using conversation data for fine-tuning models beyond basic service provision).\nLegal Obligation: Processing is necessary to comply with a legal obligation to which we are subject."
+  },
+  {
+    "objectID": "general/privacy.html#data-sharing-and-third-parties",
+    "href": "general/privacy.html#data-sharing-and-third-parties",
+    "title": "Privacy Policy",
+    "section": "6. Data Sharing and Third Parties",
+    "text": "6. Data Sharing and Third Parties\nTo provide the Chatbot service, your Prompts are processed by and shared with the following third-party services and infrastructure providers:\n\nChatbot Interface: The user interface for the Chatbot runs directly in your web browser.\nRAG-Backend: The RAG backend runs on a self-hosted server on Hetzner in Germany.\nLLM Observation (Langfuse): We use Langfuse to observe the usage of the LLM models we use. Your Prompts (and generated responses) pass through Langfuse to reach the selected LLM provider or guardrail service. The data is stored on our self-hosted server at Hetzner in Germany.\nHosting Provider (Hetzner): Our instance of Langfuse is self-hosted on servers provided by Hetzner Online GmbH. Hetzner acts as a data processor providing the infrastructure. We store application data and interaction logs on these servers, located within Germany.\nMistral AI: We use Mistral AI for two primary purposes: (1) as one of the LLM options to generate Responses to your Prompts, and (2) as a guardrail service to check Prompts and/or potential Responses (which may have been generated by Mistral AI itself) for safety, appropriateness, and compliance with content policies before a final response is delivered to you. When Mistral is used for either generation or guardrail checking, your data (relevant Prompts and/or potential Responses) is processed according to Mistral’s terms and privacy policy. The data ist not used or saved for training purposes by the model providers.\n\nImportant Note on Third-Party Processing: These LLM and guardrail providers process your data to generate Responses or perform safety checks. They may use data according to their own policies, potentially including service improvement, subject to their terms. We encourage you to review their respective privacy policies. We do not explicitly share personal identifiers like your name or email through the Chatbot interaction unless you voluntarily include such information in your Prompts."
+  },
+  {
+    "objectID": "general/privacy.html#data-storage-security-and-retention",
+    "href": "general/privacy.html#data-storage-security-and-retention",
+    "title": "Privacy Policy",
+    "section": "7. Data Storage, Security, and Retention",
+    "text": "7. Data Storage, Security, and Retention\n\nStorage: Chat interaction data (Prompts, Responses) and technical logs may be stored temporarily or persistently (depending on configuration) on our Langfuse instance hosted on Hetzner servers in Germany.\nSecurity: We implement reasonable technical and organizational measures to protect your data from unauthorized access, disclosure, alteration, or destruction. This includes using HTTPS encryption for data transmitted between your browser, our server, and the LLM providers. Access to the backend systems is restricted.\nRetention: We retain chat interaction data and technical logs only for as long as necessary to fulfill the purposes outlined in this policy, for troubleshooting, security logging, service improvement, or as required by law. Retention periods vary depending on the type of data and our operational needs."
+  },
+  {
+    "objectID": "general/privacy.html#your-data-protection-rights",
+    "href": "general/privacy.html#your-data-protection-rights",
+    "title": "Privacy Policy",
+    "section": "8. Your Data Protection Rights",
+    "text": "8. Your Data Protection Rights\nDepending on your location and applicable data protection laws, you may have the following rights regarding your personal data:\n\nRight to Access: You can request copies of your personal data that we hold.\nRight to Rectification: You can request correction of inaccurate or incomplete data.\nRight to Erasure (‘Right to be Forgotten’): You can request the deletion of your personal data under certain conditions.\nRight to Restrict Processing: You can request the limitation of how we process your data under certain conditions.\nRight to Data Portability: You can request that we transfer the data we have collected to another organization, or directly to you, under certain conditions.\nRight to Object: You can object to our processing of your personal data based on legitimate interests.\nRight to Withdraw Consent: If processing is based on consent, you can withdraw it at any time.\n\nTo exercise any of these rights, please contact us using the details provided in Section 2 (Data Controller). We may need to verify your identity before processing your request."
+  },
+  {
+    "objectID": "general/privacy.html#changes-to-this-privacy-policy",
+    "href": "general/privacy.html#changes-to-this-privacy-policy",
+    "title": "Privacy Policy",
+    "section": "9. Changes to This Privacy Policy",
+    "text": "9. Changes to This Privacy Policy\nWe may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the “Last Updated” date at the top. We encourage you to review this policy periodically for any changes."
+  },
+  {
+    "objectID": "tutorials/tutorial-02.html",
+    "href": "tutorials/tutorial-02.html",
+    "title": "Übung 02",
+    "section": "",
+    "text": "Diese Übung behandelt zwei zentrale Themen der Kapazitätsplanung in der Produktion: Warteschlangensysteme und Fließbandabstimmung.\nWichtige Formeln:\n\nLittle’s Gesetz: \\(L = \\lambda \\cdot W\\) (Bestand = Ankunftsrate × Durchlaufzeit)\nAuslastung: \\(\\rho = \\frac{\\lambda}{\\mu}\\) (bei einem Server)\nMittlerer Bestand (M/M/1): \\(L = \\frac{\\rho}{1-\\rho}\\)\nMittlere Durchlaufzeit (M/M/1): \\(W = \\frac{1}{\\mu(1-\\rho)}\\)",
+    "crumbs": [
+      "02 Leistung",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-02.html#einführung",
+    "href": "tutorials/tutorial-02.html#einführung",
+    "title": "Übung 02",
+    "section": "",
+    "text": "Diese Übung behandelt zwei zentrale Themen der Kapazitätsplanung in der Produktion: Warteschlangensysteme und Fließbandabstimmung.\nWichtige Formeln:\n\nLittle’s Gesetz: \\(L = \\lambda \\cdot W\\) (Bestand = Ankunftsrate × Durchlaufzeit)\nAuslastung: \\(\\rho = \\frac{\\lambda}{\\mu}\\) (bei einem Server)\nMittlerer Bestand (M/M/1): \\(L = \\frac{\\rho}{1-\\rho}\\)\nMittlere Durchlaufzeit (M/M/1): \\(W = \\frac{1}{\\mu(1-\\rho)}\\)",
+    "crumbs": [
+      "02 Leistung",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-02.html#aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion",
+    "href": "tutorials/tutorial-02.html#aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion",
+    "title": "Übung 02",
+    "section": "Aufgabe 1 - Warteschlangenanalyse in der Automobilproduktion",
+    "text": "Aufgabe 1 - Warteschlangenanalyse in der Automobilproduktion\nEin Automobilzulieferer betreibt eine Fertigungslinie mit 4 Bearbeitungsstationen für Getriebekomponenten. Die Stationen haben folgende Bearbeitungsraten (in Stück pro Stunde):\n\nStation 1 (Drehen): \\(\\mu_1 = 3\\)\nStation 2 (Fräsen): \\(\\mu_2 = 3\\)\nStation 3 (Schleifen): \\(\\mu_3 = 4\\)\nStation 4 (Qualitätskontrolle): \\(\\mu_4 = 3\\)\n\nZwischen den Stationen sind unbeschränkte Puffer vorhanden. Die Zwischenankunfts- und Bearbeitungszeiten sind exponentialverteilt.\n\nBestimmen Sie für die Ankunftsraten \\(\\lambda_1 = 2\\) und \\(\\lambda_1 = 3\\) Stück/h vor der ersten Station:\n\nDie Produktionsrate des Systems\nDie Ankunftsraten an den einzelnen Stationen\n\nBerechnen Sie für beide Szenarien aus a):\n\nDie Auslastung jeder Station und die durchschnittliche Systemauslastung\nDen mittleren Bestand an jeder Station und im Gesamtsystem\nDie mittlere Durchlaufzeit pro Station und die Gesamtdurchlaufzeit\n\nFür \\(\\lambda_1 = 2\\): Wie hoch ist die Wahrscheinlichkeit, dass sich an Station 1:\n\nGenau 5 Werkstücke befinden?\nHöchstens 5 Werkstücke befinden?\nDie Station leer ist?\n\nEine zusätzliche Vorbearbeitungsstation hat \\(\\lambda = 5\\) und \\(\\mu = 7\\). Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.",
+    "crumbs": [
+      "02 Leistung",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-02.html#aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage",
+    "href": "tutorials/tutorial-02.html#aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage",
+    "title": "Übung 02",
+    "section": "Aufgabe 2 - Fließbandabstimmung bei der Smartphone-Montage",
+    "text": "Aufgabe 2 - Fließbandabstimmung bei der Smartphone-Montage\nEin Elektronikhersteller plant eine neue Montagelinie für Smartphones. Pro 8-Stunden-Schicht sollen 48 Geräte montiert werden. Die Montage besteht aus 10 Arbeitselementen mit folgenden Beziehungen:\nArbeitselemente und Elementzeiten:\n\n\n\nElement\nA\nB\nC\nD\nE\nF\nG\nH\nI\nJ\n\n\n\n\nZeit [min]\n5\n3\n6\n4\n8\n3\n4\n5\n6\n5\n\n\n\nVorranggraph:\n    A(5) ──→ D(4) ──→ G(4) ──→ J(5)\n         ↘                    ↗\n          E(8) ──→ H(5) ────↗\n          ↗\n    B(3) ↗\n\n    C(6) ──→ F(3) ──→ I(6) ──→ J(5)\n\nBestimmen Sie die Taktzeit für die geforderte Produktionsrate.\nBerechnen Sie die theoretisch minimale Anzahl an Stationen. Wie viele Stationen werden maximal benötigt?\nFühren Sie eine Fließbandabstimmung mit der Heuristik “Längste Elementzeit zuerst” durch.\nBerechnen Sie den Bandwirkungsgrad Ihrer Lösung.",
+    "crumbs": [
+      "02 Leistung",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-02.html#aufgabe-3---leistungsanalyse-eines-fließproduktionssystems",
+    "href": "tutorials/tutorial-02.html#aufgabe-3---leistungsanalyse-eines-fließproduktionssystems",
+    "title": "Übung 02",
+    "section": "Aufgabe 3 - Leistungsanalyse eines Fließproduktionssystems",
+    "text": "Aufgabe 3 - Leistungsanalyse eines Fließproduktionssystems\nEine Elektronikfertigung für Leiterplatten besteht aus 5 aufeinanderfolgenden Bearbeitungsstationen. Die erste Station erhält Werkstücke mit einer Rate von \\(\\lambda = 0,08\\) Leiterplatten pro Minute. Alle Stationen haben eine mittlere Bearbeitungszeit von \\(b = 11\\) Minuten pro Leiterplatte. Die Bearbeitungszeiten sind exponentialverteilt, und zwischen den Stationen befinden sich unbeschränkte Puffer.\n\nBerechnen Sie für jede Station:\n\nDie Bearbeitungsrate \\(\\mu\\)\nDie Auslastung \\(\\rho\\)\nDen mittleren Bestand \\(L\\)\nDie mittlere Durchlaufzeit \\(W\\)\n\nBestimmen Sie für das Gesamtsystem:\n\nDie Produktionsrate\nDen Gesamtbestand\nDie Gesamtdurchlaufzeit\n\nFür Station 3: Mit welcher Wahrscheinlichkeit\n\nIst die Station leer?\nBefinden sich genau 3 Leiterplatten an der Station?\nBefinden sich 3 oder weniger Leiterplatten an der Station?\nBefinden sich mehr als 10 Leiterplatten an der Station?",
+    "crumbs": [
+      "02 Leistung",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-02.html#aufgabe-4---starving-und-blocking",
+    "href": "tutorials/tutorial-02.html#aufgabe-4---starving-und-blocking",
+    "title": "Übung 02",
+    "section": "Aufgabe 4 - Starving und Blocking",
+    "text": "Aufgabe 4 - Starving und Blocking\nEin Produktionssystem besteht aus drei Stationen mit beschränkten Puffern:\n[Lager] → Station 1 → [Puffer 1: 3 Plätze] → Station 2 → [Puffer 2: 2 Plätze] → Station 3 → [Fertigwarenlager]\nDie Bearbeitungszeiten sind deterministisch: \\(b_1 = 4\\) min, \\(b_2 = 5\\) min, \\(b_3 = 3\\) min.\n\nErklären Sie die Begriffe “Starving” und “Blocking” im Kontext dieses Systems.\nIdentifizieren Sie mögliche Starving- und Blocking-Situationen in diesem System.\nWelche Station ist der Engpass? Wie wirkt sich das auf die anderen Stationen aus?\nSchlagen Sie zwei Maßnahmen zur Verbesserung der Systemleistung vor.",
+    "crumbs": [
+      "02 Leistung",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-04.html",
+    "href": "tutorials/tutorial-04.html",
+    "title": "Übung 04",
+    "section": "",
+    "text": "Diese Übung behandelt die operative Produktionsplanung mit zwei zentralen Planungsaufgaben: die aggregierte Produktionsprogrammplanung zur Beschäftigungsglättung und die Losgrößenplanung zur optimalen Auftragsgrößenbestimmung.\nWichtige Modelle und Formeln:\nAGGRPLAN (Aggregierte Planung):\n\nZielfunktion: \\(\\text{Min } Z = \\sum_{k,t} h_k \\cdot y_{kt} + \\sum_t u_t \\cdot U_t\\)\nLagerbilanz: \\(y_{k,t-1} + x_{kt} - y_{kt} = d_{kt}\\)\nKapazitätsbeschränkungen: \\(\\sum_k a_k^C \\cdot x_{kt} \\leq b_t^{C_{max}}\\), \\(\\sum_k a_k^N \\cdot x_{kt} - U_t \\leq b_t^{N_{max}}\\)\n\nSIULSP (Losgrößenplanung):\n\nZielfunktion: \\(\\text{Min } Z = \\sum_t (s \\cdot \\gamma_t + h \\cdot y_t)\\)\nBedarfsdeckung: \\(y_{t-1} + q_t - y_t = d_t\\)\nSetup-Kopplung: \\(q_t \\leq M \\cdot \\gamma_t\\)",
+    "crumbs": [
+      "04 Produktion",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-04.html#einführung",
+    "href": "tutorials/tutorial-04.html#einführung",
+    "title": "Übung 04",
+    "section": "",
+    "text": "Diese Übung behandelt die operative Produktionsplanung mit zwei zentralen Planungsaufgaben: die aggregierte Produktionsprogrammplanung zur Beschäftigungsglättung und die Losgrößenplanung zur optimalen Auftragsgrößenbestimmung.\nWichtige Modelle und Formeln:\nAGGRPLAN (Aggregierte Planung):\n\nZielfunktion: \\(\\text{Min } Z = \\sum_{k,t} h_k \\cdot y_{kt} + \\sum_t u_t \\cdot U_t\\)\nLagerbilanz: \\(y_{k,t-1} + x_{kt} - y_{kt} = d_{kt}\\)\nKapazitätsbeschränkungen: \\(\\sum_k a_k^C \\cdot x_{kt} \\leq b_t^{C_{max}}\\), \\(\\sum_k a_k^N \\cdot x_{kt} - U_t \\leq b_t^{N_{max}}\\)\n\nSIULSP (Losgrößenplanung):\n\nZielfunktion: \\(\\text{Min } Z = \\sum_t (s \\cdot \\gamma_t + h \\cdot y_t)\\)\nBedarfsdeckung: \\(y_{t-1} + q_t - y_t = d_t\\)\nSetup-Kopplung: \\(q_t \\leq M \\cdot \\gamma_t\\)",
+    "crumbs": [
+      "04 Produktion",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-04.html#aufgabe-1---aggregierte-produktionsplanung",
+    "href": "tutorials/tutorial-04.html#aufgabe-1---aggregierte-produktionsplanung",
+    "title": "Übung 04",
+    "section": "Aufgabe 1 - Aggregierte Produktionsplanung",
+    "text": "Aufgabe 1 - Aggregierte Produktionsplanung\nEin Unternehmen produziert zwei Produkte (P1, P2) für die folgenden Nachfragemengen in den nächsten vier Perioden ermittelt wurden:\n\n\n\n\\(d_{k,t}\\)\n\\(t=1\\)\n\\(t=2\\)\n\\(t=3\\)\n\\(t=4\\)\n\n\n\n\nP1\n20\n50\n30\n20\n\n\nP2\n50\n20\n60\n30\n\n\n\nWeitere Daten:\n\nKapazitätsbedarf P1: 1 Maschinenstunde, 1,5 Personenstunden pro Einheit\nKapazitätsbedarf P2: 2 Maschinenstunden, 0,5 Personenstunden pro Einheit\nVerfügbare Kapazität pro Periode: 150 Maschinenstunden, 70 Personenstunden\nMaximale Überstunden: 50 pro Periode\nLagerkostensatz: 1 GE/(Einheit·Periode) für beide Produkte\nÜberstundenkostensatz: 2 GE/Stunde (alle Perioden)\nAnfangslagerbestände: \\(y_{1,0} = y_{2,0} = 0\\)\n\n\nFormulieren Sie das vollständige mathematische Modell zur Beschäftigungsglättung.\nBerechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständiger Bedarfsdeckung ohne Lagerhaltung.\nBestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.\nWie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?",
+    "crumbs": [
+      "04 Produktion",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-04.html#aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren",
+    "href": "tutorials/tutorial-04.html#aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren",
+    "title": "Übung 04",
+    "section": "Aufgabe 2 - Losgrößenplanung mit verschiedenen Verfahren",
+    "text": "Aufgabe 2 - Losgrößenplanung mit verschiedenen Verfahren\nFür ein Endprodukt liegen folgende periodenbezogene Bedarfsprognosen vor: \\(d_1 = 30, d_2 = 90, d_3 = 20, d_4 = 0, d_5 = 50\\).\nGegeben: Lagerkostensatz \\(h = 2\\) €/(Einheit·Periode), Rüstkostensatz \\(s = 250\\) €/Rüstvorgang\n\nFormulieren Sie das vollständige SIULSP-Modell für dieses Problem.\nWelchen Wert muss “Big-M” mindestens annehmen? Begründen Sie Ihre Antwort.\nBestimmen Sie eine Lösung mit dem Silver-Meal-Verfahren.\nBestimmen Sie eine Lösung mit dem Groff-Verfahren.\nBestimmen Sie die optimale Lösung mit dem Wagner-Whitin-Verfahren (Kürzeste-Wege-Interpretation).\nVergleichen Sie die Lösungsqualität der drei Verfahren und bewerten Sie deren praktische Anwendbarkeit.",
+    "crumbs": [
+      "04 Produktion",
+      "Tutorium"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-04.html#aufgabe-3---kapazitätsbeschränkte-losgrößenplanung",
+    "href": "tutorials/tutorial-04.html#aufgabe-3---kapazitätsbeschränkte-losgrößenplanung",
+    "title": "Übung 04",
+    "section": "Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung",
+    "text": "Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung\nErweitern Sie das SIULSP-Modell aus Aufgabe 2 um folgende Kapazitätsbeschränkungen:\n\nVerfügbare Produktionskapazität: 80 Einheiten pro Periode\nRüstzeit: 10 Stunden pro Rüstvorgang\nVerfügbare Rüstkapazität: 15 Stunden pro Periode\nProduktionszeit: 0,5 Stunden pro Einheit\n\n\nFormulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschränkte Problem.\nAnalysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.\nWelche Auswirkungen haben Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren?",
+    "crumbs": [
+      "04 Produktion",
+      "Tutorium"
+    ]
+  }
+]
