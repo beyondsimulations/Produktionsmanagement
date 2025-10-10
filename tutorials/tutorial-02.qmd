@@ -3,17 +3,6 @@ title: "Übung 02"
 subtitle: "Fließbandproduktion & Leistungsanalysen"
 ---
 
-## Einführung
-
-Diese Übung behandelt zwei zentrale Themen der Kapazitätsplanung in der Produktion: Warteschlangensysteme und Fließbandabstimmung.
-
-**Wichtige Formeln:**
-
-- **Little's Gesetz**: $L = \lambda \cdot W$ (Bestand = Ankunftsrate × Durchlaufzeit)
-- **Auslastung**: $\rho = \frac{\lambda}{\mu}$ (bei einem Server)
-- **Mittlerer Bestand (M/M/1)**: $L = \frac{\rho}{1-\rho}$
-- **Mittlere Durchlaufzeit (M/M/1)**: $W = \frac{1}{\mu(1-\rho)}$
-
 ## Aufgabe 1 - Warteschlangenanalyse in der Automobilproduktion
 
 Ein Automobilzulieferer betreibt eine Fertigungslinie mit 4 Bearbeitungsstationen für Getriebekomponenten. Die Stationen haben folgende Bearbeitungsraten (in Stück pro Stunde):
@@ -28,17 +17,14 @@ Zwischen den Stationen sind unbeschränkte Puffer vorhanden. Die Zwischenankunft
 a) Bestimmen Sie für die Ankunftsraten $\lambda_1 = 2$ und $\lambda_1 = 3$ Stück/h vor der ersten Station:
    - Die Produktionsrate des Systems
    - Die Ankunftsraten an den einzelnen Stationen
-
 b) Berechnen Sie für beide Szenarien aus a):
    - Die Auslastung jeder Station und die durchschnittliche Systemauslastung
    - Den mittleren Bestand an jeder Station und im Gesamtsystem
    - Die mittlere Durchlaufzeit pro Station und die Gesamtdurchlaufzeit
-
 c) Für $\lambda_1 = 2$: Wie hoch ist die Wahrscheinlichkeit, dass sich an Station 1:
    - Genau 5 Werkstücke befinden?
    - Höchstens 5 Werkstücke befinden?
    - Die Station leer ist?
-
 d) Eine zusätzliche Vorbearbeitungsstation hat $\lambda = 5$ und $\mu = 7$. Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.
 
 ::: {.content-visible when-profile="solution"}
@@ -137,11 +123,8 @@ Ein Elektronikhersteller plant eine neue Montagelinie für Smartphones. Pro 8-St
 ```
 
 a) Bestimmen Sie die Taktzeit für die geforderte Produktionsrate.
-
 b) Berechnen Sie die theoretisch minimale Anzahl an Stationen. Wie viele Stationen werden maximal benötigt?
-
 c) Führen Sie eine Fließbandabstimmung mit der Heuristik "Längste Elementzeit zuerst" durch.
-
 d) Berechnen Sie den Bandwirkungsgrad Ihrer Lösung.
 
 ::: {.content-visible when-profile="solution"}
@@ -200,12 +183,10 @@ a) Berechnen Sie für jede Station:
    - Die Auslastung $\rho$
    - Den mittleren Bestand $L$
    - Die mittlere Durchlaufzeit $W$
-
 b) Bestimmen Sie für das Gesamtsystem:
    - Die Produktionsrate
    - Den Gesamtbestand
    - Die Gesamtdurchlaufzeit
-
 c) Für Station 3: Mit welcher Wahrscheinlichkeit
    - Ist die Station leer?
    - Befinden sich genau 3 Leiterplatten an der Station?
@@ -253,11 +234,8 @@ Ein Produktionssystem besteht aus drei Stationen mit beschränkten Puffern:
 Die Bearbeitungszeiten sind deterministisch: $b_1 = 4$ min, $b_2 = 5$ min, $b_3 = 3$ min.
 
 a) Erklären Sie die Begriffe "Starving" und "Blocking" im Kontext dieses Systems.
-
 b) Identifizieren Sie mögliche Starving- und Blocking-Situationen in diesem System.
-
 c) Welche Station ist der Engpass? Wie wirkt sich das auf die anderen Stationen aus?
-
 d) Schlagen Sie zwei Maßnahmen zur Verbesserung der Systemleistung vor.
 
 ::: {.content-visible when-profile="solution"}

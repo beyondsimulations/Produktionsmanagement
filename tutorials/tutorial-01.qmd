@@ -3,18 +3,6 @@ title: "Übung 01"
 subtitle: "Grundlagen & Standortplanung"
 ---
 
-## Einführung
-
-Die Standortplanung ist eine zentrale Aufgabe des strategischen Produktionsmanagements.
-
-**Notation:**
-- $\gamma_i \in \{0,1\}$: Binärvariable für Standortwahl (1 = Standort wird errichtet)
-- $x_{ij} \geq 0$: Transportmenge von Standort $i$ zu Abnehmer $j$
-- $f_i$: Fixkosten für Standort $i$
-- $c_{ij}$: Transportkosten pro ME von $i$ nach $j$
-- $b_i$: Kapazität von Standort $i$
-- $d_j$: Bedarf von Abnehmer $j$
-
 ## Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung
 
 Ein Unternehmen plant die Belieferung von drei Abnehmern ($j \in \{1, 2, 3\}$) von potentiellen Standorten ($i \in \{A, B, C\}$) mit unbegrenzter Kapazität. Folgende Daten sind gegeben:
@@ -30,9 +18,7 @@ Ein Unternehmen plant die Belieferung von drei Abnehmern ($j \in \{1, 2, 3\}$) v
 **Bedarfe:** $d_1 = 100$ ME, $d_2 = 150$ ME, $d_3 = 200$ ME
 
 a) Bestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.
-
 b) Wie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?
-
 c) Interpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?
 
 ::: {.content-visible when-profile="solution"}
@@ -74,13 +60,10 @@ Die Lösung mit nur Standort A minimiert zwar die Kosten, birgt aber Risiken:
 Gegeben sei ein Standortplanungsproblem mit $I$ potentiellen Standorten und $J$ Abnehmern.
 
 a) Formulieren Sie die vollständige mathematische Modellierung des Standortplanungsproblems mit Kapazitätsbeschränkungen (Zielfunktion und alle Nebenbedingungen).
-
 b) Erläutern Sie, aus welchen zwei Teilproblemen das Standortplanungsproblem besteht.
-
 c) Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Abnehmern (1, 2, 3) mit folgenden Daten:
    - Fixkosten: $f_A = 1.000$, $f_B = 1.200$, $f_C = 900$
    - Transportkosten: $c_{A1} = 1$, $c_{A2} = 2$, $c_{A3} = 3$, etc.
-
 d) Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.
 
 ::: {.content-visible when-profile="solution"}
@@ -144,13 +127,9 @@ a) Gegeben sei folgende Lösung: $\gamma_A = 1$, $\gamma_B = 1$, $\gamma_C = 0$
    - Abnehmer 1 wird vollständig von A beliefert: $x_{A1} = 200$
    - Abnehmer 2 wird je zur Hälfte von A und B beliefert: $x_{A2} = 150$, $x_{B2} = 150$
    - Abnehmer 3 wird vollständig von B beliefert: $x_{B3} = 250$
-
    Berechnen Sie den Zielfunktionswert dieser Lösung.
-
 b) Prüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingungen.
-
 c) Ist folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert ($x_{A2} = 300$)? Begründen Sie.
-
 d) Schlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.
 
 ::: {.content-visible when-profile="solution"}
@@ -203,9 +182,7 @@ Ein mittelständisches Unternehmen plant die Versorgung von drei regionalen Abne
 **Bedarfe:** $d_1 = 20$, $d_2 = 10$, $d_3 = 10$
 
 a) Wenden Sie die Add-Heuristik an, um eine Lösung zu bestimmen. Dokumentieren Sie jeden Schritt.
-
 b) Sind heuristische Lösungen optimal? Begründen Sie Ihre Antwort.
-
 c) Auf welcher Managementebene sind Standortentscheidungen angesiedelt und warum?
 
 ::: {.content-visible when-profile="solution"}

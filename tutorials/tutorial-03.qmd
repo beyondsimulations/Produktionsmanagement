@@ -26,15 +26,12 @@ Die folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihr
 | Erzeugnis D |  | X |  |  | X | X |
 
 a) Identifizieren Sie geeignete Erzeugnisfamilien für Produktionsinseln durch systematische Umordnung der Matrix. Welche Maschinengruppen und Erzeugnisgruppen ergeben sich?
-
 b) Bewerten Sie die Qualität Ihrer Erzeugnisfamilienbildung. Ergeben sich Probleme und wie könnten diese gelöst werden?
-
 c) Vergleichen Sie die Zentrenproduktion mit der Werkstattfertigung hinsichtlich folgender Kriterien:
    - Transportwege und -zeiten
    - Durchlaufzeiten und Lagerbestände
    - Flexibilität bei Produktmix-Änderungen
    - Investitionsbedarf
-
 d) Ein Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. Welche vier Planungsschritte sind dabei zu berücksichtigen?
 
 ::: {.content-visible when-profile="solution"}
@@ -117,13 +114,10 @@ Gegeben sei ein geschlossenes Warteschlangennetzwerk (FFS) mit 3 Bearbeitungssta
 - $p_4 = 1,0$ (Transport - nach jeder Bearbeitung)
 
 a) Berechnen Sie die mittlere Arbeitsbelastung (Workload) $w_m = \frac{p_m \cdot b_m}{S_m}$ für alle Stationen.
-
 b) Bestimmen Sie den Engpass des Systems.
-
 c) Berechnen Sie unter der Annahme einer 100%-Engpassauslastung:
    - Die Produktionsraten $X_m$ aller Stationen
    - Die Auslastungen $U_m$ aller Stationen
-
 d) Diskutieren Sie: Ist das Ergebnis realistisch, wenn die Anzahl der Paletten im System begrenzt ist? Welche praktischen Probleme könnten auftreten?
 
 ::: {.content-visible when-profile="solution"}
@@ -190,13 +184,9 @@ Die Duisburger Spirituosenfabrik "Nordrhein Destille" produziert den Schnaps "St
 | 2023 | 39,8 | 40,2 | 40,4 | 39,9 | 40,1 |
 
 a) Berechnen Sie für jede Stichprobe den Stichprobenmittelwert $x_t$ und die Stichprobenspannweite $R_t$.
-
 b) Bestimmen Sie den Mittelwert aller Stichprobenmittelwerte $\bar{x}$ und die mittlere Spannweite $\bar{R}$.
-
 c) Berechnen Sie die Kontrollgrenzen für eine $\bar{x}$-Kontrollkarte mit dem Faktor $A(n=5) = 0,577$.
-
 d) Die nächste Stichprobe (2024) liefert folgende Werte: [38,2; 40,5; 39,3; 39,9; 41,4]. Ist der Prozess noch unter statistischer Kontrolle?
-
 e) Interpretieren Sie das Ergebnis: Was bedeutet es für die Qualität des Produkts und welche Maßnahmen wären zu empfehlen?
 
 ::: {.content-visible when-profile="solution"}
