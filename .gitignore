@@ -5,3 +5,8 @@ notes/
 exams/
 basefiles/
 md_base/
+
+/.quarto/
+**/*.quarto_ipynb
+_site/
+_repo-md/

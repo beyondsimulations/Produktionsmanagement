@@ -1,7 +1,6 @@
 project:
   type: website
   post-render:
-    - helpers/convert_pypercent.py
     - helpers/convert_qmd_to_md.py
   render:
     - index.qmd
@@ -28,31 +27,31 @@ website:
           - text: "Vorlesung"
             href: lectures/lec-01-standort.pdf
           - text: "Tutorium"
-            href: tutorial/tutorial-01.qmd
+            href: tutorials/tutorial-01.qmd
       - section: "02 Standorte"
         contents:
           - text: "Vorlesung"
             href: lectures/lec-02-standort.pdf
           - text: "Tutorium"
-            href: tutorial/tutorial-02.qmd
+            href: tutorials/tutorial-02.qmd
       - section: "03 Standorte"
         contents:
           - text: "Vorlesung"
             href: lectures/lec-03-standort.pdf
           - text: "Tutorium"
-            href: tutorial/tutorial-03.qmd
+            href: tutorials/tutorial-03.qmd
       - section: "04 Standorte"
         contents:
           - text: "Vorlesung"
             href: lectures/lec-04-standort.pdf
           - text: "Tutorium"
-            href: tutorial/tutorial-04.qmd
+            href: tutorials/tutorial-04.qmd
       - section: "05 Standorte"
         contents:
           - text: "Vorlesung"
             href: lectures/lec-05-standort.pdf
           - text: "Tutorium"
-            href: tutorial/tutorial-05.qmd
+            href: tutorials/tutorial-05.qmd
       - text: "***"
       - text: "FAQs"
         href: general/faq.qmd
@@ -111,8 +110,6 @@ format-links:
   - format: typst
     text: PDF
     icon: file-pdf
-
-bibliography: Literature.bib
 
 execute:
   freeze: auto
