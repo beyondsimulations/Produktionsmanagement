@@ -111,7 +111,6 @@ b) Welchen Wert muss "Big-M" mindestens annehmen? Begründen Sie Ihre Antwort.
 c) Bestimmen Sie eine Lösung mit dem **Silver-Meal-Verfahren**.
 d) Bestimmen Sie eine Lösung mit dem **Groff-Verfahren**.
 e) Bestimmen Sie die **optimale Lösung** mit dem **Wagner-Whitin-Verfahren** (Kürzeste-Wege-Interpretation).
-
 f) Vergleichen Sie die Lösungsqualität der drei Verfahren und bewerten Sie deren praktische Anwendbarkeit.
 
 ::: {.content-visible when-profile="solution"}
