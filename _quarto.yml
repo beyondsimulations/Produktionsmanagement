@@ -31,25 +31,25 @@ website:
       - section: "02 Leistung"
         contents:
           - text: "Vorlesung"
-            href: lectures/lec-02-standort.pdf
+            href: lectures/lec-02-fliessband.pdf
           - text: "Tutorium"
             href: tutorials/tutorial-02.qmd
       - section: "03 Qualität"
         contents:
           - text: "Vorlesung"
-            href: lectures/lec-03-standort.pdf
+            href: lectures/lec-03-qualitaet.pdf
           - text: "Tutorium"
             href: tutorials/tutorial-03.qmd
       - section: "04 Produktion"
         contents:
           - text: "Vorlesung"
-            href: lectures/lec-04-standort.pdf
+            href: lectures/lec-04-produktion.pdf
           - text: "Tutorium"
             href: tutorials/tutorial-04.qmd
       - section: "05 Ressourcen"
         contents:
           - text: "Vorlesung"
-            href: lectures/lec-05-standort.pdf
+            href: lectures/lec-05-ressourcen.pdf
           - text: "Tutorium"
             href: tutorials/tutorial-05.qmd
       - text: "***"
