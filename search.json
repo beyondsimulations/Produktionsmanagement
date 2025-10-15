@@ -37,18 +37,7 @@
     "href": "tutorials/tutorial-03.html",
     "title": "Übung 03",
     "section": "",
-    "text": "Diese Übung behandelt zwei zentrale Konzepte der Produktionsorganisation: die Zentrenproduktion als flexible Alternative zur Werkstattfertigung und das Qualitätsmanagement mit statistischen Methoden.\nWichtige Konzepte:\n\nZentrenproduktion: Gruppierung von Maschinen nach Erzeugnisfamilien\nErzeugnisfamilien: Produkte mit ähnlichen Fertigungsverfahren\nFFS (Flexibles Fertigungssystem): Automatisierte Zentrenproduktion\nEngpassanalyse: \\(\\text{Engpass } e = \\arg \\max_m \\left\\{ \\frac{p_m \\cdot b_m}{S_m} \\right\\}\\)",
-    "crumbs": [
-      "03 Qualität",
-      "Tutorium"
-    ]
-  },
-  {
-    "objectID": "tutorials/tutorial-03.html#einführung",
-    "href": "tutorials/tutorial-03.html#einführung",
-    "title": "Übung 03",
-    "section": "",
-    "text": "Diese Übung behandelt zwei zentrale Konzepte der Produktionsorganisation: die Zentrenproduktion als flexible Alternative zur Werkstattfertigung und das Qualitätsmanagement mit statistischen Methoden.\nWichtige Konzepte:\n\nZentrenproduktion: Gruppierung von Maschinen nach Erzeugnisfamilien\nErzeugnisfamilien: Produkte mit ähnlichen Fertigungsverfahren\nFFS (Flexibles Fertigungssystem): Automatisierte Zentrenproduktion\nEngpassanalyse: \\(\\text{Engpass } e = \\arg \\max_m \\left\\{ \\frac{p_m \\cdot b_m}{S_m} \\right\\}\\)",
+    "text": "Die folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihrer Erstellung notwendigen Maschinen:\n\n\n\nMaschine\n1\n2\n3\n4\n5\n6\n\n\n\n\nErzeugnis A\n\nX\n\n\nX\n\n\n\nErzeugnis B\nX\n\nX\nX\n\nX\n\n\nErzeugnis C\n\n\n\nX\n\nX\n\n\nErzeugnis D\n\nX\n\n\nX\nX\n\n\n\n\nIdentifizieren Sie geeignete Erzeugnisfamilien für Produktionsinseln durch systematische Umordnung der Matrix. Welche Maschinengruppen und Erzeugnisgruppen ergeben sich?\nBewerten Sie die Qualität Ihrer Erzeugnisfamilienbildung. Ergeben sich Probleme und wie könnten diese gelöst werden?\nVergleichen Sie die Zentrenproduktion mit der Werkstattfertigung hinsichtlich folgender Kriterien:\n\nTransportwege und -zeiten\nDurchlaufzeiten und Lagerbestände\nFlexibilität bei Produktmix-Änderungen\nInvestitionsbedarf\n\nEin Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. Welche vier Planungsschritte sind dabei zu berücksichtigen?",
     "crumbs": [
       "03 Qualität",
       "Tutorium"
@@ -58,8 +47,8 @@
     "objectID": "tutorials/tutorial-03.html#aufgabe-1---zentrenproduktion-und-erzeugnisfamilien",
     "href": "tutorials/tutorial-03.html#aufgabe-1---zentrenproduktion-und-erzeugnisfamilien",
     "title": "Übung 03",
-    "section": "Aufgabe 1 - Zentrenproduktion und Erzeugnisfamilien",
-    "text": "Aufgabe 1 - Zentrenproduktion und Erzeugnisfamilien\nDie folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihrer Erstellung notwendigen Maschinen:\n\n\n\nMaschine\n1\n2\n3\n4\n5\n6\n\n\n\n\nErzeugnis A\n\nX\n\n\nX\n\n\n\nErzeugnis B\nX\n\nX\nX\n\nX\n\n\nErzeugnis C\n\n\n\nX\n\nX\n\n\nErzeugnis D\n\nX\n\n\nX\nX\n\n\n\n\nIdentifizieren Sie geeignete Erzeugnisfamilien für Produktionsinseln durch systematische Umordnung der Matrix. Welche Maschinengruppen und Erzeugnisgruppen ergeben sich?\nBewerten Sie die Qualität Ihrer Erzeugnisfamilienbildung. Ergeben sich Probleme und wie könnten diese gelöst werden?\nVergleichen Sie die Zentrenproduktion mit der Werkstattfertigung hinsichtlich folgender Kriterien:\n\nTransportwege und -zeiten\nDurchlaufzeiten und Lagerbestände\nFlexibilität bei Produktmix-Änderungen\nInvestitionsbedarf\n\nEin Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. Welche vier Planungsschritte sind dabei zu berücksichtigen?",
+    "section": "",
+    "text": "Die folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihrer Erstellung notwendigen Maschinen:\n\n\n\nMaschine\n1\n2\n3\n4\n5\n6\n\n\n\n\nErzeugnis A\n\nX\n\n\nX\n\n\n\nErzeugnis B\nX\n\nX\nX\n\nX\n\n\nErzeugnis C\n\n\n\nX\n\nX\n\n\nErzeugnis D\n\nX\n\n\nX\nX\n\n\n\n\nIdentifizieren Sie geeignete Erzeugnisfamilien für Produktionsinseln durch systematische Umordnung der Matrix. Welche Maschinengruppen und Erzeugnisgruppen ergeben sich?\nBewerten Sie die Qualität Ihrer Erzeugnisfamilienbildung. Ergeben sich Probleme und wie könnten diese gelöst werden?\nVergleichen Sie die Zentrenproduktion mit der Werkstattfertigung hinsichtlich folgender Kriterien:\n\nTransportwege und -zeiten\nDurchlaufzeiten und Lagerbestände\nFlexibilität bei Produktmix-Änderungen\nInvestitionsbedarf\n\nEin Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. Welche vier Planungsschritte sind dabei zu berücksichtigen?",
     "crumbs": [
       "03 Qualität",
       "Tutorium"
