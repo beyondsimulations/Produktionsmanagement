@@ -3,17 +3,6 @@ title: "Übung 03"
 subtitle: "Zentrenproduktion & Qualitätsmanagement"
 ---
 
-## Einführung
-
-Diese Übung behandelt zwei zentrale Konzepte der Produktionsorganisation: die Zentrenproduktion als flexible Alternative zur Werkstattfertigung und das Qualitätsmanagement mit statistischen Methoden.
-
-**Wichtige Konzepte:**
-
-- **Zentrenproduktion**: Gruppierung von Maschinen nach Erzeugnisfamilien
-- **Erzeugnisfamilien**: Produkte mit ähnlichen Fertigungsverfahren
-- **FFS (Flexibles Fertigungssystem)**: Automatisierte Zentrenproduktion
-- **Engpassanalyse**: $\text{Engpass } e = \arg \max_m \left\{ \frac{p_m \cdot b_m}{S_m} \right\}$
-
 ## Aufgabe 1 - Zentrenproduktion und Erzeugnisfamilien
 
 Die folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihrer Erstellung notwendigen Maschinen:
