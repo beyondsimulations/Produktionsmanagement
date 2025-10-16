@@ -74,7 +74,7 @@ c) **Vergleich Zentren- vs. Werkstattfertigung:**
 | Durchlaufzeiten | Niedrig durch kurze Wege | Hoch durch Transport und Warteschlangen |
 | Lagerbestände | Gering durch niedrige Losgrößen | Hoch durch große Lose |
 | Flexibilität | Hoch für Produktfamilie | Hoch für verschiedene Produkte |
-| Investitionsbedarf | Mittel (evtl. Maschinenduplikation) | Niedrig (Maschinenauslastung optimal) |
+| Investitionsbedarf | Mittel (evtl. Maschinenduplikation) | Niedrig (Maschinenauslastung besser) |
 
 d) **Vier Planungsschritte:**
 
@@ -128,9 +128,11 @@ b) **Engpass-Bestimmung:**
 c) **Produktionsraten und Auslastungen bei 100% Engpassauslastung:**
 
 **Produktionsrate des Engpasses:**
+
 $X_e = X_1 = \frac{S_1}{b_1} = \frac{1}{50} = 0,02$ Werkstücke/min
 
 **Produktionsraten der anderen Stationen:**
+
 $X_m = \frac{p_m}{p_e} \cdot X_e = \frac{p_m}{p_1} \cdot X_1$
 
 - $X_1 = 0,020$ Werkstücke/min
@@ -139,6 +141,7 @@ $X_m = \frac{p_m}{p_e} \cdot X_e = \frac{p_m}{p_1} \cdot X_1$
 - $X_4 = \frac{1,0}{0,4} \times 0,020 = 0,050$ Werkstücke/min
 
 **Auslastungen:**
+
 $U_m = \frac{b_m \cdot X_m}{S_m}$
 
 - $U_1 = \frac{50 \times 0,020}{1} = 1,000 = 100,0\%$ (Engpass)
@@ -157,7 +160,6 @@ d) **Realitätsbewertung bei begrenzten Paletten:**
 3. **Schwankungen**: Reale Bearbeitungszeiten sind nicht konstant
 4. **100% Auslastung**: Praktisch nicht dauerhaft erreichbar
 
-**Realistische Auslastung**: 85-90% des Engpasses wären praktikabel, was die Systemleistung entsprechend reduziert.
 :::
 
 ## Aufgabe 3 - Statistische Qualitätskontrolle
@@ -194,7 +196,7 @@ a) **Stichprobenmittelwerte und Spannweiten:**
 b) **Prozessparameter:**
 
 - Mittelwert der Stichprobenmittelwerte:
-  $\bar{x} = \frac{40,1 + 40,24 + 39,96 + 39,7 + 40,08}{5} = 40,016$ (≈ 40,0%)
+  $\bar{x} = \frac{40,1 + 40,24 + 39,96 + 39,7 + 40,08}{5} = 40,016$
 
 - Mittlere Spannweite:
   $\bar{R} = \frac{1,4 + 1,3 + 1,2 + 0,7 + 0,6}{5} = 1,04$
@@ -203,8 +205,8 @@ c) **Kontrollgrenzen:**
 
 Mit $A(5) = 0,577$:
 
-- **UCL** = $\bar{x} + A \cdot \bar{R} = 40,0 + 0,577 \times 1,04 = 40,0 + 0,60 = 40,60$%
-- **LCL** = $\bar{x} - A \cdot \bar{R} = 40,0 - 0,577 \times 1,04 = 40,0 - 0,60 = 39,40$%
+- **UCL** = $\bar{x} + A \cdot \bar{R} = 40,016 + 0,577 \times 1,04 = 40,0 + 0,60 = 40,616$%
+- **LCL** = $\bar{x} - A \cdot \bar{R} = 40,016 - 0,577 \times 1,04 = 40,0 - 0,60 = 39,416$%
 
 d) **Beurteilung der Stichprobe 2024:**
 
