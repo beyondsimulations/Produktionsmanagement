@@ -63,7 +63,7 @@ a) Formulieren Sie die vollständige mathematische Modellierung des Standortplan
 b) Erläutern Sie, aus welchen zwei Teilproblemen das Standortplanungsproblem besteht.
 c) Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Abnehmern (1, 2, 3) mit folgenden Daten:
    - Fixkosten: $f_A = 1.000$, $f_B = 1.200$, $f_C = 900$
-   - Transportkosten: $c_{A1} = 1$, $c_{A2} = 2$, $c_{A3} = 3$, etc.
+   - Transportkosten: $c_{A1} = 1$, $c_{A2} = 2$, $c_{A3} = 3$, $c_{B1} = 4$, $c_{B2} = 5$, $c_{B3} = 6$, $c_{C1} = 7$, $c_{C2} = 8$, $c_{C3} = 9$
 d) Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.
 
 ::: {.content-visible when-profile="solution"}
