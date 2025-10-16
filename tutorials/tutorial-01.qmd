@@ -190,39 +190,38 @@ c) Auf welcher Managementebene sind Standortentscheidungen angesiedelt und warum
 
 a) **Add-Heuristik:**
 
-**Schritt 1:** Bestimme den besten Einzelstandort (vollständige Belieferung)
+**Schritt 1:** Bestimme den besten Einzelstandort für vollständige Belieferung aller Abnehmer:
 
-- Standort A: Kapazität 25 < Gesamtbedarf 40 → nicht möglich
-- Standort B: Kapazität 20 < Gesamtbedarf 40 → nicht möglich
-- Standort C: Kapazität 25 < Gesamtbedarf 40 → nicht möglich
+- Standort A: Fixkosten 60 + Transportkosten $(4 \cdot 20 + 4 \cdot 10 + 9 \cdot 10) = 60 + 210 = 270$ €
+- Standort B: Fixkosten 60 + Transportkosten $(8 \cdot 20 + 7 \cdot 10 + 2 \cdot 10) = 60 + 250 = 310$ €
+- Standort C: Fixkosten 70 + Transportkosten $(6 \cdot 20 + 3 \cdot 10 + 5 \cdot 10) = 70 + 200 = 270$ €
 
-Da kein Einzelstandort ausreicht, starten wir mit dem Standort mit den geringsten durchschnittlichen Transportkosten:
+**Start mit Standort A** (270 €, niedrigere Fixkosten als C)
 
-- A: $(4 \cdot 20 + 4 \cdot 10 + 9 \cdot 10)/40 = 210/40 = 5,25$ €/ME
-- B: $(8 \cdot 20 + 7 \cdot 10 + 2 \cdot 10)/40 = 250/40 = 6,25$ €/ME
-- C: $(6 \cdot 20 + 3 \cdot 10 + 5 \cdot 10)/40 = 200/40 = 5,00$ €/ME
+**Schritt 2:** Prüfe Vorteilhaftigkeit eines zweiten Standorts:
 
-**Start mit Standort C** (geringste durchschnittliche Transportkosten)
+Zusätzlich Standort B:
+- Abnehmer 3: Wechsel von A zu B → Einsparung: $(9-2) \cdot 10 = 70$ €
+- Zusätzliche Fixkosten: 60 €
+- Nettovorteil: $70 - 60 = 10$ € ✓
 
-Zuordnung zu C (Kapazität 25):
-- Abnehmer 2 von C (günstigste Option): $x_{C2} = 10$
-- Abnehmer 3 von C: $x_{C3} = 10$
-- Abnehmer 1 teilweise von C: $x_{C1} = 5$
+Zusätzlich Standort C:
+- Abnehmer 2: Wechsel von A zu C → Einsparung: $(4-3) \cdot 10 = 10$ €
+- Abnehmer 3: Wechsel von A zu C → Einsparung: $(9-5) \cdot 10 = 40$ €
+- Zusätzliche Fixkosten: 70 €
+- Nettovorteil: $50 - 70 = -20$ € ✗
 
-Restbedarf: Abnehmer 1 benötigt noch 15 ME
+**Wähle Standort B zusätzlich**
 
-**Schritt 2:** Ergänze zweiten Standort
-
-Für Restbedarf von 15 ME bei Abnehmer 1:
-- Standort A: Fixkosten 60 + Transportkosten $4 \cdot 15 = 60$ → Gesamt: 120
-- Standort B: Fixkosten 60 + Transportkosten $8 \cdot 15 = 120$ → Gesamt: 180
-
-**Wähle Standort A** zusätzlich: $x_{A1} = 15$
+**Schritt 3:** Prüfe dritten Standort C (mit A und B bereits gewählt):
+- Abnehmer 2: Wechsel von A zu C → Einsparung: $(4-3) \cdot 10 = 10$ €
+- Zusätzliche Fixkosten: 70 €
+- Nettovorteil: $10 - 70 = -60$ € ✗
 
 **Ergebnis Add-Heuristik:**
-- Standorte: C und A
-- Zuordnung: $x_{C1} = 5$, $x_{C2} = 10$, $x_{C3} = 10$, $x_{A1} = 15$
-- Kosten: $70 + 60 + 6 \cdot 5 + 3 \cdot 10 + 5 \cdot 10 + 4 \cdot 15 = 130 + 30 + 30 + 50 + 60 = 300$
+- Standorte: A und B
+- Zuordnung: Abnehmer 1 und 2 von A, Abnehmer 3 von B
+- Kosten: $60 + 60 + 4 \cdot 20 + 4 \cdot 10 + 2 \cdot 10 = 120 + 80 + 40 + 20 = 260$ €
 
 b) **Optimalität:**
 
