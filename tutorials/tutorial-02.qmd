@@ -89,12 +89,13 @@ c) **Wahrscheinlichkeiten für Station 1 bei $\lambda_1 = 2$:**
 Mit $\rho_1 = 0,667$ gilt: $P[N=n] = (1-\rho) \cdot \rho^n = 0,333 \cdot 0,667^n$
 
 - $P[N=5] = 0,333 \cdot 0,667^5 = 0,333 \cdot 0,132 = 0,044$ (4,4%)
-- $P[N \leq 5] = \sum_{n=0}^{5} P[N=n] = 0,333 \cdot \frac{1-0,667^6}{1-0,667} = 0,912$ (91,2%)
+- $P[N \leq 5] = \sum_{n=0}^{5} P[N=n] = 0,912$
 - $P[N=0] = 0,333$ (33,3%)
 
 d) **Analyse der Vorbearbeitungsstation:**
 
 Bei $\lambda = 5$ und $\mu = 7$:
+
 - Bearbeitungszeit: $b = \frac{1}{\mu} = \frac{1}{7} = 0,143$ h
 - Auslastung: $\rho = \frac{5}{7} = 0,714$
 - Mittlerer Bestand: $L = \frac{0,714}{1-0,714} = 2,50$ Stück
@@ -113,13 +114,13 @@ Ein Elektronikhersteller plant eine neue Montagelinie für Smartphones. Pro 8-St
 
 **Vorranggraph:**
 ```
-    A(5) ──→ D(4) ──→ G(4) ──→ J(5)
-         ↘                    ↗
-          E(8) ──→ H(5) ────↗
-          ↗
-    B(3) ↗
-
-    C(6) ──→ F(3) ──→ I(6) ──→ J(5)
+    A(5) ──→ D(4) ──→ G(4) ──────────────→ J(5)
+         ↘                    ↗         ↗
+          E(8) ──→ H(5) ────↗          ↗
+          ↗                          ↗
+    B(3) ↗                         ↗
+                                 ↗
+    C(6) ──→ F(3) ──→ I(6) ──→ ↗
 ```
 
 a) Bestimmen Sie die Taktzeit für die geforderte Produktionsrate.
@@ -218,7 +219,7 @@ Mit $\rho_3 = 0,88$ und $P[N=n] = (1-\rho) \cdot \rho^n$:
 
 - Station leer: $P[N=0] = 1 - 0,88 = 0,12$ (12%)
 - Genau 3 Leiterplatten: $P[N=3] = 0,12 \cdot 0,88^3 = 0,12 \cdot 0,681 = 0,082$ (8,2%)
-- 3 oder weniger: $P[N \leq 3] = 0,12 \cdot \frac{1-0,88^4}{1-0,88} = 0,12 \cdot \frac{0,401}{0,12} = 0,401$ (40,1%)
+- 3 oder weniger: $P[N \leq 3] = 0,401$ (40,1%)
 - Mehr als 10: $P[N > 10] = \rho^{11} = 0,88^{11} = 0,314$ (31,4%)
 
 :::
@@ -270,16 +271,14 @@ Station 2 ist der Engpass mit der längsten Bearbeitungszeit (5 min).
 d) **Verbesserungsmaßnahmen:**
 
 1. **Pufferoptimierung:**
+
    - Puffer 1 verkleinern (da Station 1 ohnehin oft blockiert wird)
    - Puffer 2 vergrößern (um Schwankungen besser auszugleichen)
    - Dadurch: Reduzierte Kapitalbindung bei gleicher Leistung
 
-2. **Kapazitätsanpassung:**
+2. **Kapazitätsanpassung (besser):**
+
    - Parallelstation zu Station 2 hinzufügen
    - Oder: Prozessverbesserung bei Station 2 zur Reduzierung von $b_2$
    - Ziel: Engpass eliminieren und Systemleistung erhöhen
-
-3. **Alternative: Pull-System einführen:**
-   - Kanban-System könnte Blocking reduzieren
-   - Produktion nur bei Bedarf der nachgelagerten Station
 :::
