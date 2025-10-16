@@ -264,21 +264,12 @@ Station 2 ist der Engpass mit der längsten Bearbeitungszeit (5 min).
 
 **Auswirkungen:**
 
-- Station 1 (schneller als Station 2): Wird häufig blockiert, da Puffer 1 sich füllt
-- Station 3 (schneller als Station 2): Hungert häufig aus, da Station 2 nicht schnell genug liefert
-- Systemtakt wird durch Station 2 auf 5 min pro Werkstück begrenzt
+- Station 1 (schneller als Station 2): Wird blockiert, da Puffer 1 sich füllt
+- Station 3 (schneller als Station 2): Hungert aus, da Station 2 nicht schnell genug liefert
 
 d) **Verbesserungsmaßnahmen:**
 
-1. **Pufferoptimierung:**
-
-   - Puffer 1 verkleinern (da Station 1 ohnehin oft blockiert wird)
-   - Puffer 2 vergrößern (um Schwankungen besser auszugleichen)
-   - Dadurch: Reduzierte Kapitalbindung bei gleicher Leistung
-
-2. **Kapazitätsanpassung (besser):**
-
    - Parallelstation zu Station 2 hinzufügen
-   - Oder: Prozessverbesserung bei Station 2 zur Reduzierung von $b_2$
+   - Prozessverbesserung bei Station 2 zur Reduzierung von $b_2$
    - Ziel: Engpass eliminieren und Systemleistung erhöhen
 :::
