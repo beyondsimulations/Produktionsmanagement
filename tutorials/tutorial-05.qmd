@@ -67,21 +67,23 @@ e) **Kritischer Weg (GP=0):**
 
 :::
 
-## Aufgabe 2: Planung mit Rüstzustandsübernahme (CLSP)
+## Aufgabe 2: Kapazitätsorientierte Losgrößenplanung (CLSP)
 
-Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschiedene Getriebetypen: Typ A und Typ B. Die Maschine kann pro Woche nur für einen Typ eingerichtet sein, aber der Rüstzustand kann in die Folgewoche übernommen werden, wenn derselbe Typ weiterproduziert wird. Ein Rüstvorgang ist nur dann nötig, wenn von einem Typ zum anderen gewechselt wird oder nach einer Woche ohne Produktion neu gestartet wird.
+Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschiedene Getriebetypen: Typ A und Typ B. Pro Woche muss die Maschine für jedes zu produzierende Produkt neu gerüstet werden.
 
 **Gegebene Daten:**
 
 *   **Planungshorizont:** 4 Wochen
 *   **Wöchentliche Kapazität:** 60 Stunden
+*   **Anfangslagerbestand:** 0 für beide Typen
+*   **Endlagerbestand:** 0 für beide Typen (alle Bedarfe müssen erfüllt sein)
 
 **Produktdaten:**
 
 | Parameter | Getriebe Typ A | Getriebe Typ B |
 | :--- | :--- | :--- |
 | Rüstkosten (s) | 200 GE | 150 GE |
-| Lagerkosten (h) | 5 GE/Stück | 7 GE/Stück |
+| Lagerkosten (h) | 5 GE/Stück/Woche | 7 GE/Stück/Woche |
 | Bearbeitungszeit (tb) | 1,0 h/Stück | 1,2 h/Stück |
 | Rüstzeit (tr) | 10 h | 8 h |
 
@@ -89,7 +91,7 @@ Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschie
 
 | Woche (t) | 1 | 2 | 3 | 4 |
 | :--- | :-: | :-: | :-: | :-: |
-| Bedarf Typ A | 20 | 55 | 0 | 0 |
+| Bedarf Typ A | 20 | 30 | 0 | 25 |
 | Bedarf Typ B | 0 | 0 | 35 | 20 |
 
 
@@ -97,20 +99,97 @@ Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschie
 
 Um das Konzept zu verstehen, analysieren Sie den folgenden, manuell erstellten Produktionsplan:
 
--   **Woche 1:** Produziere 50 $\times$ Typ A.
--   **Woche 2:** Produziere 25 $\times$ Typ A.
--   **Woche 3:** Produziere 55 $\times$ Typ B.
--   **Woche 4:** Keine Produktion.
+-   **Woche 1:** Produziere 50 $\times$ Typ A
+-   **Woche 2:** Keine Produktion
+-   **Woche 3:** Produziere 55 $\times$ Typ B
+-   **Woche 4:** Produziere 25 $\times$ Typ A
 
-a) Berechnen Sie die gesamten Rüst- und Lagerkosten für den vorgegebenen Plan. Identifizieren Sie, in welcher Woche Rüstkosten eingespart werden.
+a) Berechnen Sie die gesamten Rüst- und Lagerkosten für den vorgegebenen Plan.
 b) Überprüfen Sie für jede Woche, ob die Produktions- und Rüstzeiten die verfügbare Kapazität von 60 Stunden einhalten.
-c)  Erläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde.
+c) Erläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde. Welche zusätzlichen Restriktionen müssen beim CLSP im Vergleich zum SULSP beachtet werden?
 
 ::: {.content-visible when-profile="solution"}
 
-```{=typst}
-#pagebreak()
-```
+**Lösungshinweise:**
 
+**a) Berechnung der Rüst- und Lagerkosten:**
+
+| Woche | Produktion A | Produktion B | Bedarf A | Bedarf B | Lagerbestand A (Ende) | Lagerbestand B (Ende) |
+|:-----:|:------------:|:------------:|:--------:|:--------:|:---------------------:|:---------------------:|
+| 1     | 50           | 0            | 20       | 0        | 30                    | 0                     |
+| 2     | 0            | 0            | 30       | 0        | 0                     | 0                     |
+| 3     | 0            | 55           | 0        | 35       | 0                     | 20                    |
+| 4     | 25           | 0            | 25       | 20       | 0                     | 0                     |
+
+**Rüstkosten:**
+
+- Woche 1: Typ A wird produziert → Rüstkosten = 200 GE
+- Woche 2: Keine Produktion → Rüstkosten = 0 GE
+- Woche 3: Typ B wird produziert → Rüstkosten = 150 GE
+- Woche 4: Typ A wird produziert → Rüstkosten = 200 GE
+
+**Gesamte Rüstkosten:** 200 + 0 + 150 + 200 = **550 GE**
+
+**Lagerkosten:**
+
+- Woche 1: 30 Stück A × 5 GE/Stück/Woche = 150 GE
+- Woche 2: 0 Stück A × 5 GE/Stück/Woche = 0 GE
+- Woche 3: 0 Stück A × 5 GE/Stück/Woche + 20 Stück B × 7 GE/Stück/Woche = 140 GE
+- Woche 4: 0 Stück × 5 GE/Stück/Woche + 0 Stück B × 7 GE/Stück/Woche = 0 GE
+
+**Gesamte Lagerkosten:** 150 + 0 + 140 + 0 = **290 GE**
+
+**Gesamtkosten:** 550 + 290 = **840 GE**
+
+**b) Kapazitätsprüfung:**
+
+Für jede Woche prüfen wir: Rüstzeit + Bearbeitungszeit ≤ 60 Stunden
+
+**Woche 1 (Typ A):**
+
+- Rüstzeit: 10 h
+- Bearbeitungszeit: 50 Stück × 1,0 h/Stück = 50 h
+- Gesamtzeit: 10 + 50 = **60 h** ≤ 60 h ✓ (zulässig)
+
+**Woche 2:**
+
+- Keine Produktion: **0 h** ≤ 60 h ✓ (zulässig)
+
+**Woche 3 (Typ B):**
+
+- Rüstzeit: 8 h
+- Bearbeitungszeit: 55 Stück × 1,2 h/Stück = 66 h
+- Gesamtzeit: 8 + 66 = **74 h** > 60 h ✗ (NICHT zulässig!)
+
+**Woche 4 (Typ A):**
+
+- Rüstzeit: 10 h
+- Bearbeitungszeit: 25 Stück × 1,0 h/Stück = 25 h
+- Gesamtzeit: 10 + 25 = **35 h** ≤ 60 h ✓ (zulässig)
+
+**Ergebnis:** Der vorgegebene Plan ist **nicht zulässig**, da in Woche 3 die Kapazität um 14 Stunden überschritten wird.
+
+**Mögliche Anpassung:** Man könnte z.B. in Woche 2 bereits einen Teil von Typ B produzieren (z.B. 20 Stück B in Woche 2 und 35 Stück B in Woche 3).
+
+**c) SULSP vs. CLSP:**
+
+**Wagner-Whitin-Algorithmus (SULSP = Single-Item Uncapacitated Lot Sizing Problem):**
+
+- Löst das Losgrößenproblem **isoliert für jedes Produkt**
+- Berücksichtigt **keine Kapazitätsbeschränkungen**
+- Berücksichtigt **keine Ressourcenkonkurrenz** zwischen verschiedenen Produkten
+- Findet die optimale Lösung nur unter der Annahme unbegrenzter Kapazität
+
+**Warum führt isolierte Planung zu Problemen?**
+
+Wenn wir Wagner-Whitin separat für Typ A und Typ B anwenden würden:
+
+- Jeder Algorithmus würde versuchen, die Anzahl der Rüstvorgänge zu minimieren
+- Typ A würde z.B. in Woche 1 alle 75 Stück (für Wochen 1, 2, 4) produzieren wollen
+- Typ B würde in Woche 3 alle 55 Stück produzieren wollen
+- Dies würde die Kapazität in mehreren Wochen überschreiten (siehe Teil b)
+- Die Algorithmen "wissen" nichts voneinander und koordinieren sich nicht
+
+**Fazit:** Beim CLSP muss die Losgrößenplanung **simultan für alle Produkte** erfolgen, um die gemeinsamen Kapazitätsbeschränkungen zu berücksichtigen. Dies führt zu einem gemischt-ganzzahligen Optimierungsproblem (MIP), das deutlich komplexer ist als das SULSP.
 
 :::
