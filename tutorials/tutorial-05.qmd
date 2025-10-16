@@ -106,7 +106,7 @@ Um das Konzept zu verstehen, analysieren Sie den folgenden, manuell erstellten P
 
 a) Berechnen Sie die gesamten Rüst- und Lagerkosten für den vorgegebenen Plan.
 b) Überprüfen Sie für jede Woche, ob die Produktions- und Rüstzeiten die verfügbare Kapazität von 60 Stunden einhalten.
-c) Erläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde. Welche zusätzlichen Restriktionen müssen beim CLSP im Vergleich zum SULSP beachtet werden?
+c) Erläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde.
 
 ::: {.content-visible when-profile="solution"}
 
