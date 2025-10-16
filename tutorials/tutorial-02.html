@@ -382,13 +382,13 @@ window.Quarto = {
 </tbody>
 </table>
 <p><strong>Vorranggraph:</strong></p>
-<pre><code>    A(5) ──→ D(4) ──→ G(4) ──→ J(5)
-         ↘                    ↗
-          E(8) ──→ H(5) ────↗
-          ↗
-    B(3) ↗
-
-    C(6) ──→ F(3) ──→ I(6) ──→ J(5)</code></pre>
+<pre><code>    A(5) ──→ D(4) ──→ G(4) ──────────────→ J(5)
+         ↘                    ↗         ↗
+          E(8) ──→ H(5) ────↗          ↗
+          ↗                          ↗
+    B(3) ↗                         ↗
+                                 ↗
+    C(6) ──→ F(3) ──→ I(6) ──→ ↗</code></pre>
 <ol type="a">
 <li>Bestimmen Sie die Taktzeit für die geforderte Produktionsrate.</li>
 <li>Berechnen Sie die theoretisch minimale Anzahl an Stationen. Wie viele Stationen werden maximal benötigt?</li>

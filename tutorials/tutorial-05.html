@@ -285,7 +285,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#aufgabe-1---montageplanung" id="toc-aufgabe-1---montageplanung" class="nav-link active" data-scroll-target="#aufgabe-1---montageplanung">Aufgabe 1 - Montageplanung</a></li>
-  <li><a href="#aufgabe-2-planung-mit-rüstzustandsübernahme-clsp" id="toc-aufgabe-2-planung-mit-rüstzustandsübernahme-clsp" class="nav-link" data-scroll-target="#aufgabe-2-planung-mit-rüstzustandsübernahme-clsp">Aufgabe 2: Planung mit Rüstzustandsübernahme (CLSP)</a></li>
+  <li><a href="#aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp" id="toc-aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp" class="nav-link" data-scroll-target="#aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp">Aufgabe 2: Kapazitätsorientierte Losgrößenplanung (CLSP)</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tutorial-05.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -386,13 +386,15 @@ window.Quarto = {
 <li>Was könnte passieren, wenn einige Arbeitsschritte Kapazitätsbeschränkungen unterliegen?</li>
 </ol>
 </section>
-<section id="aufgabe-2-planung-mit-rüstzustandsübernahme-clsp" class="level2">
-<h2 class="anchored" data-anchor-id="aufgabe-2-planung-mit-rüstzustandsübernahme-clsp">Aufgabe 2: Planung mit Rüstzustandsübernahme (CLSP)</h2>
-<p>Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschiedene Getriebetypen: Typ A und Typ B. Die Maschine kann pro Woche nur für einen Typ eingerichtet sein, aber der Rüstzustand kann in die Folgewoche übernommen werden, wenn derselbe Typ weiterproduziert wird. Ein Rüstvorgang ist nur dann nötig, wenn von einem Typ zum anderen gewechselt wird oder nach einer Woche ohne Produktion neu gestartet wird.</p>
+<section id="aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp">Aufgabe 2: Kapazitätsorientierte Losgrößenplanung (CLSP)</h2>
+<p>Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschiedene Getriebetypen: Typ A und Typ B. Pro Woche muss die Maschine für jedes zu produzierende Produkt neu gerüstet werden.</p>
 <p><strong>Gegebene Daten:</strong></p>
 <ul>
 <li><strong>Planungshorizont:</strong> 4 Wochen</li>
 <li><strong>Wöchentliche Kapazität:</strong> 60 Stunden</li>
+<li><strong>Anfangslagerbestand:</strong> 0 für beide Typen</li>
+<li><strong>Endlagerbestand:</strong> 0 für beide Typen (alle Bedarfe müssen erfüllt sein)</li>
 </ul>
 <p><strong>Produktdaten:</strong></p>
 <table class="caption-top table">
@@ -411,8 +413,8 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lagerkosten (h)</td>
-<td style="text-align: left;">5 GE/Stück</td>
-<td style="text-align: left;">7 GE/Stück</td>
+<td style="text-align: left;">5 GE/Stück/Woche</td>
+<td style="text-align: left;">7 GE/Stück/Woche</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Bearbeitungszeit (tb)</td>
@@ -441,9 +443,9 @@ window.Quarto = {
 <tr class="odd">
 <td style="text-align: left;">Bedarf Typ A</td>
 <td style="text-align: center;">20</td>
-<td style="text-align: center;">55</td>
+<td style="text-align: center;">30</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">25</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Bedarf Typ B</td>
@@ -457,13 +459,13 @@ window.Quarto = {
 <p><strong>Vorgegebener Produktionsplan:</strong></p>
 <p>Um das Konzept zu verstehen, analysieren Sie den folgenden, manuell erstellten Produktionsplan:</p>
 <ul>
-<li><strong>Woche 1:</strong> Produziere 50 <span class="math inline">\(\times\)</span> Typ A.</li>
-<li><strong>Woche 2:</strong> Produziere 25 <span class="math inline">\(\times\)</span> Typ A.</li>
-<li><strong>Woche 3:</strong> Produziere 55 <span class="math inline">\(\times\)</span> Typ B.</li>
-<li><strong>Woche 4:</strong> Keine Produktion.</li>
+<li><strong>Woche 1:</strong> Produziere 50 <span class="math inline">\(\times\)</span> Typ A</li>
+<li><strong>Woche 2:</strong> Keine Produktion</li>
+<li><strong>Woche 3:</strong> Produziere 55 <span class="math inline">\(\times\)</span> Typ B</li>
+<li><strong>Woche 4:</strong> Produziere 25 <span class="math inline">\(\times\)</span> Typ A</li>
 </ul>
 <ol type="a">
-<li>Berechnen Sie die gesamten Rüst- und Lagerkosten für den vorgegebenen Plan. Identifizieren Sie, in welcher Woche Rüstkosten eingespart werden.</li>
+<li>Berechnen Sie die gesamten Rüst- und Lagerkosten für den vorgegebenen Plan.</li>
 <li>Überprüfen Sie für jede Woche, ob die Produktions- und Rüstzeiten die verfügbare Kapazität von 60 Stunden einhalten.</li>
 <li>Erläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde.</li>
 </ol>
