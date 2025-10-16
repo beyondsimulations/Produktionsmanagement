@@ -165,6 +165,29 @@ Bei $x_{A2} = 300$ wäre die Auslastung von A:
 $x_{A1} + x_{A2} + x_{A3} = 200 + 300 + 0 = 500 > 400 = b_A$
 
 **Nein**, diese Lösung ist nicht zulässig, da die Kapazität von Standort A überschritten wird.
+
+d) **Verbesserte Lösung:**
+
+Bei den geöffneten Standorten A und B kann die Belieferung optimiert werden:
+
+**Optimale Belieferungsstrategie:**
+
+- Abnehmer 1: vollständig von A beliefern (da $c_{A1} = 1 < c_{B1} = 4$)
+- Abnehmer 2: möglichst viel von A beliefern (da $c_{A2} = 2 < c_{B2} = 5$)
+- Abnehmer 3: von B beliefern
+
+**Verbesserte Lösung:** $\gamma_A = 1$, $\gamma_B = 1$, $\gamma_C = 0$
+
+- $x_{A1} = 200$ (Abnehmer 1 vollständig von A)
+- $x_{A2} = 200$ (maximale Belieferung von Abnehmer 2 durch A)
+- $x_{B2} = 100$ (Restbedarf von Abnehmer 2)
+- $x_{B3} = 250$ (Abnehmer 3 vollständig von B)
+
+**Gesamtkosten:** $Z = 2.200 + 600 + 2.000 = 4.800$
+
+**Verbesserung:** Die ursprüngliche Lösung kostete 4.950, die verbesserte Lösung kostet 4.800, was eine Ersparnis von 150 bedeutet.
+
+**Begründung:** Durch die stärkere Nutzung des günstigeren Standorts A für Abnehmer 2 (200 statt 150 Einheiten) werden die Transportkosten reduziert, während alle Kapazitätsbeschränkungen eingehalten bleiben.
 :::
 
 ## Aufgabe 4 - Heuristiken zur Standortplanung
