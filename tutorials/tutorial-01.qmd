@@ -42,6 +42,7 @@ Schritt 1: Berechnung der Gesamtkosten für jeden einzelnen Standort (vollständ
 b) **Anzahl der Kombinationsmöglichkeiten:**
 
 Bei 3 Standorten gibt es $2^3 - 1 = 7$ nicht-leere Kombinationen:
+
 - Einzelstandorte: {A}, {B}, {C}
 - Zweierkombinationen: {A,B}, {A,C}, {B,C}
 - Alle drei: {A,B,C}
@@ -49,6 +50,7 @@ Bei 3 Standorten gibt es $2^3 - 1 = 7$ nicht-leere Kombinationen:
 c) **Interpretation:**
 
 Die Lösung mit nur Standort A minimiert zwar die Kosten, birgt aber Risiken:
+
 - **Keine Redundanz**: Bei Ausfall von A bricht die gesamte Versorgung zusammen
 - **Keine Flexibilität**: Keine Reaktionsmöglichkeit auf Nachfrageschwankungen
 - **Transportrisiken**: Alle Transporte gehen von einem Punkt aus
@@ -69,20 +71,7 @@ d) Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden könne
 ::: {.content-visible when-profile="solution"}
 **Lösung:**
 
-a) **Vollständiges Modell STANDORT:**
-
-**Zielfunktion:**
-$$\text{Minimiere } Z = \sum_{i \in \mathcal{I}} f_i \cdot \gamma_i + \sum_{i \in \mathcal{I}} \sum_{j \in \mathcal{J}} c_{ij} \cdot x_{ij}$$
-
-**Nebenbedingungen:**
-
-(1) Bedarfsdeckung: $\sum_{i \in \mathcal{I}} x_{ij} \geq d_j$ für alle $j \in \mathcal{J}$
-
-(2) Kapazitätsbeschränkung: $\sum_{j \in \mathcal{J}} x_{ij} \leq b_i \cdot \gamma_i$ für alle $i \in \mathcal{I}$
-
-(3) Binärbedingung: $\gamma_i \in \{0,1\}$ für alle $i \in \mathcal{I}$
-
-(4) Nichtnegativität: $x_{ij} \geq 0$ für alle $i \in \mathcal{I}, j \in \mathcal{J}$
+a) **Siehe Vorlesung:**
 
 b) **Die zwei Teilprobleme:**
 
@@ -105,6 +94,7 @@ d) **Kapazitätsbeschränkung für Standort B:**
 $x_{B1} + x_{B2} + x_{B3} \leq b_B \cdot \gamma_B$
 
 Diese Nebenbedingung stellt sicher, dass:
+
 - Wenn $\gamma_B = 0$ (Standort B nicht errichtet): $x_{B1} + x_{B2} + x_{B3} \leq 0$, d.h. keine Lieferung möglich
 - Wenn $\gamma_B = 1$ (Standort B errichtet): $x_{B1} + x_{B2} + x_{B3} \leq b_B$, d.h. Kapazität begrenzt Lieferungen
 :::
@@ -140,6 +130,7 @@ a) **Berechnung des Zielfunktionswerts:**
 Fixkosten: $f_A \cdot \gamma_A + f_B \cdot \gamma_B + f_C \cdot \gamma_C = 1.000 \cdot 1 + 1.200 \cdot 1 + 900 \cdot 0 = 2.200$
 
 Transportkosten:
+
 - Von A: $c_{A1} \cdot x_{A1} + c_{A2} \cdot x_{A2} = 1 \cdot 200 + 2 \cdot 150 = 500$
 - Von B: $c_{B2} \cdot x_{B2} + c_{B3} \cdot x_{B3} = 5 \cdot 150 + 6 \cdot 250 = 2.250$
 
@@ -148,11 +139,13 @@ Transportkosten:
 b) **Prüfung der Zulässigkeit:**
 
 **Bedarfsdeckung (NB 1):**
+
 - Abnehmer 1: $x_{A1} + x_{B1} + x_{C1} = 200 + 0 + 0 = 200 = d_1$ ✓
 - Abnehmer 2: $x_{A2} + x_{B2} + x_{C2} = 150 + 150 + 0 = 300 = d_2$ ✓
 - Abnehmer 3: $x_{A3} + x_{B3} + x_{C3} = 0 + 250 + 0 = 250 = d_3$ ✓
 
 **Kapazitätsbeschränkung (NB 2):**
+
 - Standort A: $x_{A1} + x_{A2} + x_{A3} = 200 + 150 + 0 = 350 \leq 400 = b_A \cdot 1$ ✓
 - Standort B: $x_{B1} + x_{B2} + x_{B3} = 0 + 150 + 250 = 400 \leq 400 = b_B \cdot 1$ ✓
 - Standort C: $x_{C1} + x_{C2} + x_{C3} = 0 + 0 + 0 = 0 \leq 0 = b_C \cdot 0$ ✓
@@ -219,16 +212,18 @@ a) **Add-Heuristik:**
 - Standort B: Fixkosten 60 + Transportkosten $(8 \cdot 20 + 7 \cdot 10 + 2 \cdot 10) = 60 + 250 = 310$ €
 - Standort C: Fixkosten 70 + Transportkosten $(6 \cdot 20 + 3 \cdot 10 + 5 \cdot 10) = 70 + 200 = 270$ €
 
-**Start mit Standort A** (270 €, niedrigere Fixkosten als C)
+**Start mit Standort A** (270 €, willkürlich)
 
 **Schritt 2:** Prüfe Vorteilhaftigkeit eines zweiten Standorts:
 
 Zusätzlich Standort B:
+
 - Abnehmer 3: Wechsel von A zu B → Einsparung: $(9-2) \cdot 10 = 70$ €
 - Zusätzliche Fixkosten: 60 €
 - Nettovorteil: $70 - 60 = 10$ € ✓
 
 Zusätzlich Standort C:
+
 - Abnehmer 2: Wechsel von A zu C → Einsparung: $(4-3) \cdot 10 = 10$ €
 - Abnehmer 3: Wechsel von A zu C → Einsparung: $(9-5) \cdot 10 = 40$ €
 - Zusätzliche Fixkosten: 70 €
@@ -237,11 +232,13 @@ Zusätzlich Standort C:
 **Wähle Standort B zusätzlich**
 
 **Schritt 3:** Prüfe dritten Standort C (mit A und B bereits gewählt):
+
 - Abnehmer 2: Wechsel von A zu C → Einsparung: $(4-3) \cdot 10 = 10$ €
 - Zusätzliche Fixkosten: 70 €
 - Nettovorteil: $10 - 70 = -60$ € ✗
 
 **Ergebnis Add-Heuristik:**
+
 - Standorte: A und B
 - Zuordnung: Abnehmer 1 und 2 von A, Abnehmer 3 von B
 - Kosten: $60 + 60 + 4 \cdot 20 + 4 \cdot 10 + 2 \cdot 10 = 120 + 80 + 40 + 20 = 260$ €
@@ -249,6 +246,7 @@ Zusätzlich Standort C:
 b) **Optimalität:**
 
 Heuristische Lösungen sind **nicht notwendigerweise optimal**, da:
+
 - Sie nur lokale Verbesserungen betrachten
 - Nicht alle Kombinationen systematisch geprüft werden
 
@@ -257,6 +255,7 @@ Die tatsächlich optimale Lösung müsste durch vollständige Enumeration oder O
 c) **Managementebene:**
 
 Standortentscheidungen sind auf der **strategischen Managementebene** angesiedelt, da sie:
+
 - Langfristige Auswirkungen haben (mehrere Jahre bis Jahrzehnte)
 - Hohe Investitionen erfordern
 - Schwer reversibel sind
