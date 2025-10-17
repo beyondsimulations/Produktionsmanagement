@@ -173,7 +173,7 @@ Für jede Woche prüfen wir: Rüstzeit + Bearbeitungszeit ≤ 60 Stunden
 
 **c) SULSP vs. CLSP:**
 
-**Wagner-Whitin-Algorithmus (SULSP = Single-Item Uncapacitated Lot Sizing Problem):**
+**Wagner-Whitin-Algorithmus:**
 
 - Löst das Losgrößenproblem **isoliert für jedes Produkt**
 - Berücksichtigt **keine Kapazitätsbeschränkungen**
