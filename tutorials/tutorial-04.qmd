@@ -273,7 +273,7 @@ Erweitern Sie das SIULSP-Modell aus Aufgabe 2 um folgende Kapazitätsbeschränku
 
 a) Formulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschränkte Problem.
 b) Analysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.
-c) Welche Auswirkungen haben Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren?
+c) Welche Auswirkungen könnten Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren haben?
 
 ::: {.content-visible when-profile="solution"}
 **Lösung:**
@@ -281,9 +281,11 @@ c) Welche Auswirkungen haben Kapazitätsbeschränkungen auf die Anwendbarkeit de
 a) **Zusätzliche Nebenbedingungen:**
 
 **Produktionskapazitätsbeschränkung:**
+
 $$q_t \leq 80 \quad \text{für alle } t = 1,2,3,4,5$$
 
 **Rüstkapazitätsbeschränkung:**
+
 $$10 \cdot \gamma_t + 0,5 \cdot q_t \leq 15 \quad \text{für alle } t = 1,2,3,4,5$$
 
 Dies kann umformuliert werden zu:
