@@ -17,7 +17,7 @@ Die Fahrzeugfertigung Zwickau GmbH ist ein traditionsreicher Standort im Automob
 | F           | Integration Steuerungseinheit          | 3            | C, E              |
 | G           | Qualitätsprüfung & Endverschluss       | 2            | F                 |
 
-Der Projektstart (Beginn von A und D) ist zum Zeitpunkt 0. Der spätestzulässige Fertigstellungstermin für den gesamten Prozess (Ende von G) ist Stunde 25.
+Der Projektstart (Beginn von A und D) ist zum Zeitpunkt 0.
 
 **Ihre Aufgaben:**
 
@@ -62,8 +62,6 @@ d) **Gesamtpuffer (GP = SAZ - FAZ):**
 
 e) **Kritischer Weg (GP=0):**
     A → B → C → F → G. Die Dauer dieses Pfades ist 3+5+4+3+2 = 17 Stunden.
-
-**Hinweis:** Wenn der gegebene spätestzulässige Projektendtermin (hier 25 Stunden) für die Rückwärtsrechnung verwendet worden wäre (d.h. SEZ(G) = 25), dann wären alle Pufferzeiten positiv gewesen (z.B. GP(G) = SAZ(G) - FAZ(G) = (25-2) - 15 = 23 - 15 = 8). In diesem Fall gäbe es keinen Arbeitsgang mit Pufferzeit Null. Der "kritische Weg" wird typischerweise als der Pfad mit Pufferzeit Null definiert, was impliziert, dass das Projekt so früh wie möglich abgeschlossen wird.
 
 :::
 
