@@ -385,6 +385,60 @@ window.Quarto = {
 <li>Identifizieren Sie den kritischen Weg im Projekt.</li>
 <li>Was könnte passieren, wenn einige Arbeitsschritte Kapazitätsbeschränkungen unterliegen?</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösungshinweise:</strong></p>
+<ol start="2" type="a">
+<li><strong>Vorwärtsrechnung:</strong>
+<ul>
+<li>A: FAZ=0, FEZ=3</li>
+<li>D: FAZ=0, FEZ=2</li>
+<li>B: FAZ=max(FEZ(A))=3, FEZ=3+5=8</li>
+<li>E: FAZ=max(FEZ(D))=2, FEZ=2+6=8</li>
+<li>C: FAZ=max(FEZ(B))=8, FEZ=8+4=12</li>
+<li>F: FAZ=max(FEZ(C)=12, FEZ(E)=8)=12, FEZ=12+3=15</li>
+<li>G: FAZ=max(FEZ(F))=15, FEZ=15+2=17 Die minimale Projektdauer beträgt 17 Stunden.</li>
+</ul></li>
+<li><strong>Rückwärtsrechnung (Annahme SEZ(G) = FEZ(G) = 17, um kritischen Pfad zu finden):</strong>
+<ul>
+<li>G: SEZ=17, SAZ=17-2=15</li>
+<li>F: SEZ=min(SAZ(G))=15, SAZ=15-3=12</li>
+<li>C: SEZ=min(SAZ(F))=12, SAZ=12-4=8</li>
+<li>E: SEZ=min(SAZ(F))=12, SAZ=12-6=6</li>
+<li>B: SEZ=min(SAZ(C))=8, SAZ=8-5=3</li>
+<li>A: SEZ=min(SAZ(B))=3, SAZ=3-3=0</li>
+<li>D: SEZ=min(SAZ(E))=6, SAZ=6-2=4</li>
+</ul></li>
+<li><strong>Gesamtpuffer (GP = SAZ - FAZ):</strong>
+<ul>
+<li>A: GP = 0 - 0 = 0</li>
+<li>B: GP = 3 - 3 = 0</li>
+<li>C: GP = 8 - 8 = 0</li>
+<li>D: GP = 4 - 0 = 4</li>
+<li>E: GP = 6 - 2 = 4</li>
+<li>F: GP = 12 - 12 = 0</li>
+<li>G: GP = 15 - 15 = 0</li>
+</ul></li>
+<li><strong>Kritischer Weg (GP=0):</strong></li>
+</ol>
+<p>A → B → C → F → G. Die Dauer dieses Pfades ist 3+5+4+3+2 = 17 Stunden.</p>
+<ol start="6" type="a">
+<li><strong>Kapazitätsbeschränkungen</strong></li>
+</ol>
+<p>Die Produktion könnte nicht mehr möglich sein.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp">Aufgabe 2: Kapazitätsorientierte Losgrößenplanung (CLSP)</h2>
@@ -469,6 +523,144 @@ window.Quarto = {
 <li>Überprüfen Sie für jede Woche, ob die Produktions- und Rüstzeiten die verfügbare Kapazität von 60 Stunden einhalten.</li>
 <li>Erläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde.</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösungshinweise:</strong></p>
+<p><strong>a) Berechnung der Rüst- und Lagerkosten:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Woche</th>
+<th style="text-align: center;">Produktion A</th>
+<th style="text-align: center;">Produktion B</th>
+<th style="text-align: center;">Bedarf A</th>
+<th style="text-align: center;">Bedarf B</th>
+<th style="text-align: center;">Lagerbestand A (Ende)</th>
+<th style="text-align: center;">Lagerbestand B (Ende)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">55</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rüstkosten:</strong></p>
+<ul>
+<li>Woche 1: Typ A wird produziert → Rüstkosten = 200 GE</li>
+<li>Woche 2: Keine Produktion → Rüstkosten = 0 GE</li>
+<li>Woche 3: Typ B wird produziert → Rüstkosten = 150 GE</li>
+<li>Woche 4: Typ A wird produziert → Rüstkosten = 200 GE</li>
+</ul>
+<p><strong>Gesamte Rüstkosten:</strong> 200 + 0 + 150 + 200 = <strong>550 GE</strong></p>
+<p><strong>Lagerkosten:</strong></p>
+<ul>
+<li>Woche 1: 30 Stück A × 5 GE/Stück/Woche = 150 GE</li>
+<li>Woche 2: 0 Stück A × 5 GE/Stück/Woche = 0 GE</li>
+<li>Woche 3: 0 Stück A × 5 GE/Stück/Woche + 20 Stück B × 7 GE/Stück/Woche = 140 GE</li>
+<li>Woche 4: 0 Stück × 5 GE/Stück/Woche + 0 Stück B × 7 GE/Stück/Woche = 0 GE</li>
+</ul>
+<p><strong>Gesamte Lagerkosten:</strong> 150 + 0 + 140 + 0 = <strong>290 GE</strong></p>
+<p><strong>Gesamtkosten:</strong> 550 + 290 = <strong>840 GE</strong></p>
+<p><strong>b) Kapazitätsprüfung:</strong></p>
+<p>Für jede Woche prüfen wir: Rüstzeit + Bearbeitungszeit ≤ 60 Stunden</p>
+<p><strong>Woche 1 (Typ A):</strong></p>
+<ul>
+<li>Rüstzeit: 10 h</li>
+<li>Bearbeitungszeit: 50 Stück × 1,0 h/Stück = 50 h</li>
+<li>Gesamtzeit: 10 + 50 = <strong>60 h</strong> ≤ 60 h ✓ (zulässig)</li>
+</ul>
+<p><strong>Woche 2:</strong></p>
+<ul>
+<li>Keine Produktion: <strong>0 h</strong> ≤ 60 h ✓ (zulässig)</li>
+</ul>
+<p><strong>Woche 3 (Typ B):</strong></p>
+<ul>
+<li>Rüstzeit: 8 h</li>
+<li>Bearbeitungszeit: 55 Stück × 1,2 h/Stück = 66 h</li>
+<li>Gesamtzeit: 8 + 66 = <strong>74 h</strong> &gt; 60 h ✗ (NICHT zulässig!)</li>
+</ul>
+<p><strong>Woche 4 (Typ A):</strong></p>
+<ul>
+<li>Rüstzeit: 10 h</li>
+<li>Bearbeitungszeit: 25 Stück × 1,0 h/Stück = 25 h</li>
+<li>Gesamtzeit: 10 + 25 = <strong>35 h</strong> ≤ 60 h ✓ (zulässig)</li>
+</ul>
+<p><strong>Ergebnis:</strong> Der vorgegebene Plan ist <strong>nicht zulässig</strong>, da in Woche 3 die Kapazität um 14 Stunden überschritten wird.</p>
+<p><strong>Mögliche Anpassung:</strong> Man könnte z.B. in Woche 2 bereits einen Teil von Typ B produzieren (z.B. 20 Stück B in Woche 2 und 35 Stück B in Woche 3).</p>
+<p><strong>c) SULSP vs.&nbsp;CLSP:</strong></p>
+<p><strong>Wagner-Whitin-Algorithmus:</strong></p>
+<ul>
+<li>Löst das Losgrößenproblem <strong>isoliert für jedes Produkt</strong></li>
+<li>Berücksichtigt <strong>keine Kapazitätsbeschränkungen</strong></li>
+<li>Berücksichtigt <strong>keine Ressourcenkonkurrenz</strong> zwischen verschiedenen Produkten</li>
+<li>Findet die optimale Lösung nur unter der Annahme unbegrenzter Kapazität</li>
+</ul>
+<p><strong>Warum führt isolierte Planung zu Problemen?</strong></p>
+<p>Wenn wir Wagner-Whitin separat für Typ A und Typ B anwenden würden:</p>
+<ul>
+<li>Jeder Algorithmus würde versuchen, die Anzahl der Rüstvorgänge zu minimieren</li>
+<li>Typ A würde z.B. in Woche 1 alle 75 Stück (für Wochen 1, 2, 4) produzieren wollen</li>
+<li>Typ B würde in Woche 3 alle 55 Stück produzieren wollen</li>
+<li>Dies würde die Kapazität in mehreren Wochen überschreiten (siehe Teil b)</li>
+<li>Die Algorithmen “wissen” nichts voneinander und koordinieren sich nicht</li>
+</ul>
+<p><strong>Fazit:</strong> Beim CLSP muss die Losgrößenplanung <strong>simultan für alle Produkte</strong> erfolgen, um die gemeinsamen Kapazitätsbeschränkungen zu berücksichtigen. Dies führt zu einem gemischt-ganzzahligen Optimierungsproblem (MIP), das deutlich komplexer ist als das SULSP.</p>
+</div>
+</div>
+</div>
 
 
 </section>

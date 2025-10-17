@@ -359,6 +359,90 @@ window.Quarto = {
 <li>Bestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.</li>
 <li>Wie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Vollständiges mathematisches Modell:</strong></li>
+</ol>
+<p>Siehe Foliensatz.</p>
+<ol start="2" type="a">
+<li><strong>Kapazitätsbedarf bei vollständiger Bedarfsdeckung:</strong></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 26%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Periode <span class="math inline">\(t\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(d_{1t}\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(d_{2t}\)</span></th>
+<th style="text-align: left;">Maschinen-bedarf</th>
+<th style="text-align: left;">Personal-bedarf</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;"><span class="math inline">\(1 \cdot 20 + 2 \cdot 50 = 120\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5 \cdot 20 + 0,5 \cdot 50 = 55\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;"><span class="math inline">\(1 \cdot 50 + 2 \cdot 20 = 90\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5 \cdot 50 + 0,5 \cdot 20 = 85\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"><span class="math inline">\(1 \cdot 30 + 2 \cdot 60 = 150\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5 \cdot 30 + 0,5 \cdot 60 = 75\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;"><span class="math inline">\(1 \cdot 20 + 2 \cdot 30 = 80\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5 \cdot 20 + 0,5 \cdot 30 = 45\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="a">
+<li><strong>Überstunden-Analyse:</strong></li>
+</ol>
+<p>Verfügbare Personenstunden: 70 pro Periode Überstunden erforderlich in:</p>
+<ul>
+<li>Periode 2: <span class="math inline">\(85 - 70 = 15\)</span> Überstunden</li>
+<li>Periode 3: <span class="math inline">\(75 - 70 = 5\)</span> Überstunden</li>
+</ul>
+<p>Beide liegen unter der Maximalgrenze von 50 Überstunden.</p>
+<ol start="4" type="a">
+<li><strong>Berücksichtigung von Mindestproduktionsmengen:</strong></li>
+</ol>
+<p><span class="math display">\[x_{kt} \geq \underline{x}_{kt}\]</span></p>
+</div>
+</div>
+</div>
 </section>
 <section id="aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren">Aufgabe 2 - Losgrößenplanung mit verschiedenen Verfahren</h2>
@@ -372,6 +456,163 @@ window.Quarto = {
 <li>Bestimmen Sie die <strong>optimale Lösung</strong> mit dem <strong>Wagner-Whitin-Verfahren</strong> (Kürzeste-Wege-Interpretation).</li>
 <li>Vergleichen Sie die Lösungsqualität der drei Verfahren und bewerten Sie deren praktische Anwendbarkeit.</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>SIULSP-Modell für das gegebene Problem:</strong></li>
+</ol>
+<p>Siehe Foliensatz.</p>
+<ol start="2" type="a">
+<li><strong>Bestimmung von Big-M:</strong></li>
+</ol>
+<p>Die maximale Losgröße ist die Summe aller verbleibenden Bedarfe: <span class="math display">\[M \geq \max\{d_1 + d_2 + d_3 + d_4 + d_5, d_2 + d_3 + d_4 + d_5, ..., d_5\}\]</span> <span class="math display">\[M \geq \max\{190, 160, 70, 50, 50\} = 190\]</span></p>
+<p><strong>Antwort:</strong> <span class="math inline">\(M \geq 190\)</span></p>
+<ol start="3" type="a">
+<li><strong>Silver-Meal-Verfahren:</strong></li>
+</ol>
+<p>Das Verfahren minimiert die durchschnittlichen Kosten pro Periode für jedes Los.</p>
+<p>Kostenkriterium: <span class="math inline">\(c_{\tau,t} = \frac{s + h \cdot \sum_{j=\tau}^{t} (j-\tau) \cdot d_j}{t-\tau+1}\)</span></p>
+<p><strong>Iteration 1 (Start <span class="math inline">\(\tau = 1\)</span>):</strong></p>
+<ul>
+<li><span class="math inline">\(c_{1,1} = \frac{250 + 2 \cdot 0 \cdot 30}{1} = 250\)</span></li>
+<li><span class="math inline">\(c_{1,2} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90)}{2} = \frac{430}{2} = 215\)</span> (besser)</li>
+<li><span class="math inline">\(c_{1,3} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20)}{3} = \frac{510}{3} = 170\)</span> (besser)</li>
+<li><span class="math inline">\(c_{1,4} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0)}{4} = \frac{510}{4} = 127,5\)</span> (besser)</li>
+<li><span class="math inline">\(c_{1,5} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0 + 4 \cdot 50)}{5} = \frac{910}{5} = 182\)</span> (schlechter)</li>
+</ul>
+<p><strong>Los 1:</strong> Perioden 1-4, <span class="math inline">\(q_1 = 140\)</span></p>
+<p><strong>Iteration 2 (Start <span class="math inline">\(\tau = 5\)</span>):</strong> - <span class="math inline">\(c_{5,5} = \frac{250 + 2 \cdot 0 \cdot 50}{1} = 250\)</span></p>
+<p><strong>Los 2:</strong> Periode 5, <span class="math inline">\(q_5 = 50\)</span></p>
+<p><strong>Silver-Meal-Lösung:</strong></p>
+<ul>
+<li><span class="math inline">\(q_1 = 140, q_2 = 0, q_3 = 0, q_4 = 0, q_5 = 50\)</span></li>
+<li>Lagerbestände: <span class="math inline">\(y_1 = 110, y_2 = 20, y_3 = 0, y_4 = 0, y_5 = 0\)</span></li>
+<li><strong>Gesamtkosten:</strong> <span class="math inline">\(2 \cdot 250 + 2 \cdot (110 + 20) = 760\)</span> €</li>
+</ul>
+<ol start="4" type="a">
+<li><strong>Groff-Verfahren:</strong></li>
+</ol>
+<p>Das Verfahren verwendet das Kriterium: <span class="math inline">\(d_{j} \cdot j \cdot (j+1) \leq 2s/h = 250\)</span></p>
+<p><strong>Iteration 1 (<span class="math inline">\(\tau = 1\)</span>):</strong></p>
+<ul>
+<li><span class="math inline">\(j = 0\)</span>: <span class="math inline">\(30 \cdot 0 \cdot 1 = 0 \leq 250\)</span></li>
+<li><span class="math inline">\(j = 1\)</span>: <span class="math inline">\(90 \cdot 1 \cdot 2 = 180 \leq 250\)</span></li>
+<li><span class="math inline">\(j = 2\)</span>: <span class="math inline">\(20 \cdot 2 \cdot 3 = 120 \leq 250\)</span></li>
+<li><span class="math inline">\(j = 3\)</span>: <span class="math inline">\(0 \cdot 3 \cdot 4 = 0 \leq 250\)</span></li>
+<li><span class="math inline">\(j = 4\)</span>: <span class="math inline">\(50 \cdot 4 \cdot 5 = 1000 &gt; 250\)</span></li>
+</ul>
+<p><strong>Los 1:</strong> Perioden 1-4, <span class="math inline">\(q_1 = 140\)</span></p>
+<p><strong>Iteration 2 (<span class="math inline">\(\tau = 5\)</span>):</strong></p>
+<ul>
+<li><span class="math inline">\(j = 0\)</span>: <span class="math inline">\(50 \cdot 0 \cdot 1 = 0 \leq 250\)</span> ✓</li>
+</ul>
+<p><strong>Los 2:</strong> Periode 5, <span class="math inline">\(q_5 = 50\)</span></p>
+<p><strong>Groff-Lösung:</strong> Identisch mit Silver-Meal</p>
+<ul>
+<li><strong>Gesamtkosten:</strong> <span class="math inline">\(760\)</span> €</li>
+</ul>
+<ol start="5" type="a">
+<li><p><strong>Wagner-Whitin-Verfahren (Optimale Lösung):</strong></p></li>
+<li><p><strong>Wagner-Whitin-Verfahren (Optimale Lösung):</strong></p></li>
+</ol>
+<p><strong>Schrittweise Berechnung:</strong></p>
+<p><strong>Periode 1:</strong> <span class="math inline">\(F_1\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30) = 0 + 250 + 0 = 250\)</span></li>
+<li><strong><span class="math inline">\(F_1 = 250\)</span></strong> (Produktion in Periode 1)</li>
+</ul>
+<p><strong>Periode 2:</strong> <span class="math inline">\(F_2\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90) = 0 + 250 + 180 = 430\)</span></li>
+<li><span class="math inline">\(\tau = 2\)</span>: <span class="math inline">\(F_1 + 250 + 2 \cdot (0 \cdot 90) = 250 + 250 + 0 = 500\)</span></li>
+<li><strong><span class="math inline">\(F_2 = 430\)</span></strong> (Produktion in Periode 1 für Perioden 1-2)</li>
+</ul>
+<p><strong>Periode 3:</strong> <span class="math inline">\(F_3\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20) = 0 + 250 + 260 = 510\)</span></li>
+<li><span class="math inline">\(\tau = 2\)</span>: <span class="math inline">\(F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20) = 250 + 250 + 40 = 540\)</span></li>
+<li><span class="math inline">\(\tau = 3\)</span>: <span class="math inline">\(F_2 + 250 + 2 \cdot (0 \cdot 20) = 430 + 250 + 0 = 680\)</span></li>
+<li><strong><span class="math inline">\(F_3 = 510\)</span></strong> (Produktion in Periode 1 für Perioden 1-3)</li>
+</ul>
+<p><strong>Periode 4:</strong> <span class="math inline">\(F_4\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0) = 0 + 250 + 260 = 510\)</span></li>
+<li><span class="math inline">\(\tau = 2\)</span>: <span class="math inline">\(F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20 + 2 \cdot 0) = 250 + 250 + 40 = 540\)</span></li>
+<li><span class="math inline">\(\tau = 3\)</span>: <span class="math inline">\(F_2 + 250 + 2 \cdot (0 \cdot 20 + 1 \cdot 0) = 430 + 250 + 0 = 680\)</span></li>
+<li><span class="math inline">\(\tau = 4\)</span>: <span class="math inline">\(F_3 + 250 + 2 \cdot (0 \cdot 0) = 510 + 250 + 0 = 760\)</span></li>
+<li><strong><span class="math inline">\(F_4 = 510\)</span></strong> (Produktion in Periode 1 für Perioden 1-4)</li>
+</ul>
+<p><strong>Periode 5:</strong> <span class="math inline">\(F_5\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0 + 4 \cdot 50) = 0 + 250 + 660 = 910\)</span></li>
+<li><span class="math inline">\(\tau = 2\)</span>: <span class="math inline">\(F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20 + 2 \cdot 0 + 3 \cdot 50) = 250 + 250 + 340 = 840\)</span></li>
+<li><span class="math inline">\(\tau = 3\)</span>: <span class="math inline">\(F_2 + 250 + 2 \cdot (0 \cdot 20 + 1 \cdot 0 + 2 \cdot 50) = 430 + 250 + 200 = 880\)</span></li>
+<li><span class="math inline">\(\tau = 4\)</span>: <span class="math inline">\(F_3 + 250 + 2 \cdot (0 \cdot 0 + 1 \cdot 50) = 510 + 250 + 100 = 860\)</span></li>
+<li><span class="math inline">\(\tau = 5\)</span>: <span class="math inline">\(F_4 + 250 + 2 \cdot (0 \cdot 50) = 510 + 250 + 0 = 760\)</span></li>
+<li><strong><span class="math inline">\(F_5 = 760\)</span></strong> (Produktion in Periode 5 zusätzlich zu optimaler Lösung bis Periode 4)</li>
+</ul>
+<p><strong>Optimale Lösung durch Backtracking:</strong></p>
+<ul>
+<li><span class="math inline">\(F_5 = 760\)</span> wird erreicht durch <span class="math inline">\(\tau = 5\)</span> in der letzten Stufe</li>
+<li><span class="math inline">\(F_4 = 510\)</span> wird erreicht durch <span class="math inline">\(\tau = 1\)</span></li>
+<li><strong>Lösung:</strong> Produktion in Periode 1 für Perioden 1-4, Produktion in Periode 5 für Periode 5</li>
+<li><span class="math inline">\(q_1 = 30 + 90 + 20 + 0 = 140\)</span>, <span class="math inline">\(q_5 = 50\)</span></li>
+<li><strong>Gesamtkosten:</strong> <span class="math inline">\(760\)</span> €</li>
+</ul>
+<ol start="6" type="a">
+<li><strong>Vergleich der Lösungsqualität:</strong></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Verfahren</th>
+<th style="text-align: left;">Produktionsplan</th>
+<th style="text-align: left;">Gesamtkosten</th>
+<th style="text-align: left;">Rechenaufwand</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Silver-Meal</td>
+<td style="text-align: left;"><span class="math inline">\(q_1=140, q_5=50\)</span></td>
+<td style="text-align: left;">760 €</td>
+<td style="text-align: left;">Mittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Groff</td>
+<td style="text-align: left;"><span class="math inline">\(q_1=140, q_5=50\)</span></td>
+<td style="text-align: left;">760 €</td>
+<td style="text-align: left;">Gering</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wagner-Whitin</td>
+<td style="text-align: left;"><span class="math inline">\(q_1=140, q_5=50\)</span></td>
+<td style="text-align: left;">760 €</td>
+<td style="text-align: left;">Hoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Praktische Bewertung:</strong></p>
+<ul>
+<li><strong>Groff-Verfahren</strong>: Einfachste Anwendung mit klarem Stopkriterium</li>
+<li><strong>Silver-Meal</strong>: Ausgewogenes Verhältnis von Rechenaufwand und Lösungsqualität</li>
+<li><strong>Wagner-Whitin</strong>: Garantiert optimale Lösung, aber aufwendige Berechnung</li>
+</ul>
+<p><strong>Besonderheit:</strong> In diesem Beispiel führen alle drei Verfahren zur identischen optimalen Lösung mit gleichen Kosten. Dies ist ein Zufall und tritt in der Praxis nicht regelmäßig auf.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="aufgabe-3---kapazitätsbeschränkte-losgrößenplanung" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-3---kapazitätsbeschränkte-losgrößenplanung">Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung</h2>
@@ -387,6 +628,55 @@ window.Quarto = {
 <li>Analysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.</li>
 <li>Welche Auswirkungen könnten Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren haben?</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Zusätzliche Nebenbedingungen:</strong></li>
+</ol>
+<p><strong>Produktionskapazitätsbeschränkung:</strong></p>
+<p><span class="math display">\[q_t \leq 80 \quad \text{für alle } t = 1,2,3,4,5\]</span></p>
+<p><strong>Rüstkapazitätsbeschränkung:</strong></p>
+<p><span class="math display">\[10 \cdot \gamma_t + 0,5 \cdot q_t \leq 15 \quad \text{für alle } t = 1,2,3,4,5\]</span></p>
+<ol start="2" type="a">
+<li><strong>Zulässigkeitsprüfung der Lösung aus 2 e):</strong></li>
+</ol>
+<p>Optimale Lösung: <span class="math inline">\(q_1 = 140, q_5 = 50\)</span></p>
+<p><strong>Periode 1:</strong></p>
+<ul>
+<li>Produktionskapazität: <span class="math inline">\(140 &gt; 80\)</span> → <strong>Verletzt!</strong></li>
+<li>Rüstkapazität: <span class="math inline">\(10 \cdot 1 + 0,5 \cdot 140 = 80 &gt; 15\)</span> → <strong>Verletzt!</strong></li>
+</ul>
+<p><strong>Periode 5:</strong></p>
+<ul>
+<li>Produktionskapazität: <span class="math inline">\(50 \leq 80\)</span> ✓</li>
+<li>Rüstkapazität: <span class="math inline">\(10 \cdot 1 + 0,5 \cdot 50 = 35 &gt; 15\)</span> → <strong>Verletzt!</strong></li>
+</ul>
+<p><strong>Antwort:</strong> Die Lösung ist <strong>nicht zulässig</strong>.</p>
+<ol start="3" type="a">
+<li><strong>Auswirkungen auf heuristische Verfahren:</strong></li>
+</ol>
+<p><strong>Silver-Meal und Groff-Verfahren:</strong></p>
+<ul>
+<li>Müssen <strong>modifiziert</strong> werden, um Kapazitätsbeschränkungen zu berücksichtigen</li>
+<li>Los-Bildung muss gestoppt werden, wenn Kapazitätsgrenzen erreicht sind</li>
+<li><strong>Lösungsqualität</strong> kann deutlich schlechter werden</li>
+</ul>
+<p><strong>Praktische Konsequenz:</strong></p>
+<p>Kapazitätsbeschränkte Losgrößenprobleme erfordern weiter angepasste <strong>Algorithmen</strong> oder die Verwendung von <strong>Mixed-Integer-Programming-Solvern</strong>.</p>
+</div>
+</div>
+</div>
 
 
 </section>

@@ -344,6 +344,95 @@ window.Quarto = {
 </ul></li>
 <li>Eine zusätzliche Vorbearbeitungsstation hat <span class="math inline">\(\lambda = 5\)</span> und <span class="math inline">\(\mu = 7\)</span>. Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Produktionsrate und Ankunftsraten:</strong></li>
+</ol>
+<p>Für <span class="math inline">\(\lambda_1 = 2\)</span>:</p>
+<ul>
+<li>Produktionsrate: <span class="math inline">\(X = \min\{\lambda_1, \mu_1, \mu_2, \mu_3, \mu_4\} = \min\{2, 3, 3, 4, 3\} = 2\)</span> Stück/h</li>
+<li>Ankunftsraten: <span class="math inline">\(\lambda_1 = 2\)</span>, <span class="math inline">\(\lambda_2 = \min\{2, 3\} = 2\)</span>, <span class="math inline">\(\lambda_3 = \min\{2, 3\} = 2\)</span>, <span class="math inline">\(\lambda_4 = \min\{2, 4\} = 2\)</span></li>
+</ul>
+<p>Für <span class="math inline">\(\lambda_1 = 3\)</span>:</p>
+<ul>
+<li>Produktionsrate: <span class="math inline">\(X = \min\{3, 3, 3, 4, 3\} = 3\)</span> Stück/h</li>
+<li>Ankunftsraten: <span class="math inline">\(\lambda_1 = 3\)</span>, <span class="math inline">\(\lambda_2 = \min\{3, 3\} = 3\)</span>, <span class="math inline">\(\lambda_3 = \min\{3, 3\} = 3\)</span>, <span class="math inline">\(\lambda_4 = \min\{3, 4\} = 3\)</span></li>
+</ul>
+<ol start="2" type="a">
+<li><strong>Kenngrößen für beide Szenarien:</strong></li>
+</ol>
+<p><strong>Szenario 1: <span class="math inline">\(\lambda_1 = 2\)</span></strong></p>
+<p>Auslastungen:</p>
+<ul>
+<li><span class="math inline">\(\rho_1 = \frac{2}{3} = 0,667\)</span></li>
+<li><span class="math inline">\(\rho_2 = \frac{2}{3} = 0,667\)</span></li>
+<li><span class="math inline">\(\rho_3 = \frac{2}{4} = 0,500\)</span></li>
+<li><span class="math inline">\(\rho_4 = \frac{2}{3} = 0,667\)</span></li>
+<li>Durchschnitt: <span class="math inline">\(\bar{\rho} = 0,625\)</span></li>
+</ul>
+<p>Mittlerer Bestand:</p>
+<ul>
+<li><span class="math inline">\(L_1 = \frac{0,667}{1-0,667} = 2,00\)</span> Stück</li>
+<li><span class="math inline">\(L_2 = \frac{0,667}{1-0,667} = 2,00\)</span> Stück</li>
+<li><span class="math inline">\(L_3 = \frac{0,500}{1-0,500} = 1,00\)</span> Stück</li>
+<li><span class="math inline">\(L_4 = \frac{0,667}{1-0,667} = 2,00\)</span> Stück</li>
+<li>Gesamt: <span class="math inline">\(L = 7,00\)</span> Stück</li>
+</ul>
+<p>Mittlere Durchlaufzeit (Little’s Gesetz: <span class="math inline">\(W = L/\lambda\)</span>):</p>
+<ul>
+<li><span class="math inline">\(W_1 = \frac{2,00}{2} = 1,00\)</span> h</li>
+<li><span class="math inline">\(W_2 = \frac{2,00}{2} = 1,00\)</span> h</li>
+<li><span class="math inline">\(W_3 = \frac{1,00}{2} = 0,50\)</span> h</li>
+<li><span class="math inline">\(W_4 = \frac{2,00}{2} = 1,00\)</span> h</li>
+<li>Gesamt: <span class="math inline">\(W = 3,50\)</span> h</li>
+</ul>
+<p><strong>Szenario 2: <span class="math inline">\(\lambda_1 = 3\)</span></strong></p>
+<p>Auslastungen:</p>
+<ul>
+<li><span class="math inline">\(\rho_1 = \rho_2 = \rho_4 = \frac{3}{3} = 1,000\)</span> → Grenzfall!</li>
+<li><span class="math inline">\(\rho_3 = \frac{3}{4} = 0,750\)</span></li>
+</ul>
+<p>Das System arbeitet am Limit. Die Stationen 1, 2 und 4 haben 100% Auslastung, was theoretisch noch stabil ist, aber praktisch extrem problematisch:</p>
+<ul>
+<li>Keine Puffer für Schwankungen vorhanden</li>
+<li>Warteschlangen werden sehr lang (theoretisch unendlich)</li>
+<li>Jede kleine Störung führt zu Problemen</li>
+<li>In der Praxis nicht realisierbar → Ankunftsrate reduzieren oder Kapazitäten erhöhen!</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Wahrscheinlichkeiten für Station 1 bei <span class="math inline">\(\lambda_1 = 2\)</span>:</strong></li>
+</ol>
+<p>Mit <span class="math inline">\(\rho_1 = 0,667\)</span> gilt: <span class="math inline">\(P[N=n] = (1-\rho) \cdot \rho^n = 0,333 \cdot 0,667^n\)</span></p>
+<ul>
+<li><span class="math inline">\(P[N=5] = 0,333 \cdot 0,667^5 = 0,333 \cdot 0,132 = 0,044\)</span> (4,4%)</li>
+<li><span class="math inline">\(P[N \leq 5] = \sum_{n=0}^{5} P[N=n] = 0,912\)</span></li>
+<li><span class="math inline">\(P[N=0] = 0,333\)</span> (33,3%)</li>
+</ul>
+<ol start="4" type="a">
+<li><strong>Analyse der Vorbearbeitungsstation:</strong></li>
+</ol>
+<p>Bei <span class="math inline">\(\lambda = 5\)</span> und <span class="math inline">\(\mu = 7\)</span>:</p>
+<ul>
+<li>Bearbeitungszeit: <span class="math inline">\(b = \frac{1}{\mu} = \frac{1}{7} = 0,143\)</span> h</li>
+<li>Auslastung: <span class="math inline">\(\rho = \frac{5}{7} = 0,714\)</span></li>
+<li>Mittlerer Bestand: <span class="math inline">\(L = \frac{0,714}{1-0,714} = 2,50\)</span> Stück</li>
+<li>Mittlere Durchlaufzeit: <span class="math inline">\(W = \frac{L}{\lambda} = \frac{2,50}{5} = 0,50\)</span> h</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage">Aufgabe 2 - Fließbandabstimmung bei der Smartphone-Montage</h2>
@@ -395,6 +484,188 @@ window.Quarto = {
 <li>Führen Sie eine Fließbandabstimmung mit der Heuristik “Längste Elementzeit zuerst” durch.</li>
 <li>Berechnen Sie den Bandwirkungsgrad Ihrer Lösung.</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Taktzeit:</strong></li>
+</ol>
+<ul>
+<li>Verfügbare Zeit: <span class="math inline">\(T = 8 \text{ h} \times 60 \text{ min/h} = 480\)</span> min</li>
+<li>Produktionsrate: 48 Stück/Schicht</li>
+<li>Taktzeit: <span class="math inline">\(C = \frac{480}{48} = 10\)</span> min/Stück</li>
+</ul>
+<ol start="2" type="a">
+<li><strong>Stationenanzahl:</strong></li>
+</ol>
+<ul>
+<li>Theoretisches Minimum: <span class="math inline">\(M_{\min} = \lceil\frac{49}{10}\rceil = 5\)</span> Stationen</li>
+<li>Maximum: <span class="math inline">\(M_{\max} = 10\)</span> Stationen (ein Element pro Station)</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Fließbandabstimmung (Längste Elementzeit zuerst):</strong></li>
+</ol>
+<p><strong>Prioritätsliste</strong>: E(8), C(6), I(6), A(5), H(5), J(5), D(4), G(4), B(3), F(3) <strong>Wichtig:</strong> Es werden nur Elemente zugeordnet, deren Vorgänger bereits zugeordnet sind!</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 23%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Station</th>
+<th style="text-align: left;">Verfügbare Elemente</th>
+<th style="text-align: left;">Gewähltes Element</th>
+<th style="text-align: left;">Elementzeit</th>
+<th style="text-align: left;">Stationszeit</th>
+<th style="text-align: left;">Restzeit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">A, B, C</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">A, B</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">II</td>
+<td style="text-align: left;">A, F</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">F, D, E</td>
+<td style="text-align: left;">E (längste)</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">E passt nicht → F</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">III</td>
+<td style="text-align: left;">D, E, I</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">D, I</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IV</td>
+<td style="text-align: left;">D, I, H</td>
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">D, H</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">V</td>
+<td style="text-align: left;">H, G</td>
+<td style="text-align: left;">H</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">G</td>
+<td style="text-align: left;">G</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">VI</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+</tr>
+</tbody>
+</table>
+<p>Ergebnis: 6 Stationen benötigt</p>
+<p><strong>Hinweis zur Optimalität:</strong> Das theoretische Minimum von 5 Stationen (⌈49/10⌉) ist aufgrund der Vorrangbeziehungen und Elementzeiten nicht erreichbar. Die gefundene Lösung mit 6 Stationen ist für diese Heuristik gut, muss aber nicht global optimal sein. Andere Heuristiken könnten möglicherweise 5 Stationen erreichen.</p>
+<ol start="4" type="a">
+<li><strong>Bandwirkungsgrad:</strong> <span class="math display">\[U = \frac{\text{Summe Elementzeiten}}{\text{Anzahl Stationen} \times \text{Taktzeit}} = \frac{49}{6 \times 10} = \frac{49}{60} = 0,817 = 81,7\%\]</span></li>
+</ol>
+</div>
+</div>
+</div>
 </section>
 <section id="aufgabe-3---leistungsanalyse-eines-fließproduktionssystems" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-3---leistungsanalyse-eines-fließproduktionssystems">Aufgabe 3 - Leistungsanalyse eines Fließproduktionssystems</h2>
@@ -421,6 +692,51 @@ window.Quarto = {
 <li>Befinden sich mehr als 10 Leiterplatten an der Station?</li>
 </ul></li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Stationskenngrößen:</strong></li>
+</ol>
+<p>Für alle Stationen <span class="math inline">\(m = 1, ..., 5\)</span>:</p>
+<ul>
+<li>Bearbeitungsrate: <span class="math inline">\(\mu_m = \frac{1}{b_m} = \frac{1}{11} = 0,091\)</span> Leiterplatten/min</li>
+<li>Ankunftsrate: <span class="math inline">\(\lambda_m = \min\{\lambda_{m-1}, \mu_{m-1}\} = 0,08\)</span> (da <span class="math inline">\(0,08 &lt; 0,091\)</span> für alle Stationen)</li>
+<li>Auslastung: <span class="math inline">\(\rho_m = \frac{\lambda_m}{\mu_m} = \frac{0,08}{0,091} = 0,88\)</span></li>
+<li>Mittlerer Bestand: <span class="math inline">\(L_m = \frac{\rho_m}{1-\rho_m} = \frac{0,88}{0,12} = 7,33\)</span> Leiterplatten</li>
+<li>Mittlere Durchlaufzeit: <span class="math inline">\(W_m = \frac{L_m}{\lambda_m} = \frac{7,33}{0,08} = 91,67\)</span> min</li>
+</ul>
+<ol start="2" type="a">
+<li><strong>Gesamtsystem:</strong></li>
+</ol>
+<ul>
+<li>Produktionsrate: <span class="math inline">\(X = \min\{\lambda, \mu_1, ..., \mu_5\} = 0,08\)</span> Leiterplatten/min</li>
+<li>Gesamtbestand: <span class="math inline">\(L = \sum_{m=1}^{5} L_m = 5 \times 7,33 = 36,67\)</span> Leiterplatten</li>
+<li>Gesamtdurchlaufzeit: <span class="math inline">\(W = \sum_{m=1}^{5} W_m = 5 \times 91,67 = 458,33\)</span> min</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Wahrscheinlichkeiten für Station 3:</strong></li>
+</ol>
+<p>Mit <span class="math inline">\(\rho_3 = 0,88\)</span> und <span class="math inline">\(P[N=n] = (1-\rho) \cdot \rho^n\)</span>:</p>
+<ul>
+<li>Station leer: <span class="math inline">\(P[N=0] = 1 - 0,88 = 0,12\)</span> (12%)</li>
+<li>Genau 3 Leiterplatten: <span class="math inline">\(P[N=3] = 0,12 \cdot 0,88^3 = 0,12 \cdot 0,681 = 0,082\)</span> (8,2%)</li>
+<li>3 oder weniger: <span class="math inline">\(P[N \leq 3] = 0,401\)</span> (40,1%)</li>
+<li>Mehr als 10: <span class="math inline">\(P[N &gt; 10] = \rho^{11} = 0,88^{11} = 0,314\)</span> (31,4%)</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="aufgabe-4---starving-und-blocking" class="level2">
 <h2 class="anchored" data-anchor-id="aufgabe-4---starving-und-blocking">Aufgabe 4 - Starving und Blocking</h2>
@@ -433,6 +749,57 @@ window.Quarto = {
 <li>Welche Station ist der Engpass? Wie wirkt sich das auf die anderen Stationen aus?</li>
 <li>Schlagen Sie zwei Maßnahmen zur Verbesserung der Systemleistung vor.</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Begriffserklärungen:</strong></li>
+</ol>
+<p><strong>Starving</strong> (Aushungern): Eine Station kann nicht arbeiten, weil der vorgelagerte Puffer leer ist und kein zu bearbeitendes Werkstück verfügbar ist.</p>
+<p><strong>Blocking</strong> (Blockierung): Eine Station kann nicht arbeiten, obwohl sie ein Werkstück fertiggestellt hat, weil der nachgelagerte Puffer voll ist und das fertige Werkstück nicht weitergegeben werden kann.</p>
+<ol start="2" type="a">
+<li><strong>Mögliche Situationen:</strong></li>
+</ol>
+<p><strong>Starving:</strong></p>
+<ul>
+<li>Station 2 hungert aus, wenn Puffer 1 leer ist und Station 1 noch arbeitet</li>
+<li>Station 3 hungert aus, wenn Puffer 2 leer ist und Station 2 noch arbeitet</li>
+</ul>
+<p><strong>Blocking:</strong></p>
+<ul>
+<li>Station 1 wird blockiert, wenn Puffer 1 voll ist (3 Werkstücke) und Station 2 noch arbeitet</li>
+<li>Station 2 wird blockiert, wenn Puffer 2 voll ist (2 Werkstücke) und Station 3 noch arbeitet</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Engpassanalyse:</strong></li>
+</ol>
+<p>Station 2 ist der Engpass mit der längsten Bearbeitungszeit (5 min).</p>
+<p><strong>Auswirkungen:</strong></p>
+<ul>
+<li>Station 1 (schneller als Station 2): Wird blockiert, da Puffer 1 sich füllt</li>
+<li>Station 3 (schneller als Station 2): Hungert aus, da Station 2 nicht schnell genug liefert</li>
+</ul>
+<ol start="4" type="a">
+<li><p><strong>Verbesserungsmaßnahmen:</strong></p>
+<ul>
+<li>Parallelstation zu Station 2 hinzufügen</li>
+<li>Prozessverbesserung bei Station 2 zur Reduzierung von <span class="math inline">\(b_2\)</span></li>
+<li>Ziel: Engpass eliminieren und Systemleistung erhöhen</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
 
 
 </section>
