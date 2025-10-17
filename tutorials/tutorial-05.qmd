@@ -23,7 +23,7 @@ Der Projektstart (Beginn von A und D) ist zum Zeitpunkt 0.
 
 a) Erstellen Sie ein Netzplan-Diagramm für dieses Projekt.
 b) Führen Sie eine Vorwärtsrechnung durch, um die frühestmöglichen Anfangszeitpunkte (FAZ) und Endzeitpunkte (FEZ) für jeden Arbeitsgang zu bestimmen.
-c) Führen Sie eine Rückwärtsrechnung durch, um die spätestzulässigen Anfangszeitpunkte (SAZ) und Endzeitpunkte (SEZ) für jeden Arbeitsgang zu bestimmen. Gehen Sie davon aus, dass der SEZ des letzten Arbeitsgangs (G) dem spätestzulässigen Projektendtermin entspricht, falls er diesen nicht überschreitet. Andernfalls ist der spätestzulässige Endtermin des Projekts maßgebend für SEZ(G).
+c) Führen Sie eine Rückwärtsrechnung durch, um die spätestzulässigen Anfangszeitpunkte (SAZ) und Endzeitpunkte (SEZ) für jeden Arbeitsgang zu bestimmen.
 d) Berechnen Sie die Gesamtpufferzeit (GP) für jeden Arbeitsgang.
 e) Identifizieren Sie den kritischen Weg im Projekt.
 f) Was könnte passieren, wenn einige Arbeitsschritte Kapazitätsbeschränkungen unterliegen?
@@ -61,7 +61,12 @@ d) **Gesamtpuffer (GP = SAZ - FAZ):**
     *   G: GP = 15 - 15 = 0
 
 e) **Kritischer Weg (GP=0):**
-    A → B → C → F → G. Die Dauer dieses Pfades ist 3+5+4+3+2 = 17 Stunden.
+
+A → B → C → F → G. Die Dauer dieses Pfades ist 3+5+4+3+2 = 17 Stunden.
+
+f) **Kapazitätsbeschränkungen**
+
+Die Produktion könnte nicht mehr möglich sein.
 
 :::
 
