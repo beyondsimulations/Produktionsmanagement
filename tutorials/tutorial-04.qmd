@@ -27,7 +27,7 @@ b) Berechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständ
 c) Bestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.
 d) Wie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?
 
-::: {.content-visible when-profile="solution"}
+::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Vollständiges mathematisches Modell:**
@@ -55,7 +55,7 @@ Beide liegen unter der Maximalgrenze von 50 Überstunden.
 
 d) **Berücksichtigung von Mindestproduktionsmengen:**
 
-$$x_{kt} \geq \underline{x}_{kt}
+$$x_{kt} \geq \underline{x}_{kt}$$
 
 :::
 
@@ -72,7 +72,7 @@ d) Bestimmen Sie eine Lösung mit dem **Groff-Verfahren**.
 e) Bestimmen Sie die **optimale Lösung** mit dem **Wagner-Whitin-Verfahren** (Kürzeste-Wege-Interpretation).
 f) Vergleichen Sie die Lösungsqualität der drei Verfahren und bewerten Sie deren praktische Anwendbarkeit.
 
-::: {.content-visible when-profile="solution"}
+::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **SIULSP-Modell für das gegebene Problem:**
@@ -218,7 +218,7 @@ a) Formulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschr
 b) Analysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.
 c) Welche Auswirkungen könnten Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren haben?
 
-::: {.content-visible when-profile="solution"}
+::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Zusätzliche Nebenbedingungen:**

@@ -27,7 +27,7 @@ c) Für $\lambda_1 = 2$: Wie hoch ist die Wahrscheinlichkeit, dass sich an Stati
    - Die Station leer ist?
 d) Eine zusätzliche Vorbearbeitungsstation hat $\lambda = 5$ und $\mu = 7$. Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.
 
-::: {.content-visible when-profile="solution"}
+::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Produktionsrate und Ankunftsraten:**
@@ -128,7 +128,7 @@ b) Berechnen Sie die theoretisch minimale Anzahl an Stationen. Wie viele Station
 c) Führen Sie eine Fließbandabstimmung mit der Heuristik "Längste Elementzeit zuerst" durch.
 d) Berechnen Sie den Bandwirkungsgrad Ihrer Lösung.
 
-::: {.content-visible when-profile="solution"}
+::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Taktzeit:**
@@ -194,7 +194,7 @@ c) Für Station 3: Mit welcher Wahrscheinlichkeit
    - Befinden sich 3 oder weniger Leiterplatten an der Station?
    - Befinden sich mehr als 10 Leiterplatten an der Station?
 
-::: {.content-visible when-profile="solution"}
+::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Stationskenngrößen:**
@@ -237,7 +237,7 @@ b) Identifizieren Sie mögliche Starving- und Blocking-Situationen in diesem Sys
 c) Welche Station ist der Engpass? Wie wirkt sich das auf die anderen Stationen aus?
 d) Schlagen Sie zwei Maßnahmen zur Verbesserung der Systemleistung vor.
 
-::: {.content-visible when-profile="solution"}
+::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Begriffserklärungen:**

@@ -21,7 +21,7 @@ a) Bestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jed
 b) Wie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?
 c) Interpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?
 
-::: {.content-visible when-profile="solution"}
+:::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Bestimmung der kostenminimalen Standorte:**
@@ -55,7 +55,7 @@ Die Lösung mit nur Standort A minimiert zwar die Kosten, birgt aber Risiken:
 - **Keine Flexibilität**: Keine Reaktionsmöglichkeit auf Nachfrageschwankungen
 - **Transportrisiken**: Alle Transporte gehen von einem Punkt aus
 - In der Praxis würde man möglicherweise einen zweiten Standort als Backup in Betracht ziehen
-:::
+::::
 
 ## Aufgabe 2 - Mathematische Modellierung
 
@@ -68,7 +68,7 @@ c) Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 St
    - Transportkosten: $c_{A1} = 1$, $c_{A2} = 2$, $c_{A3} = 3$, $c_{B1} = 4$, $c_{B2} = 5$, $c_{B3} = 6$, $c_{C1} = 7$, $c_{C2} = 8$, $c_{C3} = 9$
 d) Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.
 
-::: {.content-visible when-profile="solution"}
+:::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Siehe Vorlesung:**
@@ -87,8 +87,6 @@ $\quad + 1 \cdot x_{A1} + 2 \cdot x_{A2} + 3 \cdot x_{A3}$
 $\quad + 4 \cdot x_{B1} + 5 \cdot x_{B2} + 6 \cdot x_{B3}$
 $\quad + 7 \cdot x_{C1} + 8 \cdot x_{C2} + 9 \cdot x_{C3}$
 
-(Annahme: Die restlichen $c_{ij}$-Werte folgen dem Muster aus Aufgabe 3)
-
 d) **Kapazitätsbeschränkung für Standort B:**
 
 $x_{B1} + x_{B2} + x_{B3} \leq b_B \cdot \gamma_B$
@@ -97,7 +95,7 @@ Diese Nebenbedingung stellt sicher, dass:
 
 - Wenn $\gamma_B = 0$ (Standort B nicht errichtet): $x_{B1} + x_{B2} + x_{B3} \leq 0$, d.h. keine Lieferung möglich
 - Wenn $\gamma_B = 1$ (Standort B errichtet): $x_{B1} + x_{B2} + x_{B3} \leq b_B$, d.h. Kapazität begrenzt Lieferungen
-:::
+::::
 
 ## Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung
 
@@ -122,7 +120,8 @@ b) Prüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingunge
 c) Ist folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert ($x_{A2} = 300$)? Begründen Sie.
 d) Schlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.
 
-::: {.content-visible when-profile="solution"}
+:::: {.callout-caution collapse="true"}
+
 **Lösung:**
 
 a) **Berechnung des Zielfunktionswerts:**
@@ -181,7 +180,7 @@ Bei den geöffneten Standorten A und B kann die Belieferung optimiert werden:
 **Verbesserung:** Die ursprüngliche Lösung kostete 4.950, die verbesserte Lösung kostet 4.800, was eine Ersparnis von 150 bedeutet.
 
 **Begründung:** Durch die stärkere Nutzung des günstigeren Standorts A für Abnehmer 2 (200 statt 150 Einheiten) werden die Transportkosten reduziert, während alle Kapazitätsbeschränkungen eingehalten bleiben.
-:::
+::::
 
 ## Aufgabe 4 - Heuristiken zur Standortplanung
 
@@ -201,7 +200,7 @@ a) Wenden Sie die Add-Heuristik an, um eine Lösung zu bestimmen. Dokumentieren 
 b) Sind heuristische Lösungen optimal? Begründen Sie Ihre Antwort.
 c) Auf welcher Managementebene sind Standortentscheidungen angesiedelt und warum?
 
-::: {.content-visible when-profile="solution"}
+:::: {.callout-caution collapse="true"}
 **Lösung:**
 
 a) **Add-Heuristik:**
@@ -261,4 +260,4 @@ Standortentscheidungen sind auf der **strategischen Managementebene** angesiedel
 - Schwer reversibel sind
 - Die Wettbewerbsposition fundamental beeinflussen
 - Mit der Unternehmensstrategie abgestimmt werden müssen
-:::
+::::
