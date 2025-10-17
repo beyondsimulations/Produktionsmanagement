@@ -25,3 +25,11 @@ Um einen Überblick von dem Klausurformat zu bekommen, mit dem ich in der Regel 
 ### Wie lange dauert die Klausur?
 
 Die Klausur hat eine Länge von 60 Minuten.
+
+### Wie ist die Klausur aufgebaut?
+
+Die Klausur besteht aus 5 Aufgaben und ss sind **vier von fünf** Aufgaben zu bearbeiten (je 15 Punkte pro Aufgabe, max. 60 Punkte).
+
+:::{.callout-warning}
+Die bearbeiteten Aufgaben, die gewertet werden sollen, sind kenntlich zu machen. Ansonsten werden die Lösungen grundsätzlich in der Reihenfolge der Aufgaben in der Klausur bewertet!
+:::

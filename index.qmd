@@ -7,6 +7,16 @@ subtitle: "Universität Duisburg-Essen - Wintersemester 2025/2026"
 
 Dieser Kurs behandelt das Modul Produktionsmanagement auf Basis der ursprünglichen Vorlesung von Prof. Dr. Manitz. Ich habe den Kurs kurzfristig übernommen und die Materialien deswegen lediglich leicht angepasst. Es sind keine neuen Inhalte enthalten, sondern lediglich angepasste Übungen.
 
+## Online Meetings
+
+Wie besprochen, finden vor der Prüfung noch 3 Online-Meetings zur Klärung Ihrer Fragen statt. Die Daten der Meetings sind wie folgt:
+
+- 20.10.2025, um 14:15 Uhr
+- 22.10.2025, um 08:15 Uhr
+- 01.12.2025, um 12:15 Uhr
+
+Alle Meetings können Sie [über diesen Link erreichen.](https://meet.google.com/ant-hrew-xtf)
+
 ## Lernziele
 
 Mein Ziel ist es, Ihnen einige wichtige Grundlagen in der Produktion näherzubringen. Diese Konzepte werden sowohl in der Wissenschaft als auch in der Industrie eingesetzt und sind gute Werkzeuge für die Praxis.
