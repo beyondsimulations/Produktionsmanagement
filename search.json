@@ -182,6 +182,16 @@
     ]
   },
   {
+    "objectID": "index.html#online-meetings",
+    "href": "index.html#online-meetings",
+    "title": "Produktionsmanagement",
+    "section": "Online Meetings",
+    "text": "Online Meetings\nWie besprochen, finden vor der Prüfung noch 3 Online-Meetings zur Klärung Ihrer Fragen statt. Die Daten der Meetings sind wie folgt:\n\n20.10.2025, um 14:15 Uhr\n22.10.2025, um 08:15 Uhr\n01.12.2025, um 12:15 Uhr\n\nAlle Meetings können Sie über diesen Link erreichen.",
+    "crumbs": [
+      "Willkommen"
+    ]
+  },
+  {
     "objectID": "index.html#lernziele",
     "href": "index.html#lernziele",
     "title": "Produktionsmanagement",
@@ -384,7 +394,7 @@
     "href": "tutorials/tutorial-04.html#aufgabe-3---kapazitätsbeschränkte-losgrößenplanung",
     "title": "Übung 04",
     "section": "Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung",
-    "text": "Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung\nErweitern Sie das SIULSP-Modell aus Aufgabe 2 um folgende Kapazitätsbeschränkungen:\n\nVerfügbare Produktionskapazität: 80 Einheiten pro Periode\nRüstzeit: 10 Stunden pro Rüstvorgang\nVerfügbare Rüstkapazität: 15 Stunden pro Periode\nProduktionszeit: 0,5 Stunden pro Einheit\n\n\nFormulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschränkte Problem.\nAnalysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.\nWelche Auswirkungen haben Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren?",
+    "text": "Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung\nErweitern Sie das SIULSP-Modell aus Aufgabe 2 um folgende Kapazitätsbeschränkungen:\n\nVerfügbare Produktionskapazität: 80 Einheiten pro Periode\nRüstzeit: 10 Stunden pro Rüstvorgang\nVerfügbare Rüstkapazität: 15 Stunden pro Periode\nProduktionszeit: 0,5 Stunden pro Einheit\n\n\nFormulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschränkte Problem.\nAnalysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.\nWelche Auswirkungen könnten Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren haben?",
     "crumbs": [
       "04 Produktion",
       "Tutorium"
