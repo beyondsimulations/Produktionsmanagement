@@ -145,25 +145,20 @@ b) **Stationenanzahl:**
 c) **Fließbandabstimmung (Längste Elementzeit zuerst):**
 
 **Prioritätsliste**: E(8), C(6), I(6), A(5), H(5), J(5), D(4), G(4), B(3), F(3)
+
 **Wichtig:** Es werden nur Elemente zugeordnet, deren Vorgänger bereits zugeordnet sind!
 
 | Station | Verfügbare Elemente | Gewähltes Element | Elementzeit | Stationszeit | Restzeit |
 |:--------|:-------------------|:-----------------|:------------|:-------------|:---------|
 | I | A, B, C | C | 6 | 6 | 4 |
-| | A, B | B | 3 | 9 | 1 |
-| | A | - | - | 9 | 1 |
+| | A, B, F | B | 3 | 9 | 1 |
 | II | A, F | A | 5 | 5 | 5 |
-| | F, D, E | E (längste) | 8 | - | - |
-| | | E passt nicht → D | 4 | 9 | 1 |
-| | F | - | - | 9 | 1 |
-| III | F, E, I | E | 8 | 8 | 2 |
-| | F, I | - | - | 8 | 2 |
-| IV | F, I, H | I | 6 | 6 | 4 |
-| | F, H | F | 3 | 9 | 1 |
-| | H | - | - | 9 | 1 |
-| V | H, G | H | 5 | 5 | 5 |
-| | G | G | 4 | 9 | 1 |
-| | J | - | - | 9 | 1 |
+| | F, D, E | D | 4 | 9 | 1 |
+| III | F, E | E | 8 | 8 | 2 |
+| IV | F, G, H | H | 5 | 5 | 5 |
+| | F, G | G | 4 | 9 | 1 |
+| V | F | F | 3| 3 | 7 |
+| | I | I | 6 | 9 | 1 |
 | VI | J | J | 5 | 5 | 5 |
 
 Ergebnis: 6 Stationen benötigt
