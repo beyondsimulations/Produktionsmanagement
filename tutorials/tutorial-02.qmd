@@ -154,12 +154,13 @@ c) **Fließbandabstimmung (Längste Elementzeit zuerst):**
 | | A | - | - | 9 | 1 |
 | II | A, F | A | 5 | 5 | 5 |
 | | F, D, E | E (längste) | 8 | - | - |
-| | | E passt nicht → F | 3 | 8 | 2 |
-| | D | - | - | 8 | 2 |
-| III | D, E, I | E | 8 | 8 | 2 |
-| | D, I | - | - | 8 | 2 |
-| IV | D, I, H | I | 6 | 6 | 4 |
-| | D, H | D | 4 | 10 | 0 |
+| | | E passt nicht → D | 4 | 9 | 1 |
+| | F | - | - | 9 | 1 |
+| III | F, E, I | E | 8 | 8 | 2 |
+| | F, I | - | - | 8 | 2 |
+| IV | F, I, H | I | 6 | 6 | 4 |
+| | F, H | F | 3 | 9 | 1 |
+| | H | - | - | 9 | 1 |
 | V | H, G | H | 5 | 5 | 5 |
 | | G | G | 4 | 9 | 1 |
 | | J | - | - | 9 | 1 |
