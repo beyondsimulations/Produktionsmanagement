@@ -33,3 +33,11 @@ Die Klausur besteht aus 5 Aufgaben und ss sind **vier von fünf** Aufgaben zu be
 :::{.callout-warning}
 Die bearbeiteten Aufgaben, die gewertet werden sollen, sind kenntlich zu machen. Ansonsten werden die Lösungen grundsätzlich in der Reihenfolge der Aufgaben in der Klausur bewertet!
 :::
+
+### Welche Themen sind ausgeschlossen?
+
+Alles, was in den Vorlesungsfolien und Übungen auf der Website behandelt wird, kann in der Prüfung vorkommen. Themen aus Altklausuren, die weder in den Folien noch in den Übungen enthalten sind, werden nicht abgefragt.
+
+### Bekomme ich bezüglich meiner Note früher Bescheid, wenn ich im dritten Versuch bin?
+
+Nein, alle Noten werden gleichzeitig veröffentlicht.
