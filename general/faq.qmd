@@ -38,6 +38,10 @@ Die bearbeiteten Aufgaben, die gewertet werden sollen, sind kenntlich zu machen.
 
 Alles, was in den Vorlesungsfolien und Übungen auf der Website behandelt wird, kann in der Prüfung vorkommen. Themen aus Altklausuren, die weder in den Folien noch in den Übungen enthalten sind, werden nicht abgefragt.
 
+### Kann es auch sein, dass in der Klausur ein Modell formuliert werden muss?
+
+Ja, es kann gut sein, dass in der Klausur ein Modell formuliert werden muss.
+
 ### Bekomme ich bezüglich meiner Note früher Bescheid, wenn ich im dritten Versuch bin?
 
 Nein, alle Noten werden gleichzeitig veröffentlicht.
