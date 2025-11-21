@@ -36,12 +36,16 @@ Die bearbeiteten Aufgaben, die gewertet werden sollen, sind kenntlich zu machen.
 
 ### Welche Themen sind ausgeschlossen?
 
-Alles, was in den Vorlesungsfolien und Übungen auf der Website behandelt wird, kann in der Prüfung vorkommen. Themen aus Altklausuren, die weder in den Folien noch in den Übungen enthalten sind, werden nicht abgefragt.
+Alles, was in den Vorlesungsfolien und Übungen auf der Website behandelt **wurde**, kann in der Prüfung vorkommen. Themen aus Altklausuren, die weder in den Folien noch in den Übungen **behandelt werden**, werden nicht abgefragt.
 
 ### Kann es auch sein, dass in der Klausur ein Modell formuliert werden muss?
 
-Ja, es kann gut sein, dass in der Klausur ein Modell formuliert werden muss.
+Ja, es kann durchaus sein, dass in der Klausur ein Modell formuliert werden muss. Dabei geht es mir nicht darum, dass alle Parameter oder Variablen eins zu eins wie im Skript wiedergegeben werden müssen, sondern dass die Logik und der Aufbau der Modelle verstanden wurden.
 
 ### Bekomme ich bezüglich meiner Note früher Bescheid, wenn ich im dritten Versuch bin?
 
 Nein, alle Noten werden gleichzeitig veröffentlicht.
+
+### Darf ich in die Klausur einen handschriftlichen Zettel mitnehmen?
+
+Nein, in der Klausur sind lediglich Schreibutensilien sowie ein Taschenrechner als Hilfsmittel zugelassen. Wichtige oder schwierige Formeln werden (mit Ausnahme von Modellformulierungen) in der Regel in der Aufgabenstellung angegeben, ebenso wie in den Altklausuren.
