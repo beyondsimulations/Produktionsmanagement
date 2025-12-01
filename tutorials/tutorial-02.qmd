@@ -154,7 +154,7 @@ c) **Fließbandabstimmung (Längste Elementzeit zuerst):**
 | | A, B, F | B | 3 | 9 | 1 |
 | II | A, F | A | 5 | 5 | 5 |
 | | F, D, E | D | 4 | 9 | 1 |
-| III | F, E | E | 8 | 8 | 2 |
+| III | F, E, G | E | 8 | 8 | 2 |
 | IV | F, G, H | H | 5 | 5 | 5 |
 | | F, G | G | 4 | 9 | 1 |
 | V | F | F | 3| 3 | 7 |
@@ -216,7 +216,7 @@ Mit $\rho_3 = 0,88$ und $P[N=n] = (1-\rho) \cdot \rho^n$:
 - Station leer: $P[N=0] = 1 - 0,88 = 0,12$ (12%)
 - Genau 3 Leiterplatten: $P[N=3] = 0,12 \cdot 0,88^3 = 0,12 \cdot 0,681 = 0,082$ (8,2%)
 - 3 oder weniger: $P[N \leq 3] = 0,401$ (40,1%)
-- Mehr als 10: $P[N > 10] = \rho^{11} = 0,88^{11} = 0,314$ (31,4%)
+- Mehr als 10: $P[N > 10] = \rho^{11} = 0,88^{11} = 0,245$ (24,5%)
 
 :::
 
