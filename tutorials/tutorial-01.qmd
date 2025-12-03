@@ -39,6 +39,10 @@ Schritt 1: Berechnung der Gesamtkosten für jeden einzelnen Standort (vollständ
 
 **Ergebnis:** Standort A ist mit 11.000 € die kostenminimale Lösung.
 
+**Warum müssen keine weiteren Kombinationen geprüft werden?**
+
+Da die Standorte unbeschränkte Kapazität haben, kann jeder einzelne Standort alle Abnehmer vollständig beliefern. Das Hinzufügen eines weiteren Standorts würde immer zusätzliche Fixkosten verursachen, ohne die Transportkosten zu senken. Denn bei Belieferung von einem Standort aus wählt man ohnehin bereits die günstigsten Transportwege von diesem Standort. Da kein anderer Standort bei irgendeinem Abnehmer günstiger ist als A (Standort A hat für alle Abnehmer die niedrigsten Transportkosten), kann das Hinzufügen eines weiteren Standorts nur zu Mehrkosten führen. Daher ist die Einzelstandortlösung mit A garantiert optimal.
+
 b) **Anzahl der Kombinationsmöglichkeiten:**
 
 Bei 3 Standorten gibt es $2^3 - 1 = 7$ nicht-leere Kombinationen:

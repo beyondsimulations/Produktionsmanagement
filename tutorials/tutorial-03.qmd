@@ -28,6 +28,8 @@ d) Ein Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. We
 
 a) **Systematische Erzeugnisfamilienbildung:**
 
+*Hinweis: Das konkrete Vorgehen oder Verfahren zur Umordnung ist hier nicht entscheidend. Wichtig ist, dass die Erzeugnisfamilien korrekt identifiziert werden.*
+
 Schritt 1: Analyse der Maschinen-Erzeugnis-Matrix
 ```
 Original-Matrix:
