@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-18">
 
-<title>Privacy Policy – Produktionsmanagement</title>
+<title>Übung 05 – Produktionsmanagement</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,15 +72,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script defer="" data-domain="beyondsimulations.github.io" src="https://plb.byndsim.com/js/script.file-downloads.hash.outbound-links.js"></script>
-<script>
-    window.plausible =
-        window.plausible ||
-        function () {
-            (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
-</script>
+<script defer="" src="https://umi.byndsim.com/script.js" data-website-id="e230d76b-b0a6-477e-8c5d-19a7bd661e68"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -94,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Privacy Policy</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-05-ressourcen.pdf">05 Ressourcen</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-05.html">Tutorium</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -238,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-05.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/tutorial-05.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tutorium</span></a>
   </div>
 </li>
@@ -263,25 +284,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#data-controller" id="toc-data-controller" class="nav-link" data-scroll-target="#data-controller">2. Data Controller</a></li>
-  <li><a href="#information-we-collect" id="toc-information-we-collect" class="nav-link" data-scroll-target="#information-we-collect">3. Information We Collect</a></li>
-  <li><a href="#how-we-use-your-information" id="toc-how-we-use-your-information" class="nav-link" data-scroll-target="#how-we-use-your-information">4. How We Use Your Information</a></li>
-  <li><a href="#legal-basis-for-processing" id="toc-legal-basis-for-processing" class="nav-link" data-scroll-target="#legal-basis-for-processing">5. Legal Basis for Processing</a></li>
-  <li><a href="#data-sharing-and-third-parties" id="toc-data-sharing-and-third-parties" class="nav-link" data-scroll-target="#data-sharing-and-third-parties">6. Data Sharing and Third Parties</a></li>
-  <li><a href="#data-storage-security-and-retention" id="toc-data-storage-security-and-retention" class="nav-link" data-scroll-target="#data-storage-security-and-retention">7. Data Storage, Security, and Retention</a></li>
-  <li><a href="#your-data-protection-rights" id="toc-your-data-protection-rights" class="nav-link" data-scroll-target="#your-data-protection-rights">8. Your Data Protection Rights</a></li>
-  <li><a href="#changes-to-this-privacy-policy" id="toc-changes-to-this-privacy-policy" class="nav-link" data-scroll-target="#changes-to-this-privacy-policy">9. Changes to This Privacy Policy</a></li>
+  <li><a href="#aufgabe-1---montageplanung" id="toc-aufgabe-1---montageplanung" class="nav-link active" data-scroll-target="#aufgabe-1---montageplanung">Aufgabe 1 - Montageplanung</a></li>
+  <li><a href="#aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp" id="toc-aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp" class="nav-link" data-scroll-target="#aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp">Aufgabe 2: Kapazitätsorientierte Losgrößenplanung (CLSP)</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="privacy.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tutorial-05.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-05-ressourcen.pdf">05 Ressourcen</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-05.html">Tutorium</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Privacy Policy</h1>
-<p class="subtitle lead">How we handle your data</p>
+<h1 class="title">Übung 05</h1>
+<p class="subtitle lead">Ressourceneinsatzplanung &amp; Losgrößen</p>
 </div>
 
 
@@ -289,12 +303,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 18, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -304,87 +312,355 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
-<p>Welcome! This Privacy Policy explains how we collect, use, shares, and protects information in relation to our AI Chatbot service (the “Chatbot”) provided on this website. All other services do not use data that is covered by this policy!</p>
-<p>We are committed to protecting your privacy. This policy outlines our practices concerning the data processed when you interact with our Chatbot. By using the Chatbot, you agree to the collection and use of information in accordance with this policy.</p>
-</section>
-<section id="data-controller" class="level2">
-<h2 class="anchored" data-anchor-id="data-controller">2. Data Controller</h2>
-<p>The data controller responsible for your personal data is:</p>
-<p>Beyond Simulations GmbH<br>
-Am Eich 9d<br>
-22113 Oststeinbek<br>
-Germany</p>
-<p>Email: <a href="mailto:info@beyondsimulations.com">info@beyond-simulations.com</a></p>
-</section>
-<section id="information-we-collect" class="level2">
-<h2 class="anchored" data-anchor-id="information-we-collect">3. Information We Collect</h2>
-<p>When you interact with our Chatbot, we collect and process the following types of information:</p>
+<section id="aufgabe-1---montageplanung" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-1---montageplanung">Aufgabe 1 - Montageplanung</h2>
+<p>Die Fahrzeugfertigung Zwickau GmbH ist ein traditionsreicher Standort im Automobilbau und hat sich auf die Produktion von Komponenten und die Endmontage von Elektrofahrzeugen spezialisiert. Für die Einführung einer neuen Montagelinie zur Fertigung von Batteriemodulen für das Modell “Saxon-E” müssen die einzelnen Arbeitsschritte genau geplant werden. Das Projektmanagement-Team hat die folgende Liste von Arbeitsgängen (AG), deren Dauer in Stunden (Std.) und die direkten Vorgänger identifiziert:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 46%">
+<col style="width: 16%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Arbeitsgang</th>
+<th>Beschreibung</th>
+<th>Dauer (Std.)</th>
+<th>Direkte Vorgänger</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Materialbereitstellung Rahmen</td>
+<td>3</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Vormontage Zellhalterungen</td>
+<td>5</td>
+<td>A</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>Einbau Zellhalterungen in Rahmen</td>
+<td>4</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>Materialbereitstellung Elektronik</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Vormontage Steuerungseinheit</td>
+<td>6</td>
+<td>D</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>Integration Steuerungseinheit</td>
+<td>3</td>
+<td>C, E</td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>Qualitätsprüfung &amp; Endverschluss</td>
+<td>2</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p>Der Projektstart (Beginn von A und D) ist zum Zeitpunkt 0.</p>
+<p><strong>Ihre Aufgaben:</strong></p>
+<ol type="a">
+<li>Erstellen Sie ein Netzplan-Diagramm für dieses Projekt.</li>
+<li>Führen Sie eine Vorwärtsrechnung durch, um die frühestmöglichen Anfangszeitpunkte (FAZ) und Endzeitpunkte (FEZ) für jeden Arbeitsgang zu bestimmen.</li>
+<li>Führen Sie eine Rückwärtsrechnung durch, um die spätestzulässigen Anfangszeitpunkte (SAZ) und Endzeitpunkte (SEZ) für jeden Arbeitsgang zu bestimmen.</li>
+<li>Berechnen Sie die Gesamtpufferzeit (GP) für jeden Arbeitsgang.</li>
+<li>Identifizieren Sie den kritischen Weg im Projekt.</li>
+<li>Was könnte passieren, wenn einige Arbeitsschritte Kapazitätsbeschränkungen unterliegen?</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösungshinweise:</strong></p>
+<ol start="2" type="a">
+<li><strong>Vorwärtsrechnung:</strong>
 <ul>
-<li><strong>Chat Interactions:</strong> This includes the questions, prompts, and text you submit to the Chatbot (“Prompts”) and the responses generated by the Chatbot (“Responses”). We do not store any personal data and all prompts are anonymized.</li>
-<li><strong>Technical Data:</strong> We may automatically collect technical information associated with your interaction, such as timestamps, session identifiers for service functionality. This data is processed on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Usage Data:</strong> We may collect aggregated and anonymized data about how the Chatbot is used to monitor performance and improve the service.</li>
-</ul>
-</section>
-<section id="how-we-use-your-information" class="level2">
-<h2 class="anchored" data-anchor-id="how-we-use-your-information">4. How We Use Your Information</h2>
-<p>We use the collected information for the following purposes:</p>
+<li>A: FAZ=0, FEZ=3</li>
+<li>D: FAZ=0, FEZ=2</li>
+<li>B: FAZ=max(FEZ(A))=3, FEZ=3+5=8</li>
+<li>E: FAZ=max(FEZ(D))=2, FEZ=2+6=8</li>
+<li>C: FAZ=max(FEZ(B))=8, FEZ=8+4=12</li>
+<li>F: FAZ=max(FEZ(C)=12, FEZ(E)=8)=12, FEZ=12+3=15</li>
+<li>G: FAZ=max(FEZ(F))=15, FEZ=15+2=17 Die minimale Projektdauer beträgt 17 Stunden.</li>
+</ul></li>
+<li><strong>Rückwärtsrechnung (Annahme SEZ(G) = FEZ(G) = 17, um kritischen Pfad zu finden):</strong>
 <ul>
-<li><strong>To Provide and Operate the Chatbot:</strong> To receive your Prompts, process them using AI models, and deliver Responses back to you.</li>
-<li><strong>To Route Requests:</strong> To manage communication between our Chatbot interface and the underlying AI models via intermediary services.</li>
-<li><strong>For Safety and Content Moderation:</strong> To analyze Prompts and/or potential Responses for harmful, inappropriate, or policy-violating content using designated services by Mistral AI acting as guardrails, aiming to ensure safer interactions.</li>
-<li><strong>For Service Improvement:</strong> To analyze usage patterns to understand user needs, troubleshoot issues, and enhance the Chatbot’s performance and capabilities.</li>
-<li><strong>For Security and Monitoring:</strong> To maintain the security of our service, prevent fraud, and monitor for potential misuse.</li>
-<li><strong>To Comply with Legal Obligations:</strong> To meet any applicable legal or regulatory requirements.</li>
-</ul>
-</section>
-<section id="legal-basis-for-processing" class="level2">
-<h2 class="anchored" data-anchor-id="legal-basis-for-processing">5. Legal Basis for Processing</h2>
-<p>We process your personal data based on the following legal grounds:</p>
+<li>G: SEZ=17, SAZ=17-2=15</li>
+<li>F: SEZ=min(SAZ(G))=15, SAZ=15-3=12</li>
+<li>C: SEZ=min(SAZ(F))=12, SAZ=12-4=8</li>
+<li>E: SEZ=min(SAZ(F))=12, SAZ=12-6=6</li>
+<li>B: SEZ=min(SAZ(C))=8, SAZ=8-5=3</li>
+<li>A: SEZ=min(SAZ(B))=3, SAZ=3-3=0</li>
+<li>D: SEZ=min(SAZ(E))=6, SAZ=6-2=4</li>
+</ul></li>
+<li><strong>Gesamtpuffer (GP = SAZ - FAZ):</strong>
 <ul>
-<li><strong>Legitimate Interests:</strong> Processing is necessary for our legitimate interests in operating and improving the Chatbot service and maintaining its security, provided these interests are not overridden by your data protection rights.</li>
-<li><strong>Consent:</strong> In some cases, we might ask for your explicit consent for specific processing activities (e.g., using conversation data for fine-tuning models beyond basic service provision).</li>
-<li><strong>Legal Obligation:</strong> Processing is necessary to comply with a legal obligation to which we are subject.</li>
-</ul>
+<li>A: GP = 0 - 0 = 0</li>
+<li>B: GP = 3 - 3 = 0</li>
+<li>C: GP = 8 - 8 = 0</li>
+<li>D: GP = 4 - 0 = 4</li>
+<li>E: GP = 6 - 2 = 4</li>
+<li>F: GP = 12 - 12 = 0</li>
+<li>G: GP = 15 - 15 = 0</li>
+</ul></li>
+<li><strong>Kritischer Weg (GP=0):</strong></li>
+</ol>
+<p>A → B → C → F → G. Die Dauer dieses Pfades ist 3+5+4+3+2 = 17 Stunden.</p>
+<ol start="6" type="a">
+<li><strong>Kapazitätsbeschränkungen</strong></li>
+</ol>
+<p>Die Produktion könnte nicht mehr möglich sein.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="data-sharing-and-third-parties" class="level2">
-<h2 class="anchored" data-anchor-id="data-sharing-and-third-parties">6. Data Sharing and Third Parties</h2>
-<p>To provide the Chatbot service, your Prompts are processed by and shared with the following third-party services and infrastructure providers:</p>
+<section id="aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-2-kapazitätsorientierte-losgrößenplanung-clsp">Aufgabe 2: Kapazitätsorientierte Losgrößenplanung (CLSP)</h2>
+<p>Ein Hersteller von Spezialgetrieben fertigt auf einer CNC-Maschine zwei verschiedene Getriebetypen: Typ A und Typ B. Pro Woche muss die Maschine für jedes zu produzierende Produkt neu gerüstet werden.</p>
+<p><strong>Gegebene Daten:</strong></p>
 <ul>
-<li><strong>Chatbot Interface:</strong> The user interface for the Chatbot runs directly in your web browser.</li>
-<li><strong>RAG-Backend:</strong> The RAG backend runs on a self-hosted server on Hetzner in Germany.</li>
-<li><strong>LLM Observation (Langfuse):</strong> We use Langfuse to observe the usage of the LLM models we use. Your Prompts (and generated responses) pass through Langfuse to reach the selected LLM provider or guardrail service. The data is stored on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Hosting Provider (Hetzner):</strong> Our instance of Langfuse is self-hosted on servers provided by Hetzner Online GmbH. Hetzner acts as a data processor providing the infrastructure. We store application data and interaction logs on these servers, located within Germany.</li>
-<li><strong>Mistral AI:</strong> We use Mistral AI for two primary purposes: (1) as one of the LLM options to generate Responses to your Prompts, and (2) <strong>as a guardrail service</strong> to check Prompts and/or potential Responses (which may have been generated by Mistral AI itself) for safety, appropriateness, and compliance with content policies <em>before</em> a final response is delivered to you. When Mistral is used for either generation or guardrail checking, your data (relevant Prompts and/or potential Responses) is processed according to Mistral’s terms and privacy policy. The data ist not used or saved for training purposes by the model providers.</li>
+<li><strong>Planungshorizont:</strong> 4 Wochen</li>
+<li><strong>Wöchentliche Kapazität:</strong> 60 Stunden</li>
+<li><strong>Anfangslagerbestand:</strong> 0 für beide Typen</li>
+<li><strong>Endlagerbestand:</strong> 0 für beide Typen (alle Bedarfe müssen erfüllt sein)</li>
 </ul>
-<p><strong>Important Note on Third-Party Processing:</strong> These LLM and guardrail providers process your data to generate Responses or perform safety checks. They may use data according to their own policies, potentially including service improvement, subject to their terms. We encourage you to review their respective privacy policies. We do not explicitly share personal identifiers like your name or email through the Chatbot interaction unless you voluntarily include such information in your Prompts.</p>
-</section>
-<section id="data-storage-security-and-retention" class="level2">
-<h2 class="anchored" data-anchor-id="data-storage-security-and-retention">7. Data Storage, Security, and Retention</h2>
+<p><strong>Produktdaten:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Getriebe Typ A</th>
+<th style="text-align: left;">Getriebe Typ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rüstkosten (s)</td>
+<td style="text-align: left;">200 GE</td>
+<td style="text-align: left;">150 GE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lagerkosten (h)</td>
+<td style="text-align: left;">5 GE/Stück/Woche</td>
+<td style="text-align: left;">7 GE/Stück/Woche</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bearbeitungszeit (tb)</td>
+<td style="text-align: left;">1,0 h/Stück</td>
+<td style="text-align: left;">1,2 h/Stück</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rüstzeit (tr)</td>
+<td style="text-align: left;">10 h</td>
+<td style="text-align: left;">8 h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nachfrage:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Woche (t)</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Bedarf Typ A</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bedarf Typ B</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vorgegebener Produktionsplan:</strong></p>
+<p>Um das Konzept zu verstehen, analysieren Sie den folgenden, manuell erstellten Produktionsplan:</p>
 <ul>
-<li><strong>Storage:</strong> Chat interaction data (Prompts, Responses) and technical logs may be stored temporarily or persistently (depending on configuration) on our Langfuse instance hosted on Hetzner servers in Germany.</li>
-<li><strong>Security:</strong> We implement reasonable technical and organizational measures to protect your data from unauthorized access, disclosure, alteration, or destruction. This includes using HTTPS encryption for data transmitted between your browser, our server, and the LLM providers. Access to the backend systems is restricted.</li>
-<li><strong>Retention:</strong> We retain chat interaction data and technical logs only for as long as necessary to fulfill the purposes outlined in this policy, for troubleshooting, security logging, service improvement, or as required by law. Retention periods vary depending on the type of data and our operational needs.</li>
+<li><strong>Woche 1:</strong> Produziere 50 <span class="math inline">\(\times\)</span> Typ A</li>
+<li><strong>Woche 2:</strong> Keine Produktion</li>
+<li><strong>Woche 3:</strong> Produziere 55 <span class="math inline">\(\times\)</span> Typ B</li>
+<li><strong>Woche 4:</strong> Produziere 25 <span class="math inline">\(\times\)</span> Typ A</li>
 </ul>
-</section>
-<section id="your-data-protection-rights" class="level2">
-<h2 class="anchored" data-anchor-id="your-data-protection-rights">8. Your Data Protection Rights</h2>
-<p>Depending on your location and applicable data protection laws, you may have the following rights regarding your personal data:</p>
+<ol type="a">
+<li>Berechnen Sie die gesamten Rüst- und Lagerkosten für den vorgegebenen Plan.</li>
+<li>Überprüfen Sie für jede Woche, ob die Produktions- und Rüstzeiten die verfügbare Kapazität von 60 Stunden einhalten.</li>
+<li>Erläutern Sie, warum die separate Anwendung des Wagner-Whitin-Algorithmus für jedes Produkt hier wahrscheinlich zu einem unzulässigen oder suboptimalen Gesamtplan führen würde.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösungshinweise:</strong></p>
+<p><strong>a) Berechnung der Rüst- und Lagerkosten:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Woche</th>
+<th style="text-align: center;">Produktion A</th>
+<th style="text-align: center;">Produktion B</th>
+<th style="text-align: center;">Bedarf A</th>
+<th style="text-align: center;">Bedarf B</th>
+<th style="text-align: center;">Lagerbestand A (Ende)</th>
+<th style="text-align: center;">Lagerbestand B (Ende)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">55</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rüstkosten:</strong></p>
 <ul>
-<li><strong>Right to Access:</strong> You can request copies of your personal data that we hold.</li>
-<li><strong>Right to Rectification:</strong> You can request correction of inaccurate or incomplete data.</li>
-<li><strong>Right to Erasure (‘Right to be Forgotten’):</strong> You can request the deletion of your personal data under certain conditions.</li>
-<li><strong>Right to Restrict Processing:</strong> You can request the limitation of how we process your data under certain conditions.</li>
-<li><strong>Right to Data Portability:</strong> You can request that we transfer the data we have collected to another organization, or directly to you, under certain conditions.</li>
-<li><strong>Right to Object:</strong> You can object to our processing of your personal data based on legitimate interests.</li>
-<li><strong>Right to Withdraw Consent:</strong> If processing is based on consent, you can withdraw it at any time.</li>
+<li>Woche 1: Typ A wird produziert → Rüstkosten = 200 GE</li>
+<li>Woche 2: Keine Produktion → Rüstkosten = 0 GE</li>
+<li>Woche 3: Typ B wird produziert → Rüstkosten = 150 GE</li>
+<li>Woche 4: Typ A wird produziert → Rüstkosten = 200 GE</li>
 </ul>
-<p>To exercise any of these rights, please contact us using the details provided in Section 2 (Data Controller). We may need to verify your identity before processing your request.</p>
-</section>
-<section id="changes-to-this-privacy-policy" class="level2">
-<h2 class="anchored" data-anchor-id="changes-to-this-privacy-policy">9. Changes to This Privacy Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the “Last Updated” date at the top. We encourage you to review this policy periodically for any changes.</p>
+<p><strong>Gesamte Rüstkosten:</strong> 200 + 0 + 150 + 200 = <strong>550 GE</strong></p>
+<p><strong>Lagerkosten:</strong></p>
+<ul>
+<li>Woche 1: 30 Stück A × 5 GE/Stück/Woche = 150 GE</li>
+<li>Woche 2: 0 Stück A × 5 GE/Stück/Woche = 0 GE</li>
+<li>Woche 3: 0 Stück A × 5 GE/Stück/Woche + 20 Stück B × 7 GE/Stück/Woche = 140 GE</li>
+<li>Woche 4: 0 Stück × 5 GE/Stück/Woche + 0 Stück B × 7 GE/Stück/Woche = 0 GE</li>
+</ul>
+<p><strong>Gesamte Lagerkosten:</strong> 150 + 0 + 140 + 0 = <strong>290 GE</strong></p>
+<p><strong>Gesamtkosten:</strong> 550 + 290 = <strong>840 GE</strong></p>
+<p><strong>b) Kapazitätsprüfung:</strong></p>
+<p>Für jede Woche prüfen wir: Rüstzeit + Bearbeitungszeit ≤ 60 Stunden</p>
+<p><strong>Woche 1 (Typ A):</strong></p>
+<ul>
+<li>Rüstzeit: 10 h</li>
+<li>Bearbeitungszeit: 50 Stück × 1,0 h/Stück = 50 h</li>
+<li>Gesamtzeit: 10 + 50 = <strong>60 h</strong> ≤ 60 h ✓ (zulässig)</li>
+</ul>
+<p><strong>Woche 2:</strong></p>
+<ul>
+<li>Keine Produktion: <strong>0 h</strong> ≤ 60 h ✓ (zulässig)</li>
+</ul>
+<p><strong>Woche 3 (Typ B):</strong></p>
+<ul>
+<li>Rüstzeit: 8 h</li>
+<li>Bearbeitungszeit: 55 Stück × 1,2 h/Stück = 66 h</li>
+<li>Gesamtzeit: 8 + 66 = <strong>74 h</strong> &gt; 60 h ✗ (NICHT zulässig!)</li>
+</ul>
+<p><strong>Woche 4 (Typ A):</strong></p>
+<ul>
+<li>Rüstzeit: 10 h</li>
+<li>Bearbeitungszeit: 25 Stück × 1,0 h/Stück = 25 h</li>
+<li>Gesamtzeit: 10 + 25 = <strong>35 h</strong> ≤ 60 h ✓ (zulässig)</li>
+</ul>
+<p><strong>Ergebnis:</strong> Der vorgegebene Plan ist <strong>nicht zulässig</strong>, da in Woche 3 die Kapazität um 14 Stunden überschritten wird.</p>
+<p><strong>Mögliche Anpassung:</strong> Man könnte z.B. in Woche 2 bereits einen Teil von Typ B produzieren (z.B. 20 Stück B in Woche 2 und 35 Stück B in Woche 3).</p>
+<p><strong>c) SULSP vs.&nbsp;CLSP:</strong></p>
+<p><strong>Wagner-Whitin-Algorithmus:</strong></p>
+<ul>
+<li>Löst das Losgrößenproblem <strong>isoliert für jedes Produkt</strong></li>
+<li>Berücksichtigt <strong>keine Kapazitätsbeschränkungen</strong></li>
+<li>Berücksichtigt <strong>keine Ressourcenkonkurrenz</strong> zwischen verschiedenen Produkten</li>
+<li>Findet die optimale Lösung nur unter der Annahme unbegrenzter Kapazität</li>
+</ul>
+<p><strong>Warum führt isolierte Planung zu Problemen?</strong></p>
+<p>Wenn wir Wagner-Whitin separat für Typ A und Typ B anwenden würden:</p>
+<ul>
+<li>Jeder Algorithmus würde versuchen, die Anzahl der Rüstvorgänge zu minimieren</li>
+<li>Typ A würde z.B. in Woche 1 alle 75 Stück (für Wochen 1, 2, 4) produzieren wollen</li>
+<li>Typ B würde in Woche 3 alle 55 Stück produzieren wollen</li>
+<li>Dies würde die Kapazität in mehreren Wochen überschreiten (siehe Teil b)</li>
+<li>Die Algorithmen “wissen” nichts voneinander und koordinieren sich nicht</li>
+</ul>
+<p><strong>Fazit:</strong> Beim CLSP muss die Losgrößenplanung <strong>simultan für alle Produkte</strong> erfolgen, um die gemeinsamen Kapazitätsbeschränkungen zu berücksichtigen. Dies führt zu einem gemischt-ganzzahligen Optimierungsproblem (MIP), das deutlich komplexer ist als das SULSP.</p>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -814,7 +1090,7 @@ Germany</p>
     </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link active" href="../general/privacy.html" aria-current="page">
+    <a class="nav-link" href="../general/privacy.html">
 <p>Privacy Policy</p>
 </a>
   </li>  

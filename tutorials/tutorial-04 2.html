@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-18">
 
-<title>Privacy Policy – Produktionsmanagement</title>
+<title>Übung 04 – Produktionsmanagement</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,15 +72,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script defer="" data-domain="beyondsimulations.github.io" src="https://plb.byndsim.com/js/script.file-downloads.hash.outbound-links.js"></script>
-<script>
-    window.plausible =
-        window.plausible ||
-        function () {
-            (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
-</script>
+<script defer="" src="https://umi.byndsim.com/script.js" data-website-id="e230d76b-b0a6-477e-8c5d-19a7bd661e68"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -94,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Privacy Policy</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-04-produktion.pdf">04 Produktion</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-04.html">Tutorium</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -215,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-04.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/tutorial-04.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tutorium</span></a>
   </div>
 </li>
@@ -263,25 +284,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#data-controller" id="toc-data-controller" class="nav-link" data-scroll-target="#data-controller">2. Data Controller</a></li>
-  <li><a href="#information-we-collect" id="toc-information-we-collect" class="nav-link" data-scroll-target="#information-we-collect">3. Information We Collect</a></li>
-  <li><a href="#how-we-use-your-information" id="toc-how-we-use-your-information" class="nav-link" data-scroll-target="#how-we-use-your-information">4. How We Use Your Information</a></li>
-  <li><a href="#legal-basis-for-processing" id="toc-legal-basis-for-processing" class="nav-link" data-scroll-target="#legal-basis-for-processing">5. Legal Basis for Processing</a></li>
-  <li><a href="#data-sharing-and-third-parties" id="toc-data-sharing-and-third-parties" class="nav-link" data-scroll-target="#data-sharing-and-third-parties">6. Data Sharing and Third Parties</a></li>
-  <li><a href="#data-storage-security-and-retention" id="toc-data-storage-security-and-retention" class="nav-link" data-scroll-target="#data-storage-security-and-retention">7. Data Storage, Security, and Retention</a></li>
-  <li><a href="#your-data-protection-rights" id="toc-your-data-protection-rights" class="nav-link" data-scroll-target="#your-data-protection-rights">8. Your Data Protection Rights</a></li>
-  <li><a href="#changes-to-this-privacy-policy" id="toc-changes-to-this-privacy-policy" class="nav-link" data-scroll-target="#changes-to-this-privacy-policy">9. Changes to This Privacy Policy</a></li>
+  <li><a href="#aufgabe-1---aggregierte-produktionsplanung" id="toc-aufgabe-1---aggregierte-produktionsplanung" class="nav-link active" data-scroll-target="#aufgabe-1---aggregierte-produktionsplanung">Aufgabe 1 - Aggregierte Produktionsplanung</a></li>
+  <li><a href="#aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren" id="toc-aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren" class="nav-link" data-scroll-target="#aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren">Aufgabe 2 - Losgrößenplanung mit verschiedenen Verfahren</a></li>
+  <li><a href="#aufgabe-3---kapazitätsbeschränkte-losgrößenplanung" id="toc-aufgabe-3---kapazitätsbeschränkte-losgrößenplanung" class="nav-link" data-scroll-target="#aufgabe-3---kapazitätsbeschränkte-losgrößenplanung">Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="privacy.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tutorial-04.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-04-produktion.pdf">04 Produktion</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-04.html">Tutorium</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Privacy Policy</h1>
-<p class="subtitle lead">How we handle your data</p>
+<h1 class="title">Übung 04</h1>
+<p class="subtitle lead">Operative Produktionsplanung</p>
 </div>
 
 
@@ -289,12 +304,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 18, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -304,87 +313,370 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
-<p>Welcome! This Privacy Policy explains how we collect, use, shares, and protects information in relation to our AI Chatbot service (the “Chatbot”) provided on this website. All other services do not use data that is covered by this policy!</p>
-<p>We are committed to protecting your privacy. This policy outlines our practices concerning the data processed when you interact with our Chatbot. By using the Chatbot, you agree to the collection and use of information in accordance with this policy.</p>
-</section>
-<section id="data-controller" class="level2">
-<h2 class="anchored" data-anchor-id="data-controller">2. Data Controller</h2>
-<p>The data controller responsible for your personal data is:</p>
-<p>Beyond Simulations GmbH<br>
-Am Eich 9d<br>
-22113 Oststeinbek<br>
-Germany</p>
-<p>Email: <a href="mailto:info@beyondsimulations.com">info@beyond-simulations.com</a></p>
-</section>
-<section id="information-we-collect" class="level2">
-<h2 class="anchored" data-anchor-id="information-we-collect">3. Information We Collect</h2>
-<p>When you interact with our Chatbot, we collect and process the following types of information:</p>
+<section id="aufgabe-1---aggregierte-produktionsplanung" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-1---aggregierte-produktionsplanung">Aufgabe 1 - Aggregierte Produktionsplanung</h2>
+<p>Ein Unternehmen produziert zwei Produkte (P1, P2) für die folgenden Nachfragemengen in den nächsten vier Perioden ermittelt wurden:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(d_{k,t}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(t=1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(t=2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(t=3\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(t=4\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">P2</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weitere Daten:</strong></p>
 <ul>
-<li><strong>Chat Interactions:</strong> This includes the questions, prompts, and text you submit to the Chatbot (“Prompts”) and the responses generated by the Chatbot (“Responses”). We do not store any personal data and all prompts are anonymized.</li>
-<li><strong>Technical Data:</strong> We may automatically collect technical information associated with your interaction, such as timestamps, session identifiers for service functionality. This data is processed on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Usage Data:</strong> We may collect aggregated and anonymized data about how the Chatbot is used to monitor performance and improve the service.</li>
+<li>Kapazitätsbedarf P1: 1 Maschinenstunde, 1,5 Personenstunden pro Einheit</li>
+<li>Kapazitätsbedarf P2: 2 Maschinenstunden, 0,5 Personenstunden pro Einheit</li>
+<li>Verfügbare Kapazität pro Periode: 150 Maschinenstunden, 70 Personenstunden</li>
+<li>Maximale Überstunden: 50 pro Periode</li>
+<li>Lagerkostensatz: 1 GE/(Einheit·Periode) für beide Produkte</li>
+<li>Überstundenkostensatz: 2 GE/Stunde (alle Perioden)</li>
+<li>Anfangslagerbestände: <span class="math inline">\(y_{1,0} = y_{2,0} = 0\)</span></li>
 </ul>
-</section>
-<section id="how-we-use-your-information" class="level2">
-<h2 class="anchored" data-anchor-id="how-we-use-your-information">4. How We Use Your Information</h2>
-<p>We use the collected information for the following purposes:</p>
+<ol type="a">
+<li>Formulieren Sie das vollständige mathematische Modell zur Beschäftigungsglättung.</li>
+<li>Berechnen Sie für jede Periode den gesamten Kapazitätsbedarf bei vollständiger Bedarfsdeckung ohne Lagerhaltung.</li>
+<li>Bestimmen Sie, in welchen Perioden Überstunden erforderlich sind und wie viele.</li>
+<li>Wie könnte das Modell erweitert werden, um Mindestproduktionsmengen zu berücksichtigen?</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Vollständiges mathematisches Modell:</strong></li>
+</ol>
+<p>Siehe Foliensatz.</p>
+<ol start="2" type="a">
+<li><strong>Kapazitätsbedarf bei vollständiger Bedarfsdeckung:</strong></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 26%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Periode <span class="math inline">\(t\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(d_{1t}\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(d_{2t}\)</span></th>
+<th style="text-align: left;">Maschinen-bedarf</th>
+<th style="text-align: left;">Personal-bedarf</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;"><span class="math inline">\(1 \cdot 20 + 2 \cdot 50 = 120\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5 \cdot 20 + 0,5 \cdot 50 = 55\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;"><span class="math inline">\(1 \cdot 50 + 2 \cdot 20 = 90\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5 \cdot 50 + 0,5 \cdot 20 = 85\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"><span class="math inline">\(1 \cdot 30 + 2 \cdot 60 = 150\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5 \cdot 30 + 0,5 \cdot 60 = 75\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;"><span class="math inline">\(1 \cdot 20 + 2 \cdot 30 = 80\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5 \cdot 20 + 0,5 \cdot 30 = 45\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="a">
+<li><strong>Überstunden-Analyse:</strong></li>
+</ol>
+<p>Verfügbare Personenstunden: 70 pro Periode Überstunden erforderlich in:</p>
 <ul>
-<li><strong>To Provide and Operate the Chatbot:</strong> To receive your Prompts, process them using AI models, and deliver Responses back to you.</li>
-<li><strong>To Route Requests:</strong> To manage communication between our Chatbot interface and the underlying AI models via intermediary services.</li>
-<li><strong>For Safety and Content Moderation:</strong> To analyze Prompts and/or potential Responses for harmful, inappropriate, or policy-violating content using designated services by Mistral AI acting as guardrails, aiming to ensure safer interactions.</li>
-<li><strong>For Service Improvement:</strong> To analyze usage patterns to understand user needs, troubleshoot issues, and enhance the Chatbot’s performance and capabilities.</li>
-<li><strong>For Security and Monitoring:</strong> To maintain the security of our service, prevent fraud, and monitor for potential misuse.</li>
-<li><strong>To Comply with Legal Obligations:</strong> To meet any applicable legal or regulatory requirements.</li>
+<li>Periode 2: <span class="math inline">\(85 - 70 = 15\)</span> Überstunden</li>
+<li>Periode 3: <span class="math inline">\(75 - 70 = 5\)</span> Überstunden</li>
 </ul>
+<p>Beide liegen unter der Maximalgrenze von 50 Überstunden.</p>
+<ol start="4" type="a">
+<li><strong>Berücksichtigung von Mindestproduktionsmengen:</strong></li>
+</ol>
+<p><span class="math display">\[x_{kt} \geq \underline{x}_{kt}\]</span></p>
+</div>
+</div>
+</div>
 </section>
-<section id="legal-basis-for-processing" class="level2">
-<h2 class="anchored" data-anchor-id="legal-basis-for-processing">5. Legal Basis for Processing</h2>
-<p>We process your personal data based on the following legal grounds:</p>
+<section id="aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-2---losgrößenplanung-mit-verschiedenen-verfahren">Aufgabe 2 - Losgrößenplanung mit verschiedenen Verfahren</h2>
+<p>Für ein Endprodukt liegen folgende periodenbezogene Bedarfsprognosen vor: <span class="math inline">\(d_1 = 30, d_2 = 90, d_3 = 20, d_4 = 0, d_5 = 50\)</span>.</p>
+<p><strong>Gegeben:</strong> Lagerkostensatz <span class="math inline">\(h = 2\)</span> €/(Einheit·Periode), Rüstkostensatz <span class="math inline">\(s = 250\)</span> €/Rüstvorgang</p>
+<ol type="a">
+<li>Formulieren Sie das vollständige SIULSP-Modell für dieses Problem.</li>
+<li>Welchen Wert muss “Big-M” mindestens annehmen? Begründen Sie Ihre Antwort.</li>
+<li>Bestimmen Sie eine Lösung mit dem <strong>Silver-Meal-Verfahren</strong>.</li>
+<li>Bestimmen Sie eine Lösung mit dem <strong>Groff-Verfahren</strong>.</li>
+<li>Bestimmen Sie die <strong>optimale Lösung</strong> mit dem <strong>Wagner-Whitin-Verfahren</strong> (Kürzeste-Wege-Interpretation).</li>
+<li>Vergleichen Sie die Lösungsqualität der drei Verfahren und bewerten Sie deren praktische Anwendbarkeit.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>SIULSP-Modell für das gegebene Problem:</strong></li>
+</ol>
+<p>Siehe Foliensatz.</p>
+<ol start="2" type="a">
+<li><strong>Bestimmung von Big-M:</strong></li>
+</ol>
+<p>Die maximale Losgröße ist die Summe aller verbleibenden Bedarfe: <span class="math display">\[M \geq \max\{d_1 + d_2 + d_3 + d_4 + d_5, d_2 + d_3 + d_4 + d_5, ..., d_5\}\]</span> <span class="math display">\[M \geq \max\{190, 160, 70, 50, 50\} = 190\]</span></p>
+<p><strong>Antwort:</strong> <span class="math inline">\(M \geq 190\)</span></p>
+<ol start="3" type="a">
+<li><strong>Silver-Meal-Verfahren:</strong></li>
+</ol>
+<p>Das Verfahren minimiert die durchschnittlichen Kosten pro Periode für jedes Los.</p>
+<p>Kostenkriterium: <span class="math inline">\(c_{\tau,t} = \frac{s + h \cdot \sum_{j=\tau}^{t} (j-\tau) \cdot d_j}{t-\tau+1}\)</span></p>
+<p><strong>Iteration 1 (Start <span class="math inline">\(\tau = 1\)</span>):</strong></p>
 <ul>
-<li><strong>Legitimate Interests:</strong> Processing is necessary for our legitimate interests in operating and improving the Chatbot service and maintaining its security, provided these interests are not overridden by your data protection rights.</li>
-<li><strong>Consent:</strong> In some cases, we might ask for your explicit consent for specific processing activities (e.g., using conversation data for fine-tuning models beyond basic service provision).</li>
-<li><strong>Legal Obligation:</strong> Processing is necessary to comply with a legal obligation to which we are subject.</li>
+<li><span class="math inline">\(c_{1,1} = \frac{250 + 2 \cdot 0 \cdot 30}{1} = 250\)</span></li>
+<li><span class="math inline">\(c_{1,2} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90)}{2} = \frac{430}{2} = 215\)</span> (besser)</li>
+<li><span class="math inline">\(c_{1,3} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20)}{3} = \frac{510}{3} = 170\)</span> (besser)</li>
+<li><span class="math inline">\(c_{1,4} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0)}{4} = \frac{510}{4} = 127,5\)</span> (besser)</li>
+<li><span class="math inline">\(c_{1,5} = \frac{250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0 + 4 \cdot 50)}{5} = \frac{910}{5} = 182\)</span> (schlechter)</li>
 </ul>
-</section>
-<section id="data-sharing-and-third-parties" class="level2">
-<h2 class="anchored" data-anchor-id="data-sharing-and-third-parties">6. Data Sharing and Third Parties</h2>
-<p>To provide the Chatbot service, your Prompts are processed by and shared with the following third-party services and infrastructure providers:</p>
+<p><strong>Los 1:</strong> Perioden 1-4, <span class="math inline">\(q_1 = 140\)</span></p>
+<p><strong>Iteration 2 (Start <span class="math inline">\(\tau = 5\)</span>):</strong> - <span class="math inline">\(c_{5,5} = \frac{250 + 2 \cdot 0 \cdot 50}{1} = 250\)</span></p>
+<p><strong>Los 2:</strong> Periode 5, <span class="math inline">\(q_5 = 50\)</span></p>
+<p><strong>Silver-Meal-Lösung:</strong></p>
 <ul>
-<li><strong>Chatbot Interface:</strong> The user interface for the Chatbot runs directly in your web browser.</li>
-<li><strong>RAG-Backend:</strong> The RAG backend runs on a self-hosted server on Hetzner in Germany.</li>
-<li><strong>LLM Observation (Langfuse):</strong> We use Langfuse to observe the usage of the LLM models we use. Your Prompts (and generated responses) pass through Langfuse to reach the selected LLM provider or guardrail service. The data is stored on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Hosting Provider (Hetzner):</strong> Our instance of Langfuse is self-hosted on servers provided by Hetzner Online GmbH. Hetzner acts as a data processor providing the infrastructure. We store application data and interaction logs on these servers, located within Germany.</li>
-<li><strong>Mistral AI:</strong> We use Mistral AI for two primary purposes: (1) as one of the LLM options to generate Responses to your Prompts, and (2) <strong>as a guardrail service</strong> to check Prompts and/or potential Responses (which may have been generated by Mistral AI itself) for safety, appropriateness, and compliance with content policies <em>before</em> a final response is delivered to you. When Mistral is used for either generation or guardrail checking, your data (relevant Prompts and/or potential Responses) is processed according to Mistral’s terms and privacy policy. The data ist not used or saved for training purposes by the model providers.</li>
+<li><span class="math inline">\(q_1 = 140, q_2 = 0, q_3 = 0, q_4 = 0, q_5 = 50\)</span></li>
+<li>Lagerbestände: <span class="math inline">\(y_1 = 110, y_2 = 20, y_3 = 0, y_4 = 0, y_5 = 0\)</span></li>
+<li><strong>Gesamtkosten:</strong> <span class="math inline">\(2 \cdot 250 + 2 \cdot (110 + 20) = 760\)</span> €</li>
 </ul>
-<p><strong>Important Note on Third-Party Processing:</strong> These LLM and guardrail providers process your data to generate Responses or perform safety checks. They may use data according to their own policies, potentially including service improvement, subject to their terms. We encourage you to review their respective privacy policies. We do not explicitly share personal identifiers like your name or email through the Chatbot interaction unless you voluntarily include such information in your Prompts.</p>
-</section>
-<section id="data-storage-security-and-retention" class="level2">
-<h2 class="anchored" data-anchor-id="data-storage-security-and-retention">7. Data Storage, Security, and Retention</h2>
+<ol start="4" type="a">
+<li><strong>Groff-Verfahren:</strong></li>
+</ol>
+<p>Das Verfahren verwendet das Kriterium: <span class="math inline">\(d_{j} \cdot j \cdot (j+1) \leq 2s/h = 250\)</span></p>
+<p><strong>Iteration 1 (<span class="math inline">\(\tau = 1\)</span>):</strong></p>
 <ul>
-<li><strong>Storage:</strong> Chat interaction data (Prompts, Responses) and technical logs may be stored temporarily or persistently (depending on configuration) on our Langfuse instance hosted on Hetzner servers in Germany.</li>
-<li><strong>Security:</strong> We implement reasonable technical and organizational measures to protect your data from unauthorized access, disclosure, alteration, or destruction. This includes using HTTPS encryption for data transmitted between your browser, our server, and the LLM providers. Access to the backend systems is restricted.</li>
-<li><strong>Retention:</strong> We retain chat interaction data and technical logs only for as long as necessary to fulfill the purposes outlined in this policy, for troubleshooting, security logging, service improvement, or as required by law. Retention periods vary depending on the type of data and our operational needs.</li>
+<li><span class="math inline">\(j = 0\)</span>: <span class="math inline">\(30 \cdot 0 \cdot 1 = 0 \leq 250\)</span></li>
+<li><span class="math inline">\(j = 1\)</span>: <span class="math inline">\(90 \cdot 1 \cdot 2 = 180 \leq 250\)</span></li>
+<li><span class="math inline">\(j = 2\)</span>: <span class="math inline">\(20 \cdot 2 \cdot 3 = 120 \leq 250\)</span></li>
+<li><span class="math inline">\(j = 3\)</span>: <span class="math inline">\(0 \cdot 3 \cdot 4 = 0 \leq 250\)</span></li>
+<li><span class="math inline">\(j = 4\)</span>: <span class="math inline">\(50 \cdot 4 \cdot 5 = 1000 &gt; 250\)</span></li>
 </ul>
-</section>
-<section id="your-data-protection-rights" class="level2">
-<h2 class="anchored" data-anchor-id="your-data-protection-rights">8. Your Data Protection Rights</h2>
-<p>Depending on your location and applicable data protection laws, you may have the following rights regarding your personal data:</p>
+<p><strong>Los 1:</strong> Perioden 1-4, <span class="math inline">\(q_1 = 140\)</span></p>
+<p><strong>Iteration 2 (<span class="math inline">\(\tau = 5\)</span>):</strong></p>
 <ul>
-<li><strong>Right to Access:</strong> You can request copies of your personal data that we hold.</li>
-<li><strong>Right to Rectification:</strong> You can request correction of inaccurate or incomplete data.</li>
-<li><strong>Right to Erasure (‘Right to be Forgotten’):</strong> You can request the deletion of your personal data under certain conditions.</li>
-<li><strong>Right to Restrict Processing:</strong> You can request the limitation of how we process your data under certain conditions.</li>
-<li><strong>Right to Data Portability:</strong> You can request that we transfer the data we have collected to another organization, or directly to you, under certain conditions.</li>
-<li><strong>Right to Object:</strong> You can object to our processing of your personal data based on legitimate interests.</li>
-<li><strong>Right to Withdraw Consent:</strong> If processing is based on consent, you can withdraw it at any time.</li>
+<li><span class="math inline">\(j = 0\)</span>: <span class="math inline">\(50 \cdot 0 \cdot 1 = 0 \leq 250\)</span> ✓</li>
 </ul>
-<p>To exercise any of these rights, please contact us using the details provided in Section 2 (Data Controller). We may need to verify your identity before processing your request.</p>
+<p><strong>Los 2:</strong> Periode 5, <span class="math inline">\(q_5 = 50\)</span></p>
+<p><strong>Groff-Lösung:</strong> Identisch mit Silver-Meal</p>
+<ul>
+<li><strong>Gesamtkosten:</strong> <span class="math inline">\(760\)</span> €</li>
+</ul>
+<ol start="5" type="a">
+<li><p><strong>Wagner-Whitin-Verfahren (Optimale Lösung):</strong></p></li>
+<li><p><strong>Wagner-Whitin-Verfahren (Optimale Lösung):</strong></p></li>
+</ol>
+<p><strong>Schrittweise Berechnung:</strong></p>
+<p><strong>Periode 1:</strong> <span class="math inline">\(F_1\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30) = 0 + 250 + 0 = 250\)</span></li>
+<li><strong><span class="math inline">\(F_1 = 250\)</span></strong> (Produktion in Periode 1)</li>
+</ul>
+<p><strong>Periode 2:</strong> <span class="math inline">\(F_2\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90) = 0 + 250 + 180 = 430\)</span></li>
+<li><span class="math inline">\(\tau = 2\)</span>: <span class="math inline">\(F_1 + 250 + 2 \cdot (0 \cdot 90) = 250 + 250 + 0 = 500\)</span></li>
+<li><strong><span class="math inline">\(F_2 = 430\)</span></strong> (Produktion in Periode 1 für Perioden 1-2)</li>
+</ul>
+<p><strong>Periode 3:</strong> <span class="math inline">\(F_3\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20) = 0 + 250 + 260 = 510\)</span></li>
+<li><span class="math inline">\(\tau = 2\)</span>: <span class="math inline">\(F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20) = 250 + 250 + 40 = 540\)</span></li>
+<li><span class="math inline">\(\tau = 3\)</span>: <span class="math inline">\(F_2 + 250 + 2 \cdot (0 \cdot 20) = 430 + 250 + 0 = 680\)</span></li>
+<li><strong><span class="math inline">\(F_3 = 510\)</span></strong> (Produktion in Periode 1 für Perioden 1-3)</li>
+</ul>
+<p><strong>Periode 4:</strong> <span class="math inline">\(F_4\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0) = 0 + 250 + 260 = 510\)</span></li>
+<li><span class="math inline">\(\tau = 2\)</span>: <span class="math inline">\(F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20 + 2 \cdot 0) = 250 + 250 + 40 = 540\)</span></li>
+<li><span class="math inline">\(\tau = 3\)</span>: <span class="math inline">\(F_2 + 250 + 2 \cdot (0 \cdot 20 + 1 \cdot 0) = 430 + 250 + 0 = 680\)</span></li>
+<li><span class="math inline">\(\tau = 4\)</span>: <span class="math inline">\(F_3 + 250 + 2 \cdot (0 \cdot 0) = 510 + 250 + 0 = 760\)</span></li>
+<li><strong><span class="math inline">\(F_4 = 510\)</span></strong> (Produktion in Periode 1 für Perioden 1-4)</li>
+</ul>
+<p><strong>Periode 5:</strong> <span class="math inline">\(F_5\)</span></p>
+<ul>
+<li><span class="math inline">\(\tau = 1\)</span>: <span class="math inline">\(F_0 + 250 + 2 \cdot (0 \cdot 30 + 1 \cdot 90 + 2 \cdot 20 + 3 \cdot 0 + 4 \cdot 50) = 0 + 250 + 660 = 910\)</span></li>
+<li><span class="math inline">\(\tau = 2\)</span>: <span class="math inline">\(F_1 + 250 + 2 \cdot (0 \cdot 90 + 1 \cdot 20 + 2 \cdot 0 + 3 \cdot 50) = 250 + 250 + 340 = 840\)</span></li>
+<li><span class="math inline">\(\tau = 3\)</span>: <span class="math inline">\(F_2 + 250 + 2 \cdot (0 \cdot 20 + 1 \cdot 0 + 2 \cdot 50) = 430 + 250 + 200 = 880\)</span></li>
+<li><span class="math inline">\(\tau = 4\)</span>: <span class="math inline">\(F_3 + 250 + 2 \cdot (0 \cdot 0 + 1 \cdot 50) = 510 + 250 + 100 = 860\)</span></li>
+<li><span class="math inline">\(\tau = 5\)</span>: <span class="math inline">\(F_4 + 250 + 2 \cdot (0 \cdot 50) = 510 + 250 + 0 = 760\)</span></li>
+<li><strong><span class="math inline">\(F_5 = 760\)</span></strong> (Produktion in Periode 5 zusätzlich zu optimaler Lösung bis Periode 4)</li>
+</ul>
+<p><strong>Optimale Lösung durch Backtracking:</strong></p>
+<ul>
+<li><span class="math inline">\(F_5 = 760\)</span> wird erreicht durch <span class="math inline">\(\tau = 5\)</span> in der letzten Stufe</li>
+<li><span class="math inline">\(F_4 = 510\)</span> wird erreicht durch <span class="math inline">\(\tau = 1\)</span></li>
+<li><strong>Lösung:</strong> Produktion in Periode 1 für Perioden 1-4, Produktion in Periode 5 für Periode 5</li>
+<li><span class="math inline">\(q_1 = 30 + 90 + 20 + 0 = 140\)</span>, <span class="math inline">\(q_5 = 50\)</span></li>
+<li><strong>Gesamtkosten:</strong> <span class="math inline">\(760\)</span> €</li>
+</ul>
+<ol start="6" type="a">
+<li><strong>Vergleich der Lösungsqualität:</strong></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Verfahren</th>
+<th style="text-align: left;">Produktionsplan</th>
+<th style="text-align: left;">Gesamtkosten</th>
+<th style="text-align: left;">Rechenaufwand</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Silver-Meal</td>
+<td style="text-align: left;"><span class="math inline">\(q_1=140, q_5=50\)</span></td>
+<td style="text-align: left;">760 €</td>
+<td style="text-align: left;">Mittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Groff</td>
+<td style="text-align: left;"><span class="math inline">\(q_1=140, q_5=50\)</span></td>
+<td style="text-align: left;">760 €</td>
+<td style="text-align: left;">Gering</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wagner-Whitin</td>
+<td style="text-align: left;"><span class="math inline">\(q_1=140, q_5=50\)</span></td>
+<td style="text-align: left;">760 €</td>
+<td style="text-align: left;">Hoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Praktische Bewertung:</strong></p>
+<ul>
+<li><strong>Groff-Verfahren</strong>: Einfachste Anwendung mit klarem Stopkriterium</li>
+<li><strong>Silver-Meal</strong>: Ausgewogenes Verhältnis von Rechenaufwand und Lösungsqualität</li>
+<li><strong>Wagner-Whitin</strong>: Garantiert optimale Lösung, aber aufwendige Berechnung</li>
+</ul>
+<p><strong>Besonderheit:</strong> In diesem Beispiel führen alle drei Verfahren zur identischen optimalen Lösung mit gleichen Kosten. Dies ist ein Zufall und tritt in der Praxis nicht regelmäßig auf.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="changes-to-this-privacy-policy" class="level2">
-<h2 class="anchored" data-anchor-id="changes-to-this-privacy-policy">9. Changes to This Privacy Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the “Last Updated” date at the top. We encourage you to review this policy periodically for any changes.</p>
+<section id="aufgabe-3---kapazitätsbeschränkte-losgrößenplanung" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-3---kapazitätsbeschränkte-losgrößenplanung">Aufgabe 3 - Kapazitätsbeschränkte Losgrößenplanung</h2>
+<p>Erweitern Sie das SIULSP-Modell aus Aufgabe 2 um folgende Kapazitätsbeschränkungen:</p>
+<ul>
+<li>Verfügbare Produktionskapazität: 80 Einheiten pro Periode</li>
+<li>Rüstzeit: 10 Stunden pro Rüstvorgang</li>
+<li>Verfügbare Rüstkapazität: 15 Stunden pro Periode</li>
+<li>Produktionszeit: 0,5 Stunden pro Einheit</li>
+</ul>
+<ol type="a">
+<li>Formulieren Sie die zusätzlichen Nebenbedingungen für das kapazitätsbeschränkte Problem.</li>
+<li>Analysieren Sie, ob die Lösung aus Aufgabe 2 e) noch zulässig ist.</li>
+<li>Welche Auswirkungen könnten Kapazitätsbeschränkungen auf die Anwendbarkeit der heuristischen Verfahren haben?</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Zusätzliche Nebenbedingungen:</strong></li>
+</ol>
+<p><strong>Produktionskapazitätsbeschränkung:</strong></p>
+<p><span class="math display">\[q_t \leq 80 \quad \text{für alle } t = 1,2,3,4,5\]</span></p>
+<p><strong>Rüstkapazitätsbeschränkung:</strong></p>
+<p><span class="math display">\[10 \cdot \gamma_t + 0,5 \cdot q_t \leq 15 \quad \text{für alle } t = 1,2,3,4,5\]</span></p>
+<ol start="2" type="a">
+<li><strong>Zulässigkeitsprüfung der Lösung aus 2 e):</strong></li>
+</ol>
+<p>Optimale Lösung: <span class="math inline">\(q_1 = 140, q_5 = 50\)</span></p>
+<p><strong>Periode 1:</strong></p>
+<ul>
+<li>Produktionskapazität: <span class="math inline">\(140 &gt; 80\)</span> → <strong>Verletzt!</strong></li>
+<li>Rüstkapazität: <span class="math inline">\(10 \cdot 1 + 0,5 \cdot 140 = 80 &gt; 15\)</span> → <strong>Verletzt!</strong></li>
+</ul>
+<p><strong>Periode 5:</strong></p>
+<ul>
+<li>Produktionskapazität: <span class="math inline">\(50 \leq 80\)</span> ✓</li>
+<li>Rüstkapazität: <span class="math inline">\(10 \cdot 1 + 0,5 \cdot 50 = 35 &gt; 15\)</span> → <strong>Verletzt!</strong></li>
+</ul>
+<p><strong>Antwort:</strong> Die Lösung ist <strong>nicht zulässig</strong>.</p>
+<ol start="3" type="a">
+<li><strong>Auswirkungen auf heuristische Verfahren:</strong></li>
+</ol>
+<p><strong>Silver-Meal und Groff-Verfahren:</strong></p>
+<ul>
+<li>Müssen <strong>modifiziert</strong> werden, um Kapazitätsbeschränkungen zu berücksichtigen</li>
+<li>Los-Bildung muss gestoppt werden, wenn Kapazitätsgrenzen erreicht sind</li>
+<li><strong>Lösungsqualität</strong> kann deutlich schlechter werden</li>
+</ul>
+<p><strong>Praktische Konsequenz:</strong></p>
+<p>Kapazitätsbeschränkte Losgrößenprobleme erfordern weiter angepasste <strong>Algorithmen</strong> oder die Verwendung von <strong>Mixed-Integer-Programming-Solvern</strong>.</p>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -814,7 +1106,7 @@ Germany</p>
     </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link active" href="../general/privacy.html" aria-current="page">
+    <a class="nav-link" href="../general/privacy.html">
 <p>Privacy Policy</p>
 </a>
   </li>  

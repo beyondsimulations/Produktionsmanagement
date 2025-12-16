@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-18">
 
-<title>Privacy Policy – Produktionsmanagement</title>
+<title>Übung 03 – Produktionsmanagement</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,15 +72,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script defer="" data-domain="beyondsimulations.github.io" src="https://plb.byndsim.com/js/script.file-downloads.hash.outbound-links.js"></script>
-<script>
-    window.plausible =
-        window.plausible ||
-        function () {
-            (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
-</script>
+<script defer="" src="https://umi.byndsim.com/script.js" data-website-id="e230d76b-b0a6-477e-8c5d-19a7bd661e68"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -94,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Privacy Policy</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-03-qualitaet.pdf">03 Qualität</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-03.html">Tutorium</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-03.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/tutorial-03.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tutorium</span></a>
   </div>
 </li>
@@ -263,25 +284,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#data-controller" id="toc-data-controller" class="nav-link" data-scroll-target="#data-controller">2. Data Controller</a></li>
-  <li><a href="#information-we-collect" id="toc-information-we-collect" class="nav-link" data-scroll-target="#information-we-collect">3. Information We Collect</a></li>
-  <li><a href="#how-we-use-your-information" id="toc-how-we-use-your-information" class="nav-link" data-scroll-target="#how-we-use-your-information">4. How We Use Your Information</a></li>
-  <li><a href="#legal-basis-for-processing" id="toc-legal-basis-for-processing" class="nav-link" data-scroll-target="#legal-basis-for-processing">5. Legal Basis for Processing</a></li>
-  <li><a href="#data-sharing-and-third-parties" id="toc-data-sharing-and-third-parties" class="nav-link" data-scroll-target="#data-sharing-and-third-parties">6. Data Sharing and Third Parties</a></li>
-  <li><a href="#data-storage-security-and-retention" id="toc-data-storage-security-and-retention" class="nav-link" data-scroll-target="#data-storage-security-and-retention">7. Data Storage, Security, and Retention</a></li>
-  <li><a href="#your-data-protection-rights" id="toc-your-data-protection-rights" class="nav-link" data-scroll-target="#your-data-protection-rights">8. Your Data Protection Rights</a></li>
-  <li><a href="#changes-to-this-privacy-policy" id="toc-changes-to-this-privacy-policy" class="nav-link" data-scroll-target="#changes-to-this-privacy-policy">9. Changes to This Privacy Policy</a></li>
+  <li><a href="#aufgabe-1---zentrenproduktion-und-erzeugnisfamilien" id="toc-aufgabe-1---zentrenproduktion-und-erzeugnisfamilien" class="nav-link active" data-scroll-target="#aufgabe-1---zentrenproduktion-und-erzeugnisfamilien">Aufgabe 1 - Zentrenproduktion und Erzeugnisfamilien</a></li>
+  <li><a href="#aufgabe-2---flexible-fertigungssysteme-ffs" id="toc-aufgabe-2---flexible-fertigungssysteme-ffs" class="nav-link" data-scroll-target="#aufgabe-2---flexible-fertigungssysteme-ffs">Aufgabe 2 - Flexible Fertigungssysteme (FFS)</a></li>
+  <li><a href="#aufgabe-3---statistische-qualitätskontrolle" id="toc-aufgabe-3---statistische-qualitätskontrolle" class="nav-link" data-scroll-target="#aufgabe-3---statistische-qualitätskontrolle">Aufgabe 3 - Statistische Qualitätskontrolle</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="privacy.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tutorial-03.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-03-qualitaet.pdf">03 Qualität</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-03.html">Tutorium</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Privacy Policy</h1>
-<p class="subtitle lead">How we handle your data</p>
+<h1 class="title">Übung 03</h1>
+<p class="subtitle lead">Zentrenproduktion &amp; Qualitätsmanagement</p>
 </div>
 
 
@@ -289,12 +304,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 18, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -304,87 +313,432 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
-<p>Welcome! This Privacy Policy explains how we collect, use, shares, and protects information in relation to our AI Chatbot service (the “Chatbot”) provided on this website. All other services do not use data that is covered by this policy!</p>
-<p>We are committed to protecting your privacy. This policy outlines our practices concerning the data processed when you interact with our Chatbot. By using the Chatbot, you agree to the collection and use of information in accordance with this policy.</p>
-</section>
-<section id="data-controller" class="level2">
-<h2 class="anchored" data-anchor-id="data-controller">2. Data Controller</h2>
-<p>The data controller responsible for your personal data is:</p>
-<p>Beyond Simulations GmbH<br>
-Am Eich 9d<br>
-22113 Oststeinbek<br>
-Germany</p>
-<p>Email: <a href="mailto:info@beyondsimulations.com">info@beyond-simulations.com</a></p>
-</section>
-<section id="information-we-collect" class="level2">
-<h2 class="anchored" data-anchor-id="information-we-collect">3. Information We Collect</h2>
-<p>When you interact with our Chatbot, we collect and process the following types of information:</p>
+<section id="aufgabe-1---zentrenproduktion-und-erzeugnisfamilien" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-1---zentrenproduktion-und-erzeugnisfamilien">Aufgabe 1 - Zentrenproduktion und Erzeugnisfamilien</h2>
+<p>Die folgende Tabelle zeigt den Zusammenhang zwischen Erzeugnissen und den zu ihrer Erstellung notwendigen Maschinen:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Maschine</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Erzeugnis A</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Erzeugnis B</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Erzeugnis C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Erzeugnis D</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li>Identifizieren Sie geeignete Erzeugnisfamilien für Produktionsinseln durch systematische Umordnung der Matrix. Welche Maschinengruppen und Erzeugnisgruppen ergeben sich?</li>
+<li>Bewerten Sie die Qualität Ihrer Erzeugnisfamilienbildung. Ergeben sich Probleme und wie könnten diese gelöst werden?</li>
+<li>Vergleichen Sie die Zentrenproduktion mit der Werkstattfertigung hinsichtlich folgender Kriterien:
 <ul>
-<li><strong>Chat Interactions:</strong> This includes the questions, prompts, and text you submit to the Chatbot (“Prompts”) and the responses generated by the Chatbot (“Responses”). We do not store any personal data and all prompts are anonymized.</li>
-<li><strong>Technical Data:</strong> We may automatically collect technical information associated with your interaction, such as timestamps, session identifiers for service functionality. This data is processed on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Usage Data:</strong> We may collect aggregated and anonymized data about how the Chatbot is used to monitor performance and improve the service.</li>
-</ul>
-</section>
-<section id="how-we-use-your-information" class="level2">
-<h2 class="anchored" data-anchor-id="how-we-use-your-information">4. How We Use Your Information</h2>
-<p>We use the collected information for the following purposes:</p>
+<li>Transportwege und -zeiten</li>
+<li>Durchlaufzeiten und Lagerbestände</li>
+<li>Flexibilität bei Produktmix-Änderungen</li>
+<li>Investitionsbedarf</li>
+</ul></li>
+<li>Ein Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. Welche vier Planungsschritte sind dabei zu berücksichtigen?</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Systematische Erzeugnisfamilienbildung:</strong></li>
+</ol>
+<p>Schritt 1: Analyse der Maschinen-Erzeugnis-Matrix</p>
+<pre><code>Original-Matrix:
+        M1  M2  M3  M4  M5  M6
+    A   -   X   -   -   X   -
+    B   X   -   X   X   -   X
+    C   -   -   -   X   -   X
+    D   -   X   -   -   X   X</code></pre>
+<p>Schritt 2: Umordnung nach Ähnlichkeiten</p>
+<pre><code>Optimierte Matrix:
+        M2  M5  M6  M1  M3  M4
+    A   X   X   -   -   -   -
+    D   X   X   X   -   -   -
+    B   -   -   X   X   X   X
+    C   -   -   X   -   -   X</code></pre>
+<p><strong>Ergebnis:</strong></p>
 <ul>
-<li><strong>To Provide and Operate the Chatbot:</strong> To receive your Prompts, process them using AI models, and deliver Responses back to you.</li>
-<li><strong>To Route Requests:</strong> To manage communication between our Chatbot interface and the underlying AI models via intermediary services.</li>
-<li><strong>For Safety and Content Moderation:</strong> To analyze Prompts and/or potential Responses for harmful, inappropriate, or policy-violating content using designated services by Mistral AI acting as guardrails, aiming to ensure safer interactions.</li>
-<li><strong>For Service Improvement:</strong> To analyze usage patterns to understand user needs, troubleshoot issues, and enhance the Chatbot’s performance and capabilities.</li>
-<li><strong>For Security and Monitoring:</strong> To maintain the security of our service, prevent fraud, and monitor for potential misuse.</li>
-<li><strong>To Comply with Legal Obligations:</strong> To meet any applicable legal or regulatory requirements.</li>
+<li><strong>Familie 1</strong>: Erzeugnisse A, D mit Maschinen M2, M5 (+ teilweise M6)</li>
+<li><strong>Familie 2</strong>: Erzeugnisse B, C mit Maschinen M1, M3, M4, M6</li>
 </ul>
-</section>
-<section id="legal-basis-for-processing" class="level2">
-<h2 class="anchored" data-anchor-id="legal-basis-for-processing">5. Legal Basis for Processing</h2>
-<p>We process your personal data based on the following legal grounds:</p>
+<ol start="2" type="a">
+<li><strong>Bewertung der Erzeugnisfamilienbildung:</strong></li>
+</ol>
+<p><strong>Probleme:</strong></p>
 <ul>
-<li><strong>Legitimate Interests:</strong> Processing is necessary for our legitimate interests in operating and improving the Chatbot service and maintaining its security, provided these interests are not overridden by your data protection rights.</li>
-<li><strong>Consent:</strong> In some cases, we might ask for your explicit consent for specific processing activities (e.g., using conversation data for fine-tuning models beyond basic service provision).</li>
-<li><strong>Legal Obligation:</strong> Processing is necessary to comply with a legal obligation to which we are subject.</li>
+<li>Maschine M6 wird von beiden Familien benötigt → “Springer-Maschine”</li>
+<li>Nicht perfekt trennscharf → Kompromisse erforderlich</li>
 </ul>
+<p><strong>Lösungsansätze:</strong></p>
+<ol type="1">
+<li>M6 duplizieren (eine Maschine pro Familie)</li>
+<li>M6 als gemeinsam genutzte Ressource zwischen den Zentren</li>
+<li>Restfertigung für Familie 2 in separater Werkstatt</li>
+</ol>
+<ol start="3" type="a">
+<li><strong>Vergleich Zentren- vs.&nbsp;Werkstattfertigung:</strong></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 38%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Kriterium</th>
+<th style="text-align: left;">Zentrenproduktion</th>
+<th style="text-align: left;">Werkstattfertigung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Transportwege</td>
+<td style="text-align: left;">Kurz, innerhalb der Zelle</td>
+<td style="text-align: left;">Lang, zwischen verschiedenen Abteilungen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Durchlaufzeiten</td>
+<td style="text-align: left;">Niedrig durch kurze Wege</td>
+<td style="text-align: left;">Hoch durch Transport und Warteschlangen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lagerbestände</td>
+<td style="text-align: left;">Gering durch niedrige Losgrößen</td>
+<td style="text-align: left;">Hoch durch große Lose</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Flexibilität</td>
+<td style="text-align: left;">Hoch für Produktfamilie</td>
+<td style="text-align: left;">Hoch für verschiedene Produkte</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Investitionsbedarf</td>
+<td style="text-align: left;">Mittel (evtl. Maschinenduplikation)</td>
+<td style="text-align: left;">Niedrig (Maschinenauslastung besser)</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" type="a">
+<li><strong>Vier Planungsschritte:</strong></li>
+</ol>
+<ol type="1">
+<li><strong>Identifizierung von Erzeugnisfamilien</strong> (wie in Aufgabe durchgeführt)</li>
+<li><strong>Auswahl der Arbeitssysteme</strong> (Layout, Maschinenausstattung)</li>
+<li><strong>Auswahl des Planungs- und Steuerungssystems</strong> (dezentral vs.&nbsp;zentral)</li>
+<li><strong>Auswahl, Schulung und Motivation der Mitarbeiter</strong> (Gruppenarbeit, Qualifikation)</li>
+</ol>
+</div>
+</div>
+</div>
 </section>
-<section id="data-sharing-and-third-parties" class="level2">
-<h2 class="anchored" data-anchor-id="data-sharing-and-third-parties">6. Data Sharing and Third Parties</h2>
-<p>To provide the Chatbot service, your Prompts are processed by and shared with the following third-party services and infrastructure providers:</p>
+<section id="aufgabe-2---flexible-fertigungssysteme-ffs" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-2---flexible-fertigungssysteme-ffs">Aufgabe 2 - Flexible Fertigungssysteme (FFS)</h2>
+<p>Gegeben sei ein geschlossenes Warteschlangennetzwerk (FFS) mit 3 Bearbeitungsstationen (je eine Maschine) und einem verbindenden Transportsystem. Die Daten sind:</p>
+<p><strong>Bearbeitungszeiten:</strong></p>
 <ul>
-<li><strong>Chatbot Interface:</strong> The user interface for the Chatbot runs directly in your web browser.</li>
-<li><strong>RAG-Backend:</strong> The RAG backend runs on a self-hosted server on Hetzner in Germany.</li>
-<li><strong>LLM Observation (Langfuse):</strong> We use Langfuse to observe the usage of the LLM models we use. Your Prompts (and generated responses) pass through Langfuse to reach the selected LLM provider or guardrail service. The data is stored on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Hosting Provider (Hetzner):</strong> Our instance of Langfuse is self-hosted on servers provided by Hetzner Online GmbH. Hetzner acts as a data processor providing the infrastructure. We store application data and interaction logs on these servers, located within Germany.</li>
-<li><strong>Mistral AI:</strong> We use Mistral AI for two primary purposes: (1) as one of the LLM options to generate Responses to your Prompts, and (2) <strong>as a guardrail service</strong> to check Prompts and/or potential Responses (which may have been generated by Mistral AI itself) for safety, appropriateness, and compliance with content policies <em>before</em> a final response is delivered to you. When Mistral is used for either generation or guardrail checking, your data (relevant Prompts and/or potential Responses) is processed according to Mistral’s terms and privacy policy. The data ist not used or saved for training purposes by the model providers.</li>
+<li>Maschine 1: <span class="math inline">\(b_1 = 50\)</span> min</li>
+<li>Maschine 2: <span class="math inline">\(b_2 = 70\)</span> min</li>
+<li>Maschine 3: <span class="math inline">\(b_3 = 30\)</span> min</li>
+<li>Transport: <span class="math inline">\(b_4 = 12\)</span> min</li>
 </ul>
-<p><strong>Important Note on Third-Party Processing:</strong> These LLM and guardrail providers process your data to generate Responses or perform safety checks. They may use data according to their own policies, potentially including service improvement, subject to their terms. We encourage you to review their respective privacy policies. We do not explicitly share personal identifiers like your name or email through the Chatbot interaction unless you voluntarily include such information in your Prompts.</p>
-</section>
-<section id="data-storage-security-and-retention" class="level2">
-<h2 class="anchored" data-anchor-id="data-storage-security-and-retention">7. Data Storage, Security, and Retention</h2>
+<p><strong>Routing-Wahrscheinlichkeiten:</strong></p>
 <ul>
-<li><strong>Storage:</strong> Chat interaction data (Prompts, Responses) and technical logs may be stored temporarily or persistently (depending on configuration) on our Langfuse instance hosted on Hetzner servers in Germany.</li>
-<li><strong>Security:</strong> We implement reasonable technical and organizational measures to protect your data from unauthorized access, disclosure, alteration, or destruction. This includes using HTTPS encryption for data transmitted between your browser, our server, and the LLM providers. Access to the backend systems is restricted.</li>
-<li><strong>Retention:</strong> We retain chat interaction data and technical logs only for as long as necessary to fulfill the purposes outlined in this policy, for troubleshooting, security logging, service improvement, or as required by law. Retention periods vary depending on the type of data and our operational needs.</li>
+<li><span class="math inline">\(p_1 = 0,4\)</span> (Station 1)</li>
+<li><span class="math inline">\(p_2 = 0,25\)</span> (Station 2)</li>
+<li><span class="math inline">\(p_3 = 0,35\)</span> (Station 3)</li>
+<li><span class="math inline">\(p_4 = 1,0\)</span> (Transport - nach jeder Bearbeitung)</li>
 </ul>
-</section>
-<section id="your-data-protection-rights" class="level2">
-<h2 class="anchored" data-anchor-id="your-data-protection-rights">8. Your Data Protection Rights</h2>
-<p>Depending on your location and applicable data protection laws, you may have the following rights regarding your personal data:</p>
+<ol type="a">
+<li>Berechnen Sie die mittlere Arbeitsbelastung (Workload) <span class="math inline">\(w_m = \frac{p_m \cdot b_m}{S_m}\)</span> für alle Stationen.</li>
+<li>Bestimmen Sie den Engpass des Systems.</li>
+<li>Berechnen Sie unter der Annahme einer 100%-Engpassauslastung:
 <ul>
-<li><strong>Right to Access:</strong> You can request copies of your personal data that we hold.</li>
-<li><strong>Right to Rectification:</strong> You can request correction of inaccurate or incomplete data.</li>
-<li><strong>Right to Erasure (‘Right to be Forgotten’):</strong> You can request the deletion of your personal data under certain conditions.</li>
-<li><strong>Right to Restrict Processing:</strong> You can request the limitation of how we process your data under certain conditions.</li>
-<li><strong>Right to Data Portability:</strong> You can request that we transfer the data we have collected to another organization, or directly to you, under certain conditions.</li>
-<li><strong>Right to Object:</strong> You can object to our processing of your personal data based on legitimate interests.</li>
-<li><strong>Right to Withdraw Consent:</strong> If processing is based on consent, you can withdraw it at any time.</li>
+<li>Die Produktionsraten <span class="math inline">\(X_m\)</span> aller Stationen</li>
+<li>Die Auslastungen <span class="math inline">\(U_m\)</span> aller Stationen</li>
+</ul></li>
+<li>Diskutieren Sie: Ist das Ergebnis realistisch, wenn die Anzahl der Paletten im System begrenzt ist? Welche praktischen Probleme könnten auftreten?</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Mittlere Arbeitsbelastung (Workload):</strong></li>
+</ol>
+<p><span class="math inline">\(w_m = \frac{p_m \cdot b_m}{S_m}\)</span> mit <span class="math inline">\(S_m = 1\)</span> für alle Stationen:</p>
+<ul>
+<li><span class="math inline">\(w_1 = \frac{0,4 \times 50}{1} = 20,0\)</span> min</li>
+<li><span class="math inline">\(w_2 = \frac{0,25 \times 70}{1} = 17,5\)</span> min</li>
+<li><span class="math inline">\(w_3 = \frac{0,35 \times 30}{1} = 10,5\)</span> min</li>
+<li><span class="math inline">\(w_4 = \frac{1,0 \times 12}{1} = 12,0\)</span> min</li>
 </ul>
-<p>To exercise any of these rights, please contact us using the details provided in Section 2 (Data Controller). We may need to verify your identity before processing your request.</p>
+<ol start="2" type="a">
+<li><strong>Engpass-Bestimmung:</strong></li>
+</ol>
+<p><strong>Engpass</strong> = Station mit höchster Arbeitsbelastung = <strong>Station 1</strong> mit <span class="math inline">\(w_1 = 20,0\)</span> min</p>
+<ol start="3" type="a">
+<li><strong>Produktionsraten und Auslastungen bei 100% Engpassauslastung:</strong></li>
+</ol>
+<p><strong>Produktionsrate des Engpasses:</strong></p>
+<p><span class="math inline">\(X_e = X_1 = \frac{S_1}{b_1} = \frac{1}{50} = 0,02\)</span> Werkstücke/min</p>
+<p><strong>Produktionsraten der anderen Stationen:</strong></p>
+<p><span class="math inline">\(X_m = \frac{p_m}{p_e} \cdot X_e = \frac{p_m}{p_1} \cdot X_1\)</span></p>
+<ul>
+<li><span class="math inline">\(X_1 = 0,020\)</span> Werkstücke/min</li>
+<li><span class="math inline">\(X_2 = \frac{0,25}{0,4} \times 0,020 = 0,0125\)</span> Werkstücke/min</li>
+<li><span class="math inline">\(X_3 = \frac{0,35}{0,4} \times 0,020 = 0,0175\)</span> Werkstücke/min</li>
+<li><span class="math inline">\(X_4 = \frac{1,0}{0,4} \times 0,020 = 0,050\)</span> Werkstücke/min</li>
+</ul>
+<p><strong>Auslastungen:</strong></p>
+<p><span class="math inline">\(U_m = \frac{b_m \cdot X_m}{S_m}\)</span></p>
+<ul>
+<li><span class="math inline">\(U_1 = \frac{50 \times 0,020}{1} = 1,000 = 100,0\%\)</span> (Engpass)</li>
+<li><span class="math inline">\(U_2 = \frac{70 \times 0,0125}{1} = 0,875 = 87,5\%\)</span></li>
+<li><span class="math inline">\(U_3 = \frac{30 \times 0,0175}{1} = 0,525 = 52,5\%\)</span></li>
+<li><span class="math inline">\(U_4 = \frac{12 \times 0,050}{1} = 0,600 = 60,0\%\)</span></li>
+</ul>
+<ol start="4" type="a">
+<li><strong>Realitätsbewertung bei begrenzten Paletten:</strong></li>
+</ol>
+<p><strong>Nein, das Ergebnis ist bei begrenzten Paletten nicht realistisch:</strong></p>
+<p><strong>Probleme:</strong></p>
+<ol type="1">
+<li><strong>Warteschlangeneffekte</strong>: Bei zu wenigen Paletten können Stationen “aushungern”</li>
+<li><strong>Blockierungen</strong>: Volle Puffer können Stationen blockieren</li>
+<li><strong>Schwankungen</strong>: Reale Bearbeitungszeiten sind nicht konstant</li>
+<li><strong>100% Auslastung</strong>: Praktisch nicht dauerhaft erreichbar</li>
+</ol>
+</div>
+</div>
+</div>
 </section>
-<section id="changes-to-this-privacy-policy" class="level2">
-<h2 class="anchored" data-anchor-id="changes-to-this-privacy-policy">9. Changes to This Privacy Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the “Last Updated” date at the top. We encourage you to review this policy periodically for any changes.</p>
+<section id="aufgabe-3---statistische-qualitätskontrolle" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-3---statistische-qualitätskontrolle">Aufgabe 3 - Statistische Qualitätskontrolle</h2>
+<p>Die Duisburger Spirituosenfabrik “Nordrhein Destille” produziert den Schnaps “Studentenglück” mit einem Soll-Alkoholgehalt von 40%. Die Stichproben der letzten 5 Jahre (Umfang <span class="math inline">\(n=5\)</span> Proben pro Stichprobe) ergaben folgende Werte:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Jahr</th>
+<th style="text-align: center;">Probe 1</th>
+<th style="text-align: center;">Probe 2</th>
+<th style="text-align: center;">Probe 3</th>
+<th style="text-align: center;">Probe 4</th>
+<th style="text-align: center;">Probe 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">39,9</td>
+<td style="text-align: center;">40,5</td>
+<td style="text-align: center;">39,2</td>
+<td style="text-align: center;">40,3</td>
+<td style="text-align: center;">40,6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">41,1</td>
+<td style="text-align: center;">40,1</td>
+<td style="text-align: center;">39,8</td>
+<td style="text-align: center;">40,1</td>
+<td style="text-align: center;">40,1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">39,3</td>
+<td style="text-align: center;">40,4</td>
+<td style="text-align: center;">39,7</td>
+<td style="text-align: center;">40,5</td>
+<td style="text-align: center;">39,9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2022</td>
+<td style="text-align: center;">40,1</td>
+<td style="text-align: center;">40,0</td>
+<td style="text-align: center;">39,4</td>
+<td style="text-align: center;">39,5</td>
+<td style="text-align: center;">39,5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2023</td>
+<td style="text-align: center;">39,8</td>
+<td style="text-align: center;">40,2</td>
+<td style="text-align: center;">40,4</td>
+<td style="text-align: center;">39,9</td>
+<td style="text-align: center;">40,1</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li>Berechnen Sie für jede Stichprobe den Stichprobenmittelwert <span class="math inline">\(x_t\)</span> und die Stichprobenspannweite <span class="math inline">\(R_t\)</span>.</li>
+<li>Bestimmen Sie den Mittelwert aller Stichprobenmittelwerte <span class="math inline">\(\bar{x}\)</span> und die mittlere Spannweite <span class="math inline">\(\bar{R}\)</span>.</li>
+<li>Berechnen Sie die Kontrollgrenzen für eine <span class="math inline">\(\bar{x}\)</span>-Kontrollkarte mit dem Faktor <span class="math inline">\(A(n=5) = 0,577\)</span>.</li>
+<li>Die nächste Stichprobe (2024) liefert folgende Werte: [38,2; 40,5; 39,3; 39,9; 41,4]. Ist der Prozess noch unter statistischer Kontrolle?</li>
+<li>Interpretieren Sie das Ergebnis: Was bedeutet es für die Qualität des Produkts und welche Maßnahmen wären zu empfehlen?</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Stichprobenmittelwerte und Spannweiten:</strong></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Jahr</th>
+<th style="text-align: center;">Stichprobenmittelwert <span class="math inline">\(x_t\)</span></th>
+<th style="text-align: center;">Spannweite <span class="math inline">\(R_t\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{39,9 + 40,5 + 39,2 + 40,3 + 40,6}{5} = 40,1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(40,6 - 39,2 = 1,4\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{41,1 + 40,1 + 39,8 + 40,1 + 40,1}{5} = 40,24\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(41,1 - 39,8 = 1,3\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{39,3 + 40,4 + 39,7 + 40,5 + 39,9}{5} = 39,96\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(40,5 - 39,3 = 1,2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2022</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{40,1 + 40,0 + 39,4 + 39,5 + 39,5}{5} = 39,7\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(40,1 - 39,4 = 0,7\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2023</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{39,8 + 40,2 + 40,4 + 39,9 + 40,1}{5} = 40,08\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(40,4 - 39,8 = 0,6\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="a">
+<li><strong>Prozessparameter:</strong></li>
+</ol>
+<ul>
+<li><p>Mittelwert der Stichprobenmittelwerte: <span class="math inline">\(\bar{x} = \frac{40,1 + 40,24 + 39,96 + 39,7 + 40,08}{5} = 40,016\)</span></p></li>
+<li><p>Mittlere Spannweite: <span class="math inline">\(\bar{R} = \frac{1,4 + 1,3 + 1,2 + 0,7 + 0,6}{5} = 1,04\)</span></p></li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Kontrollgrenzen:</strong></li>
+</ol>
+<p>Mit <span class="math inline">\(A(5) = 0,577\)</span>:</p>
+<ul>
+<li><strong>UCL</strong> = <span class="math inline">\(\bar{x} + A \cdot \bar{R} = 40,016 + 0,577 \times 1,04 = 40,0 + 0,60 = 40,616\)</span>%</li>
+<li><strong>LCL</strong> = <span class="math inline">\(\bar{x} - A \cdot \bar{R} = 40,016 - 0,577 \times 1,04 = 40,0 - 0,60 = 39,416\)</span>%</li>
+</ul>
+<ol start="4" type="a">
+<li><strong>Beurteilung der Stichprobe 2024:</strong></li>
+</ol>
+<p>Stichprobe 2024: [38,2; 40,5; 39,3; 39,9; 41,4]</p>
+<ul>
+<li><span class="math inline">\(x_{2024} = \frac{38,2 + 40,5 + 39,3 + 39,9 + 41,4}{5} = 39,86\)</span>%</li>
+<li>Kontrollgrenzen: LCL = 39,40% ≤ <strong>39,86%</strong> ≤ 40,60% = UCL</li>
+</ul>
+<p><strong>Ergebnis:</strong> Der Stichprobenmittelwert liegt <strong>innerhalb der Kontrollgrenzen</strong> → Prozess ist unter statistischer Kontrolle.</p>
+<ol start="5" type="a">
+<li><strong>Interpretation und Maßnahmen:</strong></li>
+</ol>
+<p><strong>Positive Aspekte:</strong></p>
+<ul>
+<li>Prozess arbeitet statistisch stabil</li>
+<li>Mittelwert liegt nahe dem Sollwert (40%)</li>
+<li>Schwankungen sind im erwarteten Rahmen</li>
+</ul>
+<p><strong>Verbesserungsmöglichkeiten:</strong></p>
+<ol type="1">
+<li><strong>Prozessfähigkeit erhöhen</strong>: Spannweite von 1,04% ist relativ hoch</li>
+<li><strong>Ursachenanalyse</strong>: Warum schwankt der Alkoholgehalt?</li>
+<li><strong>Prozessoptimierung</strong>: Bessere Temperatur-/Druckkontrolle bei der Destillation</li>
+<li><strong>Häufigere Kontrollen</strong>: Monatliche statt jährliche Stichproben</li>
+</ol>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -814,7 +1168,7 @@ Germany</p>
     </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link active" href="../general/privacy.html" aria-current="page">
+    <a class="nav-link" href="../general/privacy.html">
 <p>Privacy Policy</p>
 </a>
   </li>  

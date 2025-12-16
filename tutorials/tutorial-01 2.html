@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-18">
 
-<title>Privacy Policy – Produktionsmanagement</title>
+<title>Übung 01 – Produktionsmanagement</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,15 +72,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script defer="" data-domain="beyondsimulations.github.io" src="https://plb.byndsim.com/js/script.file-downloads.hash.outbound-links.js"></script>
-<script>
-    window.plausible =
-        window.plausible ||
-        function () {
-            (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
-</script>
+<script defer="" src="https://umi.byndsim.com/script.js" data-website-id="e230d76b-b0a6-477e-8c5d-19a7bd661e68"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -94,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Privacy Policy</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-01-standort.pdf">01 Standorte</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-01.html">Tutorium</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -146,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-01.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/tutorial-01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tutorium</span></a>
   </div>
 </li>
@@ -263,25 +284,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#data-controller" id="toc-data-controller" class="nav-link" data-scroll-target="#data-controller">2. Data Controller</a></li>
-  <li><a href="#information-we-collect" id="toc-information-we-collect" class="nav-link" data-scroll-target="#information-we-collect">3. Information We Collect</a></li>
-  <li><a href="#how-we-use-your-information" id="toc-how-we-use-your-information" class="nav-link" data-scroll-target="#how-we-use-your-information">4. How We Use Your Information</a></li>
-  <li><a href="#legal-basis-for-processing" id="toc-legal-basis-for-processing" class="nav-link" data-scroll-target="#legal-basis-for-processing">5. Legal Basis for Processing</a></li>
-  <li><a href="#data-sharing-and-third-parties" id="toc-data-sharing-and-third-parties" class="nav-link" data-scroll-target="#data-sharing-and-third-parties">6. Data Sharing and Third Parties</a></li>
-  <li><a href="#data-storage-security-and-retention" id="toc-data-storage-security-and-retention" class="nav-link" data-scroll-target="#data-storage-security-and-retention">7. Data Storage, Security, and Retention</a></li>
-  <li><a href="#your-data-protection-rights" id="toc-your-data-protection-rights" class="nav-link" data-scroll-target="#your-data-protection-rights">8. Your Data Protection Rights</a></li>
-  <li><a href="#changes-to-this-privacy-policy" id="toc-changes-to-this-privacy-policy" class="nav-link" data-scroll-target="#changes-to-this-privacy-policy">9. Changes to This Privacy Policy</a></li>
+  <li><a href="#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung" id="toc-aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung" class="nav-link active" data-scroll-target="#aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung">Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung</a></li>
+  <li><a href="#aufgabe-2---mathematische-modellierung" id="toc-aufgabe-2---mathematische-modellierung" class="nav-link" data-scroll-target="#aufgabe-2---mathematische-modellierung">Aufgabe 2 - Mathematische Modellierung</a></li>
+  <li><a href="#aufgabe-3---standortplanung-mit-kapazitätsbeschränkung" id="toc-aufgabe-3---standortplanung-mit-kapazitätsbeschränkung" class="nav-link" data-scroll-target="#aufgabe-3---standortplanung-mit-kapazitätsbeschränkung">Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung</a></li>
+  <li><a href="#aufgabe-4---heuristiken-zur-standortplanung" id="toc-aufgabe-4---heuristiken-zur-standortplanung" class="nav-link" data-scroll-target="#aufgabe-4---heuristiken-zur-standortplanung">Aufgabe 4 - Heuristiken zur Standortplanung</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="privacy.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tutorial-01.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-01-standort.pdf">01 Standorte</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-01.html">Tutorium</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Privacy Policy</h1>
-<p class="subtitle lead">How we handle your data</p>
+<h1 class="title">Übung 01</h1>
+<p class="subtitle lead">Grundlagen &amp; Standortplanung</p>
 </div>
 
 
@@ -289,12 +305,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 18, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -304,87 +314,414 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
-<p>Welcome! This Privacy Policy explains how we collect, use, shares, and protects information in relation to our AI Chatbot service (the “Chatbot”) provided on this website. All other services do not use data that is covered by this policy!</p>
-<p>We are committed to protecting your privacy. This policy outlines our practices concerning the data processed when you interact with our Chatbot. By using the Chatbot, you agree to the collection and use of information in accordance with this policy.</p>
-</section>
-<section id="data-controller" class="level2">
-<h2 class="anchored" data-anchor-id="data-controller">2. Data Controller</h2>
-<p>The data controller responsible for your personal data is:</p>
-<p>Beyond Simulations GmbH<br>
-Am Eich 9d<br>
-22113 Oststeinbek<br>
-Germany</p>
-<p>Email: <a href="mailto:info@beyondsimulations.com">info@beyond-simulations.com</a></p>
-</section>
-<section id="information-we-collect" class="level2">
-<h2 class="anchored" data-anchor-id="information-we-collect">3. Information We Collect</h2>
-<p>When you interact with our Chatbot, we collect and process the following types of information:</p>
+<section id="aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-1---standortplanung-ohne-kapazitätsbeschränkung">Aufgabe 1 - Standortplanung ohne Kapazitätsbeschränkung</h2>
+<p>Ein Unternehmen plant die Belieferung von drei Abnehmern (<span class="math inline">\(j \in \{1, 2, 3\}\)</span>) von potentiellen Standorten (<span class="math inline">\(i \in \{A, B, C\}\)</span>) mit unbegrenzter Kapazität. Folgende Daten sind gegeben:</p>
+<p><strong>Transportkosten <span class="math inline">\(c_{ij}\)</span> [€/ME] und Fixkosten <span class="math inline">\(f_i\)</span> [€]:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Standort <span class="math inline">\(i\)</span></th>
+<th style="text-align: left;">Abnehmer 1</th>
+<th style="text-align: left;">Abnehmer 2</th>
+<th style="text-align: left;">Abnehmer 3</th>
+<th style="text-align: left;">Fixkosten <span class="math inline">\(f_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">1.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">2.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">2.500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bedarfe:</strong> <span class="math inline">\(d_1 = 100\)</span> ME, <span class="math inline">\(d_2 = 150\)</span> ME, <span class="math inline">\(d_3 = 200\)</span> ME</p>
+<ol type="a">
+<li>Bestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jeder Abnehmer vollständig vom günstigsten Standort beliefert wird.</li>
+<li>Wie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?</li>
+<li>Interpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Bestimmung der kostenminimalen Standorte:</strong></li>
+</ol>
+<p>Schritt 1: Berechnung der Gesamtkosten für jeden einzelnen Standort (vollständige Belieferung):</p>
 <ul>
-<li><strong>Chat Interactions:</strong> This includes the questions, prompts, and text you submit to the Chatbot (“Prompts”) and the responses generated by the Chatbot (“Responses”). We do not store any personal data and all prompts are anonymized.</li>
-<li><strong>Technical Data:</strong> We may automatically collect technical information associated with your interaction, such as timestamps, session identifiers for service functionality. This data is processed on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Usage Data:</strong> We may collect aggregated and anonymized data about how the Chatbot is used to monitor performance and improve the service.</li>
+<li><p>Standort A: <span class="math inline">\(K_A = f_A + c_{A1} \cdot d_1 + c_{A2} \cdot d_2 + c_{A3} \cdot d_3\)</span> <span class="math inline">\(K_A = 1.000 + 10 \cdot 100 + 20 \cdot 150 + 30 \cdot 200 = 1.000 + 1.000 + 3.000 + 6.000 = 11.000\)</span> €</p></li>
+<li><p>Standort B: <span class="math inline">\(K_B = 2.000 + 50 \cdot 100 + 40 \cdot 150 + 50 \cdot 200\)</span> <span class="math inline">\(K_B = 2.000 + 5.000 + 6.000 + 10.000 = 23.000\)</span> €</p></li>
+<li><p>Standort C: <span class="math inline">\(K_C = 2.500 + 80 \cdot 100 + 30 \cdot 150 + 40 \cdot 200\)</span> <span class="math inline">\(K_C = 2.500 + 8.000 + 4.500 + 8.000 = 23.000\)</span> €</p></li>
 </ul>
-</section>
-<section id="how-we-use-your-information" class="level2">
-<h2 class="anchored" data-anchor-id="how-we-use-your-information">4. How We Use Your Information</h2>
-<p>We use the collected information for the following purposes:</p>
+<p><strong>Ergebnis:</strong> Standort A ist mit 11.000 € die kostenminimale Lösung.</p>
+<ol start="2" type="a">
+<li><strong>Anzahl der Kombinationsmöglichkeiten:</strong></li>
+</ol>
+<p>Bei 3 Standorten gibt es <span class="math inline">\(2^3 - 1 = 7\)</span> nicht-leere Kombinationen:</p>
 <ul>
-<li><strong>To Provide and Operate the Chatbot:</strong> To receive your Prompts, process them using AI models, and deliver Responses back to you.</li>
-<li><strong>To Route Requests:</strong> To manage communication between our Chatbot interface and the underlying AI models via intermediary services.</li>
-<li><strong>For Safety and Content Moderation:</strong> To analyze Prompts and/or potential Responses for harmful, inappropriate, or policy-violating content using designated services by Mistral AI acting as guardrails, aiming to ensure safer interactions.</li>
-<li><strong>For Service Improvement:</strong> To analyze usage patterns to understand user needs, troubleshoot issues, and enhance the Chatbot’s performance and capabilities.</li>
-<li><strong>For Security and Monitoring:</strong> To maintain the security of our service, prevent fraud, and monitor for potential misuse.</li>
-<li><strong>To Comply with Legal Obligations:</strong> To meet any applicable legal or regulatory requirements.</li>
+<li>Einzelstandorte: {A}, {B}, {C}</li>
+<li>Zweierkombinationen: {A,B}, {A,C}, {B,C}</li>
+<li>Alle drei: {A,B,C}</li>
 </ul>
-</section>
-<section id="legal-basis-for-processing" class="level2">
-<h2 class="anchored" data-anchor-id="legal-basis-for-processing">5. Legal Basis for Processing</h2>
-<p>We process your personal data based on the following legal grounds:</p>
+<ol start="3" type="a">
+<li><strong>Interpretation:</strong></li>
+</ol>
+<p>Die Lösung mit nur Standort A minimiert zwar die Kosten, birgt aber Risiken:</p>
 <ul>
-<li><strong>Legitimate Interests:</strong> Processing is necessary for our legitimate interests in operating and improving the Chatbot service and maintaining its security, provided these interests are not overridden by your data protection rights.</li>
-<li><strong>Consent:</strong> In some cases, we might ask for your explicit consent for specific processing activities (e.g., using conversation data for fine-tuning models beyond basic service provision).</li>
-<li><strong>Legal Obligation:</strong> Processing is necessary to comply with a legal obligation to which we are subject.</li>
+<li><strong>Keine Redundanz</strong>: Bei Ausfall von A bricht die gesamte Versorgung zusammen</li>
+<li><strong>Keine Flexibilität</strong>: Keine Reaktionsmöglichkeit auf Nachfrageschwankungen</li>
+<li><strong>Transportrisiken</strong>: Alle Transporte gehen von einem Punkt aus</li>
+<li>In der Praxis würde man möglicherweise einen zweiten Standort als Backup in Betracht ziehen</li>
 </ul>
+</div>
+</div>
+</div>
 </section>
-<section id="data-sharing-and-third-parties" class="level2">
-<h2 class="anchored" data-anchor-id="data-sharing-and-third-parties">6. Data Sharing and Third Parties</h2>
-<p>To provide the Chatbot service, your Prompts are processed by and shared with the following third-party services and infrastructure providers:</p>
+<section id="aufgabe-2---mathematische-modellierung" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-2---mathematische-modellierung">Aufgabe 2 - Mathematische Modellierung</h2>
+<p>Gegeben sei ein Standortplanungsproblem mit <span class="math inline">\(I\)</span> potentiellen Standorten und <span class="math inline">\(J\)</span> Abnehmern.</p>
+<ol type="a">
+<li>Formulieren Sie die vollständige mathematische Modellierung des Standortplanungsproblems mit Kapazitätsbeschränkungen (Zielfunktion und alle Nebenbedingungen).</li>
+<li>Erläutern Sie, aus welchen zwei Teilproblemen das Standortplanungsproblem besteht.</li>
+<li>Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 Standorten (A, B, C) und 3 Abnehmern (1, 2, 3) mit folgenden Daten:
 <ul>
-<li><strong>Chatbot Interface:</strong> The user interface for the Chatbot runs directly in your web browser.</li>
-<li><strong>RAG-Backend:</strong> The RAG backend runs on a self-hosted server on Hetzner in Germany.</li>
-<li><strong>LLM Observation (Langfuse):</strong> We use Langfuse to observe the usage of the LLM models we use. Your Prompts (and generated responses) pass through Langfuse to reach the selected LLM provider or guardrail service. The data is stored on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Hosting Provider (Hetzner):</strong> Our instance of Langfuse is self-hosted on servers provided by Hetzner Online GmbH. Hetzner acts as a data processor providing the infrastructure. We store application data and interaction logs on these servers, located within Germany.</li>
-<li><strong>Mistral AI:</strong> We use Mistral AI for two primary purposes: (1) as one of the LLM options to generate Responses to your Prompts, and (2) <strong>as a guardrail service</strong> to check Prompts and/or potential Responses (which may have been generated by Mistral AI itself) for safety, appropriateness, and compliance with content policies <em>before</em> a final response is delivered to you. When Mistral is used for either generation or guardrail checking, your data (relevant Prompts and/or potential Responses) is processed according to Mistral’s terms and privacy policy. The data ist not used or saved for training purposes by the model providers.</li>
-</ul>
-<p><strong>Important Note on Third-Party Processing:</strong> These LLM and guardrail providers process your data to generate Responses or perform safety checks. They may use data according to their own policies, potentially including service improvement, subject to their terms. We encourage you to review their respective privacy policies. We do not explicitly share personal identifiers like your name or email through the Chatbot interaction unless you voluntarily include such information in your Prompts.</p>
-</section>
-<section id="data-storage-security-and-retention" class="level2">
-<h2 class="anchored" data-anchor-id="data-storage-security-and-retention">7. Data Storage, Security, and Retention</h2>
+<li>Fixkosten: <span class="math inline">\(f_A = 1.000\)</span>, <span class="math inline">\(f_B = 1.200\)</span>, <span class="math inline">\(f_C = 900\)</span></li>
+<li>Transportkosten: <span class="math inline">\(c_{A1} = 1\)</span>, <span class="math inline">\(c_{A2} = 2\)</span>, <span class="math inline">\(c_{A3} = 3\)</span>, <span class="math inline">\(c_{B1} = 4\)</span>, <span class="math inline">\(c_{B2} = 5\)</span>, <span class="math inline">\(c_{B3} = 6\)</span>, <span class="math inline">\(c_{C1} = 7\)</span>, <span class="math inline">\(c_{C2} = 8\)</span>, <span class="math inline">\(c_{C3} = 9\)</span></li>
+</ul></li>
+<li>Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><p><strong>Siehe Vorlesung:</strong></p></li>
+<li><p><strong>Die zwei Teilprobleme:</strong></p></li>
+</ol>
+<ol type="1">
+<li><strong>Standortauswahlproblem</strong>: Welche Standorte sollen errichtet werden? (Entscheidung über <span class="math inline">\(\gamma_i\)</span>)</li>
+<li><strong>Transportproblem</strong>: Wie sollen die Abnehmer von den gewählten Standorten beliefert werden? (Entscheidung über <span class="math inline">\(x_{ij}\)</span>)</li>
+</ol>
+<p>Diese Probleme sind gekoppelt, da die Transportentscheidung von der Standortwahl abhängt.</p>
+<ol start="3" type="a">
+<li><strong>Explizite Zielfunktion:</strong></li>
+</ol>
+<p><span class="math inline">\(Z = 1.000 \cdot \gamma_A + 1.200 \cdot \gamma_B + 900 \cdot \gamma_C\)</span> <span class="math inline">\(\quad + 1 \cdot x_{A1} + 2 \cdot x_{A2} + 3 \cdot x_{A3}\)</span> <span class="math inline">\(\quad + 4 \cdot x_{B1} + 5 \cdot x_{B2} + 6 \cdot x_{B3}\)</span> <span class="math inline">\(\quad + 7 \cdot x_{C1} + 8 \cdot x_{C2} + 9 \cdot x_{C3}\)</span></p>
+<ol start="4" type="a">
+<li><strong>Kapazitätsbeschränkung für Standort B:</strong></li>
+</ol>
+<p><span class="math inline">\(x_{B1} + x_{B2} + x_{B3} \leq b_B \cdot \gamma_B\)</span></p>
+<p>Diese Nebenbedingung stellt sicher, dass:</p>
 <ul>
-<li><strong>Storage:</strong> Chat interaction data (Prompts, Responses) and technical logs may be stored temporarily or persistently (depending on configuration) on our Langfuse instance hosted on Hetzner servers in Germany.</li>
-<li><strong>Security:</strong> We implement reasonable technical and organizational measures to protect your data from unauthorized access, disclosure, alteration, or destruction. This includes using HTTPS encryption for data transmitted between your browser, our server, and the LLM providers. Access to the backend systems is restricted.</li>
-<li><strong>Retention:</strong> We retain chat interaction data and technical logs only for as long as necessary to fulfill the purposes outlined in this policy, for troubleshooting, security logging, service improvement, or as required by law. Retention periods vary depending on the type of data and our operational needs.</li>
+<li>Wenn <span class="math inline">\(\gamma_B = 0\)</span> (Standort B nicht errichtet): <span class="math inline">\(x_{B1} + x_{B2} + x_{B3} \leq 0\)</span>, d.h. keine Lieferung möglich</li>
+<li>Wenn <span class="math inline">\(\gamma_B = 1\)</span> (Standort B errichtet): <span class="math inline">\(x_{B1} + x_{B2} + x_{B3} \leq b_B\)</span>, d.h. Kapazität begrenzt Lieferungen</li>
 </ul>
+</div>
+</div>
+</div>
 </section>
-<section id="your-data-protection-rights" class="level2">
-<h2 class="anchored" data-anchor-id="your-data-protection-rights">8. Your Data Protection Rights</h2>
-<p>Depending on your location and applicable data protection laws, you may have the following rights regarding your personal data:</p>
+<section id="aufgabe-3---standortplanung-mit-kapazitätsbeschränkung" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-3---standortplanung-mit-kapazitätsbeschränkung">Aufgabe 3 - Standortplanung mit Kapazitätsbeschränkung</h2>
+<p>Betrachten Sie folgendes Standortplanungsproblem:</p>
+<p><strong>Daten:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Standort <span class="math inline">\(i\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(c_{i1}\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(c_{i2}\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(c_{i3}\)</span></th>
+<th style="text-align: left;">Fixkosten <span class="math inline">\(f_i\)</span></th>
+<th style="text-align: left;">Kapazität <span class="math inline">\(b_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">1.000</td>
+<td style="text-align: left;">400</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">1.200</td>
+<td style="text-align: left;">400</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">900</td>
+<td style="text-align: left;">400</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bedarfe:</strong> <span class="math inline">\(d_1 = 200\)</span>, <span class="math inline">\(d_2 = 300\)</span>, <span class="math inline">\(d_3 = 250\)</span></p>
+<ol type="a">
+<li>Gegeben sei folgende Lösung: <span class="math inline">\(\gamma_A = 1\)</span>, <span class="math inline">\(\gamma_B = 1\)</span>, <span class="math inline">\(\gamma_C = 0\)</span>
 <ul>
-<li><strong>Right to Access:</strong> You can request copies of your personal data that we hold.</li>
-<li><strong>Right to Rectification:</strong> You can request correction of inaccurate or incomplete data.</li>
-<li><strong>Right to Erasure (‘Right to be Forgotten’):</strong> You can request the deletion of your personal data under certain conditions.</li>
-<li><strong>Right to Restrict Processing:</strong> You can request the limitation of how we process your data under certain conditions.</li>
-<li><strong>Right to Data Portability:</strong> You can request that we transfer the data we have collected to another organization, or directly to you, under certain conditions.</li>
-<li><strong>Right to Object:</strong> You can object to our processing of your personal data based on legitimate interests.</li>
-<li><strong>Right to Withdraw Consent:</strong> If processing is based on consent, you can withdraw it at any time.</li>
+<li>Abnehmer 1 wird vollständig von A beliefert: <span class="math inline">\(x_{A1} = 200\)</span></li>
+<li>Abnehmer 2 wird je zur Hälfte von A und B beliefert: <span class="math inline">\(x_{A2} = 150\)</span>, <span class="math inline">\(x_{B2} = 150\)</span></li>
+<li>Abnehmer 3 wird vollständig von B beliefert: <span class="math inline">\(x_{B3} = 250\)</span> Berechnen Sie den Zielfunktionswert dieser Lösung.</li>
+</ul></li>
+<li>Prüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingungen.</li>
+<li>Ist folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert (<span class="math inline">\(x_{A2} = 300\)</span>)? Begründen Sie.</li>
+<li>Schlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Berechnung des Zielfunktionswerts:</strong></li>
+</ol>
+<p>Fixkosten: <span class="math inline">\(f_A \cdot \gamma_A + f_B \cdot \gamma_B + f_C \cdot \gamma_C = 1.000 \cdot 1 + 1.200 \cdot 1 + 900 \cdot 0 = 2.200\)</span></p>
+<p>Transportkosten:</p>
+<ul>
+<li>Von A: <span class="math inline">\(c_{A1} \cdot x_{A1} + c_{A2} \cdot x_{A2} = 1 \cdot 200 + 2 \cdot 150 = 500\)</span></li>
+<li>Von B: <span class="math inline">\(c_{B2} \cdot x_{B2} + c_{B3} \cdot x_{B3} = 5 \cdot 150 + 6 \cdot 250 = 2.250\)</span></li>
 </ul>
-<p>To exercise any of these rights, please contact us using the details provided in Section 2 (Data Controller). We may need to verify your identity before processing your request.</p>
+<p><strong>Gesamtkosten:</strong> <span class="math inline">\(Z = 2.200 + 500 + 2.250 = 4.950\)</span></p>
+<ol start="2" type="a">
+<li><strong>Prüfung der Zulässigkeit:</strong></li>
+</ol>
+<p><strong>Bedarfsdeckung (NB 1):</strong></p>
+<ul>
+<li>Abnehmer 1: <span class="math inline">\(x_{A1} + x_{B1} + x_{C1} = 200 + 0 + 0 = 200 = d_1\)</span> ✓</li>
+<li>Abnehmer 2: <span class="math inline">\(x_{A2} + x_{B2} + x_{C2} = 150 + 150 + 0 = 300 = d_2\)</span> ✓</li>
+<li>Abnehmer 3: <span class="math inline">\(x_{A3} + x_{B3} + x_{C3} = 0 + 250 + 0 = 250 = d_3\)</span> ✓</li>
+</ul>
+<p><strong>Kapazitätsbeschränkung (NB 2):</strong></p>
+<ul>
+<li>Standort A: <span class="math inline">\(x_{A1} + x_{A2} + x_{A3} = 200 + 150 + 0 = 350 \leq 400 = b_A \cdot 1\)</span> ✓</li>
+<li>Standort B: <span class="math inline">\(x_{B1} + x_{B2} + x_{B3} = 0 + 150 + 250 = 400 \leq 400 = b_B \cdot 1\)</span> ✓</li>
+<li>Standort C: <span class="math inline">\(x_{C1} + x_{C2} + x_{C3} = 0 + 0 + 0 = 0 \leq 0 = b_C \cdot 0\)</span> ✓</li>
+</ul>
+<p><strong>Ergebnis:</strong> Die Lösung ist zulässig.</p>
+<ol start="3" type="a">
+<li><strong>Alternative mit vollständiger Belieferung von Abnehmer 2 durch A:</strong></li>
+</ol>
+<p>Bei <span class="math inline">\(x_{A2} = 300\)</span> wäre die Auslastung von A: <span class="math inline">\(x_{A1} + x_{A2} + x_{A3} = 200 + 300 + 0 = 500 &gt; 400 = b_A\)</span></p>
+<p><strong>Nein</strong>, diese Lösung ist nicht zulässig, da die Kapazität von Standort A überschritten wird.</p>
+<ol start="4" type="a">
+<li><strong>Verbesserte Lösung:</strong></li>
+</ol>
+<p>Bei den geöffneten Standorten A und B kann die Belieferung optimiert werden:</p>
+<p><strong>Optimale Belieferungsstrategie:</strong></p>
+<ul>
+<li>Abnehmer 1: vollständig von A beliefern (da <span class="math inline">\(c_{A1} = 1 &lt; c_{B1} = 4\)</span>)</li>
+<li>Abnehmer 2: möglichst viel von A beliefern (da <span class="math inline">\(c_{A2} = 2 &lt; c_{B2} = 5\)</span>)</li>
+<li>Abnehmer 3: von B beliefern</li>
+</ul>
+<p><strong>Verbesserte Lösung:</strong> <span class="math inline">\(\gamma_A = 1\)</span>, <span class="math inline">\(\gamma_B = 1\)</span>, <span class="math inline">\(\gamma_C = 0\)</span></p>
+<ul>
+<li><span class="math inline">\(x_{A1} = 200\)</span> (Abnehmer 1 vollständig von A)</li>
+<li><span class="math inline">\(x_{A2} = 200\)</span> (maximale Belieferung von Abnehmer 2 durch A)</li>
+<li><span class="math inline">\(x_{B2} = 100\)</span> (Restbedarf von Abnehmer 2)</li>
+<li><span class="math inline">\(x_{B3} = 250\)</span> (Abnehmer 3 vollständig von B)</li>
+</ul>
+<p><strong>Gesamtkosten:</strong> <span class="math inline">\(Z = 2.200 + 600 + 2.000 = 4.800\)</span></p>
+<p><strong>Verbesserung:</strong> Die ursprüngliche Lösung kostete 4.950, die verbesserte Lösung kostet 4.800, was eine Ersparnis von 150 bedeutet.</p>
+<p><strong>Begründung:</strong> Durch die stärkere Nutzung des günstigeren Standorts A für Abnehmer 2 (200 statt 150 Einheiten) werden die Transportkosten reduziert, während alle Kapazitätsbeschränkungen eingehalten bleiben.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="changes-to-this-privacy-policy" class="level2">
-<h2 class="anchored" data-anchor-id="changes-to-this-privacy-policy">9. Changes to This Privacy Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the “Last Updated” date at the top. We encourage you to review this policy periodically for any changes.</p>
+<section id="aufgabe-4---heuristiken-zur-standortplanung" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-4---heuristiken-zur-standortplanung">Aufgabe 4 - Heuristiken zur Standortplanung</h2>
+<p>Ein mittelständisches Unternehmen plant die Versorgung von drei regionalen Abnehmern. Folgende Daten liegen vor:</p>
+<p><strong>Transportkosten <span class="math inline">\(c_{ij}\)</span> [€/ME], Fixkosten und Kapazitäten:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Standort <span class="math inline">\(i\)</span></th>
+<th style="text-align: left;">Abnehmer 1</th>
+<th style="text-align: left;">Abnehmer 2</th>
+<th style="text-align: left;">Abnehmer 3</th>
+<th style="text-align: left;">Fixkosten <span class="math inline">\(f_i\)</span></th>
+<th style="text-align: left;">Kapazität <span class="math inline">\(b_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;">25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;">25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bedarfe:</strong> <span class="math inline">\(d_1 = 20\)</span>, <span class="math inline">\(d_2 = 10\)</span>, <span class="math inline">\(d_3 = 10\)</span></p>
+<ol type="a">
+<li>Wenden Sie die Add-Heuristik an, um eine Lösung zu bestimmen. Dokumentieren Sie jeden Schritt.</li>
+<li>Sind heuristische Lösungen optimal? Begründen Sie Ihre Antwort.</li>
+<li>Auf welcher Managementebene sind Standortentscheidungen angesiedelt und warum?</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Add-Heuristik:</strong></li>
+</ol>
+<p><strong>Schritt 1:</strong> Bestimme den besten Einzelstandort für vollständige Belieferung aller Abnehmer:</p>
+<ul>
+<li>Standort A: Fixkosten 60 + Transportkosten <span class="math inline">\((4 \cdot 20 + 4 \cdot 10 + 9 \cdot 10) = 60 + 210 = 270\)</span> €</li>
+<li>Standort B: Fixkosten 60 + Transportkosten <span class="math inline">\((8 \cdot 20 + 7 \cdot 10 + 2 \cdot 10) = 60 + 250 = 310\)</span> €</li>
+<li>Standort C: Fixkosten 70 + Transportkosten <span class="math inline">\((6 \cdot 20 + 3 \cdot 10 + 5 \cdot 10) = 70 + 200 = 270\)</span> €</li>
+</ul>
+<p><strong>Start mit Standort A</strong> (270 €, willkürlich)</p>
+<p><strong>Schritt 2:</strong> Prüfe Vorteilhaftigkeit eines zweiten Standorts:</p>
+<p>Zusätzlich Standort B:</p>
+<ul>
+<li>Abnehmer 3: Wechsel von A zu B → Einsparung: <span class="math inline">\((9-2) \cdot 10 = 70\)</span> €</li>
+<li>Zusätzliche Fixkosten: 60 €</li>
+<li>Nettovorteil: <span class="math inline">\(70 - 60 = 10\)</span> € ✓</li>
+</ul>
+<p>Zusätzlich Standort C:</p>
+<ul>
+<li>Abnehmer 2: Wechsel von A zu C → Einsparung: <span class="math inline">\((4-3) \cdot 10 = 10\)</span> €</li>
+<li>Abnehmer 3: Wechsel von A zu C → Einsparung: <span class="math inline">\((9-5) \cdot 10 = 40\)</span> €</li>
+<li>Zusätzliche Fixkosten: 70 €</li>
+<li>Nettovorteil: <span class="math inline">\(50 - 70 = -20\)</span> € ✗</li>
+</ul>
+<p><strong>Wähle Standort B zusätzlich</strong></p>
+<p><strong>Schritt 3:</strong> Prüfe dritten Standort C (mit A und B bereits gewählt):</p>
+<ul>
+<li>Abnehmer 2: Wechsel von A zu C → Einsparung: <span class="math inline">\((4-3) \cdot 10 = 10\)</span> €</li>
+<li>Zusätzliche Fixkosten: 70 €</li>
+<li>Nettovorteil: <span class="math inline">\(10 - 70 = -60\)</span> € ✗</li>
+</ul>
+<p><strong>Ergebnis Add-Heuristik:</strong></p>
+<ul>
+<li>Standorte: A und B</li>
+<li>Zuordnung: Abnehmer 1 und 2 von A, Abnehmer 3 von B</li>
+<li>Kosten: <span class="math inline">\(60 + 60 + 4 \cdot 20 + 4 \cdot 10 + 2 \cdot 10 = 120 + 80 + 40 + 20 = 260\)</span> €</li>
+</ul>
+<ol start="2" type="a">
+<li><strong>Optimalität:</strong></li>
+</ol>
+<p>Heuristische Lösungen sind <strong>nicht notwendigerweise optimal</strong>, da:</p>
+<ul>
+<li>Sie nur lokale Verbesserungen betrachten</li>
+<li>Nicht alle Kombinationen systematisch geprüft werden</li>
+</ul>
+<p>Die tatsächlich optimale Lösung müsste durch vollständige Enumeration oder Optimierungsverfahren ermittelt werden.</p>
+<ol start="3" type="a">
+<li><strong>Managementebene:</strong></li>
+</ol>
+<p>Standortentscheidungen sind auf der <strong>strategischen Managementebene</strong> angesiedelt, da sie:</p>
+<ul>
+<li>Langfristige Auswirkungen haben (mehrere Jahre bis Jahrzehnte)</li>
+<li>Hohe Investitionen erfordern</li>
+<li>Schwer reversibel sind</li>
+<li>Die Wettbewerbsposition fundamental beeinflussen</li>
+<li>Mit der Unternehmensstrategie abgestimmt werden müssen</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -814,7 +1151,7 @@ Germany</p>
     </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link active" href="../general/privacy.html" aria-current="page">
+    <a class="nav-link" href="../general/privacy.html">
 <p>Privacy Policy</p>
 </a>
   </li>  

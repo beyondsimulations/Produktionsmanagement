@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-18">
 
-<title>Privacy Policy – Produktionsmanagement</title>
+<title>Übung 02 – Produktionsmanagement</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,15 +72,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script defer="" data-domain="beyondsimulations.github.io" src="https://plb.byndsim.com/js/script.file-downloads.hash.outbound-links.js"></script>
-<script>
-    window.plausible =
-        window.plausible ||
-        function () {
-            (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
-</script>
+<script defer="" src="https://umi.byndsim.com/script.js" data-website-id="e230d76b-b0a6-477e-8c5d-19a7bd661e68"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -94,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Privacy Policy</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-02-fliessband.pdf">02 Leistung</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-02.html">Tutorium</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-02.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/tutorial-02.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tutorium</span></a>
   </div>
 </li>
@@ -263,25 +284,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#data-controller" id="toc-data-controller" class="nav-link" data-scroll-target="#data-controller">2. Data Controller</a></li>
-  <li><a href="#information-we-collect" id="toc-information-we-collect" class="nav-link" data-scroll-target="#information-we-collect">3. Information We Collect</a></li>
-  <li><a href="#how-we-use-your-information" id="toc-how-we-use-your-information" class="nav-link" data-scroll-target="#how-we-use-your-information">4. How We Use Your Information</a></li>
-  <li><a href="#legal-basis-for-processing" id="toc-legal-basis-for-processing" class="nav-link" data-scroll-target="#legal-basis-for-processing">5. Legal Basis for Processing</a></li>
-  <li><a href="#data-sharing-and-third-parties" id="toc-data-sharing-and-third-parties" class="nav-link" data-scroll-target="#data-sharing-and-third-parties">6. Data Sharing and Third Parties</a></li>
-  <li><a href="#data-storage-security-and-retention" id="toc-data-storage-security-and-retention" class="nav-link" data-scroll-target="#data-storage-security-and-retention">7. Data Storage, Security, and Retention</a></li>
-  <li><a href="#your-data-protection-rights" id="toc-your-data-protection-rights" class="nav-link" data-scroll-target="#your-data-protection-rights">8. Your Data Protection Rights</a></li>
-  <li><a href="#changes-to-this-privacy-policy" id="toc-changes-to-this-privacy-policy" class="nav-link" data-scroll-target="#changes-to-this-privacy-policy">9. Changes to This Privacy Policy</a></li>
+  <li><a href="#aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion" id="toc-aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion" class="nav-link active" data-scroll-target="#aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion">Aufgabe 1 - Warteschlangenanalyse in der Automobilproduktion</a></li>
+  <li><a href="#aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage" id="toc-aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage" class="nav-link" data-scroll-target="#aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage">Aufgabe 2 - Fließbandabstimmung bei der Smartphone-Montage</a></li>
+  <li><a href="#aufgabe-3---leistungsanalyse-eines-fließproduktionssystems" id="toc-aufgabe-3---leistungsanalyse-eines-fließproduktionssystems" class="nav-link" data-scroll-target="#aufgabe-3---leistungsanalyse-eines-fließproduktionssystems">Aufgabe 3 - Leistungsanalyse eines Fließproduktionssystems</a></li>
+  <li><a href="#aufgabe-4---starving-und-blocking" id="toc-aufgabe-4---starving-und-blocking" class="nav-link" data-scroll-target="#aufgabe-4---starving-und-blocking">Aufgabe 4 - Starving und Blocking</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="privacy.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tutorial-02.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lec-02-fliessband.pdf">02 Leistung</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-02.html">Tutorium</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Privacy Policy</h1>
-<p class="subtitle lead">How we handle your data</p>
+<h1 class="title">Übung 02</h1>
+<p class="subtitle lead">Fließbandproduktion &amp; Leistungsanalysen</p>
 </div>
 
 
@@ -289,12 +305,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 18, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -304,87 +314,453 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
-<p>Welcome! This Privacy Policy explains how we collect, use, shares, and protects information in relation to our AI Chatbot service (the “Chatbot”) provided on this website. All other services do not use data that is covered by this policy!</p>
-<p>We are committed to protecting your privacy. This policy outlines our practices concerning the data processed when you interact with our Chatbot. By using the Chatbot, you agree to the collection and use of information in accordance with this policy.</p>
-</section>
-<section id="data-controller" class="level2">
-<h2 class="anchored" data-anchor-id="data-controller">2. Data Controller</h2>
-<p>The data controller responsible for your personal data is:</p>
-<p>Beyond Simulations GmbH<br>
-Am Eich 9d<br>
-22113 Oststeinbek<br>
-Germany</p>
-<p>Email: <a href="mailto:info@beyondsimulations.com">info@beyond-simulations.com</a></p>
-</section>
-<section id="information-we-collect" class="level2">
-<h2 class="anchored" data-anchor-id="information-we-collect">3. Information We Collect</h2>
-<p>When you interact with our Chatbot, we collect and process the following types of information:</p>
+<section id="aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-1---warteschlangenanalyse-in-der-automobilproduktion">Aufgabe 1 - Warteschlangenanalyse in der Automobilproduktion</h2>
+<p>Ein Automobilzulieferer betreibt eine Fertigungslinie mit 4 Bearbeitungsstationen für Getriebekomponenten. Die Stationen haben folgende Bearbeitungsraten (in Stück pro Stunde):</p>
 <ul>
-<li><strong>Chat Interactions:</strong> This includes the questions, prompts, and text you submit to the Chatbot (“Prompts”) and the responses generated by the Chatbot (“Responses”). We do not store any personal data and all prompts are anonymized.</li>
-<li><strong>Technical Data:</strong> We may automatically collect technical information associated with your interaction, such as timestamps, session identifiers for service functionality. This data is processed on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Usage Data:</strong> We may collect aggregated and anonymized data about how the Chatbot is used to monitor performance and improve the service.</li>
+<li>Station 1 (Drehen): <span class="math inline">\(\mu_1 = 3\)</span></li>
+<li>Station 2 (Fräsen): <span class="math inline">\(\mu_2 = 3\)</span></li>
+<li>Station 3 (Schleifen): <span class="math inline">\(\mu_3 = 4\)</span></li>
+<li>Station 4 (Qualitätskontrolle): <span class="math inline">\(\mu_4 = 3\)</span></li>
 </ul>
-</section>
-<section id="how-we-use-your-information" class="level2">
-<h2 class="anchored" data-anchor-id="how-we-use-your-information">4. How We Use Your Information</h2>
-<p>We use the collected information for the following purposes:</p>
+<p>Zwischen den Stationen sind unbeschränkte Puffer vorhanden. Die Zwischenankunfts- und Bearbeitungszeiten sind exponentialverteilt.</p>
+<ol type="a">
+<li>Bestimmen Sie für die Ankunftsraten <span class="math inline">\(\lambda_1 = 2\)</span> und <span class="math inline">\(\lambda_1 = 3\)</span> Stück/h vor der ersten Station:
 <ul>
-<li><strong>To Provide and Operate the Chatbot:</strong> To receive your Prompts, process them using AI models, and deliver Responses back to you.</li>
-<li><strong>To Route Requests:</strong> To manage communication between our Chatbot interface and the underlying AI models via intermediary services.</li>
-<li><strong>For Safety and Content Moderation:</strong> To analyze Prompts and/or potential Responses for harmful, inappropriate, or policy-violating content using designated services by Mistral AI acting as guardrails, aiming to ensure safer interactions.</li>
-<li><strong>For Service Improvement:</strong> To analyze usage patterns to understand user needs, troubleshoot issues, and enhance the Chatbot’s performance and capabilities.</li>
-<li><strong>For Security and Monitoring:</strong> To maintain the security of our service, prevent fraud, and monitor for potential misuse.</li>
-<li><strong>To Comply with Legal Obligations:</strong> To meet any applicable legal or regulatory requirements.</li>
-</ul>
-</section>
-<section id="legal-basis-for-processing" class="level2">
-<h2 class="anchored" data-anchor-id="legal-basis-for-processing">5. Legal Basis for Processing</h2>
-<p>We process your personal data based on the following legal grounds:</p>
+<li>Die Produktionsrate des Systems</li>
+<li>Die Ankunftsraten an den einzelnen Stationen</li>
+</ul></li>
+<li>Berechnen Sie für beide Szenarien aus a):
 <ul>
-<li><strong>Legitimate Interests:</strong> Processing is necessary for our legitimate interests in operating and improving the Chatbot service and maintaining its security, provided these interests are not overridden by your data protection rights.</li>
-<li><strong>Consent:</strong> In some cases, we might ask for your explicit consent for specific processing activities (e.g., using conversation data for fine-tuning models beyond basic service provision).</li>
-<li><strong>Legal Obligation:</strong> Processing is necessary to comply with a legal obligation to which we are subject.</li>
-</ul>
-</section>
-<section id="data-sharing-and-third-parties" class="level2">
-<h2 class="anchored" data-anchor-id="data-sharing-and-third-parties">6. Data Sharing and Third Parties</h2>
-<p>To provide the Chatbot service, your Prompts are processed by and shared with the following third-party services and infrastructure providers:</p>
+<li>Die Auslastung jeder Station und die durchschnittliche Systemauslastung</li>
+<li>Den mittleren Bestand an jeder Station und im Gesamtsystem</li>
+<li>Die mittlere Durchlaufzeit pro Station und die Gesamtdurchlaufzeit</li>
+</ul></li>
+<li>Für <span class="math inline">\(\lambda_1 = 2\)</span>: Wie hoch ist die Wahrscheinlichkeit, dass sich an Station 1:
 <ul>
-<li><strong>Chatbot Interface:</strong> The user interface for the Chatbot runs directly in your web browser.</li>
-<li><strong>RAG-Backend:</strong> The RAG backend runs on a self-hosted server on Hetzner in Germany.</li>
-<li><strong>LLM Observation (Langfuse):</strong> We use Langfuse to observe the usage of the LLM models we use. Your Prompts (and generated responses) pass through Langfuse to reach the selected LLM provider or guardrail service. The data is stored on our self-hosted server at Hetzner in Germany.</li>
-<li><strong>Hosting Provider (Hetzner):</strong> Our instance of Langfuse is self-hosted on servers provided by Hetzner Online GmbH. Hetzner acts as a data processor providing the infrastructure. We store application data and interaction logs on these servers, located within Germany.</li>
-<li><strong>Mistral AI:</strong> We use Mistral AI for two primary purposes: (1) as one of the LLM options to generate Responses to your Prompts, and (2) <strong>as a guardrail service</strong> to check Prompts and/or potential Responses (which may have been generated by Mistral AI itself) for safety, appropriateness, and compliance with content policies <em>before</em> a final response is delivered to you. When Mistral is used for either generation or guardrail checking, your data (relevant Prompts and/or potential Responses) is processed according to Mistral’s terms and privacy policy. The data ist not used or saved for training purposes by the model providers.</li>
-</ul>
-<p><strong>Important Note on Third-Party Processing:</strong> These LLM and guardrail providers process your data to generate Responses or perform safety checks. They may use data according to their own policies, potentially including service improvement, subject to their terms. We encourage you to review their respective privacy policies. We do not explicitly share personal identifiers like your name or email through the Chatbot interaction unless you voluntarily include such information in your Prompts.</p>
-</section>
-<section id="data-storage-security-and-retention" class="level2">
-<h2 class="anchored" data-anchor-id="data-storage-security-and-retention">7. Data Storage, Security, and Retention</h2>
+<li>Genau 5 Werkstücke befinden?</li>
+<li>Höchstens 5 Werkstücke befinden?</li>
+<li>Die Station leer ist?</li>
+</ul></li>
+<li>Eine zusätzliche Vorbearbeitungsstation hat <span class="math inline">\(\lambda = 5\)</span> und <span class="math inline">\(\mu = 7\)</span>. Analysieren Sie diese Station bezüglich Auslastung, Bestand und Durchlaufzeit.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Produktionsrate und Ankunftsraten:</strong></li>
+</ol>
+<p>Für <span class="math inline">\(\lambda_1 = 2\)</span>:</p>
 <ul>
-<li><strong>Storage:</strong> Chat interaction data (Prompts, Responses) and technical logs may be stored temporarily or persistently (depending on configuration) on our Langfuse instance hosted on Hetzner servers in Germany.</li>
-<li><strong>Security:</strong> We implement reasonable technical and organizational measures to protect your data from unauthorized access, disclosure, alteration, or destruction. This includes using HTTPS encryption for data transmitted between your browser, our server, and the LLM providers. Access to the backend systems is restricted.</li>
-<li><strong>Retention:</strong> We retain chat interaction data and technical logs only for as long as necessary to fulfill the purposes outlined in this policy, for troubleshooting, security logging, service improvement, or as required by law. Retention periods vary depending on the type of data and our operational needs.</li>
+<li>Produktionsrate: <span class="math inline">\(X = \min\{\lambda_1, \mu_1, \mu_2, \mu_3, \mu_4\} = \min\{2, 3, 3, 4, 3\} = 2\)</span> Stück/h</li>
+<li>Ankunftsraten: <span class="math inline">\(\lambda_1 = 2\)</span>, <span class="math inline">\(\lambda_2 = \min\{2, 3\} = 2\)</span>, <span class="math inline">\(\lambda_3 = \min\{2, 3\} = 2\)</span>, <span class="math inline">\(\lambda_4 = \min\{2, 4\} = 2\)</span></li>
 </ul>
-</section>
-<section id="your-data-protection-rights" class="level2">
-<h2 class="anchored" data-anchor-id="your-data-protection-rights">8. Your Data Protection Rights</h2>
-<p>Depending on your location and applicable data protection laws, you may have the following rights regarding your personal data:</p>
+<p>Für <span class="math inline">\(\lambda_1 = 3\)</span>:</p>
 <ul>
-<li><strong>Right to Access:</strong> You can request copies of your personal data that we hold.</li>
-<li><strong>Right to Rectification:</strong> You can request correction of inaccurate or incomplete data.</li>
-<li><strong>Right to Erasure (‘Right to be Forgotten’):</strong> You can request the deletion of your personal data under certain conditions.</li>
-<li><strong>Right to Restrict Processing:</strong> You can request the limitation of how we process your data under certain conditions.</li>
-<li><strong>Right to Data Portability:</strong> You can request that we transfer the data we have collected to another organization, or directly to you, under certain conditions.</li>
-<li><strong>Right to Object:</strong> You can object to our processing of your personal data based on legitimate interests.</li>
-<li><strong>Right to Withdraw Consent:</strong> If processing is based on consent, you can withdraw it at any time.</li>
+<li>Produktionsrate: <span class="math inline">\(X = \min\{3, 3, 3, 4, 3\} = 3\)</span> Stück/h</li>
+<li>Ankunftsraten: <span class="math inline">\(\lambda_1 = 3\)</span>, <span class="math inline">\(\lambda_2 = \min\{3, 3\} = 3\)</span>, <span class="math inline">\(\lambda_3 = \min\{3, 3\} = 3\)</span>, <span class="math inline">\(\lambda_4 = \min\{3, 4\} = 3\)</span></li>
 </ul>
-<p>To exercise any of these rights, please contact us using the details provided in Section 2 (Data Controller). We may need to verify your identity before processing your request.</p>
+<ol start="2" type="a">
+<li><strong>Kenngrößen für beide Szenarien:</strong></li>
+</ol>
+<p><strong>Szenario 1: <span class="math inline">\(\lambda_1 = 2\)</span></strong></p>
+<p>Auslastungen:</p>
+<ul>
+<li><span class="math inline">\(\rho_1 = \frac{2}{3} = 0,667\)</span></li>
+<li><span class="math inline">\(\rho_2 = \frac{2}{3} = 0,667\)</span></li>
+<li><span class="math inline">\(\rho_3 = \frac{2}{4} = 0,500\)</span></li>
+<li><span class="math inline">\(\rho_4 = \frac{2}{3} = 0,667\)</span></li>
+<li>Durchschnitt: <span class="math inline">\(\bar{\rho} = 0,625\)</span></li>
+</ul>
+<p>Mittlerer Bestand:</p>
+<ul>
+<li><span class="math inline">\(L_1 = \frac{0,667}{1-0,667} = 2,00\)</span> Stück</li>
+<li><span class="math inline">\(L_2 = \frac{0,667}{1-0,667} = 2,00\)</span> Stück</li>
+<li><span class="math inline">\(L_3 = \frac{0,500}{1-0,500} = 1,00\)</span> Stück</li>
+<li><span class="math inline">\(L_4 = \frac{0,667}{1-0,667} = 2,00\)</span> Stück</li>
+<li>Gesamt: <span class="math inline">\(L = 7,00\)</span> Stück</li>
+</ul>
+<p>Mittlere Durchlaufzeit (Little’s Gesetz: <span class="math inline">\(W = L/\lambda\)</span>):</p>
+<ul>
+<li><span class="math inline">\(W_1 = \frac{2,00}{2} = 1,00\)</span> h</li>
+<li><span class="math inline">\(W_2 = \frac{2,00}{2} = 1,00\)</span> h</li>
+<li><span class="math inline">\(W_3 = \frac{1,00}{2} = 0,50\)</span> h</li>
+<li><span class="math inline">\(W_4 = \frac{2,00}{2} = 1,00\)</span> h</li>
+<li>Gesamt: <span class="math inline">\(W = 3,50\)</span> h</li>
+</ul>
+<p><strong>Szenario 2: <span class="math inline">\(\lambda_1 = 3\)</span></strong></p>
+<p>Auslastungen:</p>
+<ul>
+<li><span class="math inline">\(\rho_1 = \rho_2 = \rho_4 = \frac{3}{3} = 1,000\)</span> → Grenzfall!</li>
+<li><span class="math inline">\(\rho_3 = \frac{3}{4} = 0,750\)</span></li>
+</ul>
+<p>Das System arbeitet am Limit. Die Stationen 1, 2 und 4 haben 100% Auslastung, was theoretisch noch stabil ist, aber praktisch extrem problematisch:</p>
+<ul>
+<li>Keine Puffer für Schwankungen vorhanden</li>
+<li>Warteschlangen werden sehr lang (theoretisch unendlich)</li>
+<li>Jede kleine Störung führt zu Problemen</li>
+<li>In der Praxis nicht realisierbar → Ankunftsrate reduzieren oder Kapazitäten erhöhen!</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Wahrscheinlichkeiten für Station 1 bei <span class="math inline">\(\lambda_1 = 2\)</span>:</strong></li>
+</ol>
+<p>Mit <span class="math inline">\(\rho_1 = 0,667\)</span> gilt: <span class="math inline">\(P[N=n] = (1-\rho) \cdot \rho^n = 0,333 \cdot 0,667^n\)</span></p>
+<ul>
+<li><span class="math inline">\(P[N=5] = 0,333 \cdot 0,667^5 = 0,333 \cdot 0,132 = 0,044\)</span> (4,4%)</li>
+<li><span class="math inline">\(P[N \leq 5] = \sum_{n=0}^{5} P[N=n] = 0,912\)</span></li>
+<li><span class="math inline">\(P[N=0] = 0,333\)</span> (33,3%)</li>
+</ul>
+<ol start="4" type="a">
+<li><strong>Analyse der Vorbearbeitungsstation:</strong></li>
+</ol>
+<p>Bei <span class="math inline">\(\lambda = 5\)</span> und <span class="math inline">\(\mu = 7\)</span>:</p>
+<ul>
+<li>Bearbeitungszeit: <span class="math inline">\(b = \frac{1}{\mu} = \frac{1}{7} = 0,143\)</span> h</li>
+<li>Auslastung: <span class="math inline">\(\rho = \frac{5}{7} = 0,714\)</span></li>
+<li>Mittlerer Bestand: <span class="math inline">\(L = \frac{0,714}{1-0,714} = 2,50\)</span> Stück</li>
+<li>Mittlere Durchlaufzeit: <span class="math inline">\(W = \frac{L}{\lambda} = \frac{2,50}{5} = 0,50\)</span> h</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="changes-to-this-privacy-policy" class="level2">
-<h2 class="anchored" data-anchor-id="changes-to-this-privacy-policy">9. Changes to This Privacy Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the “Last Updated” date at the top. We encourage you to review this policy periodically for any changes.</p>
+<section id="aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-2---fließbandabstimmung-bei-der-smartphone-montage">Aufgabe 2 - Fließbandabstimmung bei der Smartphone-Montage</h2>
+<p>Ein Elektronikhersteller plant eine neue Montagelinie für Smartphones. Pro 8-Stunden-Schicht sollen 48 Geräte montiert werden. Die Montage besteht aus 10 Arbeitselementen mit folgenden Beziehungen:</p>
+<p><strong>Arbeitselemente und Elementzeiten:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Element</th>
+<th style="text-align: left;">A</th>
+<th style="text-align: left;">B</th>
+<th style="text-align: left;">C</th>
+<th style="text-align: left;">D</th>
+<th style="text-align: left;">E</th>
+<th style="text-align: left;">F</th>
+<th style="text-align: left;">G</th>
+<th style="text-align: left;">H</th>
+<th style="text-align: left;">I</th>
+<th style="text-align: left;">J</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Zeit [min]</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vorranggraph:</strong></p>
+<pre><code>    A(5) ──→ D(4) ──→ G(4) ──────────────→ J(5)
+         ↘                    ↗         ↗
+          E(8) ──→ H(5) ────↗          ↗
+          ↗                          ↗
+    B(3) ↗                         ↗
+                                 ↗
+    C(6) ──→ F(3) ──→ I(6) ──→ ↗</code></pre>
+<ol type="a">
+<li>Bestimmen Sie die Taktzeit für die geforderte Produktionsrate.</li>
+<li>Berechnen Sie die theoretisch minimale Anzahl an Stationen. Wie viele Stationen werden maximal benötigt?</li>
+<li>Führen Sie eine Fließbandabstimmung mit der Heuristik “Längste Elementzeit zuerst” durch.</li>
+<li>Berechnen Sie den Bandwirkungsgrad Ihrer Lösung.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Taktzeit:</strong></li>
+</ol>
+<ul>
+<li>Verfügbare Zeit: <span class="math inline">\(T = 8 \text{ h} \times 60 \text{ min/h} = 480\)</span> min</li>
+<li>Produktionsrate: 48 Stück/Schicht</li>
+<li>Taktzeit: <span class="math inline">\(C = \frac{480}{48} = 10\)</span> min/Stück</li>
+</ul>
+<ol start="2" type="a">
+<li><strong>Stationenanzahl:</strong></li>
+</ol>
+<ul>
+<li>Theoretisches Minimum: <span class="math inline">\(M_{\min} = \lceil\frac{49}{10}\rceil = 5\)</span> Stationen</li>
+<li>Maximum: <span class="math inline">\(M_{\max} = 10\)</span> Stationen (ein Element pro Station)</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Fließbandabstimmung (Längste Elementzeit zuerst):</strong></li>
+</ol>
+<p><strong>Prioritätsliste</strong>: E(8), C(6), I(6), A(5), H(5), J(5), D(4), G(4), B(3), F(3)</p>
+<p><strong>Wichtig:</strong> Es werden nur Elemente zugeordnet, deren Vorgänger bereits zugeordnet sind!</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 23%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Station</th>
+<th style="text-align: left;">Verfügbare Elemente</th>
+<th style="text-align: left;">Gewähltes Element</th>
+<th style="text-align: left;">Elementzeit</th>
+<th style="text-align: left;">Stationszeit</th>
+<th style="text-align: left;">Restzeit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">A, B, C</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">A, B, F</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">II</td>
+<td style="text-align: left;">A, F</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">F, D, E</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">III</td>
+<td style="text-align: left;">F, E</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IV</td>
+<td style="text-align: left;">F, G, H</td>
+<td style="text-align: left;">H</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">F, G</td>
+<td style="text-align: left;">G</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">V</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">VI</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+</tr>
+</tbody>
+</table>
+<p>Ergebnis: 6 Stationen benötigt</p>
+<p><strong>Hinweis zur Optimalität:</strong> Das theoretische Minimum von 5 Stationen (⌈49/10⌉) ist aufgrund der Vorrangbeziehungen und Elementzeiten nicht erreichbar. Die gefundene Lösung mit 6 Stationen ist für diese Heuristik gut, muss aber nicht global optimal sein. Andere Heuristiken könnten möglicherweise 5 Stationen erreichen.</p>
+<ol start="4" type="a">
+<li><strong>Bandwirkungsgrad:</strong> <span class="math display">\[U = \frac{\text{Summe Elementzeiten}}{\text{Anzahl Stationen} \times \text{Taktzeit}} = \frac{49}{6 \times 10} = \frac{49}{60} = 0,817 = 81,7\%\]</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-3---leistungsanalyse-eines-fließproduktionssystems" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-3---leistungsanalyse-eines-fließproduktionssystems">Aufgabe 3 - Leistungsanalyse eines Fließproduktionssystems</h2>
+<p>Eine Elektronikfertigung für Leiterplatten besteht aus 5 aufeinanderfolgenden Bearbeitungsstationen. Die erste Station erhält Werkstücke mit einer Rate von <span class="math inline">\(\lambda = 0,08\)</span> Leiterplatten pro Minute. Alle Stationen haben eine mittlere Bearbeitungszeit von <span class="math inline">\(b = 11\)</span> Minuten pro Leiterplatte. Die Bearbeitungszeiten sind exponentialverteilt, und zwischen den Stationen befinden sich unbeschränkte Puffer.</p>
+<ol type="a">
+<li>Berechnen Sie für jede Station:
+<ul>
+<li>Die Bearbeitungsrate <span class="math inline">\(\mu\)</span></li>
+<li>Die Auslastung <span class="math inline">\(\rho\)</span></li>
+<li>Den mittleren Bestand <span class="math inline">\(L\)</span></li>
+<li>Die mittlere Durchlaufzeit <span class="math inline">\(W\)</span></li>
+</ul></li>
+<li>Bestimmen Sie für das Gesamtsystem:
+<ul>
+<li>Die Produktionsrate</li>
+<li>Den Gesamtbestand</li>
+<li>Die Gesamtdurchlaufzeit</li>
+</ul></li>
+<li>Für Station 3: Mit welcher Wahrscheinlichkeit
+<ul>
+<li>Ist die Station leer?</li>
+<li>Befinden sich genau 3 Leiterplatten an der Station?</li>
+<li>Befinden sich 3 oder weniger Leiterplatten an der Station?</li>
+<li>Befinden sich mehr als 10 Leiterplatten an der Station?</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Stationskenngrößen:</strong></li>
+</ol>
+<p>Für alle Stationen <span class="math inline">\(m = 1, ..., 5\)</span>:</p>
+<ul>
+<li>Bearbeitungsrate: <span class="math inline">\(\mu_m = \frac{1}{b_m} = \frac{1}{11} = 0,091\)</span> Leiterplatten/min</li>
+<li>Ankunftsrate: <span class="math inline">\(\lambda_m = \min\{\lambda_{m-1}, \mu_{m-1}\} = 0,08\)</span> (da <span class="math inline">\(0,08 &lt; 0,091\)</span> für alle Stationen)</li>
+<li>Auslastung: <span class="math inline">\(\rho_m = \frac{\lambda_m}{\mu_m} = \frac{0,08}{0,091} = 0,88\)</span></li>
+<li>Mittlerer Bestand: <span class="math inline">\(L_m = \frac{\rho_m}{1-\rho_m} = \frac{0,88}{0,12} = 7,33\)</span> Leiterplatten</li>
+<li>Mittlere Durchlaufzeit: <span class="math inline">\(W_m = \frac{L_m}{\lambda_m} = \frac{7,33}{0,08} = 91,67\)</span> min</li>
+</ul>
+<ol start="2" type="a">
+<li><strong>Gesamtsystem:</strong></li>
+</ol>
+<ul>
+<li>Produktionsrate: <span class="math inline">\(X = \min\{\lambda, \mu_1, ..., \mu_5\} = 0,08\)</span> Leiterplatten/min</li>
+<li>Gesamtbestand: <span class="math inline">\(L = \sum_{m=1}^{5} L_m = 5 \times 7,33 = 36,67\)</span> Leiterplatten</li>
+<li>Gesamtdurchlaufzeit: <span class="math inline">\(W = \sum_{m=1}^{5} W_m = 5 \times 91,67 = 458,33\)</span> min</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Wahrscheinlichkeiten für Station 3:</strong></li>
+</ol>
+<p>Mit <span class="math inline">\(\rho_3 = 0,88\)</span> und <span class="math inline">\(P[N=n] = (1-\rho) \cdot \rho^n\)</span>:</p>
+<ul>
+<li>Station leer: <span class="math inline">\(P[N=0] = 1 - 0,88 = 0,12\)</span> (12%)</li>
+<li>Genau 3 Leiterplatten: <span class="math inline">\(P[N=3] = 0,12 \cdot 0,88^3 = 0,12 \cdot 0,681 = 0,082\)</span> (8,2%)</li>
+<li>3 oder weniger: <span class="math inline">\(P[N \leq 3] = 0,401\)</span> (40,1%)</li>
+<li>Mehr als 10: <span class="math inline">\(P[N &gt; 10] = \rho^{11} = 0,88^{11} = 0,314\)</span> (31,4%)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-4---starving-und-blocking" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe-4---starving-und-blocking">Aufgabe 4 - Starving und Blocking</h2>
+<p>Ein Produktionssystem besteht aus drei Stationen mit beschränkten Puffern:</p>
+<p><code>[Lager] → Station 1 → [Puffer 1: 3 Plätze] → Station 2 → [Puffer 2: 2 Plätze] → Station 3 → [Fertigwarenlager]</code></p>
+<p>Die Bearbeitungszeiten sind deterministisch: <span class="math inline">\(b_1 = 4\)</span> min, <span class="math inline">\(b_2 = 5\)</span> min, <span class="math inline">\(b_3 = 3\)</span> min.</p>
+<ol type="a">
+<li>Erklären Sie die Begriffe “Starving” und “Blocking” im Kontext dieses Systems.</li>
+<li>Identifizieren Sie mögliche Starving- und Blocking-Situationen in diesem System.</li>
+<li>Welche Station ist der Engpass? Wie wirkt sich das auf die anderen Stationen aus?</li>
+<li>Schlagen Sie zwei Maßnahmen zur Verbesserung der Systemleistung vor.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lösung:</strong></p>
+<ol type="a">
+<li><strong>Begriffserklärungen:</strong></li>
+</ol>
+<p><strong>Starving</strong> (Aushungern): Eine Station kann nicht arbeiten, weil der vorgelagerte Puffer leer ist und kein zu bearbeitendes Werkstück verfügbar ist.</p>
+<p><strong>Blocking</strong> (Blockierung): Eine Station kann nicht arbeiten, obwohl sie ein Werkstück fertiggestellt hat, weil der nachgelagerte Puffer voll ist und das fertige Werkstück nicht weitergegeben werden kann.</p>
+<ol start="2" type="a">
+<li><strong>Mögliche Situationen:</strong></li>
+</ol>
+<p><strong>Starving:</strong></p>
+<ul>
+<li>Station 2 hungert aus, wenn Puffer 1 leer ist und Station 1 noch arbeitet</li>
+<li>Station 3 hungert aus, wenn Puffer 2 leer ist und Station 2 noch arbeitet</li>
+</ul>
+<p><strong>Blocking:</strong></p>
+<ul>
+<li>Station 1 wird blockiert, wenn Puffer 1 voll ist (3 Werkstücke) und Station 2 noch arbeitet</li>
+<li>Station 2 wird blockiert, wenn Puffer 2 voll ist (2 Werkstücke) und Station 3 noch arbeitet</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Engpassanalyse:</strong></li>
+</ol>
+<p>Station 2 ist der Engpass mit der längsten Bearbeitungszeit (5 min).</p>
+<p><strong>Auswirkungen:</strong></p>
+<ul>
+<li>Station 1 (schneller als Station 2): Wird blockiert, da Puffer 1 sich füllt</li>
+<li>Station 3 (schneller als Station 2): Hungert aus, da Station 2 nicht schnell genug liefert</li>
+</ul>
+<ol start="4" type="a">
+<li><p><strong>Verbesserungsmaßnahmen:</strong></p>
+<ul>
+<li>Parallelstation zu Station 2 hinzufügen</li>
+<li>Prozessverbesserung bei Station 2 zur Reduzierung von <span class="math inline">\(b_2\)</span></li>
+<li>Ziel: Engpass eliminieren und Systemleistung erhöhen</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -814,7 +1190,7 @@ Germany</p>
     </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link active" href="../general/privacy.html" aria-current="page">
+    <a class="nav-link" href="../general/privacy.html">
 <p>Privacy Policy</p>
 </a>
   </li>  
