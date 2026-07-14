@@ -9,13 +9,15 @@ project:
     - lectures/*.qmd
     - tutorials/*.qmd
 website:
+  favicon: images/favicon.svg
   title: "Produktionsmanagement"
   repo-url: https://github.com/beyondsimulations/Produktionsmanagement
   site-url: https://beyondsimulations.github.io/Produktionsmanagement
   bread-crumbs: true
   sidebar:
     style: floating
-    logo: https://images.beyondsimulations.com/lectures/mj-machine.png
+    logo: images/course-logo.svg
+    logo-alt: "Produktionsmanagement"
     collapse-level: 2
     search: true
     contents:
@@ -88,6 +90,7 @@ format:
       url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     include-in-header:
       - general/header.html
+      - general/favicon.html
     include-after-body:
       text: |
         <script defer src="https://oshu.eu/widget.js"></script>
