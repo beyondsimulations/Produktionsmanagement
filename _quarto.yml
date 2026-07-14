@@ -65,7 +65,10 @@ website:
         href: https://linkedin.com/in/tobiasvlcek
       - icon: envelope
         href: mailto:vlcek@beyondsimulations.com
-      - icon: lock
+    right:
+      - text: "Imprint"
+        href: general/imprint.qmd
+      - text: "Privacy"
         href: general/privacy.qmd
 
 format:
@@ -87,19 +90,14 @@ format:
       - general/header.html
     include-after-body:
       text: |
-        <script src="https://cdn.jsdelivr.net/gh/beyondsimulations/web-embedded-chat@latest/floating-chat.js"></script>
+        <script defer src="https://oshu.eu/widget.js"></script>
         <script>
-            new UniversalChatWidget({
-                title: "Course Assistant",
-                apiEndpoint: "https://model-proxy.vlcek-4b4.workers.dev/api",
-                model: "produktionsmanagement",
-                title: "Assistent",
-                welcomeMessage: "Moin Moin! Wie kann ich helfen?",
-                placeholder: "Frage den Assistenten...",
-                userMessageOpacity: 0.5,
-                assistantMessageOpacity: 0.5,
-                position: "bottom-right",
-                windowHeight: 800
+            document.addEventListener('DOMContentLoaded', function () {
+                ChatWidget.init({
+                    tenant: "platform",
+                    agent: "produktionsmanagement",
+                    layoutMode: "sidebar",
+                });
             });
         </script>
 
