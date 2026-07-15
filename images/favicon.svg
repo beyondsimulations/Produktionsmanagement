@@ -10,8 +10,8 @@
     <rect x="40" y="40" width="22" height="8"></rect>
     <rect x="30" y="68" width="22" height="8"></rect>
   </g>
-  <rect x="50" y="54" width="24" height="8" fill="#52717a" opacity="0.96"></rect>
-  <g stroke="#52717a" stroke-width="1.83" stroke-dasharray="3 2" opacity="0.82">
+  <rect x="50" y="54" width="24" height="8" fill="#9E2B2B" opacity="0.96"></rect>
+  <g stroke="#9E2B2B" stroke-width="1.83" stroke-dasharray="3 2" opacity="0.82">
     <path d="M44 30 L48 30 L48 40 L44 40"></path>
     <path d="M62 44 L66 44 L66 54 L62 54"></path>
   </g>
