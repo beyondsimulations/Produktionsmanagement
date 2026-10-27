@@ -23,8 +23,7 @@ c) Vergleichen Sie die Zentrenproduktion mit der Werkstattfertigung hinsichtlich
    - Investitionsbedarf
 d) Ein Unternehmen plant die Umstellung von Werkstatt- auf Zentrenproduktion. Welche vier Planungsschritte sind dabei zu berücksichtigen?
 
-::: {.callout-caution collapse="true"}
-**Lösung:**
+::: {.callout-caution title="Lösung" collapse="true"}
 
 a) **Systematische Erzeugnisfamilienbildung:**
 
@@ -111,8 +110,7 @@ c) Berechnen Sie unter der Annahme einer 100%-Engpassauslastung:
    - Die Auslastungen $U_m$ aller Stationen
 d) Diskutieren Sie: Ist das Ergebnis realistisch, wenn die Anzahl der Paletten im System begrenzt ist? Welche praktischen Probleme könnten auftreten?
 
-::: {.callout-caution collapse="true"}
-**Lösung:**
+::: {.callout-caution title="Lösung" collapse="true"}
 
 a) **Mittlere Arbeitsbelastung (Workload):**
 
@@ -182,8 +180,7 @@ c) Berechnen Sie die Kontrollgrenzen für eine $\bar{x}$-Kontrollkarte mit dem F
 d) Die nächste Stichprobe (2024) liefert folgende Werte: [38,2; 40,5; 39,3; 39,9; 41,4]. Ist der Prozess noch unter statistischer Kontrolle?
 e) Interpretieren Sie das Ergebnis: Was bedeutet es für die Qualität des Produkts und welche Maßnahmen wären zu empfehlen?
 
-::: {.callout-caution collapse="true"}
-**Lösung:**
+::: {.callout-caution title="Lösung" collapse="true"}
 
 a) **Stichprobenmittelwerte und Spannweiten:**
 

@@ -21,8 +21,7 @@ a) Bestimmen Sie den/die kostenminimalen Standort(e) unter der Annahme, dass jed
 b) Wie viele Kombinationsmöglichkeiten müssten theoretisch geprüft werden, wenn Sie alle möglichen Standortkombinationen untersuchen wollten?
 c) Interpretieren Sie Ihr Ergebnis aus a). Warum ist diese Lösung in der Praxis möglicherweise nicht optimal?
 
-:::: {.callout-caution collapse="true"}
-**Lösung:**
+:::: {.callout-caution title="Lösung" collapse="true"}
 
 a) **Bestimmung der kostenminimalen Standorte:**
 
@@ -72,8 +71,7 @@ c) Formulieren Sie explizit die Zielfunktion für eine konkrete Instanz mit 3 St
    - Transportkosten: $c_{A1} = 1$, $c_{A2} = 2$, $c_{A3} = 3$, $c_{B1} = 4$, $c_{B2} = 5$, $c_{B3} = 6$, $c_{C1} = 7$, $c_{C2} = 8$, $c_{C3} = 9$
 d) Welche Nebenbedingung stellt sicher, dass Standorte nur genutzt werden können, wenn sie auch errichtet wurden? Formulieren Sie diese für Standort B.
 
-:::: {.callout-caution collapse="true"}
-**Lösung:**
+:::: {.callout-caution title="Lösung" collapse="true"}
 
 a) **Siehe Vorlesung:**
 
@@ -124,9 +122,7 @@ b) Prüfen Sie die Zulässigkeit dieser Lösung bezüglich aller Nebenbedingunge
 c) Ist folgende alternative Belieferung zulässig: Abnehmer 2 wird vollständig von A beliefert ($x_{A2} = 300$)? Begründen Sie.
 d) Schlagen Sie eine verbesserte Lösung vor und begründen Sie Ihre Wahl.
 
-:::: {.callout-caution collapse="true"}
-
-**Lösung:**
+:::: {.callout-caution title="Lösung" collapse="true"}
 
 a) **Berechnung des Zielfunktionswerts:**
 
@@ -204,8 +200,7 @@ a) Wenden Sie die Add-Heuristik an, um eine Lösung zu bestimmen. Dokumentieren 
 b) Sind heuristische Lösungen optimal? Begründen Sie Ihre Antwort.
 c) Auf welcher Managementebene sind Standortentscheidungen angesiedelt und warum?
 
-:::: {.callout-caution collapse="true"}
-**Lösung:**
+:::: {.callout-caution title="Lösung" collapse="true"}
 
 a) **Add-Heuristik:**
 

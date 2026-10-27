@@ -1,13 +1,12 @@
 project:
   type: website
-  post-render:
-    - helpers/convert_qmd_to_md.py
   render:
     - index.qmd
     - 404.qmd
     - general/*.qmd
     - lectures/*.qmd
     - tutorials/*.qmd
+lang: de
 website:
   favicon: images/favicon.svg
   title: "Produktionsmanagement"
@@ -59,19 +58,26 @@ website:
         href: general/faq.qmd
 
   page-footer:
-    center: "Produktionsmanagement, Tobias Vlćek </br>CC BY-SA 4.0"
+    center: "Produktionsmanagement, Dr. Tobias Vlćek </br>CC BY-SA 4.0"
     left:
       - icon: github
         href: https://github.com/beyondsimulations/Produktionsmanagement
+        aria-label: GitHub-Repository
       - icon: linkedin
         href: https://linkedin.com/in/tobiasvlcek
+        aria-label: LinkedIn
       - icon: envelope
         href: mailto:vlcek@beyondsimulations.com
-    right:
-      - text: "Imprint"
-        href: general/imprint.qmd
-      - text: "Privacy"
+        aria-label: E-Mail
+      - icon: skip-backward
+        href: https://tobiasvlcek.com/lectures/
+        aria-label: Alle Lehrveranstaltungen
+      - icon: shield-check
         href: general/privacy.qmd
+        aria-label: Datenschutz
+      - icon: info-circle
+        href: general/imprint.qmd
+        aria-label: Impressum
 
 format:
   html:
@@ -81,6 +87,7 @@ format:
       - brand
     toc: true
     highlight-style: arrow
+    callout-appearance: simple
     code-copy: true
     code-link: true
     toc-location: right
@@ -104,9 +111,13 @@ format:
             });
         </script>
 
-  hugo-md: default
 
   typst:
+    template-partials:
+      - helpers/typst-show.typ
+    logo:
+      path: images/course-logo.svg
+      alt: "Produktionsmanagement"
     papersize: a4
 
 format-links:
@@ -119,3 +130,7 @@ execute:
   freeze: auto
 
 brand: _brand.yml
+
+filters:
+  - helpers/typst-classes.lua
+  - helpers/page-pauses.lua

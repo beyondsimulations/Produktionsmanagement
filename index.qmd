@@ -35,6 +35,14 @@ Der Kerninhalt des Kurses ist in sechs Abschnitte gegliedert:
 
 Die Tutorials sind von mir auf Basis der Vorlesung von Prof. Dr. Manitz erstellt worden. Sie helfen Ihnen, die Konzepte aus der Vorlesung anzuwenden und zu verstehen. Die Klausur am Ende orientiert sich an den Probeklausuren von Herrn Manitz und wird die Themen der Vorlesung abdecken, die wir gemeinsam behandelt haben.
 
+## KI im Kurs
+
+**Kurs-Chatbot.** Auf dieser Website steht ein Kurs-Chatbot zum Lernen und Erkunden bereit. Er ist so gebaut, dass er Ihren Lösungsweg begleitet statt Lösungen auszugeben: Rechnen Sie mit Hinweisen und Rückfragen, nicht mit fertigen Antworten. Er läuft auf EU-Infrastruktur (Mistral-Modelle, Server in Deutschland); Ihre Unterhaltungen werden nicht für das Training von Modellen verwendet. Details stehen in der [Datenschutzerklärung](general/privacy.qmd).
+
+**Externe KI-Tools.** Sie dürfen externe KI-Tools verwenden (z. B. ChatGPT, Claude, Mistral, Gemini). Sie sind für jeden Schritt, auf den Sie sich stützen, selbst verantwortlich: Verstehen Sie ihn, statt ihn zu kopieren. Wer sich die Übungen von einer KI lösen lässt, schwächt genau das Verständnis, das die Klausur prüft.
+
+**Klausur.** In der Klausur selbst sind KI-Tools nicht zugelassen, sofern die Prüfungshinweise nichts anderes ausdrücklich erlauben.
+
 ## Fragen und Unterstützung
 
 Für Ihre Fragen stehe ich jederzeit gerne zur Verfügung. Kontaktieren Sie mich einfach per E-Mail unter [tobias.vlcek@uni-due.de](mailto:tobias.vlcek@uni-due.de?subject=Produktionsmanagement%3A%20%3CIhr%20Betreff%3E).
